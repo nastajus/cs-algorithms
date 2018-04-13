@@ -1,5 +1,7 @@
 ﻿using System;
 using static System.Console;
+//using System.Windows.Forms;
+//using System.Windows.Forms.dll;
 
 namespace cs_algorithms
 {
@@ -9,11 +11,11 @@ namespace cs_algorithms
         {
             //BubbleSort(new int[] { 2, 1 });
             BubbleSort(new int[] { 3, 2, 1 });
-            BubbleSort(new int[] { 4, 3, 2, 1 });
-            BubbleSort(new int[] { 7, 6, 5, 4, 3, 2, 1 });
+           // BubbleSort(new int[] { 4, 3, 2, 1 });
+           // BubbleSort(new int[] { 7, 6, 5, 4, 3, 2, 1 });
             //BubbleSort({ 4, 3, 2, 1 });   //invalid [{..} not an expression, expression expected inside brackets]
-            BubbleSort(new int[3]); //valid 
-            BubbleSort(new int[0]);
+           // BubbleSort(new int[3]); //valid 
+           // BubbleSort(new int[0]);
             ReadKey();
         }
 
@@ -23,12 +25,14 @@ namespace cs_algorithms
 
             //int[] sortedArray = new int[array.Length];
 
-            //suppose 2 items passed in, new int[] { 2, 1 }
+            //suppose 3 items passed in, new int[] { 3, 2, 1 }
 
             System.Diagnostics.Debug.WriteLine("Original: " + Utils.PrintArray(array));
+            //for (int i = 0; i < 2; i++)
             for (int i = 0; i < array.Length - 1; i++)  //minus one here because below we look-ahead by one.
             {
-                for (int k = i; k < array.Length - 1; k++) 
+                //for (int k = 0;    k < 2,1,0; k++)
+                for (int k = 0; k < i ; k++) 
                 {
                     var leftIdx = k;
                     var rightIdx = k + 1;
