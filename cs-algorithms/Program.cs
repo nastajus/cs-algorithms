@@ -1,7 +1,5 @@
 ﻿using System;
 using static System.Console;
-//using System.Windows.Forms;
-//using System.Windows.Forms.dll;
 
 namespace cs_algorithms
 {
@@ -23,31 +21,23 @@ namespace cs_algorithms
         {
             if (array.Length <= 1) return array;
 
-            //int[] sortedArray = new int[array.Length];
-
-            //suppose 3 items passed in, new int[] { 3, 2, 1 }
-
-            System.Diagnostics.Debug.WriteLine("Original: " + Utils.PrintArray(array));
-            for (int i = 0; i < array.Length; i++)  //minus one here because below we look-ahead by one.
+            for (int i = 0; i < array.Length; i++)  
             {
-                for (int k = 0; k < array.Length - 1 ; k++)
+                for (int k = 0; k < array.Length - 1 ; k++) //minus one here because below we look-ahead by one.
                 {
                     var leftIdx = k;
-                    var rightIdx = k + 1;
+                    var rightIdx = k + 1; //look-ahead by one.
 
                     if (array[leftIdx] > array[rightIdx])
                     {
                         //swap
                         var tempValue = array[rightIdx];
-                        array[rightIdx] = array[leftIdx];     //by copy, preserved
-                        array[leftIdx] = tempValue;             //by copy, preserved
+                        array[rightIdx] = array[leftIdx];
+                        array[leftIdx] = tempValue;
                     }
-                    System.Diagnostics.Debug.Write("[" + i + "," + k + "] " + Utils.PrintArray(array));
                 }
-                System.Diagnostics.Debug.WriteLine("");
             }
             System.Diagnostics.Debug.WriteLine("Sorted: " + Utils.PrintArray(array));
-            System.Diagnostics.Debug.WriteLine("======");
 
             return array;
         }
