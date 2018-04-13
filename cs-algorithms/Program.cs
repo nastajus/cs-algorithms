@@ -28,8 +28,8 @@ namespace cs_algorithms
             {
                 for (int k = 0; k < i; k++) 
                 {
-                    var leftIdx = i;
-                    var rightIdx = i + 1;
+                    var leftIdx = k;
+                    var rightIdx = k + 1;
 
                     if (array[leftIdx] > array[rightIdx])
                     {
