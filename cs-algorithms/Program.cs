@@ -19,7 +19,7 @@ namespace cs_algorithms
         {
             if (array.Length <= 1) return array;
 
-            int[] sortedArray = new int[array.Length];
+            //int[] sortedArray = new int[array.Length];
 
             //suppose 2 items passed in, new int[] { 2, 1 }
 
@@ -35,9 +35,9 @@ namespace cs_algorithms
                     array[leftIdx] = tempValue;             //by copy, preserved
                 }
             }
-            WriteLine("Sorted: " + Utils.PrintArray(sortedArray));
+            WriteLine("Sorted: " + Utils.PrintArray(array));
 
-            return sortedArray;
+            return array;
         }
 
         static void SelectionSort()
