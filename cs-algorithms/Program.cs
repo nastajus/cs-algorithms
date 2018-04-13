@@ -24,18 +24,15 @@ namespace cs_algorithms
             //suppose 2 items passed in, new int[] { 2, 1 }
 
             for (int i = 0; i < array.Length - 1; i++)  //minus one here because below we look-ahead by one.
-            //              ^^^^^^^^^^^^^^^^
-            //              while "i" is less than ... is true, we execute the loop
             {
-                var left = array[i];
-                var right = array[i + 1];
+                var leftIdx = i;
+                var rightIdx = i + 1;
 
-                if (left > right)
+                if (array[leftIdx] > array[rightIdx])
                 {
-                    //swap (by reference?)
-                    var temp = right;
-                    right = left;   //by copy, lost
-                    left = temp;    //by copy, lost
+                    var tempValue = array[rightIdx];
+                    array[rightIdx] = array[leftIdx];     //by copy, preserved
+                    array[leftIdx] = tempValue;             //by copy, preserved
                 }
             }
             WriteLine("Sorted: " + Utils.PrintArray(sortedArray));
