@@ -8,6 +8,7 @@ namespace cs_algorithms
         static void Main(string[] args)
         {
             BubbleSort(new int[] { 2, 1 });
+            BubbleSort(new int[] { 3, 2, 1 });
             BubbleSort(new int[] { 4, 3, 2, 1 });
             BubbleSort(new int[] { 7, 6, 5, 4, 3, 2, 1 });
             //BubbleSort({ 4, 3, 2, 1 });   //invalid [{..} not an expression, expression expected inside brackets]
@@ -24,7 +25,8 @@ namespace cs_algorithms
 
             //suppose 2 items passed in, new int[] { 2, 1 }
 
-            for (int i = 0; i < array.Length; i++)  //minus one here because below we look-ahead by one.
+            WriteLine("Original: " + Utils.PrintArray(array));
+            for (int i = 0; i < array.Length - 1; i++)  //minus one here because below we look-ahead by one.
             {
                 for (int k = i; k < array.Length - 1; k++) 
                 {
@@ -33,13 +35,17 @@ namespace cs_algorithms
 
                     if (array[leftIdx] > array[rightIdx])
                     {
+                        //swap
                         var tempValue = array[rightIdx];
                         array[rightIdx] = array[leftIdx];     //by copy, preserved
                         array[leftIdx] = tempValue;             //by copy, preserved
                     }
+                    Write("[" + i + "," + k + "] " + Utils.PrintArray(array));
                 }
+                WriteLine("");
             }
             WriteLine("Sorted: " + Utils.PrintArray(array));
+            WriteLine("======");
 
             return array;
         }
