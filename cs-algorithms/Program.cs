@@ -25,15 +25,12 @@ namespace cs_algorithms
             {
                 for (int k = 0; k < array.Length - 1 ; k++) //minus one here because below we look-ahead by one.
                 {
-                    var l = k;
-                    var r = k + 1; //look-ahead by one.
-
-                    if (array[l] > array[r])
+                    if (array[k] > array[k + 1])
                     {
                         //swap
-                        var tempValue = array[r];
-                        array[r] = array[l];
-                        array[l] = tempValue;
+                        var tempValue = array[k + 1];
+                        array[k + 1] = array[k];
+                        array[k] = tempValue;
                     }
                 }
             }
