@@ -24,7 +24,7 @@ namespace cs_algorithms
 
             //suppose 2 items passed in, new int[] { 2, 1 }
 
-            for (int i = 0; i < array.Length - 1; i++)  //minus one here because below we look-ahead by one.
+            for (int i = 0; i < array.Length; i++)  //minus one here because below we look-ahead by one.
             {
                 for (int k = i; k < array.Length - 1; k++) 
                 {
