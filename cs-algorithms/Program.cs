@@ -21,9 +21,9 @@ namespace cs_algorithms
         {
             if (array.Length <= 1) return array;
 
-            for (int i = 0; i < array.Length; i++)  
+            for (int i = 0; i < array.Length; i++)
             {
-                for (int k = 0; k < array.Length - 1 ; k++) //minus one here because below we look-ahead by one.
+                for (int k = 0; k < array.Length - 1 ; k++)
                 {
                     if (array[k] > array[k + 1])
                     {
