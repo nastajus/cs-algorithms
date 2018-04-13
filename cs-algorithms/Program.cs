@@ -9,6 +9,7 @@ namespace cs_algorithms
         {
             BubbleSort(new int[] { 2, 1 });
             BubbleSort(new int[] { 4, 3, 2, 1 });
+            BubbleSort(new int[] { 7, 6, 5, 4, 3, 2, 1 });
             //BubbleSort({ 4, 3, 2, 1 });   //invalid [{..} not an expression, expression expected inside brackets]
             BubbleSort(new int[3]); //valid 
             BubbleSort(new int[0]);
@@ -25,14 +26,17 @@ namespace cs_algorithms
 
             for (int i = 0; i < array.Length - 1; i++)  //minus one here because below we look-ahead by one.
             {
-                var leftIdx = i;
-                var rightIdx = i + 1;
-
-                if (array[leftIdx] > array[rightIdx])
+                for (int k = 0; k < i; k++) 
                 {
-                    var tempValue = array[rightIdx];
-                    array[rightIdx] = array[leftIdx];     //by copy, preserved
-                    array[leftIdx] = tempValue;             //by copy, preserved
+                    var leftIdx = i;
+                    var rightIdx = i + 1;
+
+                    if (array[leftIdx] > array[rightIdx])
+                    {
+                        var tempValue = array[rightIdx];
+                        array[rightIdx] = array[leftIdx];     //by copy, preserved
+                        array[leftIdx] = tempValue;             //by copy, preserved
+                    }
                 }
             }
             WriteLine("Sorted: " + Utils.PrintArray(array));
