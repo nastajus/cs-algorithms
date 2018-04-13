@@ -7,7 +7,7 @@ namespace cs_algorithms
     {
         static void Main(string[] args)
         {
-            BubbleSort(new int[] { 2, 1 });
+            //BubbleSort(new int[] { 2, 1 });
             BubbleSort(new int[] { 3, 2, 1 });
             BubbleSort(new int[] { 4, 3, 2, 1 });
             BubbleSort(new int[] { 7, 6, 5, 4, 3, 2, 1 });
@@ -25,7 +25,7 @@ namespace cs_algorithms
 
             //suppose 2 items passed in, new int[] { 2, 1 }
 
-            WriteLine("Original: " + Utils.PrintArray(array));
+            System.Diagnostics.Debug.WriteLine("Original: " + Utils.PrintArray(array));
             for (int i = 0; i < array.Length - 1; i++)  //minus one here because below we look-ahead by one.
             {
                 for (int k = i; k < array.Length - 1; k++) 
@@ -40,12 +40,12 @@ namespace cs_algorithms
                         array[rightIdx] = array[leftIdx];     //by copy, preserved
                         array[leftIdx] = tempValue;             //by copy, preserved
                     }
-                    Write("[" + i + "," + k + "] " + Utils.PrintArray(array));
+                    System.Diagnostics.Debug.Write("[" + i + "," + k + "] " + Utils.PrintArray(array));
                 }
-                WriteLine("");
+                System.Diagnostics.Debug.WriteLine("");
             }
-            WriteLine("Sorted: " + Utils.PrintArray(array));
-            WriteLine("======");
+            System.Diagnostics.Debug.WriteLine("Sorted: " + Utils.PrintArray(array));
+            System.Diagnostics.Debug.WriteLine("======");
 
             return array;
         }
