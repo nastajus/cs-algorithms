@@ -39,9 +39,15 @@ namespace cs_algorithms
             return array;
         }
 
-        static void SelectionSort()
+        static void SelectionSort(int[] array)
         {
+            for (int i = 0; i < array.Length; i++)
+            {
+                for (int j = 0; j < array.Length; j++)
+                {
 
+                }
+            }
         }
 
     }
