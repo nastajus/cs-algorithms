@@ -7,6 +7,10 @@ namespace cs_algorithms
     {
         static void Main(string[] args)
         {
+
+            SelectionSort(new int[] {3,2,1});
+            ReadKey();
+
             BubbleSort(new int[] { 2, 1 });
             BubbleSort(new int[] { 3, 2, 1 });
             BubbleSort(new int[] { 4, 3, 2, 1 });
@@ -39,14 +43,27 @@ namespace cs_algorithms
             return array;
         }
 
+        //double-looping structure, is taken as basic premise for sorting,
+        //as one pass can only conceivably operate upon one of n elements.
         static void SelectionSort(int[] array)
         {
             for (int i = 0; i < array.Length; i++)
             {
-                for (int j = 0; j < array.Length; j++)
-                {
+                //assign smallest known index position starting at left-most array entry (gotta start somewhere)
+                int smallestIdx = i;
 
+                //as examination proceeds linearly, only "new smallest" entires need be examined.
+                //hence, iteration of j can "jump ahead" to latest "<i'th> value".
+                for (int j = i; j < array.Length; j++)
+                {
+                    //find smallest index 
+                    if (array[j] < array[smallestIdx])
+                    {
+                        smallestIdx = j;
+                    }
                 }
+
+                System.Diagnostics.Debug.WriteLine("smallestIdx is: " + smallestIdx);
             }
         }
 
