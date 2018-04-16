@@ -10,8 +10,10 @@ namespace cs_algorithms
 
             //SelectionSort(new int[] {3,2,1});
             SelectionSort(new int[] { 4, 3, 2, 1 });
+            //SelectionSort(new int[] { 14, 5, 3, 12, 11, 1, 2 });
             ReadKey();
 
+            
             BubbleSort(new int[] { 2, 1 });
             BubbleSort(new int[] { 3, 2, 1 });
             BubbleSort(new int[] { 4, 3, 2, 1 });
@@ -49,7 +51,10 @@ namespace cs_algorithms
         //hence needing n passes over n elements.
         static void SelectionSort(int[] array)
         {
-            for (int i = 0; i < array.Length; i++)
+            //-1 needed as it prevents unnecessary iteration loop of outer loop as it is unnecessary, 
+            //as by design, every possible smaller element has already been placed before this final element,
+            //by the other logic of swapping.
+            for (int i = 0; i < array.Length - 1; i++)
             {
                 //assign smallest known index position starting at left-most array entry (gotta start somewhere)
                 int smallestIdx = i;
@@ -74,10 +79,9 @@ namespace cs_algorithms
                     array[i] = tempVal;
 
                     System.Diagnostics.Debug.WriteLine("swap result *i=" + i + "* : " + Utils.PrintArray(array));
-                    System.Diagnostics.Debug.WriteLine("swapped at *i=" + i + "* and ^smallestIdx:" + smallestIdx + "^.");
+                    System.Diagnostics.Debug.WriteLine("swapped at *i=" + i + "* and ^smallestIdx:" + smallestIdx + "^.");                    
+                    System.Diagnostics.Debug.WriteLine("smallestIdx is: " + smallestIdx);
                 }
-
-                System.Diagnostics.Debug.WriteLine("smallestIdx is: " + smallestIdx);
             }
             System.Diagnostics.Debug.WriteLine("sorted: " + Utils.PrintArray(array));
         }
