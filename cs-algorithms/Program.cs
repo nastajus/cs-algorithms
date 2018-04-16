@@ -46,25 +46,14 @@ namespace cs_algorithms
             return array;
         }
 
-        //double-looping structure, is taken as basic premise for sorting,
-        //as one pass can only conceivably operate upon one of n elements,
-        //hence needing n passes over n elements.
         static void SelectionSort(int[] array)
         {
-            //-1 needed as it prevents unnecessary iteration loop of outer loop as it is unnecessary, 
-            //as by design, every possible smaller element has already been placed before this final element,
-            //by the other logic of swapping.
             for (int i = 0; i < array.Length - 1; i++)
             {
-                //assign smallest known index position starting at left-most array entry (gotta start somewhere)
                 int smallestIdx = i;
 
-                //as examination proceeds linearly, only "new smallest" entires need be examined.
-                //hence, iteration of j can "jump ahead" to latest "<i'th> value".
-                //+1 needed here to prevent re-examining same smallest index, just assigned above
                 for (int j = i + 1; j < array.Length; j++)
                 {
-                    //find smallest index 
                     if (array[j] < array[smallestIdx])
                     {
                         smallestIdx = j;
@@ -77,10 +66,6 @@ namespace cs_algorithms
                     int tempVal = array[smallestIdx];
                     array[smallestIdx] = array[i];
                     array[i] = tempVal;
-
-                    System.Diagnostics.Debug.WriteLine("swap result *i=" + i + "* : " + Utils.PrintArray(array));
-                    System.Diagnostics.Debug.WriteLine("swapped at *i=" + i + "* and ^smallestIdx:" + smallestIdx + "^.");                    
-                    System.Diagnostics.Debug.WriteLine("smallestIdx is: " + smallestIdx);
                 }
             }
             System.Diagnostics.Debug.WriteLine("sorted: " + Utils.PrintArray(array));
