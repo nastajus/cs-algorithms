@@ -67,13 +67,14 @@ namespace cs_algorithms
                 }
 
                 //swap
+                if (smallestIdx != i)
                 {
                     int tempVal = array[smallestIdx];
                     array[smallestIdx] = array[i];
                     array[i] = tempVal;
 
-                    System.Diagnostics.Debug.WriteLine("partial on *i=" + i + "* : " + Utils.PrintArray(array));
-                    System.Diagnostics.Debug.WriteLine("swapped *i=" + i + "* and ^smallestIdx:" + smallestIdx + "^.");
+                    System.Diagnostics.Debug.WriteLine("swap result *i=" + i + "* : " + Utils.PrintArray(array));
+                    System.Diagnostics.Debug.WriteLine("swapped at *i=" + i + "* and ^smallestIdx:" + smallestIdx + "^.");
                 }
 
                 System.Diagnostics.Debug.WriteLine("smallestIdx is: " + smallestIdx);
