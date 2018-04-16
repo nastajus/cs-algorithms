@@ -8,7 +8,8 @@ namespace cs_algorithms
         static void Main(string[] args)
         {
 
-            SelectionSort(new int[] {3,2,1});
+            //SelectionSort(new int[] {3,2,1});
+            SelectionSort(new int[] { 4, 3, 2, 1 });
             ReadKey();
 
             BubbleSort(new int[] { 2, 1 });
@@ -44,7 +45,8 @@ namespace cs_algorithms
         }
 
         //double-looping structure, is taken as basic premise for sorting,
-        //as one pass can only conceivably operate upon one of n elements.
+        //as one pass can only conceivably operate upon one of n elements,
+        //hence needing n passes over n elements.
         static void SelectionSort(int[] array)
         {
             for (int i = 0; i < array.Length; i++)
@@ -54,7 +56,8 @@ namespace cs_algorithms
 
                 //as examination proceeds linearly, only "new smallest" entires need be examined.
                 //hence, iteration of j can "jump ahead" to latest "<i'th> value".
-                for (int j = i; j < array.Length; j++)
+                //+1 needed here to prevent re-examining same smallest index, just assigned above
+                for (int j = i + 1; j < array.Length; j++)
                 {
                     //find smallest index 
                     if (array[j] < array[smallestIdx])
@@ -63,8 +66,19 @@ namespace cs_algorithms
                     }
                 }
 
+                //swap
+                {
+                    int tempVal = array[smallestIdx];
+                    array[smallestIdx] = array[i];
+                    array[i] = tempVal;
+
+                    System.Diagnostics.Debug.WriteLine("partial on *i=" + i + "* : " + Utils.PrintArray(array));
+                    System.Diagnostics.Debug.WriteLine("swapped *i=" + i + "* and ^smallestIdx:" + smallestIdx + "^.");
+                }
+
                 System.Diagnostics.Debug.WriteLine("smallestIdx is: " + smallestIdx);
             }
+            System.Diagnostics.Debug.WriteLine("sorted: " + Utils.PrintArray(array));
         }
 
     }
