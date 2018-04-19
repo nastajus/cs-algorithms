@@ -1,5 +1,6 @@
 ﻿using System;
-using static System.Console;
+//using static System.Console;
+using static System.Diagnostics.Debug;
 
 namespace cs_algorithms
 {
@@ -8,12 +9,12 @@ namespace cs_algorithms
         static void Main(string[] args) 
         {
 
+            WriteLine("test");
             //SelectionSort(new int[] {3,2,1});
             SelectionSort(new int[] { 4, 3, 2, 1 });
             //SelectionSort(new int[] { 14, 5, 3, 12, 11, 1, 2 });
-            ReadKey();
-
             
+
             BubbleSort(new int[] { 2, 1 });
             BubbleSort(new int[] { 3, 2, 1 });
             BubbleSort(new int[] { 4, 3, 2, 1 });
@@ -21,7 +22,6 @@ namespace cs_algorithms
             //BubbleSort({ 4, 3, 2, 1 });   //invalid [{..} not an expression, expression expected inside brackets]
            // BubbleSort(new int[3]); //valid 
            // BubbleSort(new int[0]);
-            ReadKey();
         }
 
         static int[] BubbleSort(int[] array)
@@ -41,7 +41,8 @@ namespace cs_algorithms
                     }
                 }
             }
-            System.Diagnostics.Debug.WriteLine("Sorted: " + Utils.PrintArray(array));
+            WriteLine("Sorted: " + Utils.PrintArray(array));
+
 
             return array;
         }
@@ -68,7 +69,7 @@ namespace cs_algorithms
                     array[i] = tempVal;
                 }
             }
-            System.Diagnostics.Debug.WriteLine("sorted: " + Utils.PrintArray(array));
+            WriteLine("sorted: " + Utils.PrintArray(array));
         }
 
     }
