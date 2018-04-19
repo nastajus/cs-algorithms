@@ -5,7 +5,7 @@ namespace cs_algorithms
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args) 
         {
 
             //SelectionSort(new int[] {3,2,1});
