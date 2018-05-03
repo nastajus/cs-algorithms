@@ -6,8 +6,17 @@ namespace cs_conversions
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
+
+            //convert list to array
+
         }
+    }
+
+    class HumanDailyNeeds
+    {
+        private int foodCalories = 2000;
+        private int sleepHours = 8; 
+
+
     }
 }

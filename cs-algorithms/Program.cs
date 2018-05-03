@@ -30,14 +30,14 @@ namespace cs_algorithms
 
             for (int i = 0; i < array.Length; i++)
             {
-                for (int k = 0; k < array.Length - 1 ; k++)
+                for (int j = 0; j < array.Length - 1 ; j++)
                 {
-                    if (array[k] > array[k + 1])
+                    if (array[j] > array[j + 1])
                     {
                         //swap
-                        var tempValue = array[k + 1];
-                        array[k + 1] = array[k];
-                        array[k] = tempValue;
+                        var tempValue = array[j + 1];
+                        array[j + 1] = array[j];
+                        array[j] = tempValue;
                     }
                 }
             }
@@ -47,7 +47,7 @@ namespace cs_algorithms
             return array;
         }
 
-        static void SelectionSort(int[] array)
+        static int[] SelectionSort(int[] array)
         {
             for (int i = 0; i < array.Length - 1; i++)
             {
@@ -70,6 +70,7 @@ namespace cs_algorithms
                 }
             }
             WriteLine("sorted: " + Utils.PrintArray(array));
+            return array;
         }
 
     }
