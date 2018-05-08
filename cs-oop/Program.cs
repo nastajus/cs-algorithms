@@ -1,4 +1,4 @@
-﻿using System;
+﻿//using System;
 using static System.Diagnostics.Debug;
 using System.Drawing;
 using System.Numerics;
@@ -36,7 +36,7 @@ namespace cs_oop
             Wheel[] wheels = new Wheel[4];
             //...
             void Drive(Vector3 destination) { }
-            public void Stop() { }
+            public void Stop() { WriteLine( "Vehicle stopped." ); }
         }
 
         class RaceCar : Vehicle
@@ -44,7 +44,7 @@ namespace cs_oop
             void NitroBoost() {}
 
             //Stop without killing passenger
-            public void Stop() {}
+            public void Stop() { WriteLine("RaceCar stopped."); }
         }
 
         class ConstructionDumpTruck : Vehicle
