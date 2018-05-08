@@ -1,12 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
 namespace cs_data_structures
 {
-    class Program
+    class DataStructures
     {
         static void Main(string[] args)
         {
+
+            GetSizes();
+            Console.ReadKey();
 
             StructsVersusClassesMemoryComparision();
             Tasks();
@@ -42,7 +46,6 @@ namespace cs_data_structures
             //System.ArgumentException: 'Type 'cs_data_structures.Program+Bar' cannot be marshaled as an unmanaged structure; no meaningful size or offset can be computed.'
             //Console.WriteLine( "Bar size is: " + Marshal.SizeOf(typeof(Bar)) );
 
-            Console.ReadLine();
             Console.ReadKey();
         }
 
@@ -85,5 +88,36 @@ namespace cs_data_structures
                 this.f = f;
             }
         }
+
+
+
+        //enum enumlist = { "monday", "tuesday", "wednesday" }    
+        //enum enumlist { "monday", "tuesday", "wednesday" }    
+        enum MyEnum { Monday, Tuesday, Wednesday }
+
+        static void GetSizes()
+        {
+            int[] arr = { 1, 2, 3 };
+            Console.WriteLine(arr.Length);
+
+            List<int> list = new List<int>(new int[] { 1, 2, 3 });
+            Console.WriteLine(list.Count);
+
+            Dictionary<int, string> dict = new Dictionary<int, string>//( { } )
+            {
+                { 1, "un" },
+                { 2, "deux" },
+                { 3, "trois" },
+            };
+            Console.WriteLine(dict.Count);
+
+            Console.WriteLine(
+                ((MyEnum[])Enum.GetValues(typeof(MyEnum))).Length
+            );
+
+
+        }
+
+
     }
 }
