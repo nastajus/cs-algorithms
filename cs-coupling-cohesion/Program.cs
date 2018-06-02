@@ -14,39 +14,21 @@ namespace cs_coupling_cohesion
         }
     }
 
-    class rottweiler : Dog
-    {
-
-    }
-
-    class Dog : Animal
-    {
-
-    }
-
-    class Animal : Creature
-    {
-
-    }
-
-    class Creature
-    {
-
-    }
-
-    class Insect : Creature
-    {
-
-    }
-
-    class Ladybug : Insect
-    {
-
-    }
+    class Rottweiler : Dog { }
+    class Dog : Animal { }
+    class Animal : Creature { }
+    class Creature { }
+    class Insect : Creature { }
+    class Ladybug : Insect { }
 
     interface IGroomable
     {
         bool Groom();
+
+        //bool AssessGroomability();
+        bool AssessGroomability<Creature>();
+
+    
     }
 
 
