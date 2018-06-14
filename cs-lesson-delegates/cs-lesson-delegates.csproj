@@ -7,7 +7,7 @@
     <ProjectGuid>{6DBD661A-635B-4191-94F3-D172D26769DD}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>cs_lesson_delegates</RootNamespace>
-    <AssemblyName>cs_lesson_delegates</AssemblyName>
+    <AssemblyName>cs-lesson-delegates</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
