@@ -12,10 +12,16 @@ namespace cs_generics
         {
             var book = new Book { Isbn = "1111", Title = "C# Advanced" };
 
-            var numbers = new List();
+            //var numbers = new List();
+            //numbers.Add(10);
+
+            //var books = new BookList();
+            //books.Add(book);
+
+            var numbers = new GenericList<int>();
             numbers.Add(10);
 
-            var books = new BookList();
+            var books = new GenericList<Book>();
             books.Add(book);
         }
     }
@@ -57,5 +63,23 @@ namespace cs_generics
     class Book {
         public string Isbn;
         public string Title;
+    }
+
+    class GenericList<T>
+    {
+        public void Add(T value)
+        {
+
+        }
+
+        //public T this[int value]
+        //{
+
+        //}
+
+        public T At(int index)
+        {
+
+        }
     }
 }
