@@ -10,16 +10,52 @@ namespace cs_generics
     {
         static void Main(string[] args)
         {
+            var book = new Book { Isbn = "1111", Title = "C# Advanced" };
+
+            var numbers = new List();
+            numbers.Add(10);
+
+            var books = new BookList();
+            books.Add(book);
+        }
+    }
+
+    class List
+    {
+        public void Add(int number)
+        {
+            throw new NotImplementedException();
         }
 
-        public class Box { }
-        public class Kittens { }
+        //int get this[int index] {
+        //    get {throw new NotImplementedException(); }
+        //}
 
-        //public void Unwrap (Box<Kittens> boxOfKittens) { }  //Error: The non-generic type 'Box' cannot be used with type arguments.
+        int At(int index)
+        {
+            return { throw new NotImplementedException () };
+        }
 
-        //public T Unwrap (Box<T> boxThings) { return new T(); } //Error: The non-generic type 'Box' cannot be used with type arguments.   //Error: The type or namespace 'T' cannot be found.
+    }
 
-        //public T Unwrap(Box<T> boxOfKittens) as T { }
+    class BookList
+    {
+        public void Add(Book book) {
+            throw new NotImplementedException();
+        }
 
+        //Book get this[Book index ] {
+        //    get {throw new NotImplementedException(); }
+        //}
+
+        Book At(Book book)
+        {
+            return { throw new NotImplementedException(); }
+        }
+    }
+
+    class Book {
+        public string Isbn;
+        public string Title;
     }
 }
