@@ -9,6 +9,8 @@ namespace cs_generics_food
     class GenericsFood
     {
         //main
+
+        //enumberable troth of endless food will occur here, feeding each a person, bird, and cow, all at different CanEat formulas. bird will have additional penalty of feeding babies intermittetly
     }
 
     interface IEdibleConsumer<TEdible>
@@ -90,6 +92,10 @@ namespace cs_generics_food
 
     class Bird : Creature, IEdibleConsumer<Food>
     {
+        /// <summary>
+        /// Bird I'm declaring as a "moderately hungry" creature that needs to eat semi-frequently.
+        /// </summary>
+        /// <returns></returns>
         public bool CanEat()
         {
             return Hungry = Stomach.Satiety < (int) HungerLevel.Full;
@@ -109,9 +115,12 @@ namespace cs_generics_food
 
     class Cow : Creature, IEdibleConsumer<Food>
     {
+        /// <summary>
+        /// I'm declaring that Cow's energy needs are so high that they'll always eat until bloated.
+        /// </summary>
         public bool CanEat()
         {
-            throw new NotImplementedException();
+            return Hungry = Stomach.Satiety < (int) HungerLevel.Bloated;
         }
 
         public (Waste, Energy) Eat(Food edible)
@@ -125,11 +134,15 @@ namespace cs_generics_food
         }
     }
 
+
     class Person : Creature, IEdibleConsumer<Food>
     {
+        /// <summary>
+        /// A person I'm declaring as having a deep capacity to wait a long time for food.
+        /// </summary>
         public bool CanEat()
         {
-            throw new NotImplementedException();
+            return Hungry = Stomach.Satiety < (int) HungerLevel.Hungry;
         }
 
         public (Waste, Energy) Eat(Food edible)
