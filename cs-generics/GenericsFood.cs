@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace cs_generics
+namespace cs_generics_food
 {
     class GenericsFood
     {

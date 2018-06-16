@@ -17,6 +17,7 @@ namespace cs_generics
     {
         bool CanFly();
         TCargo DropCargo();
+        //void PickupCargo(TCargo cargo);
     }
     
     class Delorian : IFlyable<TPerson>
@@ -30,6 +31,11 @@ namespace cs_generics
         {
             throw new NotImplementedException();
         }
+
+        //public void PickupCargo(TPerson cargo)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 
     class Bird : IFlyable<TPoop>
@@ -43,6 +49,11 @@ namespace cs_generics
         {
             throw new NotImplementedException();
         }
+
+        //public void PickupCargo(Object o) //(TPoop poop)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 
     class TPerson { }
