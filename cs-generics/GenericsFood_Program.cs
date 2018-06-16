@@ -6,8 +6,22 @@ using System.Threading.Tasks;
 
 namespace cs_generics_food
 {
-    class GenericsFood
+    class GenericsFood_Program
     {
+
+        //is this a good place???
+        // well it is the "runner" or "beginning" so it "may as well hold any relevant logic... 
+
+
+        //like this, a satiety index
+
+        // Dictionary < (Person, Apple), Satiety value > 
+        // Dictionary < (Bird, Apple), Satiety value >
+        Dictionary<(Person, Apple), int> satietyIndexBad = new Dictionary<(Person, Apple), int>();
+        Dictionary<(Creature, Food), int> satietyIndex = new Dictionary<(Creature, Food), int>();
+
+
+
 
         Bird bird = new Bird();
         Cow cow = new Cow();
@@ -15,7 +29,8 @@ namespace cs_generics_food
 
 
 
-        //main
+        //main method 
+
 
         //enumberable troth of endless food will occur here, feeding each a person, bird, and cow, all at different CanEat formulas. bird will have additional penalty of feeding babies intermittetly.
 
@@ -129,16 +144,6 @@ namespace cs_generics_food
         {
             throw new NotImplementedException();
         }
-
-
-
-        //like this, a satiety index
-
-        // Dictionary < (Person, Apple), Satiety value > 
-        // Dictionary < (Bird, Apple), Satiety value >
-        Dictionary<(Person, Apple), int> satietyIndexBad = new Dictionary<(Person, Apple), int>();
-        Dictionary<(Creature, Food), int> satietyIndex = new Dictionary<(Creature, Food), int>();
-
     }
 
     class Cow : Creature, IEdibleConsumer<Food>
@@ -186,11 +191,6 @@ namespace cs_generics_food
         public Food Regurgitate()
         {
             return null; //do nothing;
-        }
-
-        public Energy Digest(Food edible)
-        {
-            throw new NotImplementedException();
         }
     }
 
