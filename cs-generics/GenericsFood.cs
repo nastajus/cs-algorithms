@@ -47,6 +47,10 @@ namespace cs_generics_food
     /// </summary>
     class PartiallyDigestedFood : Food { }
 
+
+    class Apple : Food { }
+
+
     class Waste { }
     class Energy { }
 
@@ -104,7 +108,7 @@ namespace cs_generics_food
     class Rumin : Stomach { }
 
 
-    class Bird : Creature, IEdibleConsumer<Food>
+    class Bird : Creature, IEdibleConsumer<Food>, ISatietyCalculator<Food>
     {
         /// <summary>
         /// Bird I'm declaring as a "moderately hungry" creature that needs to eat semi-frequently.
@@ -125,6 +129,27 @@ namespace cs_generics_food
             return new PartiallyDigestedFood();
         }
 
+        public Energy Digest(Food edible)
+        {
+            throw new NotImplementedException();
+        }
+
+        //hmm... okay... i want a way to enforce defining of an Apple's satiety for each creature-type... this doesn't do it... it doesn't implement the interface (grayed out method name in visual studio with resharper extension)
+        //the idea is to force an implementation ... for every food type? ... a calculation of energy returned... 
+        //is this wise? 
+        //this seems unwise...
+        //perhaps a dictionary is better-suited, rather than cluttering up each creature with endless food...
+        //or more of a matrix... or having a tuple as the key in the dictionary...
+
+        //like this
+
+        // Dictionary < (Person, Apple), Satiety value > 
+        // Dictionary < (Bird, Apple), Satiety value >
+
+        public Energy Digest(Apple edible)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     class Cow : Creature, IEdibleConsumer<Food>
