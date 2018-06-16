@@ -43,50 +43,26 @@ namespace cs_generics_food
     class Waste { }
     class Energy { }
 
-    class Creature : IEdibleConsumer<Food>
+    class Creature { }
+
+    //class Bird : Creature
+    //class Bird : Creature<Food>
+    //class Bird<Food> : Creature
+
+    //Error on interface: 'Bird' does not implement interface member 'IEdibleConsumer<Food>.Eat(Food)'. 'Bird.Eat<Food>' cannot implement an interface member because it is not public
+    class Bird : Creature, IEdibleConsumer<Food>
     {
         public bool CanEat()
         {
             throw new NotImplementedException();
         }
 
-        public (Waste, Energy) Eat(Food edible)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Food Regurgitate()
-        {
-            throw new NotImplementedException();
-        }
-    }
-
-    //class Bird : Creature
-    //class Bird : Creature<Food>
-    //class Bird<Food> : Creature
-
-    //i tried to add the generic concretization to each base class, derived class, before realizing i might want to apply the interface directly here too.
-
-    class Bird : Creature, IEdibleConsumer<Food>
-    {
-        //new hides parent deliberately
-        public new bool CanEat()
-        {
-            throw new NotImplementedException();
-        }
-
-        //weird. notice that dot. 
-        //weird interface reference in the method path.
-        //oh
-        //it was to disambugate two usages.
-        //oooh.. okay.. well.. then we can conclude it's foolish to re-use the same interface 2x in the same inheritance chain
         (Waste, Energy) Eat(Food edible)
         {
             throw new NotImplementedException();
         }
 
-        //new hides parent deliberately
-        public new Food Regurgitate()
+        public Food Regurgitate()
         {
             return new ChewedFood();
             throw new NotImplementedException();
