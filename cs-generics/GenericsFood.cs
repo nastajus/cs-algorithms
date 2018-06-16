@@ -61,24 +61,34 @@ namespace cs_generics_food
         }
     }
 
-    class Bird : Creature
+    //class Bird : Creature
+    //class Bird : Creature<Food>
+    //class Bird<Food> : Creature
+
+    //i tried to add the generic concretization to each base class, derived class, before realizing i might want to apply the interface directly here too.
+
+    class Bird : Creature, IEdibleConsumer<Food>
     {
-        public bool CanEat()
+        //new hides parent deliberately
+        public new bool CanEat()
         {
             throw new NotImplementedException();
         }
 
+        //weird. notice that dot. 
         (Waste, Energy) IEdibleConsumer<Food>.Eat(Food edible)
         {
             throw new NotImplementedException();
         }
 
-        public void Eat(Food edible)
+        //new hides parent deliberately
+        public new void Eat(Food edible)
         {
             throw new NotImplementedException();
         }
 
-        public Food Regurgitate()
+        //new hides parent deliberately
+        public new Food Regurgitate()
         {
             return new ChewedFood();
             throw new NotImplementedException();
