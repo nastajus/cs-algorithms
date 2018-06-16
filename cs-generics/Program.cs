@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cs_generics
 {
-    class Program
+    class Generics
     {
         static void Main(string[] args)
         {
@@ -17,6 +17,23 @@ namespace cs_generics
     {
         bool CanFly();
         TCargo GetCargo(); //take out.
+    }
+
+    //class Delorian
+    //class Delorian : IFlyable
+    //class Delorian : IFlyable<>
+    //class Delorian : IFlyable<People> { }
+    class Delorian : IFlyable<>
+    {
+        public bool CanFly()
+        {
+            throw new NotImplementedException();
+        }
+
+        public TCargo GetCargo()
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }
