@@ -9,6 +9,18 @@ namespace cs_generics_food
     class GenericsFood_Program
     {
 
+        //syntax errors, both ',' and ')' expected. 
+        //maybe it's the tupes?
+        //static Dictionary<(typeof(Food), typeof(Creature)), int> satietyIndex
+
+        //nope
+        //static Dictionary<typeof(Food), int>
+        //that wasn't the answer neither
+
+        // do  i need generic umm something? a "generic dictionary"? 
+
+        static Dictionary<(Type,Type), int> si = new Dictionary<(Type, Type), int>();
+
         static Dictionary<(Food, Creature), int> satietyIndex = new Dictionary<(Food, Creature), int>();
 
         
@@ -27,7 +39,11 @@ namespace cs_generics_food
         private static void InitializeSatietyIndex()
         {
             //satietyIndex.Add((Apple, Person), 10);
-            satietyIndex.Add((new Apple(), new Person()), 10);
+            //satietyIndex.Add((new Apple(), new Person()), 10);
+            //i'd rather store the TYPE and not INSTANCES OF TYPES.
+            si.Add((typeof(Food), typeof(Creature)), 10);
+            si.Add((typeof(Apple), typeof(Person)), 10);
+
         }
 
 
