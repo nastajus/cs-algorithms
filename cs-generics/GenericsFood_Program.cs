@@ -9,7 +9,7 @@ namespace cs_generics_food
     class GenericsFood_Program
     {
 
-        Dictionary<(Food, Creature), int> satietyIndex = new Dictionary<(Food, Creature), int>();
+        static Dictionary<(Food, Creature), int> satietyIndex = new Dictionary<(Food, Creature), int>();
 
         
         Bird bird = new Bird();
@@ -27,7 +27,6 @@ namespace cs_generics_food
         private static void InitializeSatietyIndex()
         {
             //satietyIndex.Add((Apple, Person), 10);
-            //Error on satietyIndex: An object-reference is required for the non-static field
             satietyIndex.Add((new Apple(), new Person()), 10);
         }
 
