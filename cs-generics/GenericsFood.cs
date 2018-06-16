@@ -29,7 +29,7 @@ namespace cs_generics_food
     interface IEdibleConsumer<TEdible>
     {
         bool CanEat();
-        void Eat(TEdible edible);
+        (Waste, Energy) Eat(TEdible edible);
         TEdible Regurgitate();
     }
 
@@ -37,9 +37,17 @@ namespace cs_generics_food
     class Food { }
     class ChewedFood : Food { }
 
+    class Waste { }
+    class Energy { }
+
     class Bird : IEdibleConsumer<Food>
     {
         public bool CanEat()
+        {
+            throw new NotImplementedException();
+        }
+
+        (Waste, Energy) IEdibleConsumer<Food>.Eat(Food edible)
         {
             throw new NotImplementedException();
         }
@@ -68,6 +76,11 @@ namespace cs_generics_food
             throw new NotImplementedException();
         }
 
+        (Waste, Energy) IEdibleConsumer<Food>.Eat(Food edible)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Eat(Food edible)
         {
             throw new NotImplementedException();
@@ -81,7 +94,6 @@ namespace cs_generics_food
 
     /*
     class Edible { }
-    class Waste { }
     class Person { }
     class Animal { }
     */
