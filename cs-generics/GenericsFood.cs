@@ -8,9 +8,18 @@ namespace cs_generics_food
 {
     class GenericsFood
     {
+
+        Bird bird = new Bird();
+        Cow cow = new Cow();
+        Person person = new Person();
+
+
+
         //main
 
-        //enumberable troth of endless food will occur here, feeding each a person, bird, and cow, all at different CanEat formulas. bird will have additional penalty of feeding babies intermittetly
+        //enumberable troth of endless food will occur here, feeding each a person, bird, and cow, all at different CanEat formulas. bird will have additional penalty of feeding babies intermittetly.
+
+        //TODO : Later I'll transform Bird into an abstraction which has two derived classes: ParentBird and BabyBird, and BabyBird will super needy with it's hunger but require low energy food so it lasts a longtime... umm shoot... umm somehow... hmm...
     }
 
     interface IEdibleConsumer<TEdible>
@@ -21,6 +30,11 @@ namespace cs_generics_food
         bool CanEat();
         (Waste, Energy) Eat(TEdible edible);
         TEdible Regurgitate();
+    }
+
+    interface ISatietyCalculator<TEdible>
+    {
+        Energy Digest(TEdible edible);
     }
 
     /// <summary>
