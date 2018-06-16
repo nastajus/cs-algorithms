@@ -76,13 +76,11 @@ namespace cs_generics_food
         }
 
         //weird. notice that dot. 
-        (Waste, Energy) IEdibleConsumer<Food>.Eat(Food edible)
-        {
-            throw new NotImplementedException();
-        }
-
-        //new hides parent deliberately
-        public new void Eat(Food edible)
+        //weird interface reference in the method path.
+        //oh
+        //it was to disambugate two usages.
+        //oooh.. okay.. well.. then we can conclude it's foolish to re-use the same interface 2x in the same inheritance chain
+        (Waste, Energy) Eat(Food edible)
         {
             throw new NotImplementedException();
         }
