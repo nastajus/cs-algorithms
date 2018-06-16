@@ -49,7 +49,6 @@ namespace cs_generics_food
     //class Bird : Creature<Food>
     //class Bird<Food> : Creature
 
-    //Error on interface: 'Bird' does not implement interface member 'IEdibleConsumer<Food>.Eat(Food)'. 'Bird.Eat<Food>' cannot implement an interface member because it is not public
     class Bird : Creature, IEdibleConsumer<Food>
     {
         public bool CanEat()
@@ -57,7 +56,7 @@ namespace cs_generics_food
             throw new NotImplementedException();
         }
 
-        (Waste, Energy) Eat(Food edible)
+        public (Waste, Energy) Eat(Food edible)
         {
             throw new NotImplementedException();
         }
@@ -65,28 +64,18 @@ namespace cs_generics_food
         public Food Regurgitate()
         {
             return new ChewedFood();
-            throw new NotImplementedException();
         }
 
-        //public ChewedFood Regurgitate()
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 
-    class Person : IEdibleConsumer<Food>
+    class Person : Creature, IEdibleConsumer<Food>
     {
         public bool CanEat()
         {
             throw new NotImplementedException();
         }
 
-        (Waste, Energy) IEdibleConsumer<Food>.Eat(Food edible)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Eat(Food edible)
+        public (Waste, Energy) Eat(Food edible)
         {
             throw new NotImplementedException();
         }
