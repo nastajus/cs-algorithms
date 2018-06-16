@@ -23,34 +23,59 @@ namespace cs_generics_food
     }
     */
 
-    //interface IEdible { }
-    //interface ICreature { }
+    //interface IEdibleConsumer { }
+    //interface ICreatureBehavior { }
 
-    // ask myself, when making an interface (like List<T>), think what actions I want interacting (like Add(T) and T Get(i)).
-    interface IEdible<TEdible>
+    interface IEdibleConsumer<TEdible>
     {
-        //void GetsEaten(TEdible edible);
-        //TEdible GiveTo(TPerson person);
-        //TEdible Cooked(TRawEdible);
-        //TEdible Ripens(TGrowable growable);
-        TEdible Ripens(Plant plant);
-
+        bool CanEat();
+        void Eat(TEdible edible);
+        TEdible Regurgitate();
     }
 
-    interface IGrowable
-    {
-        void Grow(Plant plant);
-    }
-
-    class Plant { }
+    //class Food : TEdible { }
     class Food { }
+    class ChewedFood : Food { }
 
-    //class GreenHouse<TEdible>
-    class GreenHouse<IGrowable>
+    class Bird : IEdibleConsumer<Food>
     {
-        void GetsSunlight()
+        public bool CanEat()
         {
+            throw new NotImplementedException();
+        }
 
+        public void Eat(Food edible)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Food Regurgitate()
+        {
+            return new ChewedFood();
+            throw new NotImplementedException();
+        }
+
+        //public ChewedFood Regurgitate()
+        //{
+        //    throw new NotImplementedException();
+        //}
+    }
+
+    class Person : IEdibleConsumer<Food>
+    {
+        public bool CanEat()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Eat(Food edible)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Food Regurgitate()
+        {
+            return null; //do nothing;
         }
     }
 
