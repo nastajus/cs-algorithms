@@ -36,9 +36,25 @@ namespace cs_generics_food
 
     class Creature
     {
+        //property
         public bool Hungry { get; protected set; } // --> yes, this
 
+        //field
+        public Stomach Stomach;
     }
+
+
+    // is it good practice to couple differing semantic values like this? eh. why not.
+    // i'm directly coupling Satiety range of 0 to 100  to Hunger Level. ok.
+    public enum HungerLevel
+    {
+        //terms true when >=
+        Starving = 0,
+        Hungry = 15,
+        Pekish = 45,
+        Full = 75,
+        Bloated = 90
+    };
 
 
     class Stomach
@@ -59,24 +75,12 @@ namespace cs_generics_food
         
         public List<Food> Contents = new List<Food>();
 
-        /*
-        // is it good practice to couple differing semantic values like this? eh. why not.
-        // i'm directly coupling Satiety range of 0 to 100  to Hunger Level. ok.
-        public enum HungerLevel
-        {
-            Starving = 0,
-            Hungry = 15,
-            Pekish = 30,
-            Full = 60,
-            Bloated = 90
-        };
-
         //hmm, which return type do i want to expose? enums or floats... both? ugh.
-        public HungerLevel CheckHungerLevel()
+        public int CheckHungerLevel(HungerLevel hungerLevel)
         {
 
+            _satiety
         }
-        */
     }
 
     /// <summary>
@@ -94,6 +98,7 @@ namespace cs_generics_food
     {
         public bool CanEat()
         {
+            if (Stomach.Satiety < (int)HungerLevel.Full) 
             //Hungry = false;   //--> test, good! 
             throw new NotImplementedException();
         }
