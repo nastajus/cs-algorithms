@@ -23,6 +23,7 @@ namespace cs_generics
     //class Delorian : IFlyable
     //class Delorian : IFlyable<>
     //class Delorian : IFlyable<People> { }
+    /*
     class Delorian : IFlyable<>
     {
         public bool CanFly()
@@ -35,5 +36,25 @@ namespace cs_generics
             throw new NotImplementedException();
         }
     }
+    */
+    
+    class Delorian : IFlyable<TPerson>
+    {
+        public bool CanFly()
+        {
+            throw new NotImplementedException();
+        }
+
+        public TPerson GetCargo()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    //Error: Cannot resolve symbol TPerson
+    //T is just a placeholder. You need to supply an actual type somewhere for T.
+    //E.g. if you have List<T>, you could make a List<int> or List<string> 
+    //Concretization
+
 
 }
