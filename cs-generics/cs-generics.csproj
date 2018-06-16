@@ -46,7 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Generics.cs" />
-    <Compile Include="GenericsFood.cs" />
+    <Compile Include="GenericsFood_Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

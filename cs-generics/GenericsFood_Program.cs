@@ -9,21 +9,10 @@ namespace cs_generics_food
     class GenericsFood_Program
     {
 
-        //syntax errors, both ',' and ')' expected. 
-        //maybe it's the tupes?
-        //static Dictionary<(typeof(Food), typeof(Creature)), int> satietyIndex
-
-        //nope
-        //static Dictionary<typeof(Food), int>
-        //that wasn't the answer neither
-
-        // do  i need generic umm something? a "generic dictionary"? 
-
-        static Dictionary<(Type,Type), int> si = new Dictionary<(Type, Type), int>();
-
+        static Dictionary<(Type, Type), int> si = new Dictionary<(Type, Type), int>();
         static Dictionary<(Food, Creature), int> satietyIndex = new Dictionary<(Food, Creature), int>();
 
-        
+
         Bird bird = new Bird();
         Cow cow = new Cow();
         Person person = new Person();
