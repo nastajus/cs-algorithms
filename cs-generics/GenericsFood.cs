@@ -26,9 +26,6 @@ namespace cs_generics_food
     /// </summary>
     class Food { }
 
-    //"Chewed Food" is no longer accurate for both Cows and Birds, but I still want a singular representative state for after a partial stay in one of the stomachs --> renaming to Partially Digested Food
-    //class ChewedFood : Food { }
-
     /// <summary>
     ///  result of some special animal stomachs, but still containing nutrients.
     /// </summary>
@@ -49,7 +46,6 @@ namespace cs_generics_food
         private const int MIN_SATIETY = 0;
         private const int MAX_SATIETY = 100;
 
-        // fullness is misleading now since there's multiple stomachs. --> replace with Satiety
         private int _satiety;
         public int Satiety
         {
