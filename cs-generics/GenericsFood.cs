@@ -11,21 +11,6 @@ namespace cs_generics_food
         //main
     }
 
-    //class Food { }
-
-    /*
-    class Food
-    {
-        //protein
-        //carb
-        //fat
-        //etc.
-    }
-    */
-
-    //interface IEdibleConsumer { }
-    //interface ICreatureBehavior { }
-
     interface IEdibleConsumer<TEdible>
     {
         //bool Hungry;
