@@ -43,7 +43,27 @@ namespace cs_generics_food
     class Waste { }
     class Energy { }
 
-    class Creature { }
+    class Creature
+    {
+        //Error on private: The accessor modifier of the accessor must be more restrictive than the property CS_generic_food.Creature.Hungry
+        //Error on set: The accessibility modifier of the 'Creature.Hungry.set' must be more restrictive than the property or indexer 'Creature.Hungry' 
+
+        //bool Hungry { get; private set; }
+
+        //private bool Hungry { get; set; }     //--> insisted on autocompleting to private... grr.
+
+
+
+        //this above error meesage sounds like it's written backwards
+        //it's saying "set" must be MORE restrictive than Hungry itself.
+        //but ... well... that got me thinking... what's the restrictiveness level of Hungry?
+        //oooh... Hungry is private AND set is private
+
+        //protected bool Hungry { get; private set; } //--> valid but undesired. decidedly don't want to "set" at Creature level.
+
+        public bool Hungry { get; protected set; } // --> yes, this
+
+    }
 
     //class Bird : Creature
     //class Bird : Creature<Food>
@@ -53,6 +73,7 @@ namespace cs_generics_food
     {
         public bool CanEat()
         {
+            //Hungry = false;   //--> test, good! accessible! :D 
             throw new NotImplementedException();
         }
 
