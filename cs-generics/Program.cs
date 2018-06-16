@@ -13,7 +13,10 @@ namespace cs_generics
         }
     }
 
-    interface IFlyable { }
-    interface IFlyable<TCargo> { }
+    interface IFlyable <TCargo>
+    {
+        bool CanFly();
+        TCargo GetCargo(); //take out.
+    }
 
 }
