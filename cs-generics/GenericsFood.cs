@@ -45,35 +45,46 @@ namespace cs_generics_food
 
     class Creature
     {
-        //Error on private: The accessor modifier of the accessor must be more restrictive than the property CS_generic_food.Creature.Hungry
-        //Error on set: The accessibility modifier of the 'Creature.Hungry.set' must be more restrictive than the property or indexer 'Creature.Hungry' 
-
-        //bool Hungry { get; private set; }
-
-        //private bool Hungry { get; set; }     //--> insisted on autocompleting to private... grr.
-
-
-
-        //this above error meesage sounds like it's written backwards
-        //it's saying "set" must be MORE restrictive than Hungry itself.
-        //but ... well... that got me thinking... what's the restrictiveness level of Hungry?
-        //oooh... Hungry is private AND set is private
-
-        //protected bool Hungry { get; private set; } //--> valid but undesired. decidedly don't want to "set" at Creature level.
-
         public bool Hungry { get; protected set; } // --> yes, this
 
     }
 
-    //class Bird : Creature
-    //class Bird : Creature<Food>
-    //class Bird<Food> : Creature
+
+    class Stomach
+    {
+        private const int MIN_FULLNESS = 0;
+        private const int MAX_FULLNESS = 100;
+
+        private int _fullness;
+        public int Fullness
+        {
+            get => _fullness;
+            set
+            {
+                if (_fullness + value > 100) _fullness = MAX_FULLNESS;
+                if (_fullness - value < 0) _fullness = MIN_FULLNESS;
+            }
+        }
+        
+        public List<Food> Contents = new List<Food>();
+    }
+
+    /// <summary>
+    /// specialized stomach for Birds which use muscles and rocks to break down food more
+    /// </summary>
+    class Gizzard : Stomach { }
+
+    /// <summary>
+    /// specialized stomach for Cows which store food for later chewing, before final digestion in "normal" stomach.
+    /// </summary>
+    class Rumin : Stomach { }
+
 
     class Bird : Creature, IEdibleConsumer<Food>
     {
         public bool CanEat()
         {
-            //Hungry = false;   //--> test, good! accessible! :D 
+            //Hungry = false;   //--> test, good! 
             throw new NotImplementedException();
         }
 
@@ -87,6 +98,24 @@ namespace cs_generics_food
             return new ChewedFood();
         }
 
+    }
+
+    class Cow : Creature, IEdibleConsumer<Food>
+    {
+        public bool CanEat()
+        {
+            throw new NotImplementedException();
+        }
+
+        public (Waste, Energy) Eat(Food edible)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Food Regurgitate()
+        {
+            throw new NotImplementedException();
+        }
     }
 
     class Person : Creature, IEdibleConsumer<Food>
@@ -107,12 +136,5 @@ namespace cs_generics_food
         }
     }
 
-    /*
-    class Edible { }
-    class Person { }
-    class Animal { }
-    */
-
-    //class Person : ICreature<>
 
 }
