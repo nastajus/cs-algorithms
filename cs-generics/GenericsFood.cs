@@ -58,6 +58,25 @@ namespace cs_generics_food
         }
         
         public List<Food> Contents = new List<Food>();
+
+        /*
+        // is it good practice to couple differing semantic values like this? eh. why not.
+        // i'm directly coupling Satiety range of 0 to 100  to Hunger Level. ok.
+        public enum HungerLevel
+        {
+            Starving = 0,
+            Hungry = 15,
+            Pekish = 30,
+            Full = 60,
+            Bloated = 90
+        };
+
+        //hmm, which return type do i want to expose? enums or floats... both? ugh.
+        public HungerLevel CheckHungerLevel()
+        {
+
+        }
+        */
     }
 
     /// <summary>
