@@ -28,6 +28,9 @@ namespace cs_generics_food
 
     interface IEdibleConsumer<TEdible>
     {
+        //bool Hungry;
+        //bool Hungry { get; private set; } --> decidedly don't want "Hungry" in interface then.
+
         bool CanEat();
         (Waste, Energy) Eat(TEdible edible);
         TEdible Regurgitate();
