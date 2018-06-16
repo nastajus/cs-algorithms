@@ -43,7 +43,25 @@ namespace cs_generics_food
     class Waste { }
     class Energy { }
 
-    class Bird : IEdibleConsumer<Food>
+    class Creature : IEdibleConsumer<Food>
+    {
+        public bool CanEat()
+        {
+            throw new NotImplementedException();
+        }
+
+        public (Waste, Energy) Eat(Food edible)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Food Regurgitate()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    class Bird : Creature
     {
         public bool CanEat()
         {
