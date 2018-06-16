@@ -75,12 +75,6 @@ namespace cs_generics_food
         
         public List<Food> Contents = new List<Food>();
 
-        //hmm, which return type do i want to expose? enums or floats... both? ugh.
-        public int CheckHungerLevel(HungerLevel hungerLevel)
-        {
-
-            _satiety
-        }
     }
 
     /// <summary>
@@ -98,15 +92,7 @@ namespace cs_generics_food
     {
         public bool CanEat()
         {
-            if (Stomach.Satiety < (int) HungerLevel.Full)
-            {
-                Hungry = true;
-            }
-            else
-            {
-                Hungry = false; 
-            }
-\            throw new NotImplementedException();
+            return Hungry = Stomach.Satiety < (int) HungerLevel.Full;
         }
 
         public (Waste, Energy) Eat(Food edible)
