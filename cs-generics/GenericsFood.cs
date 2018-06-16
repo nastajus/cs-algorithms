@@ -21,9 +21,18 @@ namespace cs_generics_food
         TEdible Regurgitate();
     }
 
-    //class Food : TEdible { }
+    /// <summary>
+    /// for the purposes of this exercise, "Food" will be considered "needs complete digestion still", and can reside in Rumin and Gizzard stomachs unmodified. 
+    /// </summary>
     class Food { }
-    class ChewedFood : Food { }
+
+    //"Chewed Food" is no longer accurate for both Cows and Birds, but I still want a singular representative state for after a partial stay in one of the stomachs --> renaming to Partially Digested Food
+    //class ChewedFood : Food { }
+
+    /// <summary>
+    ///  result of some special animal stomachs, but still containing nutrients.
+    /// </summary>
+    class PartiallyDigestedFood : Food { }
 
     class Waste { }
     class Energy { }
@@ -37,17 +46,18 @@ namespace cs_generics_food
 
     class Stomach
     {
-        private const int MIN_FULLNESS = 0;
-        private const int MAX_FULLNESS = 100;
+        private const int MIN_SATIETY = 0;
+        private const int MAX_SATIETY = 100;
 
-        private int _fullness;
-        public int Fullness
+        // fullness is misleading now since there's multiple stomachs. --> replace with Satiety
+        private int _satiety;
+        public int Satiety
         {
-            get => _fullness;
+            get => _satiety;
             set
             {
-                if (_fullness + value > 100) _fullness = MAX_FULLNESS;
-                if (_fullness - value < 0) _fullness = MIN_FULLNESS;
+                if (_satiety + value > 100) _satiety = MAX_SATIETY;
+                if (_satiety - value < 0) _satiety = MIN_SATIETY;
             }
         }
         
@@ -80,7 +90,7 @@ namespace cs_generics_food
 
         public Food Regurgitate()
         {
-            return new ChewedFood();
+            return new PartiallyDigestedFood();
         }
 
     }
