@@ -98,9 +98,15 @@ namespace cs_generics_food
     {
         public bool CanEat()
         {
-            if (Stomach.Satiety < (int)HungerLevel.Full) 
-            //Hungry = false;   //--> test, good! 
-            throw new NotImplementedException();
+            if (Stomach.Satiety < (int) HungerLevel.Full)
+            {
+                Hungry = true;
+            }
+            else
+            {
+                Hungry = false; 
+            }
+\            throw new NotImplementedException();
         }
 
         public (Waste, Energy) Eat(Food edible)
