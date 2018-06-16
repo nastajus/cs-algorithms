@@ -51,10 +51,9 @@ namespace cs_generics
         }
     }
 
-    //Error: Cannot resolve symbol TPerson
-    //T is just a placeholder. You need to supply an actual type somewhere for T.
-    //E.g. if you have List<T>, you could make a List<int> or List<string> 
-    //Concretization
+    class TPerson
+    {
 
+    }
 
 }
