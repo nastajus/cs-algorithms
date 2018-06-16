@@ -16,27 +16,8 @@ namespace cs_generics
     interface IFlyable <TCargo>
     {
         bool CanFly();
-        TCargo GetCargo(); //take out.
+        TCargo DropCargo();
     }
-
-    //class Delorian
-    //class Delorian : IFlyable
-    //class Delorian : IFlyable<>
-    //class Delorian : IFlyable<People> { }
-    /*
-    class Delorian : IFlyable<>
-    {
-        public bool CanFly()
-        {
-            throw new NotImplementedException();
-        }
-
-        public TCargo GetCargo()
-        {
-            throw new NotImplementedException();
-        }
-    }
-    */
     
     class Delorian : IFlyable<TPerson>
     {
@@ -45,15 +26,26 @@ namespace cs_generics
             throw new NotImplementedException();
         }
 
-        public TPerson GetCargo()
+        public TPerson DropCargo()
         {
             throw new NotImplementedException();
         }
     }
 
-    class TPerson
+    class Bird : IFlyable<TPoop>
     {
+        public bool CanFly()
+        {
+            throw new NotImplementedException();
+        }
 
+        public TPoop DropCargo()
+        {
+            throw new NotImplementedException();
+        }
     }
+
+    class TPerson { }
+    class TPoop { }
 
 }
