@@ -26,15 +26,32 @@ namespace cs_generics
     //interface IEdible { }
     //interface ICreature { }
 
+    // ask myself, when making an interface (like List<T>), think what actions I want interacting (like Add(T) and T Get(i)).
     interface IEdible<TEdible>
     {
+        //void GetsEaten(TEdible edible);
+        //TEdible GiveTo(TPerson person);
+        //TEdible Cooked(TRawEdible);
+        //TEdible Ripens(TGrowable growable);
+        TEdible Ripens(Plant plant);
 
     }
 
-    interface ICreature<TEdible>
+    interface IGrowable
     {
-        void Eats(TEdible edible);      //probably or possibly a bad usage of TEdible??
-                                        //decidedly. doesn't follow principles in {cs_generics} 
+        void Grow(Plant plant);
+    }
+
+    class Plant { }
+    class Food { }
+
+    //class GreenHouse<TEdible>
+    class GreenHouse<IGrowable>
+    {
+        void GetsSunlight()
+        {
+
+        }
     }
 
     /*
