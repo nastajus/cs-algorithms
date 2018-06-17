@@ -7,31 +7,29 @@ using System.Threading.Tasks;
 namespace cs_generics_food
 {
 
+    static class uiop
+    {
+        public static void AddF<TKey1, TKey2>(this Dictionary<(TKey1, TKey2), int> dictionary, TKey1 key1, TKey2 key2, int value)
+        {
+            dictionary.Add((key1, key2), value);
+        }
+
+        //example
+        public static void AddFormat<TKey>(this Dictionary<TKey, string> dictionary,
+            TKey key,
+            string formatString,
+            params object[] argList)
+        {
+            dictionary.Add(key, string.Format(formatString, argList));
+        }
+
+    }
+
     class GenericsFood_Program
     {
 
-        public static Dictionary<T, U> CreateDict<T, U>() //where T : Food where U : Creature
-        {
-            Dictionary<T, U> dict = new Dictionary<T, U>();
-
-            // Fill dictionary with data     
-
-
-            return dict;
-        }
-
-
-        static Dictionary<(Type, Type), int> si = new Dictionary<(Type, Type), int>();
-        //static Dictionary<(Type T, Type U), int> si2 = new Dictionary<(Type, Type), int>();
-        //static Dictionary<(Type T, Type U), int> si3 = new Dictionary<(Type T, Type U), int>();
-        //static Dictionary<(Type Food, Type Creature), int> si4 = new Dictionary<(Type T, Type U), int>();
-
-
-        static Dictionary<(Food, Creature), int> satietyIndex = new Dictionary<(Food, Creature), int>();
-
-        static Dictionary<(IFoodProfile, Creature), int> asdf = new Dictionary<(IFoodProfile, Creature), int>();
-
-        static Dictionary<(IFoodProfile, IC), int> qwer = new Dictionary<(IFoodProfile, IC), int>();
+        static Dictionary<(Type, Type), int> satietyIndex = new Dictionary<(Type, Type), int>();
+        //static Dictionary<(Food, Creature), int> satietyIndex = new Dictionary<(Food, Creature), int>();
 
 
         Bird bird = new Bird();
@@ -54,7 +52,7 @@ namespace cs_generics_food
             //i'd rather store the TYPE and not INSTANCES OF TYPES.
             //satietyIndex.Add((typeof(Person), typeof(Person)), 10);
 
-            si.Add((typeof(Food), typeof(Creature)), 10);
+            satietyIndex.Add((typeof(Food), typeof(Creature)), 10);
             si.Add((typeof(Apple), typeof(Person)), 10);
             si.Add((typeof(Person), typeof(Person)), 10);
 
@@ -68,7 +66,11 @@ namespace cs_generics_food
             var myDict3 = CreateDict<int, Food>();
             //myDict3.Add(1, typeof(Food));
 
+            uiop.AddF((Food, Person), 1);
+
         }
+
+
 
 
 
