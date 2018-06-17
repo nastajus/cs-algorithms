@@ -30,6 +30,8 @@ namespace cs_generics_food
 
         // how to enforce type checking on a dictionary c#
 
+        // enforce polymorphic dictionary of types
+
         Bird bird = new Bird();
         Cow cow = new Cow();
         Person person = new Person();
@@ -83,10 +85,19 @@ namespace cs_generics_food
         }
 
 
-        //enumberable troth of endless food will occur here, feeding each a person, bird, and cow, all at different CanEat formulas. bird will have additional penalty of feeding babies intermittetly.
+        //public void DoSomething<T>(IDictionary<T, int> dictionary) where T : B
+        public void DoSomething<T, U>(IDictionary<(T, U), int> dictionary) where T : Food where U : Creature
+        {
+            //dictionary.Add((T,U), 10);
+            // IDictionary<(T,U), int> dictionaryd;
+        }
 
-        //TODO : Later I'll transform Bird into an abstraction which has two derived classes: ParentBird and BabyBird, and BabyBird will super needy with it's hunger but require low energy food so it lasts a longtime... umm shoot... umm somehow... hmm...
-    }
+
+
+    //enumberable troth of endless food will occur here, feeding each a person, bird, and cow, all at different CanEat formulas. bird will have additional penalty of feeding babies intermittetly.
+
+    //TODO : Later I'll transform Bird into an abstraction which has two derived classes: ParentBird and BabyBird, and BabyBird will super needy with it's hunger but require low energy food so it lasts a longtime... umm shoot... umm somehow... hmm...
+}
 
     interface IEdibleConsumer<TEdible>
     {
