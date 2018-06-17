@@ -7,19 +7,31 @@ using System.Threading.Tasks;
 namespace cs_generics_food
 {
 
-
     class GenericsFood_Program
     {
 
-        //which is the worse poison / better choice?
-        //do I keep the (Type, Type) and lose any kind of compiletime checking ... ?
-        //do I instantiate instances which I deem icky and unnecessary... 
-        // the choice is obvious, actually.
+        public static Dictionary<T, U> CreateDict<T, U>() //where T : Food where U : Creature
+        {
+            Dictionary<T, U> dict = new Dictionary<T, U>();
+
+            // Fill dictionary with data     
+
+
+            return dict;
+        }
+
 
         static Dictionary<(Type, Type), int> si = new Dictionary<(Type, Type), int>();
+        //static Dictionary<(Type T, Type U), int> si2 = new Dictionary<(Type, Type), int>();
+        //static Dictionary<(Type T, Type U), int> si3 = new Dictionary<(Type T, Type U), int>();
+        //static Dictionary<(Type Food, Type Creature), int> si4 = new Dictionary<(Type T, Type U), int>();
+
+
         static Dictionary<(Food, Creature), int> satietyIndex = new Dictionary<(Food, Creature), int>();
 
         static Dictionary<(IFoodProfile, Creature), int> asdf = new Dictionary<(IFoodProfile, Creature), int>();
+
+        static Dictionary<(IFoodProfile, IC), int> qwer = new Dictionary<(IFoodProfile, IC), int>();
 
 
         Bird bird = new Bird();
@@ -46,11 +58,25 @@ namespace cs_generics_food
             si.Add((typeof(Apple), typeof(Person)), 10);
             si.Add((typeof(Person), typeof(Person)), 10);
 
+            qwer.Add((typeof(Protein), typeof(Carbohydrate)), 10);
+            qwer.Add((typeof(Food), typeof(Creature)), 10);
+            qwer.Add( (Food, Creature), 10);
 
-    //enumberable troth of endless food will occur here, feeding each a person, bird, and cow, all at different CanEat formulas. bird will have additional penalty of feeding babies intermittetly.
+            //The user then can call this function:
+            var myDict1 = CreateDict<string, int>();
+            var myDict2 = CreateDict<string, MyOwnType>();
+            var myDict3 = CreateDict<int, Food>();
+            //myDict3.Add(1, typeof(Food));
 
-    //TODO : Later I'll transform Bird into an abstraction which has two derived classes: ParentBird and BabyBird, and BabyBird will super needy with it's hunger but require low energy food so it lasts a longtime... umm shoot... umm somehow... hmm...
-}
+        }
+
+
+
+
+        //enumberable troth of endless food will occur here, feeding each a person, bird, and cow, all at different CanEat formulas. bird will have additional penalty of feeding babies intermittetly.
+
+        //TODO : Later I'll transform Bird into an abstraction which has two derived classes: ParentBird and BabyBird, and BabyBird will super needy with it's hunger but require low energy food so it lasts a longtime... umm shoot... umm somehow... hmm...
+    }
 
     interface IEdibleConsumer<TEdible>
     {
@@ -117,7 +143,9 @@ namespace cs_generics_food
     class Waste { }
     class Energy { }
 
-    class Creature 
+    interface IC { }
+
+    class Creature : IC
     {
         //property
         public bool Hungry { get; protected set; } // --> yes, this
