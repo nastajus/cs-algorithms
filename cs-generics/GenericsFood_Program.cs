@@ -9,7 +9,16 @@ namespace cs_generics_food
 
     class GenericsFood_Program
     {
+        /// <summary>
+        ///     usage: Food, Creature
+        /// </summary>
         static Dictionary<(Type, Type), int> satietyIndex = new Dictionary<(Type, Type), int>();
+
+        /// <summary>
+        ///     usage: Nutrient, Person, float, enum units
+        /// </summary>
+        //static Dictionary<(Type, Type), (float, UnitsNutrient)> nutrientDRI = new Dictionary<(Type, Type), (float, UnitsNutrient)>();
+
 
         Bird bird = new Bird();
         Cow cow = new Cow();
@@ -17,17 +26,22 @@ namespace cs_generics_food
 
         static void Main(string[] args)
         {
-            InitializeSatietyIndex();
+            InitSatietyIndex();
+            //InitNutrientUnits();
         }
 
-        private static void InitializeSatietyIndex()
+        //private static void InitNutrientUnits()
+        //{
+        //    nutrientDRI
+        //}
+
+        private static void InitSatietyIndex()
         {
-
-            satietyIndex.Add((typeof(Person), typeof(Person)), 10);
-            satietyIndex.Add((typeof(Apple), typeof(Person)), 30);
-            satietyIndex.Add((typeof(Person), typeof(Apple)), 40);
-
-
+            //no type safety enforced... sad.
+            satietyIndex.Add((typeof(Apple), typeof(Person)), 10);
+            satietyIndex.Add((typeof(Apple), typeof(Cow)), 1);
+            satietyIndex.Add((typeof(Apple), typeof(Bird)), 1000);
+            
             var enumerator = satietyIndex.GetEnumerator();
             while (enumerator.MoveNext())
             {
@@ -111,9 +125,7 @@ namespace cs_generics_food
     class Waste { }
     class Energy { }
 
-    interface IC { }
-
-    class Creature : IC
+    class Creature
     {
         //property
         public bool Hungry { get; protected set; } // --> yes, this
@@ -253,5 +265,13 @@ namespace cs_generics_food
         }
     }
 
+
+    public enum UnitsNutrient
+    {
+        Microgram = 1,
+        Milligram = 1000,
+        Gram = 1000000
+
+    }
 
 }
