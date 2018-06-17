@@ -7,30 +7,26 @@ using System.Threading.Tasks;
 namespace cs_generics_food
 {
 
-    static class uiop
-    {
-        public static void AddF<TKey1, TKey2>(this Dictionary<(TKey1, TKey2), int> dictionary, TKey1 key1, TKey2 key2, int value)
-        {
-            dictionary.Add((key1, key2), value);
-        }
-
-        //example
-        public static void AddFormat<TKey>(this Dictionary<TKey, string> dictionary,
-            TKey key,
-            string formatString,
-            params object[] argList)
-        {
-            dictionary.Add(key, string.Format(formatString, argList));
-        }
-
-    }
-
     class GenericsFood_Program
     {
 
-        static Dictionary<(Type, Type), int> satietyIndex = new Dictionary<(Type, Type), int>();
-        //static Dictionary<(Food, Creature), int> satietyIndex = new Dictionary<(Food, Creature), int>();
+        //option 1:
+        //Type - Add(typeof(
+        //assume more valuable experience to learn with, even without type safety
+        //assume more likely to convert with assistance
 
+        static Dictionary<(Type, Type), int> satietyIndex = new Dictionary<(Type, Type), int>();
+
+        //option 2
+        //Type - Add(instance):
+        //damn it well..
+        //i still feel it's icky to use instances but ... meh.
+        //oh wait, lookups with keys will NEVER MATCH! ha!
+
+        static Dictionary<(Food, Creature), int> satietyIndex = new Dictionary<(Food, Creature), int>();
+
+        //option 3
+        //store strings and use a custom Add extension method to enforce .. type inheritence? ugh.
 
         Bird bird = new Bird();
         Cow cow = new Cow();
