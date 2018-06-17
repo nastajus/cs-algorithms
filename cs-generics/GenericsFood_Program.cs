@@ -13,20 +13,8 @@ namespace cs_generics_food
 
         static Dictionary<(Type, Type), int> si = new Dictionary<(Type, Type), int>();
         static Dictionary<(Food, Creature), int> satietyIndex = new Dictionary<(Food, Creature), int>();
-        static Dictionary<Tuple<Food, Creature>, int> asdf = new Dictionary<Tuple<Food, Creature>, int>();
 
-        //public class SatietyDictionary<T> : <(Food, Creature), int> {}
-        //public Dictionary<Tuple<T,U>, int> qwer = new ....... nope.
-
-
-        //my issue is i want type enforcement. 
-        // so let's put it to words.
-        // what precise goal may i have? 
-        // well firstly i am uncertain what that "type enforcement" might entail.
-        // well, i'd like compile-time checking that I'm adding "the right type", that is, only child types would be allowed.
-        // i began searching for "generic dictionaries" on a whim of an internet-inspired search result, but perhaps that isn't the right label for this stated goal.
-        //i think i need to practice a little with basic polymorphism before i worry about this.
-
+        //dictionary of type t c#
 
         Bird bird = new Bird();
         Cow cow = new Cow();
@@ -46,8 +34,13 @@ namespace cs_generics_food
             //satietyIndex.Add((Apple, Person), 10);
             //satietyIndex.Add((new Apple(), new Person()), 10);
             //i'd rather store the TYPE and not INSTANCES OF TYPES.
+            //satietyIndex.Add((typeof(Person), typeof(Person)), 10);
+
+
             si.Add((typeof(Food), typeof(Creature)), 10);
             si.Add((typeof(Apple), typeof(Person)), 10);
+            si.Add((typeof(Person), typeof(Person)), 10);
+
 
         }
 
@@ -68,6 +61,21 @@ namespace cs_generics_food
         Energy Digest(TEdible edible);
     }
 
+    interface INutrientIntaker<TNutrient>
+    {
+        /// <summary>
+        /// return Daily Value Intake percentage for a given nutrient
+        ///         ??? relative to a person's stats ???
+        /// </summary>
+        float GetDVI(TNutrient nutrient);
+    }
+
+
+    
+    class Protein { } 
+    class Carbohydrate { }
+    class Fat { }
+
     /// <summary>
     /// for the purposes of this exercise, "Food" will be considered "needs complete digestion still", and can reside in Rumin and Gizzard stomachs unmodified. 
     /// </summary>
@@ -85,13 +93,14 @@ namespace cs_generics_food
     class Waste { }
     class Energy { }
 
-    class Creature
+    class Creature 
     {
         //property
         public bool Hungry { get; protected set; } // --> yes, this
 
         //field
         public Stomach Stomach;
+
     }
 
 
@@ -193,7 +202,7 @@ namespace cs_generics_food
     }
 
 
-    class Person : Creature, IEdibleConsumer<Food>
+    class Person : Creature, IEdibleConsumer<Food>, INutrientIntaker<Food>
     {
         /// <summary>
         /// A person I'm declaring as having a deep capacity to wait a long time for food.
@@ -211,6 +220,16 @@ namespace cs_generics_food
         public Food Regurgitate()
         {
             return null; //do nothing;
+        }
+
+        public Energy Digest(Food edible)
+        {
+            throw new NotImplementedException();
+        }
+
+        public float GetDVI(Food nutrient)
+        {
+            throw new NotImplementedException();
         }
     }
 
