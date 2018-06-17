@@ -10,8 +10,6 @@ namespace cs_generics_food
     class GenericsFood_Program
     {
         static Dictionary<(Type, Type), int> satietyIndex = new Dictionary<(Type, Type), int>();
-        static Dictionary<int, int> asdf = new Dictionary<int, int>();
-            //
 
         Bird bird = new Bird();
         Cow cow = new Cow();
@@ -24,17 +22,18 @@ namespace cs_generics_food
 
         private static void InitializeSatietyIndex()
         {
-            asdf.Add(1,1);
-            asdf.Add(2,2);
+            Dictionary<int, int> asdf = new Dictionary<int, int>();
+            //var res = asdf[3]; //hmm same exception.
+            int val;
+            var res = asdf.TryGetValue(1, out val);
 
             satietyIndex.Add((typeof(Person), typeof(Person)), 10);
-            satietyIndex.Add((typeof(Person), typeof(Person)), 20); //Unhandled Exception:  System.ArgumentException: 'An item with the same key has already been added.'
             satietyIndex.Add((typeof(Apple), typeof(Person)), 30);
-            satietyIndex.Add((typeof(Person), typeof(Apple)), 40);
+            //satietyIndex.Add((typeof(Person), typeof(Apple)), 40);
             var result = satietyIndex[(typeof(Person), typeof(Person))];
-            result = satietyIndex[(typeof(Apple), typeof(Person))];
-            result = satietyIndex[(typeof(Person), typeof(Apple))];
-            result = satietyIndex[(typeof(Apple), typeof(Apple))];
+            var result2 = satietyIndex[(typeof(Apple), typeof(Person))];
+            var result3 = satietyIndex[(typeof(Person), typeof(Apple))]; //Exception Unhandled: System.Collections.Generic.KeyNotFoundException: 'The given key was not present in the dictionary.'
+            var result4 = satietyIndex[(typeof(Apple), typeof(Apple))];
             Console.WriteLine(result);
 
             
