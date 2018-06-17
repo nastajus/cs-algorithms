@@ -6,16 +6,23 @@ using System.Threading.Tasks;
 
 namespace cs_generics_food
 {
+
+
     class GenericsFood_Program
     {
 
         static Dictionary<(Type, Type), int> si = new Dictionary<(Type, Type), int>();
         static Dictionary<(Food, Creature), int> satietyIndex = new Dictionary<(Food, Creature), int>();
+        static Dictionary<Tuple<Food, Creature>, int> asdf = new Dictionary<Tuple<Food, Creature>, int>();
+
+        //public class SatietyDictionary<T> : <(Food, Creature), int> {}
+        //public Dictionary<Tuple<T,U>, int> qwer = new ....... nope.
 
 
         Bird bird = new Bird();
         Cow cow = new Cow();
         Person person = new Person();
+
 
 
         //main method 
