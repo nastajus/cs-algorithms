@@ -18,36 +18,89 @@ namespace cs_polymorphsim
 
 
             Riviera.Examine(Homer);
+            Moe.ServeAnyBeerTo(Homer);
+            //Moe.ServeAnyBeerTo(Barney);
         }
 
-        abstract class Person
+        interface IPatientBehaviors
         {
-            public abstract bool? Breath();
-            public abstract Phlegm Cough();
-            public abstract bool Peer();
+            bool? Breath();
+            Phlegm Cough();
+            bool Peer();
+        }
 
-            public abstract bool AcceptBeer(Beer beer);
+        interface IAlcoholicBehaviors
+        {
+            bool AcceptBeer(Beer beer);
+        
+        }
 
+        abstract class Person : IPatientBehaviors, IAlcoholicBehaviors
+        {
+            private List<object> acceptedThings = new List<object>();
+
+            public bool? Breath()
+            {
+                throw new NotImplementedException();
+            }
+
+            public Phlegm Cough()
+            {
+                throw new NotImplementedException();
+            }
+
+            public bool Peer()
+            {
+                throw new NotImplementedException();
+            }
+
+            public bool AcceptBeer(Beer beer)
+            {
+                throw new NotImplementedException();
+            }
+
+            public bool Accept(object obj)
+            {
+                if (obj == null) return false;
+                acceptedThings.Add(obj);
+                return true;
+            }
         }
 
         class Bartender : Person
         {
-            public Beer ServeBeerTo(Person person)
+            private List<Beer> beerInventory = new List<Beer>
             {
+                new Beer {Vintage = "Heineken"},
+                new Beer {Vintage = "Steam Whistle"},
+                new Beer {Vintage = "Sapporo"},
+                new Beer {Vintage = "Crabby's"}
+            };
 
+            public Beer ServeBeerTo(Beer beer, Person person)
+            {
+                person.Accept(beer);
+                return beer;
             }
 
-            public override bool? Breath()
+            public Beer ServeAnyBeerTo(Person person)
+            {
+                Beer beer = beerInventory.Last();
+                person.Accept(beer);
+                return beer;
+            }
+
+            public bool? Breath()
             {
                 throw new NotImplementedException();
             }
 
-            public override Phlegm Cough()
+            public Phlegm Cough()
             {
                 throw new NotImplementedException();
             }
 
-            public override bool Peer()
+            public bool Peer()
             {
                 throw new NotImplementedException();
             }
@@ -59,17 +112,17 @@ namespace cs_polymorphsim
 
         class Sicky : Person {
 
-            public override bool? Breath()
+            public bool? Breath()
             {
                 return false;
             }
 
-            public override Phlegm Cough()
+            public Phlegm Cough()
             {
                 return new Phlegm { Description = "Yucky and Green" };
             }
 
-            public override bool Peer()
+            public bool Peer()
             {
                 return false;
             }
@@ -77,36 +130,46 @@ namespace cs_polymorphsim
 
         class Drunkard : Person
         {
-            public override bool? Breath()
+            public bool? Breath()
             {
                 return true;
             }
 
-            public override Phlegm Cough()
+            public Phlegm Cough()
             {
                 throw new NotImplementedException();
             }
 
-            public override bool Peer()
+            public bool Peer()
             {
                 throw new NotImplementedException();
+            }
+
+            public new bool AcceptBeer(Beer beer)
+            {
+                return Drink(beer);
+            }
+
+            bool Drink(Beer beer)
+            {
+                return beer != null;
             }
         }
 
 
         class Baby : Person
         {
-            public override bool? Breath()
+            public bool? Breath()
             {
                 return null;
             }
 
-            public override Phlegm Cough()
+            public Phlegm Cough()
             {
                 throw new NotImplementedException();
             }
 
-            public override bool Peer()
+            public bool Peer()
             {
                 return true;
             }
@@ -114,17 +177,17 @@ namespace cs_polymorphsim
 
         class Patient : Person
         {
-            public override bool? Breath()
+            public bool? Breath()
             {
                 throw new NotImplementedException();
             }
 
-            public override Phlegm Cough()
+            public Phlegm Cough()
             {
                 throw new NotImplementedException();
             }
 
-            public override bool Peer()
+            public bool Peer()
             {
                 return true;
             }
@@ -142,17 +205,17 @@ namespace cs_polymorphsim
                 person.Peer();
             }
             
-            public override bool? Breath()
+            public bool? Breath()
             {
                 throw new NotImplementedException();
             }
 
-            public override Phlegm Cough()
+            public Phlegm Cough()
             {
                 throw new NotImplementedException();
             }
 
-            public override bool Peer()
+            public bool Peer()
             {
                 throw new NotImplementedException();
             }
