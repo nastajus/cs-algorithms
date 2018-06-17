@@ -19,6 +19,15 @@ namespace cs_generics_food
         //public Dictionary<Tuple<T,U>, int> qwer = new ....... nope.
 
 
+        //my issue is i want type enforcement. 
+        // so let's put it to words.
+        // what precise goal may i have? 
+        // well firstly i am uncertain what that "type enforcement" might entail.
+        // well, i'd like compile-time checking that I'm adding "the right type", that is, only child types would be allowed.
+        // i began searching for "generic dictionaries" on a whim of an internet-inspired search result, but perhaps that isn't the right label for this stated goal.
+        //i think i need to practice a little with basic polymorphism before i worry about this.
+
+
         Bird bird = new Bird();
         Cow cow = new Cow();
         Person person = new Person();
