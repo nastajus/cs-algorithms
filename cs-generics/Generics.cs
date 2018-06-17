@@ -6,12 +6,6 @@ using System.Threading.Tasks;
 
 namespace cs_generics
 {
-    class Generics
-    {
-        static void Main(string[] args)
-        {
-        }
-    }
 
     interface IFlyable <TCargo>
     {

@@ -9,67 +9,36 @@ namespace cs_generics_food
 
     class GenericsFood_Program
     {
-
-        //option 1:
-        //Type - Add(typeof(
-        //assume more valuable experience to learn with, even without type safety
-        //assume more likely to convert with assistance
-
         static Dictionary<(Type, Type), int> satietyIndex = new Dictionary<(Type, Type), int>();
-
-        //option 2
-        //Type - Add(instance):
-        //damn it well..
-        //i still feel it's icky to use instances but ... meh.
-        //oh wait, lookups with keys will NEVER MATCH! ha!
-
-        static Dictionary<(Food, Creature), int> satietyIndex = new Dictionary<(Food, Creature), int>();
-
-        //option 3
-        //store strings and use a custom Add extension method to enforce .. type inheritence? ugh.
+        static Dictionary<int, int> asdf = new Dictionary<int, int>();
+            //
 
         Bird bird = new Bird();
         Cow cow = new Cow();
         Person person = new Person();
 
-
-
-        //main method 
-
-        public static void main(String[] args)
+        static void Main(string[] args)
         {
             InitializeSatietyIndex();
         }
 
         private static void InitializeSatietyIndex()
         {
-            //satietyIndex.Add((Apple, Person), 10);
-            //satietyIndex.Add((new Apple(), new Person()), 10);
-            //i'd rather store the TYPE and not INSTANCES OF TYPES.
-            //satietyIndex.Add((typeof(Person), typeof(Person)), 10);
+            asdf.Add(1,1);
+            asdf.Add(2,2);
 
-            satietyIndex.Add((typeof(Food), typeof(Creature)), 10);
-            si.Add((typeof(Apple), typeof(Person)), 10);
-            si.Add((typeof(Person), typeof(Person)), 10);
+            satietyIndex.Add((typeof(Person), typeof(Person)), 10);
+            satietyIndex.Add((typeof(Person), typeof(Person)), 20); //Unhandled Exception:  System.ArgumentException: 'An item with the same key has already been added.'
+            satietyIndex.Add((typeof(Apple), typeof(Person)), 30);
+            satietyIndex.Add((typeof(Person), typeof(Apple)), 40);
+            var result = satietyIndex[(typeof(Person), typeof(Person))];
+            result = satietyIndex[(typeof(Apple), typeof(Person))];
+            result = satietyIndex[(typeof(Person), typeof(Apple))];
+            result = satietyIndex[(typeof(Apple), typeof(Apple))];
+            Console.WriteLine(result);
 
-            qwer.Add((typeof(Protein), typeof(Carbohydrate)), 10);
-            qwer.Add((typeof(Food), typeof(Creature)), 10);
-            qwer.Add( (Food, Creature), 10);
-
-            //The user then can call this function:
-            var myDict1 = CreateDict<string, int>();
-            var myDict2 = CreateDict<string, MyOwnType>();
-            var myDict3 = CreateDict<int, Food>();
-            //myDict3.Add(1, typeof(Food));
-
-            uiop.AddF((Food, Person), 1);
-
+            
         }
-
-
-
-
-
 
         //enumberable troth of endless food will occur here, feeding each a person, bird, and cow, all at different CanEat formulas. bird will have additional penalty of feeding babies intermittetly.
 
