@@ -14,6 +14,11 @@ namespace cs_generics_food
         static Dictionary<(Type, Type), int> si = new Dictionary<(Type, Type), int>();
         static Dictionary<(Food, Creature), int> satietyIndex = new Dictionary<(Food, Creature), int>();
 
+        static Dictionary<(IFoodProfile, Creature), int> asdf = new Dictionary<(IFoodProfile, Creature), int>();
+
+        static Dictionary<IFoodProfile, int> qwer = new Dictionary< IFoodProfile , int>();
+
+
         //dictionary of type t c#
 
         Bird bird = new Bird();
@@ -36,11 +41,13 @@ namespace cs_generics_food
             //i'd rather store the TYPE and not INSTANCES OF TYPES.
             //satietyIndex.Add((typeof(Person), typeof(Person)), 10);
 
-
             si.Add((typeof(Food), typeof(Creature)), 10);
             si.Add((typeof(Apple), typeof(Person)), 10);
             si.Add((typeof(Person), typeof(Person)), 10);
 
+            asdf.Add((typeof(Apple), typeof(Person)), 10);
+            qwer.Add(typeof(Apple), 10);
+            qwer.Add(Apple, 10);
 
         }
 
@@ -70,7 +77,23 @@ namespace cs_generics_food
         float GetDVI(TNutrient nutrient);
     }
 
+    interface IFoodProfile
+    {
+        FoodProfile GetFoodProfile(Creature creature);
+    }
 
+    class FoodProfile : IFoodProfile
+    {
+        public Protein Protein { get; protected set; }
+        public Carbohydrate Carbohydrate { get; protected set; }
+        public Fat Fat { get; protected set; }
+
+        public FoodProfile GetFoodProfile(Creature creature)
+        {
+            //umm calculate for a given person's mass, height, ethnicity, estimated BMR... ugh
+            throw new NotImplementedException();
+        }
+    }
     
     class Protein { } 
     class Carbohydrate { }
@@ -79,7 +102,13 @@ namespace cs_generics_food
     /// <summary>
     /// for the purposes of this exercise, "Food" will be considered "needs complete digestion still", and can reside in Rumin and Gizzard stomachs unmodified. 
     /// </summary>
-    class Food { }
+    class Food : IFoodProfile {
+
+        public FoodProfile GetFoodProfile(Creature creature)
+        {
+            throw new NotImplementedException();
+        }
+    }
 
     /// <summary>
     ///  result of some special animal stomachs, but still containing nutrients.
