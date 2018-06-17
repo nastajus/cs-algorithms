@@ -22,7 +22,13 @@ namespace cs_generics_food
         //static Dictionary<dynamic Food, int> zxcv = new Dictionary<dynamic, int>();
 
 
+        //google searches:
+
+        //generic dictionaries
+
         //dictionary of type t c#
+
+        // how to enforce type checking on a dictionary c#
 
         Bird bird = new Bird();
         Cow cow = new Cow();
@@ -55,6 +61,22 @@ namespace cs_generics_food
             zxcv.Add(Apple, 10);
             zxcv.Add(typeof(Apple), 10);
 
+        }
+
+
+        //🎶 🎶 this is how we make generics to add to dictionaries
+        //🎶 🎶 this is how we make generics to add to dictionaries
+        public void Set<T, U>(Tuple<T, U> key, int value) where U : Creature where T : Food
+        {
+            satietyIndex.Add(key, value);
+        }
+
+
+        //🎶 🎶 this is how we make generics to add to dictionaries
+        //🎶 🎶 this is how we make generics to add to dictionaries
+        public void Sett<T, U>( (T, U) key, int value) where U : Creature where T : Food
+        {
+            satietyIndex.Add(key, value);
         }
 
 
