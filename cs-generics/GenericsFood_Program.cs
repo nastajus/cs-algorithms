@@ -18,6 +18,9 @@ namespace cs_generics_food
 
         static Dictionary<IFoodProfile, int> qwer = new Dictionary< IFoodProfile , int>();
 
+        static Dictionary<dynamic, int> zxcv = new Dictionary<dynamic, int>();
+        //static Dictionary<dynamic Food, int> zxcv = new Dictionary<dynamic, int>();
+
 
         //dictionary of type t c#
 
@@ -48,6 +51,9 @@ namespace cs_generics_food
             asdf.Add((typeof(Apple), typeof(Person)), 10);
             qwer.Add(typeof(Apple), 10);
             qwer.Add(Apple, 10);
+
+            zxcv.Add(Apple, 10);
+            zxcv.Add(typeof(Apple), 10);
 
         }
 
