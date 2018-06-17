@@ -11,16 +11,31 @@ namespace cs_polymorphsim
     {
         static void Main(string[] args)
         {
+            PetWalker pw = new PetWalker();
+
+            Dog lassie = new Dog {Name = "Lassie", FurColor = "Golden", Attitude = "Heroic" };
+
+            pw.Walk(lassie);
+
+            Goose carl = new Goose{Name = "Carl", Attitude = "Asshole", FeatherColor = "Snow White" };
+
+            pw.Walk(carl);
+
         }
     }
 
     abstract class Pet
     {
         public abstract void Walk();
+        public string Name;
+        public string Attitude;
+        public string Color { get; protected set; }
     }
 
     class Dog : Pet
     {
+        public string FurColor { get => Color; set => Color = value; }
+
         public override void Walk()
         {
             SmellButts();
@@ -34,6 +49,8 @@ namespace cs_polymorphsim
 
     class Goose : Pet
     {
+        public string FeatherColor { get => Color; set => Color = value; }
+
         public override void Walk()
         {
             BiteHumans();
@@ -47,7 +64,7 @@ namespace cs_polymorphsim
     class PetWalker
     {
         //polymorphism makes a lot more sense when you introduce an object that uses the hierarchy
-        void Walk(Pet pet)
+        public void Walk(Pet pet)
         {
             pet.Walk();
         }
