@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs-coupling-cohesion", "cs-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs-generics", "cs-generics\cs-generics.csproj", "{90FE3521-965C-460C-8AC3-FA0D7A854BC7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs-polymorphsim", "cs-polymorphsim\cs-polymorphsim.csproj", "{9D8EEAB2-97EF-4CBE-AA00-FD5C78861022}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{90FE3521-965C-460C-8AC3-FA0D7A854BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90FE3521-965C-460C-8AC3-FA0D7A854BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90FE3521-965C-460C-8AC3-FA0D7A854BC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D8EEAB2-97EF-4CBE-AA00-FD5C78861022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D8EEAB2-97EF-4CBE-AA00-FD5C78861022}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D8EEAB2-97EF-4CBE-AA00-FD5C78861022}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D8EEAB2-97EF-4CBE-AA00-FD5C78861022}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
