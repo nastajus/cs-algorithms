@@ -61,12 +61,15 @@ namespace cs_generics_food
             zxcv.Add(Apple, 10);
             zxcv.Add(typeof(Apple), 10);
 
+            Sett((Apple, Person), 10);
+            Sett((typeof(Apple), typeof(Person)), 10);
+
         }
 
 
         //🎶 🎶 this is how we make generics to add to dictionaries
         //🎶 🎶 this is how we make generics to add to dictionaries
-        public void Set<T, U>(Tuple<T, U> key, int value) where U : Creature where T : Food
+        static void Set<T, U>(Tuple<T, U> key, int value) where U : Creature where T : Food
         {
             satietyIndex.Add(key, value);
         }
@@ -74,7 +77,7 @@ namespace cs_generics_food
 
         //🎶 🎶 this is how we make generics to add to dictionaries
         //🎶 🎶 this is how we make generics to add to dictionaries
-        public void Sett<T, U>( (T, U) key, int value) where U : Creature where T : Food
+        static void Sett<T, U>( (T, U) key, int value) where U : Creature where T : Food
         {
             satietyIndex.Add(key, value);
         }
