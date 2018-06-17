@@ -11,7 +11,7 @@ namespace cs_polymorphsim
         public static void Main2(string[] args)
         {
             Doctor Riviera = new Doctor();
-            Patient Homer = new Patient();
+            Person Homer = new Patient();
             Drunkard Barney = new Drunkard();
             Sicky Burns = new Sicky();
             Bartender Moe = new Bartender();
@@ -35,24 +35,22 @@ namespace cs_polymorphsim
         
         }
 
-        abstract class Person : IPatientBehaviors, IAlcoholicBehaviors
+        interface IDecrepit
+        {
+            void FallOver();
+            void InjureSelf();
+            void InjureOthers(List<Person> otherPeopleInjured);
+        }
+
+        /// <summary>
+        ///     implements "IPatientBehavior"... 
+        ///     As all people COULD POTENTIALLY BE patients... etc...
+        ///     But now find that implementation "too heavy"...
+        ///     Yet if I kept it here I'd be ABLE TO ITERATE spefifically such functions.
+        /// </summary>
+        abstract class Person : IAlcoholicBehaviors
         {
             private List<object> acceptedThings = new List<object>();
-
-            public bool? Breath()
-            {
-                throw new NotImplementedException();
-            }
-
-            public Phlegm Cough()
-            {
-                throw new NotImplementedException();
-            }
-
-            public bool Peer()
-            {
-                throw new NotImplementedException();
-            }
 
             public bool AcceptBeer(Beer beer)
             {
@@ -110,7 +108,7 @@ namespace cs_polymorphsim
 
         class Phlegm { public string Description; }
 
-        class Sicky : Person {
+        class Sicky : Person, IPatientBehaviors {
 
             public bool? Breath()
             {
