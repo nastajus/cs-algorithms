@@ -22,21 +22,23 @@ namespace cs_generics_food
 
         private static void InitializeSatietyIndex()
         {
-            Dictionary<int, int> asdf = new Dictionary<int, int>();
-            //var res = asdf[3]; //hmm same exception.
-            int val;
-            var res = asdf.TryGetValue(1, out val);
 
             satietyIndex.Add((typeof(Person), typeof(Person)), 10);
             satietyIndex.Add((typeof(Apple), typeof(Person)), 30);
-            //satietyIndex.Add((typeof(Person), typeof(Apple)), 40);
-            var result = satietyIndex[(typeof(Person), typeof(Person))];
-            var result2 = satietyIndex[(typeof(Apple), typeof(Person))];
-            var result3 = satietyIndex[(typeof(Person), typeof(Apple))]; //Exception Unhandled: System.Collections.Generic.KeyNotFoundException: 'The given key was not present in the dictionary.'
-            var result4 = satietyIndex[(typeof(Apple), typeof(Apple))];
-            Console.WriteLine(result);
+            satietyIndex.Add((typeof(Person), typeof(Apple)), 40);
 
-            
+
+            var enumerator = satietyIndex.GetEnumerator();
+            while (enumerator.MoveNext())
+            {
+                var result = enumerator.Current;
+                Console.WriteLine(result);
+            }
+            enumerator.Dispose(); //why?
+
+            Console.ReadKey();
+
+
         }
 
         //enumberable troth of endless food will occur here, feeding each a person, bird, and cow, all at different CanEat formulas. bird will have additional penalty of feeding babies intermittetly.
