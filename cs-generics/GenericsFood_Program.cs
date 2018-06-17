@@ -11,26 +11,16 @@ namespace cs_generics_food
     class GenericsFood_Program
     {
 
+        //which is the worse poison / better choice?
+        //do I keep the (Type, Type) and lose any kind of compiletime checking ... ?
+        //do I instantiate instances which I deem icky and unnecessary... 
+        // the choice is obvious, actually.
+
         static Dictionary<(Type, Type), int> si = new Dictionary<(Type, Type), int>();
         static Dictionary<(Food, Creature), int> satietyIndex = new Dictionary<(Food, Creature), int>();
 
         static Dictionary<(IFoodProfile, Creature), int> asdf = new Dictionary<(IFoodProfile, Creature), int>();
 
-        static Dictionary<IFoodProfile, int> qwer = new Dictionary< IFoodProfile , int>();
-
-        static Dictionary<dynamic, int> zxcv = new Dictionary<dynamic, int>();
-        //static Dictionary<dynamic Food, int> zxcv = new Dictionary<dynamic, int>();
-
-
-        //google searches:
-
-        //generic dictionaries
-
-        //dictionary of type t c#
-
-        // how to enforce type checking on a dictionary c#
-
-        // enforce polymorphic dictionary of types
 
         Bird bird = new Bird();
         Cow cow = new Cow();
@@ -55,43 +45,6 @@ namespace cs_generics_food
             si.Add((typeof(Food), typeof(Creature)), 10);
             si.Add((typeof(Apple), typeof(Person)), 10);
             si.Add((typeof(Person), typeof(Person)), 10);
-
-            asdf.Add((typeof(Apple), typeof(Person)), 10);
-            qwer.Add(typeof(Apple), 10);
-            qwer.Add(Apple, 10);
-
-            zxcv.Add(Apple, 10);
-            zxcv.Add(typeof(Apple), 10);
-
-            Sett((Apple, Person), 10);
-            Sett((typeof(Apple), typeof(Person)), 10);
-
-        }
-
-
-        //🎶 🎶 this is how we make generics to add to dictionaries
-        //🎶 🎶 this is how we make generics to add to dictionaries
-        static void Set<T, U>(Tuple<T, U> key, int value) where U : Creature where T : Food
-        {
-            satietyIndex.Add(key, value);
-        }
-
-
-        //🎶 🎶 this is how we make generics to add to dictionaries
-        //🎶 🎶 this is how we make generics to add to dictionaries
-        static void Sett<T, U>( (T, U) key, int value) where U : Creature where T : Food
-        {
-            satietyIndex.Add(key, value);
-        }
-
-
-        //public void DoSomething<T>(IDictionary<T, int> dictionary) where T : B
-        public void DoSomething<T, U>(IDictionary<(T, U), int> dictionary) where T : Food where U : Creature
-        {
-            //dictionary.Add((T,U), 10);
-            // IDictionary<(T,U), int> dictionaryd;
-        }
-
 
 
     //enumberable troth of endless food will occur here, feeding each a person, bird, and cow, all at different CanEat formulas. bird will have additional penalty of feeding babies intermittetly.
