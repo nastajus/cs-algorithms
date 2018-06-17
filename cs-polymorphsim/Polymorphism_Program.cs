@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,64 +8,67 @@ namespace cs_polymorphsim
 {
     class Polymorphism_Program
     {
-        static void Main(string[] args)
+        public static void Main2(string[] args)
         {
-            PetWalker pw = new PetWalker();
+            Doctor Riviera = new Doctor();
+            Patient Homer = new Patient();
 
-            Dog lassie = new Dog {Name = "Lassie", FurColor = "Golden", Attitude = "Heroic" };
-
-            pw.Walk(lassie);
-
-            Goose carl = new Goose{Name = "Carl", Attitude = "Asshole", FeatherColor = "Snow White" };
-
-            pw.Walk(carl);
-
-        }
-    }
-
-    abstract class Pet
-    {
-        public abstract void Walk();
-        public string Name;
-        public string Attitude;
-        public string Color { get; protected set; }
-    }
-
-    class Dog : Pet
-    {
-        public string FurColor { get => Color; set => Color = value; }
-
-        public override void Walk()
-        {
-            SmellButts();
-            PeeHydrants();
+            Riviera.Examine(Homer);
         }
 
-        void SmellButts() { }
-        void PeeHydrants() { }
-        void BarkRandomly() { }
-    }
-
-    class Goose : Pet
-    {
-        public string FeatherColor { get => Color; set => Color = value; }
-
-        public override void Walk()
+        abstract class Person
         {
-            BiteHumans();
-            PoopEverywhere();
+            public abstract void Breath();
+            public abstract void Cough();
+            public abstract void Peer();
+
         }
 
-        void BiteHumans() { }
-        void PoopEverywhere() { }
-    }
 
-    class PetWalker
-    {
-        //polymorphism makes a lot more sense when you introduce an object that uses the hierarchy
-        public void Walk(Pet pet)
+        class Patient : Person
         {
-            pet.Walk();
+            public override void Breath()
+            {
+                throw new NotImplementedException();
+            }
+
+            public override void Cough()
+            {
+                throw new NotImplementedException();
+            }
+
+            public override void Peer()
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+
+
+        class Doctor : Person
+        {
+
+            public void Examine(Person person)
+            {
+                person.Breath();
+                person.Cough();
+                person.Peer();
+            }
+            
+            public override void Breath()
+            {
+                throw new NotImplementedException();
+            }
+
+            public override void Cough()
+            {
+                throw new NotImplementedException();
+            }
+
+            public override void Peer()
+            {
+                throw new NotImplementedException();
+            }
         }
     }
 }
