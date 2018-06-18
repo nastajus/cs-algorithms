@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -236,6 +238,12 @@ namespace cs_generics_food
 
     class Person : Creature, IEdibleConsumer<Food>, INutrientIntaker<Food>
     {
+        public Weight Weight { get; private set; }
+
+        //[DefaultValue((Sex)(new Random()).Next(2))]
+        [DefaultValue(Sex.Male)]
+        public Sex Sex { get; private set; }
+
         /// <summary>
         /// A person I'm declaring as having a deep capacity to wait a long time for food.
         /// </summary>
@@ -261,8 +269,32 @@ namespace cs_generics_food
 
         public float GetDVI(Food nutrient)
         {
+            //consult tables for gender, weight, nutrient, source
             throw new NotImplementedException();
         }
+    }
+
+    /// <summary>
+    ///     conventially people refer to their weight, but technically it's really their mass.
+    /// </summary>
+    class Weight
+    {
+        [DefaultValue(170)]
+        public float Mass { get; set; }
+
+        [DefaultValue(UnitsPerson.Pound)]
+        public UnitsPerson Units { get; set; }
+    }
+
+
+    /// <summary>
+    ///     hopefully "other" isn't considered discriminatory. hopefully "sex" removes this concern.
+    /// </summary>
+    public enum Sex
+    {
+        Male,
+        Female,
+        Other
     }
 
 
@@ -272,6 +304,57 @@ namespace cs_generics_food
         Milligram = 1000,
         Gram = 1000000
 
+    }
+
+    /// <summary>
+    ///     1 pound = 0.45359237 kilograms legally. divide both by Pound's size to get real number.
+    /// </summary>
+    public enum UnitsPerson
+    {
+        Kilogram = 45359237,
+        Pound = 100000000
+    }
+
+
+    public enum UnitsIntake
+    {
+        GramsPerDay,
+        GramsPerKilogram,
+        GramsPerPound
+    }
+
+
+    static class DRI
+    {
+        static void Data()
+        {
+            //https://www.ncbi.nlm.nih.gov/books/NBK56068/table/summarytables.t4/?report=objectonly
+            var foo = new
+            {
+                Name = "asdf"
+            };
+            var protein = new
+            {
+                Units = UnitsIntake.GramsPerDay,
+                Age = "31–50",
+
+                blah1 = new
+                {
+                    Sex = Sex.Male,
+                    Amount = 56
+                },
+
+                blah2 = new
+                {
+                    Sex = Sex.Female,
+                    Amount = 46
+                }
+            };
+            var carbohydrate = new
+            {
+
+            }
+        }
     }
 
 }
