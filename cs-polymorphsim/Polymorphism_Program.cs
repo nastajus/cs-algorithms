@@ -12,6 +12,8 @@ namespace cs_polymorphsim
         {
             Doctor Riviera = new Doctor();
             Patient Homer = new Patient();
+            var didBreath = Homer.Breathe(); //throws exception, as invokes Patient's, but wasn't intended.
+            Homer.Cough();
             Drunkard Barney = new Drunkard();
             Sicky Burns = new Sicky();
             Bartender Moe = new Bartender();
@@ -49,7 +51,7 @@ namespace cs_polymorphsim
 
         interface IPatientBehaviors
         {
-            bool? Breath();
+            bool? Breathe();
             Phlegm Cough();
             bool Peer();
         }
@@ -89,8 +91,10 @@ namespace cs_polymorphsim
                 return true;
             }
 
-            public bool? Breath()
+            public bool? Breathe()
             {
+                return false;
+                //i give up. was being thrown. maybe because of nullable? return type? wild guess.
                 throw new NotImplementedException();
             }
 
@@ -128,7 +132,7 @@ namespace cs_polymorphsim
                 return beer;
             }
 
-            public new bool? Breath()
+            public new bool? Breathe()
             {
                 throw new NotImplementedException();
             }
@@ -150,7 +154,7 @@ namespace cs_polymorphsim
 
         class Sicky : Person, IPatientBehaviors {
 
-            public new bool? Breath()
+            public new bool? Breathe()
             {
                 return false;
             }
@@ -168,7 +172,7 @@ namespace cs_polymorphsim
 
         class Drunkard : Person
         {
-            public new bool? Breath()
+            public new bool? Breathe()
             {
                 return true;
             }
@@ -197,7 +201,7 @@ namespace cs_polymorphsim
 
         class Baby : Person
         {
-            public new bool? Breath()
+            public new bool? Breathe()
             {
                 return null;
             }
@@ -215,13 +219,16 @@ namespace cs_polymorphsim
 
         class Patient : Person
         {
-            public new bool? Breath()
+            //Compiler Warning level 4: does not hide an inherited member. the new keyword is not required
+            public new bool? Breathe()
             {
+                return true;
                 throw new NotImplementedException();
             }
 
             public new Phlegm Cough()
             {
+                base.Breathe(); //oh. fuck. maybe this was executing???
                 throw new NotImplementedException();
             }
 
@@ -238,17 +245,30 @@ namespace cs_polymorphsim
 
             public (bool?, Phlegm, bool) Examine(Person person)
             {
-                //this crashes because i'm directly calling "person's Breath" 
+                //this crashes because i'm directly calling "person's Breathe" 
                 //even tho I extened Person, invoking person's method directly avoids that inheritence.
                 //i'd just been assuming the lowest-called member is always called.
                 //hmm
-                return (person.Breath(),
+                //i was of the impression that polymorphism would execute the "child member" here...
+                //but
+                //the example i was given here https://stackoverflow.com/questions/12756048/why-and-when-use-polymorphism
+                //showed a virtual - override relationship...
+                // what i'm doing is a nil - new relationship...
+                //  so that's probably why it's not working? maybe? 
+                //   yet "hiding" was supposed to occur... 
+                //    i guess i dunno what is meant by hiding.
+
+                // ok so based on here: https://stackoverflow.com/questions/38139838/how-is-the-new-keyword-used-to-hide-a-method
+                // i see if instead i did 
+                    // Homer.Breathe() instead of person.Breathe() I would have executed that particular instance class' Breathe (Patient's Breathe()) && and that base.Breathe wouldn't have been accessible from inside that instance class's Breathe()
+
+                return (person.Breathe(),
                         person.Cough(),
                         person.Peer()
                     );
             }
             
-            public new bool? Breath()
+            public new bool? Breathe()
             {
                 throw new NotImplementedException();
             }
