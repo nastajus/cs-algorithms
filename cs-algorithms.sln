@@ -17,11 +17,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cs-io", "cs-io\cs-io.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs-lesson-populate", "cs-lesson-populate\cs-lesson-populate.csproj", "{9BE16FE8-B0D4-4EEC-88B2-635C59A3F372}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs-lesson-tasks", "cs-lesson-tasks\cs-lesson-tasks.csproj", "{869802C6-A70A-48DB-8627-C2688CF9CA57}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs-coupling-cohesion", "cs-coupling-cohesion\cs-coupling-cohesion.csproj", "{62C08362-E355-440C-8803-C681B8972F95}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs-generics", "cs-generics\cs-generics.csproj", "{90FE3521-965C-460C-8AC3-FA0D7A854BC7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs-polymorphsim", "cs-polymorphsim\cs-polymorphsim.csproj", "{9D8EEAB2-97EF-4CBE-AA00-FD5C78861022}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs-comparisons", "cs-comparisons\cs-comparisons.csproj", "{3A880B9F-10DF-41A7-996D-90571FC8F171}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
