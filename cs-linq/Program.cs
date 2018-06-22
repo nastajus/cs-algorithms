@@ -29,6 +29,25 @@ namespace cs_linq
             var zzz = xxx.Where(x => yyy.Any(y => x.DTO != y.DTO));
             //why doesn't this return { 0 and 2 } as expected, but instead returns null?
 
+            //var zzz = xxx.Where(x => yyy.All(y => x.DTO != y.DTO));
+            //still null
+            //https://stackoverflow.com/questions/9027530/linq-not-any-vs-all-dont
+            //https://softwareengineering.stackexchange.com/questions/296445/whats-the-use-of-any-in-a-c-list
+
+            //var zz = xxx.Select(i => i.DTO).Intersect(yyy);
+            //var zz = xxx.Where( o => yyy.Intersect())
+            //var zz = xxx.Where(u => yyy.Intersect().Any());
+
+            //int[] Results = FirstArray.Intersect(SecondArray).ToArray();  
+            //var zz = xxx.Intersect(yyy).Where()
+
+            //like an inner join
+            var zz = xxx.Select(x => x.DTO).Intersect(yyy.Select(y => y.DTO)); //21 only
+
+            //like a left join
+            var z = xxx.Select(x => x.DTO).Except(yyy.Select(y => y.DTO)); //20 only
+
+
         }
 
         class Rat
