@@ -11,18 +11,6 @@ namespace cs_generics
         public int Max(int a, int b)
         {
             return (a > b) ? a : b;
-        //  ^^^^^^^^^^^^^^^^^^^^^^^
-        //  statement
-        //         ^^^^^^^
-        //         expression
-        //                  ^ 
-        //                  expression
-        //                      ^
-        //                      expression
-            // operators? 
-            //      a : b 
-            //      which parts are really which types of syntactic scenarios? 
-            // eh. w/e.
         }
     }
 }
