@@ -10,7 +10,8 @@ namespace cs_generics
     {
         public static void Init()
         {
-            Max(1, 2);
+            var f = Max(1, 2);
+            var g = Max<int>(3, 4);
         }
 
         public static int Max(int a, int b)
@@ -18,11 +19,13 @@ namespace cs_generics
             return (a > b) ? a : b;
         }
 
-        public static T Max<T>(T a, T b)
+        public static T Max<T>(T a, T b) where T : IComparable
+        //                               ^^^^^^^^^^^^^^^^^^^^^
+        //                               constraint
         {
             if (typeof(T) == typeof(int))
             {
-                return (a > b) ? a : b;
+                return a.CompareTo(b) > 0 ? a : b;
             }
 
             return default(T);
