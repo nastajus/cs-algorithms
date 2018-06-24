@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{334EFFED-CFD2-487E-A4DD-8A69749440F6}</ProjectGuid>
+    <ProjectGuid>{66E34A3F-FEE8-4F6C-A3FC-26D4406C676C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>cs_delegates</RootNamespace>
-    <AssemblyName>cs-delegates</AssemblyName>
+    <RootNamespace>cs_extensions_methods</RootNamespace>
+    <AssemblyName>cs-extensions-methods</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
