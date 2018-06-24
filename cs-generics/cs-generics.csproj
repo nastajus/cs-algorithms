@@ -49,6 +49,7 @@
     <Compile Include="Generics_Food.cs" />
     <Compile Include="Generics_Kittens.cs" />
     <Compile Include="Generics_Main.cs" />
+    <Compile Include="Generics_Mosh.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
