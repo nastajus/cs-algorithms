@@ -15,9 +15,8 @@ namespace cs_generics
 
         public static T Max<T>(T a, T b)
         {
-            //the given expression is never of the provided ("int") type.
-            //the given expression is never of the provided type.
-            if (typeof(T) is int)
+            //A constant value is expected 
+            if (typeof(T) is typeof(int))
             {
                 return (a > b) ? a : b;
             }
