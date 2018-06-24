@@ -8,14 +8,21 @@ namespace cs_generics
 {
     class Generics_Mosh
     {
-        public int Max(int a, int b)
+        public static void Init()
         {
-            return (a > b) ? a : b;
+            Max(1, 2);
         }
 
-        public T Max<T>(T a, T b)
+        public static T Max<T>(T a, T b)
         {
-            return 
+            //the given expression is never of the provided ("int") type.
+            //the given expression is never of the provided type.
+            if (typeof(T) is int)
+            {
+                return (a > b) ? a : b;
+            }
+
+            return default(T);
         }
 
     }

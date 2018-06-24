@@ -12,6 +12,7 @@ namespace cs_generics
         public static void Main(string[] args)
         {
             Generics_Kittens.Init(args);
+            Generics_Mosh.Init();
             Generics_Food.Init(args);
         }
     }
