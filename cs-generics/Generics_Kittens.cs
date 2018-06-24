@@ -10,22 +10,20 @@ namespace cs_generics
     {
         public static void Init(string[] args)
         {
-            
+            Box<Kitten> boxOfKittens = new Box<Kitten>();
+            boxOfKittens.Unwrap();
         }
     }
 
-    class Box { }
-    class Kitten { }
-
-    
-    //class Boite { }
-    //class Chaton { }
-
-
-    //tooltip: Name 'Chaton' does not match rule 'Type parameters'. Suggested name is 'TChaton'.
-    class Boite<Chaton>
+    //useless
+    class Box<TKitten>
     {
-
+        public Kitten Unwrap()
+        {
+            return new Kitten();
+        }
     }
+
+    class Kitten { }
 
 }
