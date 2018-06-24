@@ -45,8 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Generics.cs" />
-    <Compile Include="GenericsFood_Program.cs" />
+    <Compile Include="Generics_Flyable.cs" />
+    <Compile Include="Generics_Food.cs" />
+    <Compile Include="Generics_Kittens.cs" />
+    <Compile Include="Generics_Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

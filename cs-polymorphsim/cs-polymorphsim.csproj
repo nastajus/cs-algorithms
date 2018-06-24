@@ -45,8 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Polymorphism_PetWalker_Program.cs" />
-    <Compile Include="Polymorphism_Program.cs" />
+    <Compile Include="Polymorphism_Main.cs" />
+    <Compile Include="Polymorphism_Pet_Walker.cs" />
+    <Compile Include="Polymorphism_Simpsons_Characters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

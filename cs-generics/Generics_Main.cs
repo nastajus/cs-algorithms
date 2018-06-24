@@ -11,8 +11,8 @@ namespace cs_generics
     {
         public static void Main(string[] args)
         {
-            Generics_Food.Init(args);
             Generics_Kittens.Init(args);
+            Generics_Food.Init(args);
         }
     }
 }
