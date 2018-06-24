@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using cs_generics_food;
 
 namespace cs_generics
 {
-    class Generics_Main
+    class Generics_Kittens
     {
-        public static void Main(string[] args)
+        public static void Init(string[] args)
         {
-            Generics_Food.Init(args);
-            Generics_Kittens.Init(args);
+
         }
     }
+
+    class Box { }
+    class Kitten { }
 }
