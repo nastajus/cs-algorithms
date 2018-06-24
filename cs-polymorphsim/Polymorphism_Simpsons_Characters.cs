@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace cs_polymorphsim
 {
-    class Polymorphism_Program
+    class Polymorphism_Simpsons_Characters
     {
-        public static void Main(string[] args)
+        public static void Init(string[] args)
         {
             Doctor Riviera = new Doctor();
             Patient Homer = new Patient();

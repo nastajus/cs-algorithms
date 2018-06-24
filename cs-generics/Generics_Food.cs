@@ -8,8 +8,15 @@ using System.Threading.Tasks;
 
 namespace cs_generics_food
 {
+    class Program
+    {
+        public static void Init(string[] args)
+        {
+            Generics_Food.Init(args);
+        }
+    }
 
-    class GenericsFood_Program
+    class Generics_Food
     {
         /// <summary>
         ///     usage: Food, Creature
@@ -26,7 +33,7 @@ namespace cs_generics_food
         Cow cow = new Cow();
         Person person = new Person();
 
-        static void Main(string[] args)
+        public static void Init(string[] args)
         {
             InitSatietyIndex();
             //InitNutrientUnits();
@@ -353,7 +360,7 @@ namespace cs_generics_food
             var carbohydrate = new
             {
 
-            }
+            };
         }
     }
 

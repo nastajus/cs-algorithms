@@ -11,7 +11,7 @@ namespace cs_conversions
             ConvertArrayToList();
             ConvertListToArray();
             ConvertEnumToArrayStrings();
-            ConvertStringToInt();
+            //ConvertStringToInt();
             Dante1();
             Console.ReadKey();
         }

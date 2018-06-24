@@ -4,8 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace cs_generics
+namespace cs_generics_flyable
 {
+
+    class Program
+    {
+        public static void Init(string[] args)
+        {
+            //does nothing. 
+            //simply exists for standardization.
+        }
+    }
 
     interface IFlyable <TCargo>
     {

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace cs_polymorphsim
 {
-    class Polymorphism_PetWalker_Program
+    class Polymorphism_Pet_Walker
     {
-        static void Main3(string[] args)
+        public static void Init(string[] args)
         {
             PetWalker pw = new PetWalker();
 
