@@ -22,20 +22,6 @@ namespace cs_generics
         {
             if (typeof(T) == typeof(int))
             {
-
-                // we want to assume that both (a) and (b) both implement the IComparable interface
-                // How Would I have Discovered This Without YouTube / Instruction ?
-                //  I would've *needed* to be taught.
-                // I **cannot** lookup operators like < or > , they are not defined in any C#-readable syntax... it is in the compiler itself
-
-                //right now it* thinks a is an OBJECT.
-                a.      (auto-complete)
-                    --> .GetHashCode
-                    --> .Equals
-                    --> .GetType
-                    --> .ToString
-
-                //cannot apply operator '>' to the operands of type 'T' and 'T'
                 return (a > b) ? a : b;
             }
 
