@@ -10,10 +10,22 @@ namespace cs_generics
     {
         public static void Init(string[] args)
         {
-
+            
         }
     }
 
     class Box { }
     class Kitten { }
+
+    
+    //class Boite { }
+    //class Chaton { }
+
+
+    //tooltip: Name 'Chaton' does not match rule 'Type parameters'. Suggested name is 'TChaton'.
+    class Boite<Chaton>
+    {
+
+    }
+
 }
