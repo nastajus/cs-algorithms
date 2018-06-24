@@ -18,9 +18,5 @@ namespace cs_generics
             return 
         }
 
-        public G Max<G>(G a, G b)
-        {
-
-        }
     }
 }
