@@ -22,12 +22,7 @@ namespace cs_generics
 
         public static T Max<T>(T a, T b) where T : IComparable
         {
-            if (typeof(T) == typeof(int))
-            {
-                return a.CompareTo(b) > 0 ? a : b;
-            }
-
-            if (typeof(T) == typeof(string))
+            if (typeof(T) == typeof(int) || typeof(T) == typeof(string))
             {
                 return a.CompareTo(b) > 0 ? a : b;
             }
