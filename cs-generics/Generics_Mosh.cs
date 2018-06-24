@@ -12,5 +12,15 @@ namespace cs_generics
         {
             return (a > b) ? a : b;
         }
+
+        public T Max<T>(T a, T b)
+        {
+            return 
+        }
+
+        public G Max<G>(G a, G b)
+        {
+
+        }
     }
 }
