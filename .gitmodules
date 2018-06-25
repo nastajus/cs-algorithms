@@ -1,0 +1,3 @@
+[submodule "cs-expando-object/import-dynamic"]
+	path = cs-expando-object/import-dynamic
+	url = git@gist.github.com:e8c61639228e23b77f4f.git
