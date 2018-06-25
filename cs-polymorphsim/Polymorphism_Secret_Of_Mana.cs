@@ -19,7 +19,7 @@ namespace cs_polymorphsim
     interface ITradable { }
 
     /**
-     * Randi, Purim, and Popoi : IPlayable, IFightable, IMerchant, ??IEquiappable??, IAutomaticFight, IAutomaticFollow
+     * Randi, Purim, and Popoi : IPlayable, IFightable, IMerchant, ??IEquiappable??, IMoveable,  IAutomaticFight, IAutomaticFollow
      *
      * IPlayable
      *      Move(Direction)
@@ -29,18 +29,15 @@ namespace cs_polymorphsim
      *      Attack( ~~ whom ? ~~ Collision ??? umm )
      *      Defend Chance ( ~~ property ~~ )
      *
-     * Equiappable
+     * IMoveable
+     *      prop Vector2 (f, f) position ... umm.. { get; protected set; } ... not allowed.
+     *
+     * ??Equiappable??
      *      ~~ a weapon is "equippable" ~~...
      *      ~~ a head gear is "equippable" ~~...
      *      ~~ a armor is "equippable" ~~...
      *      ~~ a wristband is "equippable" ~~...
      *      but is this really an interface ???
-     *          no.
-     *          there's no "actions" to enforce... , no methods to implement... unless
-     *          should there be interfaces without methods?
-     *          seems like   a bad method...
-     *          maybe using raw inheritance of classes is better ???
-     *          https://softwareengineering.stackexchange.com/questions/260343/why-is-inheritance-generally-viewed-as-a-bad-thing-by-oop-proponents
      *
      *      on second thought.... characters need rules to follow certain types...
      *      but this clearly needs more thought...
