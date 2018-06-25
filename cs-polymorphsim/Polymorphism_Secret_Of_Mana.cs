@@ -28,9 +28,17 @@ namespace cs_polymorphsim
      * IFightable
      *      Attack( ~~ whom ? ~~ Collision ??? umm )
      *      Defend Chance ( ~~ property ~~ )
+     *      BeHit (int damage)
+     *      prop int HP { get; set; } --- umm... where should responsibility for damage reside? i suppose that depends on SoM's algorithms...
+     *      https://gamefaqs.gamespot.com/boards/588646-secret-of-mana/69777977
+     *          Rabite's defpower all cases = 0 * 0 / 80 = 0
+     *      https://gist.github.com/alexbevi/2953220
+     *          data is derivable from this table
+     *          search for "---" for Weapons, Enemies, etc. ---
+     *
      *
      * IMoveable
-     *      prop Vector2 (f, f) position ... umm.. { get; set; } ... others can move you! ha!
+     *      prop Vector2 (f, f) position ... umm.. { get; set; } ... others can move you! ha! it's okay in an interface! 
      *
      * ??Equiappable??
      *      ~~ a weapon is "equippable" ~~...
@@ -99,7 +107,10 @@ namespace cs_polymorphsim
      * algorithms for attacking, defending, ... all the above...
      *
      *
-     * Attack Guard Approach Keep Away
+     * Attack, Guard, Approach, Keep Away
+     *
+     *
+     * Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning : enum StatusEffects
      *
      */
 }
