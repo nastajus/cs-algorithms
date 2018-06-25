@@ -19,7 +19,7 @@ namespace cs_polymorphsim
     interface ITradable { }
 
     /**
-     * Randi, Purim, and Popoi : IPlayable, IFightable, IMerchant
+     * Randi, Purim, and Popoi : IPlayable, IFightable, IMerchant, IAutomatic
      *
      * IPlayable
      *      Move(Direction)
@@ -29,11 +29,16 @@ namespace cs_polymorphsim
      *      Attack( ~~ whom ? ~~ Collision ??? umm )
      *      Defend Chance ( ~~ property ~~ )
      *
+     * IAutomatic
+     *      
      *
      *
      * Purim, Popoi : IMagical
      *      Cast(TSpell)
      *      int MP;
+     *
+     * Undine, Gnome, Salamando, Syphlid, Luna, Lumina, Shade, Dryad : IElemental
+     *      ... ? anything ? ...
      *
      * Fire Gigas, Spikey Tiger, Wall Face : IBoss 
      *      Reward(TRewardable~~ == e.g. Orb, ManaSeed)
@@ -64,9 +69,10 @@ namespace cs_polymorphsim
      *
      * Sword, Spear, Boomerang, Javalin, Whip, Axe, Knuckles, Bow & Arrow : IWeapons
      *      Attack(IFightable)
+     *      Level -- property [enum --> references various things ... ]
      *
      *
-     * Gaia's Navel, Dwarf Village, Gold City : ~~ ?? ILocation 
+     * Gaia's Navel, Dwarf Village, Gold City : .... dictionary items as strings... affects prices.. ?
      *
      */
 }
