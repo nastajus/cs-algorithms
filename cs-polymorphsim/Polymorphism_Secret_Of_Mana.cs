@@ -19,7 +19,7 @@ namespace cs_polymorphsim
     interface ITradable { }
 
     /**
-     * Randi, Purim, and Popoi : IPlayable, IFightable, IMerchant, IEquiappable IAutomaticFight, IAutomaticFollow
+     * Randi, Purim, and Popoi : IPlayable, IFightable, IMerchant, ??IEquiappable??, IAutomaticFight, IAutomaticFollow
      *
      * IPlayable
      *      Move(Direction)
@@ -41,6 +41,10 @@ namespace cs_polymorphsim
      *          seems like   a bad method...
      *          maybe using raw inheritance of classes is better ???
      *          https://softwareengineering.stackexchange.com/questions/260343/why-is-inheritance-generally-viewed-as-a-bad-thing-by-oop-proponents
+     *
+     *      on second thought.... characters need rules to follow certain types...
+     *      but this clearly needs more thought...
+     *      like Randy can where heavy armor, or the other two can wear lighter armor, or the girl can where the Tiger Bikini...
      *
      *
      * IAutomaticFight
