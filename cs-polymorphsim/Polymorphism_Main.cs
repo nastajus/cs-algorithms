@@ -12,6 +12,7 @@ namespace cs_polymorphsim
         {
             Polymorphism_Pet_Walker.Init(args);
             Polymorphism_Simpsons_Characters.Init(args);
+            Polymorphsim_Futurama.Init();
 
         }
     }

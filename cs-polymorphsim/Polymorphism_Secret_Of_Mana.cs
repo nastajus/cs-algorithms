@@ -14,6 +14,7 @@ namespace cs_polymorphsim
         //battle regular enemy
         //sale
         //
+
     }
 
     interface ITradable { }
