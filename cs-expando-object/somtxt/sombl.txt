@@ -1,0 +1,11461 @@
+--- Weapons ---
+SPIKE KNUCKLE
+Type: Gloves
+Gfx: 00
+Pal: 02
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 2
+Inflict: None
+Status rate: 80
+
+POWER GLOVE
+Type: Gloves
+Gfx: 00
+Pal: 1A
+Effective: Insect
+Critical: 0
+Hit: 75
+Attack: 6
+Inflict: None
+Status rate: 80
+
+MOOGLE CLAWS
+Type: Gloves
+Gfx: 00
+Pal: 18
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 11
+Inflict: Sleep
+Status rate: 80
+
+CHAKRA HAND
+Type: Gloves
+Int+1 Wis+1
+Gfx: 00
+Pal: 0E
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 17
+Inflict: None
+Status rate: 80
+
+HEAVY GLOVE
+Type: Gloves
+Gfx: 00
+Pal: 0C
+Effective: Insect
+Critical: 0
+Hit: 75
+Attack: 24
+Inflict: None
+Status rate: 80
+
+HYPER-FIST
+Type: Gloves
+Gfx: 00
+Pal: 16
+Effective: Lizard
+Critical: 0
+Hit: 75
+Attack: 30
+Inflict: None
+Status rate: 80
+
+GRIFFIN CLAWS
+Type: Gloves
+Gfx: 00
+Pal: 12
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 38
+Inflict: Poison
+Status rate: 80
+
+DRAGON CLAWS
+Type: Gloves
+Gfx: 00
+Pal: 04
+Effective: Dragon
+Critical: 0
+Hit: 75
+Attack: 47
+Inflict: None
+Status rate: 80
+
+AURA GLOVE
+Type: Gloves
+Gfx: 00
+Pal: 06
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 53
+Inflict: None
+Status rate: 80
+
+RUSTY SWORD
+Type: Sword
+Gfx: 00
+Pal: 18
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 3
+Inflict: None
+Status rate: 80
+
+BROAD SWORD
+Type: Sword
+Agi+1
+Gfx: 00
+Pal: 0C
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 8
+Inflict: None
+Status rate: 80
+
+HERALD SWORD
+Type: Sword
+Gfx: 00
+Pal: 02
+Effective: Lizard
+Critical: 0
+Hit: 75
+Attack: 14
+Inflict: None
+Status rate: 80
+
+CLAYMORE
+Type: Sword
+Gfx: 00
+Pal: 1E
+Effective: Insect
+Critical: 0
+Hit: 75
+Attack: 20
+Inflict: None
+Status rate: 80
+
+EXCALIBUR
+Type: Sword
+Gfx: 00
+Pal: 16
+Effective: Evil
+Critical: 0
+Hit: 75
+Attack: 27
+Inflict: None
+Status rate: 80
+
+MASAMUNE
+Type: Sword
+Gfx: 00
+Pal: 08
+Effective: None
+Critical: 10
+Hit: 75
+Attack: 35
+Inflict: None
+Status rate: 80
+
+GIGAS SWORD
+Type: Sword
+Str+1
+Gfx: 00
+Pal: 10
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 43
+Inflict: None
+Status rate: 80
+
+DRAGON BUSTER
+Type: Sword
+Gfx: 00
+Pal: 1A
+Effective: Dragon
+Critical: 0
+Hit: 75
+Attack: 52
+Inflict: None
+Status rate: 80
+
+MANA SWORD
+Type: Sword
+Str+5 Agi+5
+Gfx: 00
+Pal: 04
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 127
+Inflict: None
+Status rate: 99
+
+WATT'S AXE
+Type: Axe
+Gfx: 00
+Pal: 00
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 4
+Inflict: None
+Status rate: 80
+
+LODE AXE
+Type: Axe
+Gfx: 00
+Pal: 1C
+Effective: Plant
+Critical: 0
+Hit: 75
+Attack: 11
+Inflict: None
+Status rate: 80
+
+STOUT AXE
+Type: Axe
+Con+1
+Gfx: 00
+Pal: 16
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 16
+Inflict: None
+Status rate: 80
+
+BATTLE AXE
+Type: Axe
+Gfx: 00
+Pal: 1A
+Effective: Plant
+Critical: 0
+Hit: 75
+Attack: 23
+Inflict: None
+Status rate: 80
+
+GOLDEN AXE
+Type: Axe
+Gfx: 00
+Pal: 1E
+Effective: Insect
+Critical: 0
+Hit: 75
+Attack: 29
+Inflict: None
+Status rate: 80
+
+WERE-BUSTER
+Type: Axe
+Gfx: 00
+Pal: 12
+Effective: Animal
+Critical: 0
+Hit: 75
+Attack: 38
+Inflict: None
+Status rate: 80
+
+GREAT AXE
+Type: Axe
+Gfx: 00
+Pal: 0C
+Effective: Plant
+Critical: 0
+Hit: 75
+Attack: 46
+Inflict: None
+Status rate: 80
+
+GIGAS AXE
+Type: Axe
+Str+5
+Gfx: 00
+Pal: 08
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 54
+Inflict: None
+Status rate: 80
+
+DOOM AXE
+Type: Axe
+Gfx: 00
+Pal: 14
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 56
+Inflict: None
+Status rate: 80
+
+SPEAR
+Type: Spear
+Gfx: 00
+Pal: 00
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 4
+Inflict: None
+Status rate: 80
+
+HEAVY SPEAR
+Type: Spear
+Gfx: 00
+Pal: 0C
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 11
+Inflict: None
+Status rate: 80
+
+SPRITE'S SPEAR
+Type: Spear
+Gfx: 00
+Pal: 0E
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 16
+Inflict: Stop
+Status rate: 80
+
+PARTISAN
+Type: Spear
+Gfx: 00
+Pal: 12
+Effective: Lizard
+Critical: 0
+Hit: 75
+Attack: 23
+Inflict: None
+Status rate: 80
+
+HALBERD
+Type: Spear
+Gfx: 00
+Pal: 1A
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 29
+Inflict: Confuse
+Status rate: 80
+
+OCEANID SPEAR
+Type: Spear
+Gfx: 00
+Pal: 18
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 38
+Inflict: Sleep
+Status rate: 80
+
+GIGAS LANCE
+Type: Spear
+Str+1
+Gfx: 00
+Pal: 04
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 46
+Inflict: None
+Status rate: 80
+
+DRAGON LANCE
+Type: Spear
+Gfx: 00
+Pal: 1C
+Effective: Dragon
+Critical: 0
+Hit: 75
+Attack: 54
+Inflict: None
+Status rate: 80
+
+DAEDALUS LANCE
+Type: Spear
+Gfx: 00
+Pal: 08
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 56
+Inflict: None
+Status rate: 80
+
+WHIP
+Type: Whip
+Gfx: 00
+Pal: 1C
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 2
+Inflict: None
+Status rate: 80
+
+BLACK WHIP
+Type: Whip
+Gfx: 00
+Pal: 10
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 6
+Inflict: Slow
+Status rate: 80
+
+BACKHAND WHIP
+Type: Whip
+Agi+1
+Gfx: 00
+Pal: 04
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 12
+Inflict: None
+Status rate: 80
+
+CHAIN WHIP
+Type: Whip
+Gfx: 00
+Pal: 02
+Effective: Lizard
+Critical: 0
+Hit: 75
+Attack: 17
+Inflict: None
+Status rate: 80
+
+FLAIL OF HOPE
+Type: Whip
+Gfx: 00
+Pal: 0C
+Effective: Evil
+Critical: 0
+Hit: 75
+Attack: 24
+Inflict: None
+Status rate: 80
+
+MORNING STAR
+Type: Whip
+Gfx: 00
+Pal: 16
+Effective: Insect
+Critical: 0
+Hit: 75
+Attack: 30
+Inflict: None
+Status rate: 80
+
+HAMMER FLAIL
+Type: Whip
+Gfx: 00
+Pal: 16
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 38
+Inflict: Slow
+Status rate: 80
+
+NIMBUS CHAIN
+Type: Whip
+Gfx: 00
+Pal: 08
+Effective: Insect
+Critical: 10
+Hit: 75
+Attack: 47
+Inflict: None
+Status rate: 80
+
+GIGAS FLAIL
+Type: Whip
+Gfx: 00
+Pal: 06
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 53
+Inflict: None
+Status rate: 80
+
+CHOBIN'S BOW
+Type: Arrow
+Gfx: 01
+Pal: 1C
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 3
+Inflict: None
+Status rate: 80
+
+SHORT BOW
+Type: Arrow
+Gfx: 01
+Pal: 00
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 8
+Inflict: None
+Status rate: 80
+
+LONG BOW
+Type: Arrow
+Gfx: 01
+Pal: 0C
+Effective: Animal
+Critical: 0
+Hit: 75
+Attack: 14
+Inflict: None
+Status rate: 80
+
+GREAT BOW
+Type: Arrow
+Gfx: 01
+Pal: 1E
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 20
+Inflict: Confuse
+Status rate: 80
+
+BOW OF HOPE
+Type: Arrow
+Gfx: 01
+Pal: 16
+Effective: Evil
+Critical: 0
+Hit: 75
+Attack: 27
+Inflict: None
+Status rate: 80
+
+ELFIN BOW
+Type: Arrow
+Int+1 Wis+1
+Gfx: 01
+Pal: 02
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 35
+Inflict: None
+Status rate: 80
+
+WING BOW
+Type: Arrow
+Gfx: 01
+Pal: 0A
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 43
+Inflict: Confuse
+Status rate: 80
+
+DOOM BOW
+Type: Arrow
+Gfx: 01
+Pal: 08
+Effective: None
+Critical: 20
+Hit: 75
+Attack: 52
+Inflict: None
+Status rate: 80
+
+GARUDA BUSTER
+Type: Arrow
+Gfx: 01
+Pal: 06
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 54
+Inflict: None
+Status rate: 80
+
+BOOMERANG
+Type: Boomerang
+Gfx: 03
+Pal: 00
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 2
+Inflict: None
+Status rate: 80
+
+CHAKRAM
+Type: Boomerang
+Gfx: 05
+Pal: 02
+Effective: Lizard
+Critical: 0
+Hit: 75
+Attack: 6
+Inflict: None
+Status rate: 80
+
+LODE BOOMERANG
+Type: Boomerang
+Gfx: 03
+Pal: 04
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 12
+Inflict: Slow
+Status rate: 80
+
+RISING SUN
+Type: Boomerang
+Gfx: 05
+Pal: 06
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 17
+Inflict: None
+Status rate: 80
+
+RED CLEAVER
+Type: Boomerang
+Gfx: 03
+Pal: 0E
+Effective: Insect
+Critical: 0
+Hit: 75
+Attack: 24
+Inflict: None
+Status rate: 80
+
+COBRA SHUTTLE
+Type: Boomerang
+Gfx: 03
+Pal: 0A
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 30
+Inflict: Poison
+Status rate: 80
+
+FRIZBAR
+Type: Boomerang
+Gfx: 05
+Pal: 10
+Effective: Lizard
+Critical: 0
+Hit: 75
+Attack: 38
+Inflict: None
+Status rate: 80
+
+SHURIKEN
+Type: Boomerang
+Gfx: 05
+Pal: 0C
+Effective: None
+Critical: 10
+Hit: 75
+Attack: 47
+Inflict: None
+Status rate: 80
+
+NINJA'S TRUMP
+Type: Boomerang
+Gfx: 05
+Pal: 08
+Effective: None
+Critical: 10
+Hit: 75
+Attack: 53
+Inflict: None
+Status rate: 80
+
+POLE DART
+Type: Javelin
+Gfx: 02
+Pal: 1C
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 2
+Inflict: None
+Status rate: 80
+
+JAVELIN
+Type: Javelin
+Gfx: 02
+Pal: 02
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 6
+Inflict: None
+Status rate: 80
+
+LIGHT TRIDENT
+Type: Javelin
+Gfx: 02
+Pal: 04
+Effective: Animal
+Critical: 0
+Hit: 75
+Attack: 12
+Inflict: None
+Status rate: 80
+
+LODE JAVELIN
+Type: Javelin
+Gfx: 02
+Pal: 16
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 17
+Inflict: Stop
+Status rate: 80
+
+FORK OF HOPE
+Type: Javelin
+Gfx: 02
+Pal: 0C
+Effective: Evil
+Critical: 0
+Hit: 75
+Attack: 24
+Inflict: None
+Status rate: 80
+
+IMP'S FORK
+Type: Javelin
+Gfx: 02
+Pal: 1A
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 30
+Inflict: Stop
+Status rate: 80
+
+ELF'S HARPOON
+Type: Javelin
+Int+1 Wis+1
+Gfx: 02
+Pal: 1E
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 38
+Inflict: None
+Status rate: 80
+
+DRAGON DART
+Type: Javelin
+Gfx: 02
+Pal: 0E
+Effective: Dragon
+Critical: 0
+Hit: 75
+Attack: 47
+Inflict: None
+Status rate: 80
+
+VALKYRIAN
+Type: Javelin
+Gfx: 02
+Pal: 08
+Effective: None
+Critical: 0
+Hit: 75
+Attack: 53
+Inflict: None
+Status rate: 80
+
+Weapon 48
+Type: 38
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 7
+Inflict: None
+Status rate: 25
+
+Weapon 49
+Type: 1D
+Gfx: 00
+Pal: 39
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 15
+Inflict: Poison
+Status rate: 25
+
+Weapon 4A
+Type: 1D
+Gfx: 00
+Pal: 39
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 16
+Inflict: Poison
+Status rate: 25
+
+Weapon 4B
+Type: 32
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 15
+Inflict: None
+Status rate: 25
+
+Weapon 4C
+Type: 32
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 14
+Inflict: Sleep
+Status rate: 99
+
+Weapon 4D
+Type: 18
+Gfx: 01
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 25
+Inflict: None
+Status rate: 25
+
+Weapon 4E
+Type: 19
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 16
+Inflict: Poison
+Status rate: 25
+
+Weapon 4F
+Type: 28
+Gfx: 00
+Pal: 37
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 36
+Inflict: None
+Status rate: 25
+
+Weapon 50
+Type: 28
+Gfx: 00
+Pal: 37
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 37
+Inflict: None
+Status rate: 25
+
+Weapon 51
+Type: 2A
+Gfx: 00
+Pal: 40
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 17
+Inflict: None
+Status rate: 25
+
+Weapon 52
+Type: 46
+Gfx: 03
+Pal: 4C
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 16
+Inflict: None
+Status rate: 25
+
+Weapon 53
+Type: 25
+Gfx: 00
+Pal: 31
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 34
+Inflict: Moogle
+Status rate: 50
+
+Weapon 54
+Type: 2D
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 15
+Inflict: Poison
+Status rate: 80
+
+Weapon 55
+Type: 29
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 66
+Inflict: None
+Status rate: 25
+
+Weapon 56
+Type: 1C
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 24
+Inflict: None
+Status rate: 0
+
+Weapon 57
+Type: 2A
+Gfx: 00
+Pal: 40
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 31
+Inflict: None
+Status rate: 25
+
+Weapon 58
+Type: 46
+Gfx: 03
+Pal: 4C
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 26
+Inflict: None
+Status rate: 25
+
+Weapon 59
+Type: 39
+Gfx: 01
+Pal: 3C
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 44
+Inflict: None
+Status rate: 25
+
+Weapon 5A
+Type: 31
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 37
+Inflict: None
+Status rate: 25
+
+Weapon 5B
+Type: 2A
+Gfx: 00
+Pal: 40
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 33
+Inflict: None
+Status rate: 25
+
+Weapon 5C
+Type: 46
+Gfx: 03
+Pal: 4C
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 24
+Inflict: None
+Status rate: 25
+
+Weapon 5D
+Type: 27
+Gfx: 00
+Pal: 88
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 90
+Inflict: Burning
+Status rate: 0
+
+Weapon 5E
+Type: 2F
+Gfx: 00
+Pal: 88
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 54
+Inflict: Poison
+Status rate: 25
+
+Weapon 5F
+Type: 2F
+Gfx: 00
+Pal: 88
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 55
+Inflict: None
+Status rate: 25
+
+Weapon 60
+Type: 39
+Gfx: 01
+Pal: 3C
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 4
+Inflict: None
+Status rate: 25
+
+Weapon 61
+Type: 41
+Gfx: 00
+Pal: 35
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 41
+Inflict: Poison
+Status rate: 25
+
+Weapon 62
+Type: 41
+Gfx: 00
+Pal: 35
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 42
+Inflict: None
+Status rate: 25
+
+Weapon 63
+Type: 26
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 47
+Inflict: None
+Status rate: 25
+
+Weapon 64
+Type: 38
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 44
+Inflict: None
+Status rate: 25
+
+Weapon 65
+Type: 36
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 28
+Inflict: None
+Status rate: 25
+
+Weapon 66
+Type: 34
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 39
+Inflict: None
+Status rate: 25
+
+Weapon 67
+Type: 34
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 38
+Inflict: None
+Status rate: 25
+
+Weapon 68
+Type: 37
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 42
+Inflict: None
+Status rate: 25
+
+Weapon 69
+Type: 21
+Gfx: 00
+Pal: 36
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 56
+Inflict: None
+Status rate: 25
+
+Weapon 6A
+Type: 21
+Gfx: 00
+Pal: 36
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 55
+Inflict: Sleep
+Status rate: 99
+
+Weapon 6B
+Type: 3E
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 33
+Inflict: None
+Status rate: 25
+
+Weapon 6C
+Type: 25
+Gfx: 00
+Pal: 31
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 63
+Inflict: Moogle
+Status rate: 25
+
+Weapon 6D
+Type: 40
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 82
+Inflict: None
+Status rate: 25
+
+Weapon 6E
+Type: 18
+Gfx: 01
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 72
+Inflict: None
+Status rate: 25
+
+Weapon 6F
+Type: 27
+Gfx: 00
+Pal: B0
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 85
+Inflict: Freeze
+Status rate: 25
+
+Weapon 70
+Type: 1C
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 95
+Inflict: None
+Status rate: 25
+
+Weapon 71
+Type: 3F
+Gfx: 00
+Pal: 4A
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 28
+Inflict: None
+Status rate: 25
+
+Weapon 72
+Type: 2B
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 32
+Inflict: Mini
+Status rate: 25
+
+Weapon 73
+Type: 24
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 31
+Inflict: None
+Status rate: 25
+
+Weapon 74
+Type: 23
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 2
+Inflict: None
+Status rate: 25
+
+Weapon 75
+Type: 30
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 73
+Inflict: None
+Status rate: 25
+
+Weapon 76
+Type: 3A
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 56
+Inflict: Poison
+Status rate: 25
+
+Weapon 77
+Type: 20
+Gfx: 00
+Pal: 38
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 62
+Inflict: None
+Status rate: 25
+
+Weapon 78
+Type: 2E
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 65
+Inflict: Burning
+Status rate: 25
+
+Weapon 79
+Type: 2E
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 65
+Inflict: Burning
+Status rate: 25
+
+Weapon 7A
+Type: 2D
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 83
+Inflict: Burning
+Status rate: 80
+
+Weapon 7B
+Type: 2D
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 83
+Inflict: Burning
+Status rate: 80
+
+Weapon 7C
+Type: 1E
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 70
+Inflict: Petrify
+Status rate: 25
+
+Weapon 7D
+Type: 1D
+Gfx: 00
+Pal: 39
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 73
+Inflict: Poison
+Status rate: 25
+
+Weapon 7E
+Type: 1D
+Gfx: 00
+Pal: 39
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 69
+Inflict: Burning
+Status rate: 25
+
+Weapon 7F
+Type: 32
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 3
+Inflict: None
+Status rate: 25
+
+Weapon 80
+Type: 32
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 3
+Inflict: Sleep
+Status rate: 99
+
+Weapon 81
+Type: 19
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 68
+Inflict: None
+Status rate: 25
+
+Weapon 82
+Type: 28
+Gfx: 00
+Pal: 37
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 95
+Inflict: None
+Status rate: 25
+
+Weapon 83
+Type: 44
+Gfx: 00
+Pal: 3A
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 90
+Inflict: None
+Status rate: 50
+
+Weapon 84
+Type: 33
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 102
+Inflict: None
+Status rate: 25
+
+Weapon 85
+Type: Sword
+Gfx: 00
+Pal: 1E
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 57
+Inflict: None
+Status rate: 80
+
+Weapon 86
+Type: Gloves
+Gfx: 00
+Pal: 0C
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 66
+Inflict: None
+Status rate: 80
+
+Weapon 87
+Type: 26
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 54
+Inflict: None
+Status rate: 25
+
+Weapon 88
+Type: 29
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 53
+Inflict: None
+Status rate: 25
+
+Weapon 89
+Type: 2F
+Gfx: 00
+Pal: 88
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 77
+Inflict: Poison
+Status rate: 25
+
+Weapon 8A
+Type: 2F
+Gfx: 00
+Pal: 88
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 78
+Inflict: Burning
+Status rate: 33
+
+Weapon 8B
+Type: 3B
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 61
+Inflict: None
+Status rate: 25
+
+Weapon 8C
+Type: 1A
+Gfx: 00
+Pal: 31
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 72
+Inflict: Moogle
+Status rate: 25
+
+Weapon 8D
+Type: 3D
+Gfx: 00
+Pal: 48
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 83
+Inflict: None
+Status rate: 25
+
+Weapon 8E
+Type: 3D
+Gfx: 00
+Pal: 48
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 84
+Inflict: None
+Status rate: 25
+
+Weapon 8F
+Type: 40
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 51
+Inflict: None
+Status rate: 25
+
+Weapon 90
+Type: 41
+Gfx: 00
+Pal: 35
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 56
+Inflict: Poison
+Status rate: 25
+
+Weapon 91
+Type: 41
+Gfx: 00
+Pal: 35
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 51
+Inflict: None
+Status rate: 25
+
+Weapon 92
+Type: 3C
+Gfx: 01
+Pal: 3D
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 56
+Inflict: None
+Status rate: 25
+
+Weapon 93
+Type: 42
+Gfx: 00
+Pal: 88
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 56
+Inflict: Burning
+Status rate: 50
+
+Weapon 94
+Type: 2D
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 80
+Inflict: Freeze
+Status rate: 80
+
+Weapon 95
+Type: 2D
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 84
+Inflict: Freeze
+Status rate: 80
+
+Weapon 96
+Type: 2B
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 80
+Inflict: Mini
+Status rate: 25
+
+Weapon 97
+Type: 22
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 58
+Inflict: Poison
+Status rate: 25
+
+Weapon 98
+Type: 43
+Gfx: 00
+Pal: 3F
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 70
+Inflict: Mini
+Status rate: 60
+
+Weapon 99
+Type: 2C
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 4
+Inflict: None
+Status rate: 25
+
+Weapon 9A
+Type: 2C
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 5
+Inflict: None
+Status rate: 25
+
+Weapon 9B
+Type: 34
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 103
+Inflict: None
+Status rate: 25
+
+Weapon 9C
+Type: 34
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 102
+Inflict: Petrify
+Status rate: 25
+
+Weapon 9D
+Type: 21
+Gfx: 00
+Pal: 36
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 3
+Inflict: None
+Status rate: 25
+
+Weapon 9E
+Type: 21
+Gfx: 00
+Pal: 36
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 4
+Inflict: Sleep
+Status rate: 99
+
+Weapon 9F
+Type: 45
+Gfx: 00
+Pal: 42
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 62
+Inflict: None
+Status rate: 25
+
+Weapon A0
+Type: Boomerang
+Gfx: 03
+Pal: 0A
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 80
+Inflict: None
+Status rate: 80
+
+Weapon A1
+Type: 1F
+Gfx: 00
+Pal: 88
+Effective: None
+Critical: 1
+Hit: 75
+Attack: 79
+Inflict: Freeze
+Status rate: 25
+
+Weapon A2
+Type: 23
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 75
+Attack: 82
+Inflict: None
+Status rate: 25
+
+Weapon A3
+Type: 20
+Gfx: 00
+Pal: 38
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 80
+Inflict: None
+Status rate: 25
+
+Weapon A4
+Type: 20
+Gfx: 00
+Pal: 38
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 80
+Inflict: None
+Status rate: 25
+
+Weapon A5
+Type: 37
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 75
+Attack: 77
+Inflict: None
+Status rate: 25
+
+Weapon A6
+Type: 3D
+Gfx: 00
+Pal: 48
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 37
+Inflict: None
+Status rate: 25
+
+Weapon A7
+Type: 3D
+Gfx: 00
+Pal: 48
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 38
+Inflict: None
+Status rate: 25
+
+Weapon A8
+Type: 2E
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 104
+Inflict: None
+Status rate: 25
+
+Weapon A9
+Type: 1B
+Gfx: 00
+Pal: 34
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 71
+Inflict: None
+Status rate: 25
+
+Weapon AA
+Type: 1B
+Gfx: 00
+Pal: 34
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 60
+Inflict: Petrify
+Status rate: 25
+
+Weapon AB
+Type: 3C
+Gfx: 01
+Pal: 3E
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 55
+Inflict: None
+Status rate: 25
+
+Weapon AC
+Type: 42
+Gfx: 00
+Pal: B0
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 56
+Inflict: Freeze
+Status rate: 25
+
+Weapon AD
+Type: 3A
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 76
+Inflict: Poison
+Status rate: 25
+
+Weapon AE
+Type: 35
+Gfx: 00
+Pal: 44
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 64
+Inflict: None
+Status rate: 25
+
+Weapon AF
+Type: 47
+Gfx: 05
+Pal: 46
+Effective: None
+Critical: 2
+Hit: 99
+Attack: 54
+Inflict: None
+Status rate: 25
+
+Weapon B0
+Type: 1A
+Gfx: 00
+Pal: 31
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 106
+Inflict: Moogle
+Status rate: 99
+
+Weapon B1
+Type: 40
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 46
+Inflict: None
+Status rate: 25
+
+Weapon B2
+Type: 22
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 107
+Inflict: Poison
+Status rate: 99
+
+Weapon B3
+Type: 43
+Gfx: 00
+Pal: 3F
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 108
+Inflict: Mini
+Status rate: 99
+
+Weapon B4
+Type: 30
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 99
+Attack: 1
+Inflict: None
+Status rate: 25
+
+Weapon B5
+Type: 35
+Gfx: 00
+Pal: 44
+Effective: None
+Critical: 2
+Hit: 99
+Attack: 29
+Inflict: None
+Status rate: 33
+
+Weapon B6
+Type: 47
+Gfx: 05
+Pal: 46
+Effective: None
+Critical: 2
+Hit: 99
+Attack: 30
+Inflict: None
+Status rate: 33
+
+Weapon B7
+Type: 45
+Gfx: 00
+Pal: 42
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 62
+Inflict: None
+Status rate: 25
+
+Weapon B8
+Type: 48
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 81
+Inflict: None
+Status rate: 99
+
+Weapon B9
+Type: 3F
+Gfx: 00
+Pal: 4A
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 106
+Inflict: None
+Status rate: 25
+
+Weapon BA
+Type: 24
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 26
+Inflict: None
+Status rate: 25
+
+Weapon BB
+Type: 45
+Gfx: 00
+Pal: 42
+Effective: None
+Critical: 1
+Hit: 99
+Attack: 114
+Inflict: None
+Status rate: 50
+
+Weapon BC
+Type: 35
+Gfx: 00
+Pal: 44
+Effective: None
+Critical: 4
+Hit: 99
+Attack: 58
+Inflict: None
+Status rate: 50
+
+Weapon BD
+Type: 47
+Gfx: 05
+Pal: 46
+Effective: None
+Critical: 4
+Hit: 99
+Attack: 58
+Inflict: None
+Status rate: 0
+
+Weapon BE
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon BF
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon C0
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon C1
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon C2
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon C3
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon C4
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon C5
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon C6
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon C7
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon C8
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon C9
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon CA
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon CB
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon CC
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon CD
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon CE
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon CF
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon D0
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon D1
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon D2
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon D3
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon D4
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon D5
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon D6
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon D7
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon D8
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon D9
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon DA
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon DB
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon DC
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon DD
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon DE
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon DF
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon E0
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon E1
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon E2
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon E3
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon E4
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon E5
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon E6
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon E7
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon E8
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon E9
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon EA
+Type: Gloves
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon EB
+Type: 48
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon EC
+Type: 48
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon ED
+Type: 48
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon EE
+Type: 48
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon EF
+Type: 48
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon F0
+Type: 48
+Gfx: 00
+Pal: 30
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon F1
+Type: Gloves
+Gfx: 00
+Pal: 7E
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon F2
+Type: 15
+Gfx: 00
+Pal: 94
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon F3
+Type: 14
+Gfx: 00
+Pal: 95
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon F4
+Type: 13
+Gfx: 00
+Pal: 93
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon F5
+Type: 12
+Gfx: 00
+Pal: 7D
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon F6
+Type: 11
+Gfx: 00
+Pal: 89
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon F7
+Type: 10
+Gfx: 00
+Pal: 94
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon F8
+Type: 0F
+Gfx: 00
+Pal: 95
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon F9
+Type: 0E
+Gfx: 00
+Pal: 93
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon FA
+Type: 0D
+Gfx: 00
+Pal: 02
+Effective: None
+Critical: 0
+Hit: 36
+Attack: 2
+Inflict: None
+Status rate: 25
+
+Weapon FB
+Type: 0C
+Gfx: 00
+Pal: 7D
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon FC
+Type: 0B
+Gfx: 00
+Pal: 7D
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon FD
+Type: 0A
+Gfx: 00
+Pal: 89
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon FE
+Type: 09
+Gfx: 00
+Pal: 89
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+Weapon FF
+Type: 08
+Gfx: 00
+Pal: 7E
+Effective: None
+Critical: 0
+Hit: 0
+Attack: 0
+Inflict: None
+Status rate: 0
+
+--- Enemies ---
+Rabite
+Level: 2
+HP: 20
+MP: 0
+Strength: 3
+Agility: 1
+Intelligence: 1
+Wisdom: 1
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Animal
+Element: None
+Experience: 1
+Blk.mag pwr: 10
+Wht.mag pwr: 10
+Protect against: Mini, Barrel, Moogle
+Weapon 1: 48
+Weapon 2: 48
+Flags: None
+Death: Splash
+Skill: 0
+Money: 2
+Chest rate: 8
+Trap agility: 8
+Disarm level: 0
+Rare item rate: 7
+Normal item: Candy
+Rare item: 4 GP
+
+Buzz Bee
+Level: 5
+HP: 65
+MP: 0
+Strength: 8
+Agility: 8
+Intelligence: 6
+Wisdom: 6
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Insect
+Element: Mana
+Experience: 4
+Blk.mag pwr: 16
+Wht.mag pwr: 16
+Protect against: Stop, Mini, Barrel, Moogle, Poison
+Weapon 1: 49
+Weapon 2: 4A
+Flags: Can't throw, 80
+Death: Dust
+Skill: 0
+Money: 11
+Chest rate: 4
+Trap agility: 24
+Disarm level: 0
+Rare item rate: 7
+Normal item: Candy
+Rare item: 22 GP
+
+Mushboom
+Level: 4
+HP: 60
+MP: 0
+Strength: 7
+Agility: 5
+Intelligence: 5
+Wisdom: 5
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Plant
+Element: Mana
+Experience: 3
+Blk.mag pwr: 6
+Wht.mag pwr: 6
+Protect against: Sleep, Mini, Barrel, Moogle
+Weapon 1: 4B
+Weapon 2: 4C
+Flags: None
+Death: Splash
+Skill: 0
+Money: 7
+Chest rate: 4
+Trap agility: 16
+Disarm level: 0
+Rare item rate: 7
+Normal item: 14 GP
+Rare item: Candy
+
+Chobin Hood
+Level: 8
+HP: 60
+MP: 0
+Strength: 12
+Agility: 2
+Intelligence: 7
+Wisdom: 7
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Human
+Element: None
+Experience: 12
+Blk.mag pwr: 16
+Wht.mag pwr: 16
+Protect against: Mini, Barrel, Moogle
+Weapon 1: 4D
+Weapon 2: 4D
+Flags: None
+Death: Skeleton
+Skill: 0
+Money: 17
+Chest rate: 4
+Trap agility: 24
+Disarm level: 0
+Rare item rate: 7
+Normal item: 34 GP
+Rare item: Candy
+
+Lullabud
+Level: 3
+HP: 36
+MP: 10
+Strength: 5
+Agility: 3
+Intelligence: 4
+Wisdom: 4
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Plant
+Element: Mana
+Experience: 3
+Blk.mag pwr: 31
+Wht.mag pwr: 31
+Protect against: Sleep, Mini, Barrel, Moogle, Poison
+Weapon 1: 4E
+Weapon 2: 4E
+Flags: Can't throw
+Death: Splash
+Skill: 0
+Money: 8
+Chest rate: 4
+Trap agility: 16
+Disarm level: 0
+Rare item rate: 7
+Normal item: Medical Herb
+Rare item: 16 GP
+
+Iffish
+Level: 11
+HP: 140
+MP: 18
+Strength: 17
+Agility: 17
+Intelligence: 22
+Wisdom: 22
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Plant
+Element: Water
+Experience: 35
+Blk.mag pwr: 27
+Wht.mag pwr: 27
+Protect against: Mini, Barrel, Moogle
+Weapon 1: 4F
+Weapon 2: 50
+Flags: Can't throw
+Death: Splash
+Skill: 1
+Money: 29
+Chest rate: 0
+Trap agility: 0
+Disarm level: 0
+Rare item rate: 0
+Normal item: 0 GP
+Rare item: 0 GP
+
+Kid Goblin
+Level: 6
+HP: 64
+MP: 0
+Strength: 15
+Agility: 5
+Intelligence: 10
+Wisdom: 10
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Human
+Element: Earth
+Experience: 8
+Blk.mag pwr: 18
+Wht.mag pwr: 18
+Protect against: Slow, Mini, Barrel, Moogle
+Weapon 1: 51
+Weapon 2: 52
+Flags: None
+Death: Skeleton
+Skill: 0
+Money: 14
+Chest rate: 4
+Trap agility: 24
+Disarm level: 3
+Rare item rate: 7
+Normal item: 28 GP
+Rare item: Head Gear
+
+Eye Spy
+Level: 9
+HP: 100
+MP: 15
+Strength: 13
+Agility: 1
+Intelligence: 20
+Wisdom: 20
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Lizard
+Element: Water
+Experience: 28
+Blk.mag pwr: 12
+Wht.mag pwr: 12
+Protect against: Mini, Barrel, Transform, Moogle
+Weapon 1: 53
+Weapon 2: 53
+Flags: Can't throw
+Death: Blow up
+Skill: 0
+Money: 30
+Chest rate: 4
+Trap agility: 24
+Disarm level: 0
+Rare item rate: 7
+Normal item: Chocolate
+Rare item: Medical Herb
+
+Green Drop
+Level: 7
+HP: 40
+MP: 0
+Strength: 12
+Agility: 4
+Intelligence: 11
+Wisdom: 11
+Evade: 99
+Defense: 10
+Magic eva: 0
+Magic def: 0
+Type: Lizard
+Element: None
+Experience: 10
+Blk.mag pwr: 19
+Wht.mag pwr: 19
+Protect against: Mini, Barrel, Moogle, Poison
+Weapon 1: 54
+Weapon 2: 54
+Flags: None
+Death: Splat
+Skill: 0
+Money: 12
+Chest rate: 4, runs
+Trap agility: 24
+Disarm level: 0
+Rare item rate: 7
+Normal item: Medical Herb
+Rare item: 24 GP
+
+Specter
+Level: 28
+HP: 200
+MP: 99
+Strength: 12
+Agility: 26
+Intelligence: 31
+Wisdom: 31
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Ghost
+Element: Dark
+Experience: 330
+Blk.mag pwr: 16
+Wht.mag pwr: 16
+Protect against: Freeze, Stop, Mini, Barrel, Transform, Moogle
+Weapon 1: 55
+Weapon 2: 55
+Flags: Can't throw, 80
+Death: Ghost
+Skill: 3
+Money: 213
+Chest rate: 4
+Trap agility: 24
+Disarm level: 0
+Rare item rate: 7
+Normal item: Faerie Walnut
+Rare item: Cup of Wishes
+
+Blat
+Level: 6
+HP: 55
+MP: 18
+Strength: 6
+Agility: 10
+Intelligence: 8
+Wisdom: 8
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Animal
+Element: None
+Experience: 7
+Blk.mag pwr: 25
+Wht.mag pwr: 25
+Protect against: Confuse, Stop, Mini, Barrel, Moogle
+Weapon 1: 56
+Weapon 2: 56
+Flags: Can't throw, 80
+Death: Splash
+Skill: 0
+Money: 10
+Chest rate: 4
+Trap agility: 24
+Disarm level: 0
+Rare item rate: 7
+Normal item: Candy
+Rare item: 20 GP
+
+Goblin
+Level: 13
+HP: 130
+MP: 18
+Strength: 21
+Agility: 1
+Intelligence: 23
+Wisdom: 23
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Human
+Element: Earth
+Experience: 42
+Blk.mag pwr: 14
+Wht.mag pwr: 14
+Protect against: Slow, Mini, Barrel, Moogle
+Weapon 1: 57
+Weapon 2: 58
+Flags: None
+Death: Skeleton
+Skill: 2
+Money: 60
+Chest rate: 4
+Trap agility: 24
+Disarm level: 0
+Rare item rate: 7
+Normal item: Candy
+Rare item: Faerie Walnut
+
+Water Thug
+Level: 17
+HP: 145
+MP: 10
+Strength: 24
+Agility: 1
+Intelligence: 28
+Wisdom: 28
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Plant
+Element: Water
+Experience: 77
+Blk.mag pwr: 30
+Wht.mag pwr: 30
+Protect against: Mini, Barrel, Moogle
+Weapon 1: 59
+Weapon 2: 59
+Flags: None
+Death: Skeleton
+Skill: 2
+Money: 65
+Chest rate: 4
+Trap agility: 32
+Disarm level: 3
+Rare item rate: 7
+Normal item: Candy
+Rare item: Cobra Bracelet
+
+Polter Chair
+Level: 9
+HP: 128
+MP: 0
+Strength: 12
+Agility: 10
+Intelligence: 21
+Wisdom: 21
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Plant
+Element: Mana
+Experience: 21
+Blk.mag pwr: 19
+Wht.mag pwr: 19
+Protect against: Freeze, Mini, Barrel, Transform, Moogle
+Weapon 1: 5A
+Weapon 2: 5A
+Flags: None
+Death: Ghost
+Skill: 0
+Money: 22
+Chest rate: 4
+Trap agility: 24
+Disarm level: 0
+Rare item rate: 7
+Normal item: 44 GP
+Rare item: Barrel
+
+Ma Goblin
+Level: 12
+HP: 150
+MP: 8
+Strength: 24
+Agility: 1
+Intelligence: 30
+Wisdom: 30
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Human
+Element: Earth
+Experience: 38
+Blk.mag pwr: 14
+Wht.mag pwr: 14
+Protect against: Mini, Barrel, Moogle
+Weapon 1: 5B
+Weapon 2: 5C
+Flags: None
+Death: Skeleton
+Skill: 1
+Money: 36
+Chest rate: 4, runs
+Trap agility: 32
+Disarm level: 3
+Rare item rate: 7
+Normal item: 60 GP
+Rare item: Power Wrist
+
+Dark Funk
+Level: 26
+HP: 100
+MP: 20
+Strength: 23
+Agility: 12
+Intelligence: 27
+Wisdom: 27
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Ghost
+Element: Fire
+Experience: 268
+Blk.mag pwr: 20
+Wht.mag pwr: 20
+Protect against: Petrify, Stop, Mini, Barrel, Moogle, Burning
+Weapon 1: 5D
+Weapon 2: 5D
+Flags: Can't throw, 80
+Death: Ghost
+Skill: 4
+Money: 192
+Chest rate: 4
+Trap agility: 32
+Disarm level: 0
+Rare item rate: 7
+Normal item: Candy
+Rare item: Faerie Walnut
+
+Crawler
+Level: 20
+HP: 100
+MP: 16
+Strength: 27
+Agility: 13
+Intelligence: 31
+Wisdom: 31
+Evade: 99
+Defense: 9
+Magic eva: 0
+Magic def: 0
+Type: Insect
+Element: Mana
+Experience: 124
+Blk.mag pwr: 20
+Wht.mag pwr: 20
+Protect against: Sleep, Mini, Barrel, Moogle, Poison
+Weapon 1: 5E
+Weapon 2: 5F
+Flags: None
+Death: Dust
+Skill: 2
+Money: 97
+Chest rate: 4
+Trap agility: 32
+Disarm level: 0
+Rare item rate: 7
+Normal item: Candy
+Rare item: Medical Herb
+
+Ice Thug
+Level: 58
+HP: 440
+MP: 40
+Strength: 57
+Agility: 49
+Intelligence: 66
+Wisdom: 66
+Evade: 99
+Defense: 30
+Magic eva: 99
+Magic def: 99
+Type: Plant
+Element: Water
+Experience: 2680
+Blk.mag pwr: 66
+Wht.mag pwr: 66
+Protect against: Freeze, Mini, Barrel, Moogle
+Weapon 1: 60
+Weapon 2: 60
+Flags: None
+Death: Skeleton
+Skill: 135
+Money: 2850
+Chest rate: 4, runs
+Trap agility: 64
+Disarm level: 3
+Rare item rate: 7
+Normal item: Royal Jam
+Rare item: Dragon Ring
+
+Zombie
+Level: 14
+HP: 150
+MP: 20
+Strength: 12
+Agility: 8
+Intelligence: 27
+Wisdom: 27
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Evil
+Element: Dark
+Experience: 50
+Blk.mag pwr: 26
+Wht.mag pwr: 26
+Protect against: Slow, Mini, Barrel, Moogle, Poison
+Weapon 1: 61
+Weapon 2: 62
+Flags: None
+Death: Skeleton
+Skill: 1
+Money: 48
+Chest rate: 4
+Trap agility: 32
+Disarm level: 0
+Rare item rate: 7
+Normal item: Medical Herb
+Rare item: 96 GP
+
+Kimono Bird
+Level: 21
+HP: 160
+MP: 48
+Strength: 17
+Agility: 25
+Intelligence: 33
+Wisdom: 33
+Evade: 94
+Defense: 28
+Magic eva: 0
+Magic def: 0
+Type: Animal
+Element: Air
+Experience: 145
+Blk.mag pwr: 17
+Wht.mag pwr: 17
+Protect against: Stop, Mini, Barrel, Transform, Moogle
+Weapon 1: 63
+Weapon 2: 63
+Flags: Can't throw, 80
+Death: Feathers
+Skill: 2
+Money: 120
+Chest rate: 4, runs
+Trap agility: 32
+Disarm level: 3
+Rare item rate: 7
+Normal item: Chocolate
+Rare item: Fancy Overalls
+
+Silktail
+Level: 18
+HP: 130
+MP: 40
+Strength: 21
+Agility: 36
+Intelligence: 29
+Wisdom: 29
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Animal
+Element: None
+Experience: 91
+Blk.mag pwr: 30
+Wht.mag pwr: 30
+Protect against: Mini, Barrel, Moogle
+Weapon 1: 64
+Weapon 2: 64
+Flags: None
+Death: Splash
+Skill: 0
+Money: 79
+Chest rate: 4
+Trap agility: 32
+Disarm level: 0
+Rare item rate: 7
+Normal item: 158 GP
+Rare item: Chocolate
+
+Nemesis Owl
+Level: 19
+HP: 122
+MP: 24
+Strength: 21
+Agility: 21
+Intelligence: 8
+Wisdom: 30
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Animal
+Element: Air
+Experience: 100
+Blk.mag pwr: 9
+Wht.mag pwr: 34
+Protect against: Stop, Mini, Barrel, Moogle
+Weapon 1: 65
+Weapon 2: 65
+Flags: Can't throw, 80
+Death: Feathers
+Skill: 4
+Money: 88
+Chest rate: 4, runs
+Trap agility: 32
+Disarm level: 3
+Rare item rate: 7
+Normal item: Medical Herb
+Rare item: Quill Cap
+
+Pebbler
+Level: 20
+HP: 186
+MP: 0
+Strength: 28
+Agility: 30
+Intelligence: 33
+Wisdom: 33
+Evade: 99
+Defense: 13
+Magic eva: 99
+Magic def: 13
+Type: Animal
+Element: Earth
+Experience: 125
+Blk.mag pwr: 42
+Wht.mag pwr: 42
+Protect against: Slow, Petrify, Mini, Barrel, Moogle
+Weapon 1: 66
+Weapon 2: 67
+Flags: None
+Death: Splash
+Skill: 0
+Money: 96
+Chest rate: 4
+Trap agility: 32
+Disarm level: 0
+Rare item rate: 7
+Normal item: Chocolate
+Rare item: Faerie Walnut
+
+Pumpkin Bomb
+Level: 22
+HP: 160
+MP: 4
+Strength: 22
+Agility: 5
+Intelligence: 39
+Wisdom: 39
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Plant
+Element: Mana
+Experience: 1
+Blk.mag pwr: 19
+Wht.mag pwr: 19
+Protect against: Sleep, Mini, Barrel, Moogle
+Weapon 1: 68
+Weapon 2: 68
+Flags: None
+Death: Blow up
+Skill: 3
+Money: 12
+Chest rate: 4
+Trap agility: 32
+Disarm level: 0
+Rare item rate: 7
+Normal item: 24 GP
+Rare item: Medical Herb
+
+Steamed Crab
+Level: 19
+HP: 110
+MP: 25
+Strength: 20
+Agility: 20
+Intelligence: 29
+Wisdom: 29
+Evade: 99
+Defense: 9
+Magic eva: 0
+Magic def: 0
+Type: Insect
+Element: None
+Experience: 110
+Blk.mag pwr: 1
+Wht.mag pwr: 1
+Protect against: Sleep, Mini, Barrel, Moogle
+Weapon 1: 69
+Weapon 2: 6A
+Flags: None
+Death: Dust
+Skill: 4
+Money: 180
+Chest rate: 4
+Trap agility: 32
+Disarm level: 0
+Rare item rate: 7
+Normal item: Faerie Walnut
+Rare item: Candy
+
+Chess Knight
+Level: 13
+HP: 135
+MP: 15
+Strength: 22
+Agility: 20
+Intelligence: 24
+Wisdom: 24
+Evade: 99
+Defense: 16
+Magic eva: 0
+Magic def: 0
+Type: Insect
+Element: Mana
+Experience: 36
+Blk.mag pwr: 13
+Wht.mag pwr: 13
+Protect against: Petrify, Mini, Barrel, Transform, Moogle
+Weapon 1: 6B
+Weapon 2: 6B
+Flags: Can't throw
+Death: Ghost
+Skill: 2
+Money: 38
+Chest rate: 4
+Trap agility: 24
+Disarm level: 0
+Rare item rate: 7
+Normal item: Medical Herb
+Rare item: Cup of Wishes
+
+Wizard Eye
+Level: 33
+HP: 200
+MP: 50
+Strength: 35
+Agility: 22
+Intelligence: 41
+Wisdom: 41
+Evade: 99
+Defense: 15
+Magic eva: 99
+Magic def: 121
+Type: Lizard
+Element: Water
+Experience: 530
+Blk.mag pwr: 1
+Wht.mag pwr: 1
+Protect against: Mini, Barrel, Transform, Moogle
+Weapon 1: 6C
+Weapon 2: 6C
+Flags: Can't throw
+Death: Blow up
+Skill: 22
+Money: 504
+Chest rate: 4, runs
+Trap agility: 40
+Disarm level: 0
+Rare item rate: 7
+Normal item: Chocolate
+Rare item: Faerie Walnut
+
+Howler
+Level: 25
+HP: 190
+MP: 16
+Strength: 22
+Agility: 28
+Intelligence: 34
+Wisdom: 34
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Animal
+Element: None
+Experience: 240
+Blk.mag pwr: 11
+Wht.mag pwr: 11
+Protect against: Slow, Mini, Barrel, Moogle
+Weapon 1: 6D
+Weapon 2: 6D
+Flags: None
+Death: Splash
+Skill: 4
+Money: 180
+Chest rate: 4
+Trap agility: 32
+Disarm level: 0
+Rare item rate: 7
+Normal item: Candy
+Rare item: Medical Herb
+
+Robin Foot
+Level: 29
+HP: 125
+MP: 16
+Strength: 32
+Agility: 35
+Intelligence: 36
+Wisdom: 36
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Human
+Element: None
+Experience: 368
+Blk.mag pwr: 3
+Wht.mag pwr: 3
+Protect against: Mini, Barrel, Moogle
+Weapon 1: 6E
+Weapon 2: 6E
+Flags: None
+Death: Skeleton
+Skill: 4
+Money: 240
+Chest rate: 4, runs
+Trap agility: 40
+Disarm level: 3
+Rare item rate: 7
+Normal item: Chocolate
+Rare item: Quilted Hood
+
+LA Funk
+Level: 26
+HP: 100
+MP: 20
+Strength: 23
+Agility: 12
+Intelligence: 27
+Wisdom: 27
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Ghost
+Element: Water
+Experience: 265
+Blk.mag pwr: 23
+Wht.mag pwr: 23
+Protect against: Freeze, Petrify, Stop, Mini, Barrel, Moogle
+Weapon 1: 6F
+Weapon 2: 6F
+Flags: Can't throw, 80
+Death: Ghost
+Skill: 3
+Money: 190
+Chest rate: 4
+Trap agility: 32
+Disarm level: 0
+Rare item rate: 7
+Normal item: Faerie Walnut
+Rare item: Cup of Wishes
+
+Grave Bat
+Level: 31
+HP: 210
+MP: 25
+Strength: 32
+Agility: 38
+Intelligence: 47
+Wisdom: 47
+Evade: 99
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Animal
+Element: Dark
+Experience: 446
+Blk.mag pwr: 1
+Wht.mag pwr: 1
+Protect against: Confuse, Stop, Mini, Barrel, Moogle
+Weapon 1: 70
+Weapon 2: 70
+Flags: Can't throw, 80
+Death: Splash
+Skill: 4
+Money: 258
+Chest rate: 4
+Trap agility: 40
+Disarm level: 0
+Rare item rate: 7
+Normal item: Candy
+Rare item: Chocolate
+
+Werewolf
+Level: 10
+HP: 140
+MP: 6
+Strength: 15
+Agility: 15
+Intelligence: 22
+Wisdom: 22
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Animal
+Element: Moon
+Experience: 30
+Blk.mag pwr: 15
+Wht.mag pwr: 15
+Protect against: Mini, Barrel, Transform, Moogle, Poison
+Weapon 1: 71
+Weapon 2: 71
+Flags: None
+Death: Skeleton
+Skill: 0
+Money: 36
+Chest rate: 4, runs
+Trap agility: 16
+Disarm level: 3
+Rare item rate: 7
+Normal item: Cup of Wishes
+Rare item: Kung Fu Dress
+
+Shadow X3
+Level: 1
+HP: 800
+MP: 0
+Strength: 25
+Agility: 10
+Intelligence: 0
+Wisdom: 0
+Evade: 99
+Defense: 20
+Magic eva: 99
+Magic def: 999
+Type: None
+Element: Dark
+Experience: 0
+Blk.mag pwr: 0
+Wht.mag pwr: 0
+Protect against: Hurt, Hurt bad, Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: A0
+Weapon 2: A0
+Flags: Can't throw
+Death: Ghost
+Skill: 32
+Money: 0
+Chest rate: 0
+Trap agility: 0
+Disarm level: 0
+Rare item rate: 0
+Normal item: 0 GP
+Rare item: 0 GP
+
+Evil Sword
+Level: 16
+HP: 125
+MP: 24
+Strength: 18
+Agility: 23
+Intelligence: 26
+Wisdom: 26
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Insect
+Element: Moon
+Experience: 64
+Blk.mag pwr: 31
+Wht.mag pwr: 31
+Protect against: Freeze, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: 73
+Weapon 2: 73
+Flags: Can't throw, 80
+Death: Ghost
+Skill: 0
+Money: 60
+Chest rate: 4
+Trap agility: 32
+Disarm level: 0
+Rare item rate: 7
+Normal item: Candy
+Rare item: 120 GP
+
+Tomato Man
+Level: 15
+HP: 40
+MP: 46
+Strength: 6
+Agility: 9
+Intelligence: 28
+Wisdom: 28
+Evade: 99
+Defense: 49
+Magic eva: 0
+Magic def: 0
+Type: Human
+Element: Fire
+Experience: 65
+Blk.mag pwr: 18
+Wht.mag pwr: 7
+Protect against: Stop, Mini, Barrel, Transform, Moogle
+Weapon 1: 74
+Weapon 2: 74
+Flags: Can't throw, 80
+Death: Splash
+Skill: 2
+Money: 96
+Chest rate: 4, runs
+Trap agility: 32
+Disarm level: 0
+Rare item rate: 7
+Normal item: Faerie Walnut
+Rare item: Cup of Wishes
+
+Mystic Book
+Level: 29
+HP: 190
+MP: 99
+Strength: 24
+Agility: 23
+Intelligence: 40
+Wisdom: 40
+Evade: 99
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Plant
+Element: None
+Experience: 370
+Blk.mag pwr: 11
+Wht.mag pwr: 11
+Protect against: Freeze, Petrify, Stop, Mini, Barrel, Moogle, Poison
+Weapon 1: 75
+Weapon 2: 75
+Flags: 80
+Death: Ghost
+Skill: 4
+Money: 264
+Chest rate: 4
+Trap agility: 32
+Disarm level: 0
+Rare item rate: 7
+Normal item: Chocolate
+Rare item: Faerie Walnut
+
+Sand Stinger
+Level: 22
+HP: 200
+MP: 10
+Strength: 27
+Agility: 18
+Intelligence: 34
+Wisdom: 34
+Evade: 99
+Defense: 13
+Magic eva: 0
+Magic def: 0
+Type: Insect
+Element: Earth
+Experience: 170
+Blk.mag pwr: 7
+Wht.mag pwr: 7
+Protect against: Mini, Barrel, Moogle, Poison
+Weapon 1: 76
+Weapon 2: 76
+Flags: None
+Death: Dust
+Skill: 3
+Money: 144
+Chest rate: 4
+Trap agility: 32
+Disarm level: 0
+Rare item rate: 7
+Normal item: Candy
+Rare item: Medical Herb
+
+Mad Mallard
+Level: 24
+HP: 200
+MP: 0
+Strength: 26
+Agility: 24
+Intelligence: 34
+Wisdom: 34
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Human
+Element: None
+Experience: 215
+Blk.mag pwr: 48
+Wht.mag pwr: 48
+Protect against: Mini, Barrel, Moogle
+Weapon 1: 77
+Weapon 2: 77
+Flags: None
+Death: Skeleton
+Skill: 0
+Money: 174
+Chest rate: 4
+Trap agility: 32
+Disarm level: 0
+Rare item rate: 7
+Normal item: Candy
+Rare item: Medical Herb
+
+Emberman
+Level: 36
+HP: 125
+MP: 36
+Strength: 29
+Agility: 27
+Intelligence: 35
+Wisdom: 35
+Evade: 99
+Defense: 15
+Magic eva: 99
+Magic def: 48
+Type: Lizard
+Element: Fire
+Experience: 685
+Blk.mag pwr: 22
+Wht.mag pwr: 22
+Protect against: Mini, Barrel, Moogle, Burning
+Weapon 1: 78
+Weapon 2: 79
+Flags: Can't throw
+Death: Splat
+Skill: 20
+Money: 516
+Chest rate: 4
+Trap agility: 32
+Disarm level: 0
+Rare item rate: 7
+Normal item: Faerie Walnut
+Rare item: Chocolate
+
+Red Drop
+Level: 28
+HP: 380
+MP: 0
+Strength: 29
+Agility: 20
+Intelligence: 37
+Wisdom: 37
+Evade: 99
+Defense: 21
+Magic eva: 0
+Magic def: 0
+Type: Lizard
+Element: Fire
+Experience: 330
+Blk.mag pwr: 53
+Wht.mag pwr: 53
+Protect against: Mini, Barrel, Moogle, Burning
+Weapon 1: 7A
+Weapon 2: 7B
+Flags: None
+Death: Splat
+Skill: 0
+Money: 216
+Chest rate: 4, runs
+Trap agility: 32
+Disarm level: 3
+Rare item rate: 7
+Normal item: Chocolate
+Rare item: Silver Band
+
+Eggatrice
+Level: 40
+HP: 185
+MP: 0
+Strength: 48
+Agility: 48
+Intelligence: 56
+Wisdom: 56
+Evade: 99
+Defense: 15
+Magic eva: 99
+Magic def: 38
+Type: Animal
+Element: Earth
+Experience: 928
+Blk.mag pwr: 50
+Wht.mag pwr: 50
+Protect against: Petrify, Mini, Barrel, Moogle
+Weapon 1: 7C
+Weapon 2: 7C
+Flags: None
+Death: Feathers
+Skill: 17
+Money: 720
+Chest rate: 4
+Trap agility: 56
+Disarm level: 0
+Rare item rate: 7
+Normal item: Medical Herb
+Rare item: Chocolate
+
+Bomb Bee
+Level: 39
+HP: 310
+MP: 40
+Strength: 33
+Agility: 44
+Intelligence: 43
+Wisdom: 43
+Evade: 99
+Defense: 10
+Magic eva: 99
+Magic def: 162
+Type: Insect
+Element: Fire
+Experience: 863
+Blk.mag pwr: 36
+Wht.mag pwr: 36
+Protect against: Freeze, Stop, Mini, Barrel, Moogle, Poison, Burning
+Weapon 1: 7D
+Weapon 2: 7E
+Flags: Can't throw, 80
+Death: Dust
+Skill: 20
+Money: 528
+Chest rate: 4
+Trap agility: 40
+Disarm level: 0
+Rare item rate: 7
+Normal item: Medical Herb
+Rare item: Royal Jam
+
+Mushgloom
+Level: 57
+HP: 628
+MP: 38
+Strength: 99
+Agility: 60
+Intelligence: 53
+Wisdom: 53
+Evade: 99
+Defense: 20
+Magic eva: 99
+Magic def: 90
+Type: Plant
+Element: Mana
+Experience: 2550
+Blk.mag pwr: 116
+Wht.mag pwr: 116
+Protect against: Sleep, Mini, Barrel, Moogle, Poison
+Weapon 1: 7F
+Weapon 2: 80
+Flags: None
+Death: Splash
+Skill: 133
+Money: 3200
+Chest rate: 4
+Trap agility: 32
+Disarm level: 0
+Rare item rate: 7
+Normal item: Chocolate
+Rare item: Barrel
+
+Trap Flower
+Level: 38
+HP: 144
+MP: 50
+Strength: 40
+Agility: 20
+Intelligence: 50
+Wisdom: 50
+Evade: 99
+Defense: 33
+Magic eva: 99
+Magic def: 0
+Type: Plant
+Element: Mana
+Experience: 800
+Blk.mag pwr: 15
+Wht.mag pwr: 20
+Protect against: Sleep, Mini, Barrel, Moogle, Poison
+Weapon 1: 81
+Weapon 2: 81
+Flags: Can't throw
+Death: Splash
+Skill: 21
+Money: 532
+Chest rate: 4
+Trap agility: 48
+Disarm level: 0
+Rare item rate: 7
+Normal item: Medical Herb
+Rare item: Candy
+
+Dinofish
+Level: 30
+HP: 240
+MP: 25
+Strength: 32
+Agility: 34
+Intelligence: 45
+Wisdom: 45
+Evade: 99
+Defense: 9
+Magic eva: 0
+Magic def: 0
+Type: Plant
+Element: Water
+Experience: 400
+Blk.mag pwr: 8
+Wht.mag pwr: 8
+Protect against: Freeze, Mini, Barrel, Moogle
+Weapon 1: 82
+Weapon 2: 83
+Flags: Can't throw
+Death: Splash
+Skill: 3
+Money: 264
+Chest rate: 0
+Trap agility: 0
+Disarm level: 0
+Rare item rate: 0
+Normal item: 0 GP
+Rare item: 0 GP
+
+Mimic Box
+Level: 37
+HP: 290
+MP: 30
+Strength: 34
+Agility: 33
+Intelligence: 45
+Wisdom: 45
+Evade: 99
+Defense: 21
+Magic eva: 99
+Magic def: 250
+Type: Plant
+Element: Moon
+Experience: 740
+Blk.mag pwr: 12
+Wht.mag pwr: 12
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Mini, Barrel, Moogle, Poison, Burning
+Weapon 1: 84
+Weapon 2: 84
+Flags: None
+Death: Blow up
+Skill: 40
+Money: 399
+Chest rate: 4
+Trap agility: 16
+Disarm level: 0
+Rare item rate: 7
+Normal item: Faerie Walnut
+Rare item: Royal Jam
+
+Shadow X1
+Level: 1
+HP: 999
+MP: 0
+Strength: 48
+Agility: 10
+Intelligence: 0
+Wisdom: 0
+Evade: 99
+Defense: 20
+Magic eva: 99
+Magic def: 999
+Type: None
+Element: Dark
+Experience: 0
+Blk.mag pwr: 0
+Wht.mag pwr: 0
+Protect against: Hurt, Hurt bad, Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: 85
+Weapon 2: 85
+Flags: Can't throw
+Death: Ghost
+Skill: 32
+Money: 0
+Chest rate: 0
+Trap agility: 0
+Disarm level: 0
+Rare item rate: 0
+Normal item: 0 GP
+Rare item: 0 GP
+
+Kimono Wizard
+Level: 49
+HP: 408
+MP: 80
+Strength: 26
+Agility: 45
+Intelligence: 54
+Wisdom: 54
+Evade: 99
+Defense: 129
+Magic eva: 0
+Magic def: 0
+Type: Animal
+Element: Air
+Experience: 1660
+Blk.mag pwr: 39
+Wht.mag pwr: 39
+Protect against: Stop, Mini, Barrel, Transform, Moogle
+Weapon 1: 87
+Weapon 2: 87
+Flags: Can't throw, 80
+Death: Feathers
+Skill: 38
+Money: 1080
+Chest rate: 4
+Trap agility: 48
+Disarm level: 0
+Rare item rate: 7
+Normal item: Faerie Walnut
+Rare item: Royal Jam
+
+Ghost
+Level: 64
+HP: 632
+MP: 99
+Strength: 38
+Agility: 43
+Intelligence: 57
+Wisdom: 57
+Evade: 0
+Defense: 0
+Magic eva: 99
+Magic def: 238
+Type: Ghost
+Element: Dark
+Experience: 3540
+Blk.mag pwr: 38
+Wht.mag pwr: 38
+Protect against: Freeze, Petrify, Stop, Mini, Barrel, Transform, Moogle
+Weapon 1: 88
+Weapon 2: 88
+Flags: Can't throw, 80
+Death: Ghost
+Skill: 39
+Money: 2160
+Chest rate: 4, runs
+Trap agility: 40
+Disarm level: 3
+Rare item rate: 7
+Normal item: Royal Jam
+Rare item: Imp's Ring
+
+Metal Crawler
+Level: 48
+HP: 450
+MP: 44
+Strength: 70
+Agility: 17
+Intelligence: 51
+Wisdom: 51
+Evade: 99
+Defense: 73
+Magic eva: 99
+Magic def: 161
+Type: Insect
+Element: Mana
+Experience: 1563
+Blk.mag pwr: 17
+Wht.mag pwr: 17
+Protect against: Freeze, Petrify, Mini, Barrel, Moogle, Poison
+Weapon 1: 89
+Weapon 2: 8A
+Flags: None
+Death: Dust
+Skill: 38
+Money: 1020
+Chest rate: 4
+Trap agility: 48
+Disarm level: 3
+Rare item rate: 7
+Normal item: Chocolate
+Rare item: Gauntlet
+
+Spider Legs
+Level: 23
+HP: 230
+MP: 21
+Strength: 27
+Agility: 16
+Intelligence: 32
+Wisdom: 32
+Evade: 99
+Defense: 15
+Magic eva: 0
+Magic def: 0
+Type: Insect
+Element: Earth
+Experience: 188
+Blk.mag pwr: 18
+Wht.mag pwr: 18
+Protect against: Freeze, Mini, Barrel, Transform, Moogle
+Weapon 1: 8B
+Weapon 2: 8B
+Flags: Can't throw
+Death: Blow up
+Skill: 3
+Money: 156
+Chest rate: 4
+Trap agility: 16
+Disarm level: 0
+Rare item rate: 7
+Normal item: Chocolate
+Rare item: Candy
+
+Weepy Eye
+Level: 29
+HP: 165
+MP: 80
+Strength: 30
+Agility: 15
+Intelligence: 38
+Wisdom: 38
+Evade: 99
+Defense: 15
+Magic eva: 0
+Magic def: 0
+Type: Plant
+Element: Light
+Experience: 370
+Blk.mag pwr: 18
+Wht.mag pwr: 18
+Protect against: Sleep, Freeze, Petrify, Stop, Mini, Barrel, Moogle, Poison
+Weapon 1: 8C
+Weapon 2: 8C
+Flags: Can't throw, 80
+Death: Blow up
+Skill: 3
+Money: 264
+Chest rate: 4, runs
+Trap agility: 32
+Disarm level: 3
+Rare item rate: 7
+Normal item: Medical Herb
+Rare item: Chest Guard
+
+Shellblast
+Level: 27
+HP: 180
+MP: 16
+Strength: 26
+Agility: 14
+Intelligence: 35
+Wisdom: 35
+Evade: 99
+Defense: 12
+Magic eva: 0
+Magic def: 0
+Type: Lizard
+Element: Water
+Experience: 300
+Blk.mag pwr: 9
+Wht.mag pwr: 9
+Protect against: Mini, Barrel, Moogle
+Weapon 1: 8D
+Weapon 2: 8E
+Flags: None
+Death: Skeleton
+Skill: 4
+Money: 204
+Chest rate: 4
+Trap agility: 32
+Disarm level: 0
+Rare item rate: 7
+Normal item: Chocolate
+Rare item: Cup of Wishes
+
+Beast Zombie
+Level: 42
+HP: 320
+MP: 48
+Strength: 44
+Agility: 19
+Intelligence: 53
+Wisdom: 53
+Evade: 99
+Defense: 15
+Magic eva: 99
+Magic def: 105
+Type: Evil
+Element: Dark
+Experience: 1065
+Blk.mag pwr: 3
+Wht.mag pwr: 3
+Protect against: Slow, Mini, Barrel, Moogle
+Weapon 1: 8F
+Weapon 2: 8F
+Flags: None
+Death: Splash
+Skill: 39
+Money: 708
+Chest rate: 4
+Trap agility: 48
+Disarm level: 0
+Rare item rate: 7
+Normal item: Chocolate
+Rare item: Medical Herb
+
+Ghoul
+Level: 32
+HP: 230
+MP: 32
+Strength: 30
+Agility: 32
+Intelligence: 35
+Wisdom: 35
+Evade: 99
+Defense: 15
+Magic eva: 0
+Magic def: 0
+Type: Evil
+Element: Dark
+Experience: 450
+Blk.mag pwr: 1
+Wht.mag pwr: 1
+Protect against: Slow, Mini, Barrel, Moogle, Poison
+Weapon 1: 90
+Weapon 2: 91
+Flags: None
+Death: Skeleton
+Skill: 23
+Money: 288
+Chest rate: 4
+Trap agility: 48
+Disarm level: 0
+Rare item rate: 7
+Normal item: Candy
+Rare item: Medical Herb
+
+Imp
+Level: 34
+HP: 138
+MP: 64
+Strength: 36
+Agility: 37
+Intelligence: 45
+Wisdom: 45
+Evade: 99
+Defense: 15
+Magic eva: 99
+Magic def: 41
+Type: Evil
+Element: Dark
+Experience: 582
+Blk.mag pwr: 4
+Wht.mag pwr: 4
+Protect against: Stop, Mini, Barrel, Moogle, Burning
+Weapon 1: 92
+Weapon 2: 93
+Flags: Can't throw, 80
+Death: Ghost
+Skill: 21
+Money: 312
+Chest rate: 4
+Trap agility: 40
+Disarm level: 0
+Rare item rate: 7
+Normal item: Candy
+Rare item: Cup of Wishes
+
+Blue Drop
+Level: 28
+HP: 380
+MP: 0
+Strength: 29
+Agility: 20
+Intelligence: 37
+Wisdom: 37
+Evade: 99
+Defense: 21
+Magic eva: 0
+Magic def: 0
+Type: Lizard
+Element: Water
+Experience: 330
+Blk.mag pwr: 53
+Wht.mag pwr: 53
+Protect against: Freeze, Mini, Barrel, Moogle
+Weapon 1: 94
+Weapon 2: 95
+Flags: None
+Death: Splat
+Skill: 0
+Money: 216
+Chest rate: 4, runs
+Trap agility: 32
+Disarm level: 3
+Rare item rate: 7
+Normal item: Chocolate
+Rare item: Golden Tiara
+
+Marmablue
+Level: 46
+HP: 324
+MP: 30
+Strength: 33
+Agility: 51
+Intelligence: 63
+Wisdom: 63
+Evade: 99
+Defense: 65
+Magic eva: 99
+Magic def: 202
+Type: Lizard
+Element: Moon
+Experience: 1385
+Blk.mag pwr: 12
+Wht.mag pwr: 12
+Protect against: Stop, Mini, Barrel, Moogle
+Weapon 1: 96
+Weapon 2: 96
+Flags: Can't throw, 80
+Death: Splat
+Skill: 39
+Money: 816
+Chest rate: 4, runs
+Trap agility: 56
+Disarm level: 0
+Rare item rate: 7
+Normal item: Faerie Walnut
+Rare item: Cup of Wishes
+
+Fierce Head
+Level: 40
+HP: 308
+MP: 80
+Strength: 46
+Agility: 32
+Intelligence: 55
+Wisdom: 55
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Evil
+Element: Dark
+Experience: 928
+Blk.mag pwr: 14
+Wht.mag pwr: 14
+Protect against: Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: 97
+Weapon 2: 98
+Flags: None
+Death: Blow up
+Skill: 21
+Money: 864
+Chest rate: 4, runs
+Trap agility: 56
+Disarm level: 3
+Rare item rate: 7
+Normal item: Faerie Walnut
+Rare item: Unicorn Helm
+
+Griffin Hand
+Level: 61
+HP: 600
+MP: 99
+Strength: 99
+Agility: 64
+Intelligence: 69
+Wisdom: 69
+Evade: 99
+Defense: 30
+Magic eva: 99
+Magic def: 100
+Type: Animal
+Element: Air
+Experience: 3090
+Blk.mag pwr: 75
+Wht.mag pwr: 75
+Protect against: Sleep, Confuse, Stop, Mini, Barrel, Moogle
+Weapon 1: 99
+Weapon 2: 9A
+Flags: 80
+Death: Feathers
+Skill: 134
+Money: 2560
+Chest rate: 4, runs
+Trap agility: 64
+Disarm level: 3
+Rare item rate: 7
+Normal item: Chocolate
+Rare item: Griffin Helm
+
+Needlion
+Level: 59
+HP: 599
+MP: 28
+Strength: 42
+Agility: 44
+Intelligence: 53
+Wisdom: 53
+Evade: 99
+Defense: 100
+Magic eva: 99
+Magic def: 191
+Type: Animal
+Element: Earth
+Experience: 2800
+Blk.mag pwr: 77
+Wht.mag pwr: 77
+Protect against: Slow, Petrify, Mini, Barrel, Moogle
+Weapon 1: 9B
+Weapon 2: 9C
+Flags: None
+Death: Splash
+Skill: 87
+Money: 2430
+Chest rate: 4, runs
+Trap agility: 56
+Disarm level: 3
+Rare item rate: 7
+Normal item: Royal Jam
+Rare item: Needle Helm
+
+Metal Crab
+Level: 62
+HP: 533
+MP: 28
+Strength: 64
+Agility: 20
+Intelligence: 45
+Wisdom: 45
+Evade: 99
+Defense: 10
+Magic eva: 99
+Magic def: 90
+Type: Insect
+Element: None
+Experience: 3230
+Blk.mag pwr: 89
+Wht.mag pwr: 89
+Protect against: Sleep, Mini, Barrel, Moogle, Poison
+Weapon 1: 9D
+Weapon 2: 9E
+Flags: None
+Death: Dust
+Skill: 135
+Money: 2846
+Chest rate: 4
+Trap agility: 48
+Disarm level: 3
+Rare item rate: 7
+Normal item: Vestguard
+Rare item: Arrow's Orb
+
+Armored Man
+Level: 35
+HP: 250
+MP: 20
+Strength: 45
+Agility: 25
+Intelligence: 39
+Wisdom: 39
+Evade: 99
+Defense: 15
+Magic eva: 0
+Magic def: 0
+Type: Insect
+Element: None
+Experience: 633
+Blk.mag pwr: 58
+Wht.mag pwr: 58
+Protect against: Freeze, Petrify, Mini, Barrel, Transform, Moogle, Burning
+Weapon 1: 9F
+Weapon 2: 9F
+Flags: None
+Death: Ghost
+Skill: 22
+Money: 540
+Chest rate: 4
+Trap agility: 32
+Disarm level: 0
+Rare item rate: 7
+Normal item: Candy
+Rare item: Cup of Wishes
+
+Shadow X2
+Level: 1
+HP: 800
+MP: 0
+Strength: 39
+Agility: 10
+Intelligence: 0
+Wisdom: 0
+Evade: 99
+Defense: 20
+Magic eva: 99
+Magic def: 999
+Type: None
+Element: Dark
+Experience: 0
+Blk.mag pwr: 0
+Wht.mag pwr: 0
+Protect against: Hurt, Hurt bad, Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: 86
+Weapon 2: 86
+Flags: Can't throw
+Death: Ghost
+Skill: 32
+Money: 0
+Chest rate: 0
+Trap agility: 0
+Disarm level: 0
+Rare item rate: 0
+Normal item: 0 GP
+Rare item: 0 GP
+
+Eggplant Man
+Level: 63
+HP: 300
+MP: 99
+Strength: 28
+Agility: 37
+Intelligence: 88
+Wisdom: 88
+Evade: 99
+Defense: 0
+Magic eva: 99
+Magic def: 90
+Type: Human
+Element: None
+Experience: 3390
+Blk.mag pwr: 1
+Wht.mag pwr: 1
+Protect against: Stop, Mini, Barrel, Transform, Moogle
+Weapon 1: A2
+Weapon 2: A2
+Flags: Can't throw, 80
+Death: Splash
+Skill: 23
+Money: 2444
+Chest rate: 4, runs
+Trap agility: 48
+Disarm level: 3
+Rare item rate: 7
+Normal item: Cup of Wishes
+Rare item: Watcher Ring
+
+Captain Duck
+Level: 51
+HP: 523
+MP: 22
+Strength: 70
+Agility: 50
+Intelligence: 58
+Wisdom: 58
+Evade: 99
+Defense: 93
+Magic eva: 99
+Magic def: 242
+Type: Human
+Element: None
+Experience: 1850
+Blk.mag pwr: 32
+Wht.mag pwr: 32
+Protect against: Mini, Barrel, Moogle
+Weapon 1: A3
+Weapon 2: A4
+Flags: None
+Death: Skeleton
+Skill: 37
+Money: 1440
+Chest rate: 4
+Trap agility: 56
+Disarm level: 3
+Rare item rate: 7
+Normal item: Royal Jam
+Rare item: Duck Helm
+
+Nitro Pumpkin
+Level: 45
+HP: 420
+MP: 20
+Strength: 40
+Agility: 52
+Intelligence: 59
+Wisdom: 59
+Evade: 99
+Defense: 162
+Magic eva: 0
+Magic def: 0
+Type: Plant
+Element: Mana
+Experience: 1300
+Blk.mag pwr: 26
+Wht.mag pwr: 26
+Protect against: Sleep, Mini, Barrel, Moogle, Poison
+Weapon 1: A5
+Weapon 2: A5
+Flags: None
+Death: Blow up
+Skill: 39
+Money: 468
+Chest rate: 4
+Trap agility: 56
+Disarm level: 0
+Rare item rate: 7
+Normal item: Cup of Wishes
+Rare item: Chocolate
+
+Turtlance
+Level: 55
+HP: 560
+MP: 44
+Strength: 80
+Agility: 52
+Intelligence: 60
+Wisdom: 60
+Evade: 99
+Defense: 30
+Magic eva: 99
+Magic def: 300
+Type: Lizard
+Element: Water
+Experience: 2300
+Blk.mag pwr: 27
+Wht.mag pwr: 27
+Protect against: Mini, Barrel, Moogle
+Weapon 1: A6
+Weapon 2: A7
+Flags: None
+Death: Skeleton
+Skill: 53
+Money: 2965
+Chest rate: 4, runs
+Trap agility: 56
+Disarm level: 3
+Rare item rate: 7
+Normal item: Chocolate
+Rare item: Tortoise Mail
+
+Tsunami
+Level: 65
+HP: 388
+MP: 99
+Strength: 52
+Agility: 1
+Intelligence: 64
+Wisdom: 64
+Evade: 99
+Defense: 0
+Magic eva: 99
+Magic def: 238
+Type: Lizard
+Element: Water
+Experience: 3700
+Blk.mag pwr: 68
+Wht.mag pwr: 68
+Protect against: Freeze, Mini, Barrel, Moogle
+Weapon 1: A8
+Weapon 2: A8
+Flags: Can't throw
+Death: Splat
+Skill: 87
+Money: 2100
+Chest rate: 4, runs
+Trap agility: 56
+Disarm level: 3
+Rare item rate: 7
+Normal item: Amulet Ring
+Rare item: Spear's Orb
+
+Basilisk
+Level: 50
+HP: 580
+MP: 41
+Strength: 52
+Agility: 52
+Intelligence: 66
+Wisdom: 66
+Evade: 99
+Defense: 75
+Magic eva: 99
+Magic def: 242
+Type: Lizard
+Element: Earth
+Experience: 1755
+Blk.mag pwr: 37
+Wht.mag pwr: 37
+Protect against: Slow, Petrify, Mini, Barrel, Moogle
+Weapon 1: A9
+Weapon 2: AA
+Flags: None
+Death: Splash
+Skill: 52
+Money: 1200
+Chest rate: 4, runs
+Trap agility: 64
+Disarm level: 3
+Rare item rate: 7
+Normal item: Faerie Walnut
+Rare item: Cockatrice Cap
+
+Gremlin
+Level: 53
+HP: 423
+MP: 64
+Strength: 54
+Agility: 57
+Intelligence: 67
+Wisdom: 67
+Evade: 99
+Defense: 97
+Magic eva: 99
+Magic def: 403
+Type: Evil
+Element: Dark
+Experience: 2074
+Blk.mag pwr: 11
+Wht.mag pwr: 11
+Protect against: Freeze, Stop, Mini, Barrel, Transform, Moogle
+Weapon 1: AB
+Weapon 2: AC
+Flags: Can't throw, 80
+Death: Ghost
+Skill: 70
+Money: 1620
+Chest rate: 4, runs
+Trap agility: 64
+Disarm level: 0
+Rare item rate: 7
+Normal item: Candy
+Rare item: Royal Jam
+
+Steelpion
+Level: 47
+HP: 390
+MP: 52
+Strength: 70
+Agility: 22
+Intelligence: 60
+Wisdom: 60
+Evade: 99
+Defense: 15
+Magic eva: 99
+Magic def: 100
+Type: Insect
+Element: Earth
+Experience: 1472
+Blk.mag pwr: 37
+Wht.mag pwr: 37
+Protect against: Sleep, Mini, Barrel, Moogle, Poison
+Weapon 1: AD
+Weapon 2: AD
+Flags: None
+Death: Dust
+Skill: 36
+Money: 960
+Chest rate: 4
+Trap agility: 56
+Disarm level: 0
+Rare item rate: 7
+Normal item: Medical Herb
+Rare item: Royal Jam
+
+Dark Ninja
+Level: 37
+HP: 300
+MP: 22
+Strength: 41
+Agility: 46
+Intelligence: 50
+Wisdom: 50
+Evade: 99
+Defense: 17
+Magic eva: 99
+Magic def: 81
+Type: Human
+Element: None
+Experience: 740
+Blk.mag pwr: 45
+Wht.mag pwr: 26
+Protect against: Mini, Barrel, Transform, Moogle
+Weapon 1: AE
+Weapon 2: AF
+Flags: None
+Death: Blow up
+Skill: 18
+Money: 600
+Chest rate: 4
+Trap agility: 48
+Disarm level: 0
+Rare item rate: 7
+Normal item: Candy
+Rare item: Chocolate
+
+Whimper
+Level: 67
+HP: 230
+MP: 99
+Strength: 58
+Agility: 52
+Intelligence: 71
+Wisdom: 71
+Evade: 99
+Defense: 100
+Magic eva: 99
+Magic def: 238
+Type: Insect
+Element: Light
+Experience: 4036
+Blk.mag pwr: 60
+Wht.mag pwr: 60
+Protect against: Sleep, Petrify, Stop, Mini, Barrel, Moogle
+Weapon 1: B0
+Weapon 2: B0
+Flags: Can't throw, 80
+Death: Blow up
+Skill: 87
+Money: 2280
+Chest rate: 4, runs
+Trap agility: 64
+Disarm level: 8
+Rare item rate: 7
+Normal item: Power Suit
+Rare item: Javelin's Orb
+
+Heck Hound
+Level: 52
+HP: 550
+MP: 40
+Strength: 70
+Agility: 60
+Intelligence: 68
+Wisdom: 68
+Evade: 99
+Defense: 20
+Magic eva: 99
+Magic def: 190
+Type: Animal
+Element: Dark
+Experience: 1964
+Blk.mag pwr: 11
+Wht.mag pwr: 11
+Protect against: Freeze, Mini, Barrel, Transform, Moogle, Burning
+Weapon 1: B1
+Weapon 2: B1
+Flags: None
+Death: Splash
+Skill: 53
+Money: 2450
+Chest rate: 4, runs
+Trap agility: 64
+Disarm level: 0
+Rare item rate: 7
+Normal item: Royal Jam
+Rare item: Faerie Walnut
+
+Fiend Head
+Level: 66
+HP: 1150
+MP: 99
+Strength: 57
+Agility: 51
+Intelligence: 70
+Wisdom: 70
+Evade: 99
+Defense: 0
+Magic eva: 99
+Magic def: 238
+Type: Evil
+Element: Dark
+Experience: 3868
+Blk.mag pwr: 64
+Wht.mag pwr: 64
+Protect against: Petrify, Mini, Barrel, Transform, Moogle, Burning
+Weapon 1: B2
+Weapon 2: B3
+Flags: None
+Death: Blow up
+Skill: 87
+Money: 2280
+Chest rate: 4, runs
+Trap agility: 64
+Disarm level: 3
+Rare item rate: 7
+Normal item: Vampire Cape
+Rare item: Axe's Orb
+
+National Scar
+Level: 56
+HP: 630
+MP: 58
+Strength: 98
+Agility: 46
+Intelligence: 56
+Wisdom: 56
+Evade: 99
+Defense: 100
+Magic eva: 99
+Magic def: 282
+Type: Plant
+Element: Dark
+Experience: 2425
+Blk.mag pwr: 31
+Wht.mag pwr: 31
+Protect against: Freeze, Petrify, Stop, Mini, Barrel, Moogle, Poison
+Weapon 1: B4
+Weapon 2: B4
+Flags: 80
+Death: Ghost
+Skill: 69
+Money: 2600
+Chest rate: 4, runs
+Trap agility: 56
+Disarm level: 3
+Rare item rate: 7
+Normal item: Faerie Walnut
+Rare item: Amulet Helm
+
+Dark Stalker
+Level: 44
+HP: 510
+MP: 60
+Strength: 70
+Agility: 50
+Intelligence: 34
+Wisdom: 34
+Evade: 99
+Defense: 20
+Magic eva: 99
+Magic def: 100
+Type: Evil
+Element: Dark
+Experience: 1219
+Blk.mag pwr: 47
+Wht.mag pwr: 47
+Protect against: Mini, Barrel, Transform, Moogle
+Weapon 1: B5
+Weapon 2: B6
+Flags: None
+Death: Blow up
+Skill: 70
+Money: 900
+Chest rate: 4, runs
+Trap agility: 56
+Disarm level: 3
+Rare item rate: 7
+Normal item: Chocolate
+Rare item: Ninja Gloves
+
+Dark Knight
+Level: 41
+HP: 200
+MP: 56
+Strength: 55
+Agility: 44
+Intelligence: 60
+Wisdom: 60
+Evade: 99
+Defense: 20
+Magic eva: 0
+Magic def: 0
+Type: Insect
+Element: Dark
+Experience: 996
+Blk.mag pwr: 14
+Wht.mag pwr: 14
+Protect against: Sleep, Freeze, Petrify, Mini, Barrel, Moogle, Poison, Burning
+Weapon 1: B7
+Weapon 2: B7
+Flags: None
+Death: Ghost
+Skill: 20
+Money: 1020
+Chest rate: 4, runs
+Trap agility: 56
+Disarm level: 3
+Rare item rate: 7
+Normal item: Magical Armor
+Rare item: Gauntlet
+
+Shape Shifter
+Level: 43
+HP: 350
+MP: 0
+Strength: 24
+Agility: 42
+Intelligence: 61
+Wisdom: 61
+Evade: 99
+Defense: 121
+Magic eva: 99
+Magic def: 403
+Type: Lizard
+Element: None
+Experience: 1140
+Blk.mag pwr: 62
+Wht.mag pwr: 62
+Protect against: Mini, Barrel, Transform, Moogle
+Weapon 1: B8
+Weapon 2: B8
+Flags: None
+Death: Splat
+Skill: 34
+Money: 1500
+Chest rate: 0
+Trap agility: 0
+Disarm level: 0
+Rare item rate: 0
+Normal item: 0 GP
+Rare item: 0 GP
+
+Wolf Lord
+Level: 68
+HP: 280
+MP: 50
+Strength: 59
+Agility: 64
+Intelligence: 90
+Wisdom: 60
+Evade: 99
+Defense: 100
+Magic eva: 99
+Magic def: 323
+Type: Evil
+Element: Dark
+Experience: 4210
+Blk.mag pwr: 35
+Wht.mag pwr: 1
+Protect against: Stop, Mini, Barrel, Transform, Moogle
+Weapon 1: B9
+Weapon 2: B9
+Flags: None
+Death: Skeleton
+Skill: 87
+Money: 2400
+Chest rate: 4, runs
+Trap agility: 72
+Disarm level: 8
+Rare item rate: 7
+Normal item: Faerie's Ring
+Rare item: Gloves's Orb
+
+Doom Sword
+Level: 54
+HP: 411
+MP: 32
+Strength: 90
+Agility: 65
+Intelligence: 69
+Wisdom: 69
+Evade: 99
+Defense: 100
+Magic eva: 99
+Magic def: 242
+Type: Insect
+Element: None
+Experience: 2190
+Blk.mag pwr: 50
+Wht.mag pwr: 50
+Protect against: Hurt, Hurt bad, Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: BA
+Weapon 2: BA
+Flags: Can't throw, 80
+Death: Ghost
+Skill: 34
+Money: 2640
+Chest rate: 4, runs
+Trap agility: 48
+Disarm level: 3
+Rare item rate: 7
+Normal item: Cup of Wishes
+Rare item: Guardian Ring
+
+Terminator
+Level: 70
+HP: 300
+MP: 99
+Strength: 82
+Agility: 59
+Intelligence: 75
+Wisdom: 75
+Evade: 99
+Defense: 200
+Magic eva: 99
+Magic def: 238
+Type: Insect
+Element: Light
+Experience: 4570
+Blk.mag pwr: 61
+Wht.mag pwr: 61
+Protect against: Hurt, Hurt bad, Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: BB
+Weapon 2: BB
+Flags: None
+Death: Ghost
+Skill: 71
+Money: 3600
+Chest rate: 4, runs
+Trap agility: 72
+Disarm level: 8
+Rare item rate: 7
+Normal item: Faerie Crown
+Rare item: Whip's Orb
+
+Master Ninja
+Level: 69
+HP: 400
+MP: 44
+Strength: 66
+Agility: 77
+Intelligence: 75
+Wisdom: 75
+Evade: 99
+Defense: 100
+Magic eva: 99
+Magic def: 323
+Type: Human
+Element: None
+Experience: 4388
+Blk.mag pwr: 54
+Wht.mag pwr: 54
+Protect against: Hurt, Hurt bad, Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: BC
+Weapon 2: BD
+Flags: None
+Death: Blow up
+Skill: 119
+Money: 2760
+Chest rate: 4, runs
+Trap agility: 72
+Disarm level: 8
+Rare item rate: 7
+Normal item: Faerie Cloak
+Rare item: Boomerang's Orb
+
+?
+Level: 1
+HP: 1
+MP: 0
+Strength: 0
+Agility: 0
+Intelligence: 0
+Wisdom: 0
+Evade: 100
+Defense: 65535
+Magic eva: 100
+Magic def: 65535
+Type: None
+Element: None
+Experience: 0
+Blk.mag pwr: 0
+Wht.mag pwr: 0
+Protect against: None
+Weapon 1: F1
+Weapon 2: F1
+Flags: Can't throw
+Death: Splash
+Skill: 0
+Money: 0
+
+Crystal Orb
+Level: 1
+HP: 1
+MP: 0
+Strength: 0
+Agility: 0
+Intelligence: 0
+Wisdom: 0
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: None
+Element: None
+Experience: 0
+Blk.mag pwr: 0
+Wht.mag pwr: 0
+Protect against: None
+Weapon 1: F1
+Weapon 2: F1
+Flags: Can't throw
+Death: Splash
+Skill: 0
+Money: 0
+
+Treasure Chest
+Level: 1
+HP: 0
+MP: 0
+Strength: 0
+Agility: 0
+Intelligence: 0
+Wisdom: 0
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: None
+Element: None
+Experience: 0
+Blk.mag pwr: 0
+Wht.mag pwr: 0
+Protect against: None
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 0
+Money: 0
+
+Mantis Ant
+Level: 4
+HP: 150
+MP: 20
+Strength: 8
+Agility: 5
+Intelligence: 7
+Wisdom: 7
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Insect
+Element: Earth
+Experience: 10
+Blk.mag pwr: 17
+Wht.mag pwr: 17
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 0
+Money: 100
+Set: 0304 0000
+Main sprite: Fl1=On BG1, Crash chr, Crash BG, Display, Show always, Frame1 Fl2=Falling Init=C23D48 Idle=C23D5A Atta=C23D8C IniA=C2D09A DthA=C2D09C ATbl=C2D0C9 Size=0004 Hght=FFE8
+Load VRAM LZ: DB8E86 006200 1400
+Palette: 000E=000E
+
+Wall Face
+Level: 17
+HP: 920
+MP: 99
+Strength: 33
+Agility: 20
+Intelligence: 28
+Wisdom: 28
+Evade: 99
+Defense: 15
+Magic eva: 0
+Magic def: 0
+Type: Evil
+Element: Air
+Experience: 580
+Blk.mag pwr: 2
+Wht.mag pwr: 2
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 3
+Money: 720
+Set floor 2
+Set: 0304 0000
+Set: 02CB 6567
+Main sprite: On BG1, Crash chr, Display, Show always, Frame1 C27AF4
+Load VRAM LZ: DBADA1 003000 0800
+Load VRAM LZ: DBB31C 006200 1400
+
+Tropicallo
+Level: 8
+HP: 315
+MP: 0
+Strength: 15
+Agility: 9
+Intelligence: 20
+Wisdom: 20
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Plant
+Element: Mana
+Experience: 80
+Blk.mag pwr: 13
+Wht.mag pwr: 13
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 0
+Money: 132
+Set: 0304 0000
+Set: 02CB 6567
+Main sprite: On BG1, Crash chr, Display, Show always, Frame1 C244A8
+Load VRAM LZ: DAE598 006200 1800
+Load: DAFE0A 7F2000 0400
+Load: DBD989 7F7000 0800
+Palette: 0022=000F
+
+Minotaur
+Level: 31
+HP: 1200
+MP: 99
+Strength: 33
+Agility: 15
+Intelligence: 39
+Wisdom: 39
+Evade: 99
+Defense: 21
+Magic eva: 99
+Magic def: 150
+Type: Animal
+Element: Earth
+Experience: 3348
+Blk.mag pwr: 1
+Wht.mag pwr: 64
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 7
+Money: 1440
+Set: 0304 0000
+Main sprite: Fl1=On BG1, Crash BG, Display, Show always, No large blocks, Frame1 Fl2=None Init=C242E1 Idle=C242E8 Atta=C24341 IniA=C2D690 DthA=C2D672 ATbl=C2D6CA Size=0007 Remv=C24412 Hght=FFE8
+Load: DB0BE4 7F2000 3000
+
+Spikey Tiger
+Level: 11
+HP: 520
+MP: 21
+Strength: 19
+Agility: 18
+Intelligence: 20
+Wisdom: 20
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Animal
+Element: Fire
+Experience: 210
+Blk.mag pwr: 13
+Wht.mag pwr: 13
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 2
+Money: 288
+Set: 0304 0000
+Main sprite: Fl1=On BG1, Crash chr, Crash BG, Display, Show always, No large blocks, Frame1 Fl2=Falling Init=C253F1 Idle=C2540C Atta=C2542E Dead=C2556D IniA=C2DB04 ATbl=C2DB4D Size=0004 Remv=C25571 Hght=FFF0
+Load: DB7750 7F2000 2400
+
+Jabberwocky
+Level: 19
+HP: 950
+MP: 90
+Strength: 28
+Agility: 10
+Intelligence: 30
+Wisdom: 30
+Evade: 99
+Defense: 12
+Magic eva: 99
+Magic def: 15
+Type: Lizard
+Element: Water
+Experience: 800
+Blk.mag pwr: 79
+Wht.mag pwr: 79
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 3
+Money: 768
+Set: 0304 0000
+Main sprite: On BG1, Crash chr, Display, Show always, Frame1 C256DB
+Load VRAM LZ: DB9B69 006200 1400
+
+Spring Beak
+Level: 21
+HP: 720
+MP: 99
+Strength: 31
+Agility: 1
+Intelligence: 32
+Wisdom: 32
+Evade: 99
+Defense: 0
+Magic eva: 99
+Magic def: 105
+Type: Animal
+Element: Air
+Experience: 1090
+Blk.mag pwr: 56
+Wht.mag pwr: 56
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 4
+Money: 864
+Set: 0304 0000
+Main sprite: Fl1=On BG1, Display, Show always, Frame1 Fl2=None Init=C266A0 Idle=C266D9 Atta=C2675A IniA=C2E30F DthA=C2E311 ATbl=C2E37D Size=0003 Remv=C267AD Hght=FFE0
+Load VRAM LZ: DADA27 006200 1800
+
+Frost Gigas
+Level: 30
+HP: 1140
+MP: 99
+Strength: 33
+Agility: 1
+Intelligence: 39
+Wisdom: 39
+Evade: 99
+Defense: 37
+Magic eva: 99
+Magic def: 121
+Type: Ghost
+Element: Water
+Experience: 3045
+Blk.mag pwr: 36
+Wht.mag pwr: 36
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 38
+Money: 1200
+Set: 0304 0000
+Main sprite: Fl1=On BG1, Crash chr, Crash BG, Display, Show always, No large blocks, Frame1 Fl2=None Init=C262B8 Idle=C262C2 Atta=C2630F IniA=C2DFB8 DthA=C2DFBA ATbl=C2DFE7 Size=0004 Remv=C263AB Hght=FFE0
+Load: DB5B9E 7F2000 2400
+Load: DAF3C7 7F6400 0400
+
+Snap Dragon
+Level: 57
+HP: 1215
+MP: 6
+Strength: 61
+Agility: 10
+Intelligence: 64
+Wisdom: 64
+Evade: 99
+Defense: 105
+Magic eva: 99
+Magic def: 407
+Type: Dragon
+Element: Water
+Experience: 19200
+Blk.mag pwr: 29
+Wht.mag pwr: 2
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 133
+Money: 12480
+Set: 0304 0001
+Main sprite: Fl1=On BG1, Crash chr, Crash BG, Display, Show always, No large blocks, Frame1 Fl2=Falling Init=C2603B Idle=C2604B Atta=C260BB Dead=C26175 IniA=C2DD57 DthA=C2DD5A ATbl=C2DD94 Size=0002 Remv=C2617F Hght=FFF8 DTbl=C2DD4F
+Load: DA9BC9 7F2000 2800
+
+Mech Rider
+Level: 24
+HP: 980
+MP: 18
+Strength: 33
+Agility: 8
+Intelligence: 36
+Wisdom: 36
+Evade: 99
+Defense: 9
+Magic eva: 99
+Magic def: 65
+Type: Insect
+Element: None
+Experience: 1595
+Blk.mag pwr: 7
+Wht.mag pwr: 7
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 3
+Money: 1055
+Set: 0304 0000
+Main sprite: Fl1=On BG1, Crash BG, Display, Show always, No large blocks, Frame1 Fl2=None Init=C270B3 Idle=C270C5 Atta=C27110 IniA=C2EB7B DthA=C2EB6B ATbl=C2EB9D Size=0004 Remv=C27272 Hght=FFD0 DTbl=C2EB63
+Load: DA88FB 7F2000 1C00
+Palette: 0058=000F
+
+Doom's Wall
+Level: 35
+HP: 1180
+MP: 99
+Strength: 30
+Agility: 9
+Intelligence: 45
+Wisdom: 45
+Evade: 99
+Defense: 33
+Magic eva: 99
+Magic def: 81
+Type: Evil
+Element: Dark
+Experience: 4750
+Blk.mag pwr: 4
+Wht.mag pwr: 4
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 53
+Money: 648
+Set floor 2
+Set: 0304 0001
+Set: 02CB 6567
+Main sprite: On BG1, Crash chr, Display, Show always, Frame1 C27AF4
+Load VRAM LZ: DBADA1 003000 0800
+Load VRAM LZ: DBB31C 006200 1400
+
+Vampire
+Level: 36
+HP: 2550
+MP: 99
+Strength: 65
+Agility: 12
+Intelligence: 45
+Wisdom: 45
+Evade: 99
+Defense: 20
+Magic eva: 99
+Magic def: 70
+Type: Evil
+Element: Dark
+Experience: 5148
+Blk.mag pwr: 13
+Wht.mag pwr: 13
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 4
+Money: 696
+Set: 0304 0000
+Set: 0FC0 D000
+Main sprite: Fl1=On BG2, Crash BG, Display, Show always, No large blocks, Frame1 Fl2=Falling Init=C26B1B Idle=C26B33 Atta=C26B63 IniA=C2E5C7 DthA=C2E5C8 ATbl=C2E5FC Size=0003 Remv=C26BAD Hght=FFE0
+Load: DB44B2 7F2000 2000
+
+Metal Mantis
+Level: 35
+HP: 1220
+MP: 40
+Strength: 39
+Agility: 11
+Intelligence: 47
+Wisdom: 47
+Evade: 99
+Defense: 15
+Magic eva: 99
+Magic def: 95
+Type: Insect
+Element: None
+Experience: 4749
+Blk.mag pwr: 85
+Wht.mag pwr: 85
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 70
+Money: 1464
+Set: 0304 0001
+Main sprite: Fl1=On BG1, Crash chr, Crash BG, Display, Show always, Frame1 Fl2=Falling Init=C23D48 Idle=C23D5A Atta=C23D8C IniA=C2D09A DthA=C2D09C ATbl=C2D0C9 Size=0004 Hght=FFE8
+Load VRAM LZ: DB8E86 006200 1400
+
+Mech Rider
+Level: 38
+HP: 1258
+MP: 30
+Strength: 30
+Agility: 1
+Intelligence: 48
+Wisdom: 48
+Evade: 99
+Defense: 15
+Magic eva: 99
+Magic def: 53
+Type: Insect
+Element: None
+Experience: 6013
+Blk.mag pwr: 105
+Wht.mag pwr: 2
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 37
+Money: 1500
+Set: 0304 0001
+Main sprite: Fl1=On BG1, Crash BG, Display, Show always, No large blocks, Frame1 Fl2=None Init=C270B3 Idle=C270C5 Atta=C27110 IniA=C2EB7B DthA=C2EB6B ATbl=C2EB9D Size=0004 Remv=C27272 Hght=FFD0 DTbl=C2EB63
+Load: DA88FB 7F2000 1C00
+Palette: 0058=000F
+
+Kilroy
+Level: 18
+HP: 900
+MP: 18
+Strength: 13
+Agility: 15
+Intelligence: 27
+Wisdom: 27
+Evade: 99
+Defense: 11
+Magic eva: 99
+Magic def: 61
+Type: Insect
+Element: None
+Experience: 686
+Blk.mag pwr: 26
+Wht.mag pwr: 26
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 1
+Money: 650
+Set: 0304 0000
+Main sprite: Fl1=On BG1, Crash chr, Crash BG, Display, Show always, Frame1 Fl2=None Init=C23F78 Idle=C23F93 Atta=C23FD9 Dead=C24083 IniA=C2D224 DthA=C2D226 ATbl=C2D272 Size=0003 Remv=C24090 Hght=FFE0
+Sprite: Not character, Frame1 C241A0
+Sprite: Not character, Frame1 C2415D
+Load VRAM LZ: DAB63A 006200 0C00
+Load VRAM LZ: DABC9C 006800 0C00
+
+Gorgon Bull
+Level: 45
+HP: 2470
+MP: 99
+Strength: 70
+Agility: 13
+Intelligence: 54
+Wisdom: 54
+Evade: 99
+Defense: 57
+Magic eva: 99
+Magic def: 290
+Type: Animal
+Element: Earth
+Experience: 9755
+Blk.mag pwr: 100
+Wht.mag pwr: 1
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 40
+Money: 4800
+Set: 0304 0001
+Main sprite: Fl1=On BG1, Crash BG, Display, Show always, No large blocks, Frame1 Fl2=None Init=C242E1 Idle=C242E8 Atta=C24341 IniA=C2D690 DthA=C2D672 ATbl=C2D6CA Size=0007 Remv=C24412 Hght=FFE8
+Load: DB0BE4 7F2000 3000
+
+Brambler
+Level: 8
+HP: 78
+MP: 99
+Strength: 15
+Agility: 9
+Intelligence: 20
+Wisdom: 20
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Plant
+Element: Mana
+Experience: 2
+Blk.mag pwr: 13
+Wht.mag pwr: 13
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 0
+Money: 24
+Set: 0304 0000
+Set: 02CB 6567
+Main sprite: On BG1, Crash chr, Display, Show always, Frame1 C244A8
+Load VRAM LZ: DAE598 006200 1800
+Load: DAFE0A 7F2000 0400
+Load: DBD989 7F7000 0800
+Palette: 0022=000F
+
+Boreal Face
+Level: 27
+HP: 1100
+MP: 12
+Strength: 24
+Agility: 12
+Intelligence: 37
+Wisdom: 37
+Evade: 99
+Defense: 13
+Magic eva: 99
+Magic def: 161
+Type: Plant
+Element: Mana
+Experience: 2245
+Blk.mag pwr: 110
+Wht.mag pwr: 2
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 4
+Money: 1040
+Set: 0304 0001
+Set: 02CB 6567
+Main sprite: On BG1, Crash chr, Display, Show always, Frame1 C244A8
+Load VRAM LZ: DAE598 006200 1800
+Load: DAFE0A 7F2000 0400
+Load: DBD989 7F7000 0800
+Palette: 0025=000F
+
+Great Viper
+Level: 23
+HP: 1330
+MP: 8
+Strength: 29
+Agility: 8
+Intelligence: 31
+Wisdom: 31
+Evade: 0
+Defense: 0
+Magic eva: 99
+Magic def: 81
+Type: Lizard
+Element: Earth
+Experience: 1410
+Blk.mag pwr: 3
+Wht.mag pwr: 3
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 5
+Money: 1056
+Set: 0304 0000
+Main sprite: Fl1=On BG1, Crash chr, Display, Show always, Frame1 Fl2=None Init=C274F9 Idle=C27605 Atta=C27661 Dead=C276D1 IniA=C2ED23 DthA=C2ED25 ATbl=C2ED65 DTbl=C2ED17
+Load VRAM LZ: DBBC2C 006200 1800
+
+Lime Slime
+Level: 42
+HP: 3470
+MP: 99
+Strength: 21
+Agility: 12
+Intelligence: 55
+Wisdom: 55
+Evade: 99
+Defense: 31
+Magic eva: 99
+Magic def: 400
+Type: Lizard
+Element: Water
+Experience: 8000
+Blk.mag pwr: 19
+Wht.mag pwr: 1
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 37
+Money: 3000
+Set: 0304 0000
+Set: 02CB 6601
+Main sprite: On BG1, Crash chr, Crash BG, Display, Show always, No large blocks, Frame1 C28455
+Clear floor 2
+Load M7 LZ: DB0000 000000 1C00
+Load: DAF74A 7F2000 0800
+Load: DBD846 7F2800 0400
+Palette: 007E=000E
+
+Blue Spike
+Level: 44
+HP: 1980
+MP: 99
+Strength: 38
+Agility: 10
+Intelligence: 52
+Wisdom: 52
+Evade: 99
+Defense: 53
+Magic eva: 99
+Magic def: 250
+Type: Animal
+Element: None
+Experience: 9150
+Blk.mag pwr: 22
+Wht.mag pwr: 2
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 86
+Money: 3840
+Set: 0304 0001
+Main sprite: Fl1=On BG1, Crash chr, Crash BG, Display, Show always, No large blocks, Frame1 Fl2=Falling Init=C253F1 Idle=C2540C Atta=C2542E Dead=C2556D IniA=C2DB04 ATbl=C2DB4D Size=0004 Remv=C25571 Hght=FFF0
+Load: DB7750 7F2000 2400
+
+Chamber's Eye
+Level: 17
+HP: 300
+MP: 99
+Strength: 33
+Agility: 20
+Intelligence: 28
+Wisdom: 28
+Evade: 99
+Defense: 13
+Magic eva: 0
+Magic def: 0
+Type: Evil
+Element: Air
+Experience: 2
+Blk.mag pwr: 2
+Wht.mag pwr: 2
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 3
+Money: 0
+
+Hydra
+Level: 49
+HP: 3382
+MP: 99
+Strength: 66
+Agility: 13
+Intelligence: 62
+Wisdom: 62
+Evade: 99
+Defense: 90
+Magic eva: 99
+Magic def: 400
+Type: Lizard
+Element: Water
+Experience: 12439
+Blk.mag pwr: 63
+Wht.mag pwr: 63
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 65
+Money: 3600
+Set: 0304 0001
+Main sprite: On BG1, Crash chr, Display, Show always, Frame1 C256DB
+Load VRAM LZ: DB9B69 006200 1400
+
+Aegagropilon
+Level: 47
+HP: 3016
+MP: 99
+Strength: 55
+Agility: 1
+Intelligence: 61
+Wisdom: 61
+Evade: 99
+Defense: 15
+Magic eva: 99
+Magic def: 97
+Type: Plant
+Element: Mana
+Experience: 11050
+Blk.mag pwr: 11
+Wht.mag pwr: 1
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 39
+Money: 1800
+Set floor 2
+Main sprite: Fl1=On BG1, BG, Crash chr, Crash BG, Display, Show always, Frame1 Fl2=None Init=C25150 Idle=C25193 Atta=C251CD Dead=C2526A IniA=C2D8F2 DthA=C2D8F4 ATbl=C2D91A Size=0004 Remv=C25277 Hght=FFE0
+Set: 0FC0 0000
+Set: 0FC2 0000
+Load VRAM LZ: DBA467 006200 0800
+Load VRAM LZ: DBA683 003000 0C00
+
+Hexas
+Level: 58
+HP: 3465
+MP: 69
+Strength: 50
+Agility: 8
+Intelligence: 64
+Wisdom: 64
+Evade: 99
+Defense: 81
+Magic eva: 99
+Magic def: 323
+Type: Evil
+Element: None
+Experience: 20103
+Blk.mag pwr: 16
+Wht.mag pwr: 1
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 54
+Money: 14400
+Set: 0304 0000
+Set: 02CB 65B4
+Main sprite: Fl1=On BG1, Crash chr, Crash BG, Display, Show always, Frame1 Fl2=None Init=C26501 Idle=C26520 Atta=C2654B IniA=C2E13A DthA=C2E13C ATbl=C2E173 Size=0004 Remv=C265DC Hght=FFE0
+Load VRAM: DB2B7A 006200 1000
+Load: DB35B1 7F2000 1400
+Palette: 0038=000F
+
+Kettle Kin
+Level: 53
+HP: 1230
+MP: 33
+Strength: 41
+Agility: 1
+Intelligence: 66
+Wisdom: 66
+Evade: 99
+Defense: 30
+Magic eva: 99
+Magic def: 282
+Type: Insect
+Element: None
+Experience: 15555
+Blk.mag pwr: 19
+Wht.mag pwr: 2
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 53
+Money: 3360
+Set: 0304 0001
+Main sprite: Fl1=On BG1, Crash chr, Crash BG, Display, Show always, Frame1 Fl2=None Init=C241F8 Idle=C24213 Atta=C24235 Dead=C242D3 IniA=C2D46B DthA=C2D46D ATbl=C2D4CF Size=0003 Remv=C242E0 Hght=FFE0
+Sprite: Not character, Frame1 C2D3F9
+Sprite: Not character, Frame1 C2415D
+Load VRAM LZ: DAB63A 006200 0C00
+Load VRAM LZ: DABC9C 006800 0C00
+
+Tonpole
+Level: 12
+HP: 600
+MP: 0
+Strength: 22
+Agility: 31
+Intelligence: 23
+Wisdom: 23
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Lizard
+Element: Water
+Experience: 50
+Blk.mag pwr: 20
+Wht.mag pwr: 20
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 0
+Money: 0
+Set: 0304 0000
+Main sprite: Fl1=On BG1, Crash chr, Crash BG, Display, Show always, No large blocks, Frame1 Fl2=Falling Init=C2603B Idle=C2604B Atta=C260BB Dead=C26175 IniA=C2DD57 DthA=C2DD5A ATbl=C2DD94 Size=0002 Remv=C2617F Hght=FFF8 DTbl=C2DD4F
+Load: DA9BC9 7F2000 2800
+
+Mech Rider
+Level: 59
+HP: 4327
+MP: 38
+Strength: 61
+Agility: 15
+Intelligence: 67
+Wisdom: 67
+Evade: 99
+Defense: 117
+Magic eva: 99
+Magic def: 323
+Type: Insect
+Element: None
+Experience: 21104
+Blk.mag pwr: 37
+Wht.mag pwr: 2
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 69
+Money: 16000
+Set: 0304 0002
+Main sprite: Fl1=On BG1, Crash BG, Display, Show always, No large blocks, Frame1 Fl2=None Init=C270B3 Idle=C270C5 Atta=C27110 IniA=C2EB7B DthA=C2EB6B ATbl=C2EB9D Size=0004 Remv=C27272 Hght=FFD0 DTbl=C2EB63
+Load: DA88FB 7F2000 1C00
+Palette: 0058=000F
+
+Snow Dragon
+Level: 64
+HP: 2800
+MP: 99
+Strength: 50
+Agility: 1
+Intelligence: 88
+Wisdom: 88
+Evade: 99
+Defense: 88
+Magic eva: 99
+Magic def: 474
+Type: Dragon
+Element: Water
+Experience: 26588
+Blk.mag pwr: 40
+Wht.mag pwr: 1
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 87
+Money: 18360
+Set floor 2
+Set: 0304 0000
+Main sprite: Fl1=On BG1, Display, Show always, Frame1 Fl2=None Init=C28AFC Idle=C28B31 Atta=C28C20 IniA=C2F028 DthA=C2F02A ATbl=C2F056 Size=0004 Remv=C28CFA Hght=FFE0
+Load VRAM LZ: DAC294 002B00 1200
+Load VRAM LZ: DACEF6 006200 1000
+
+Fire Gigas
+Level: 14
+HP: 850
+MP: 66
+Strength: 25
+Agility: 1
+Intelligence: 30
+Wisdom: 30
+Evade: 0
+Defense: 0
+Magic eva: 99
+Magic def: 45
+Type: Ghost
+Element: Fire
+Experience: 326
+Blk.mag pwr: 42
+Wht.mag pwr: 42
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 4
+Money: 360
+Set: 0304 0001
+Main sprite: Fl1=On BG1, Crash chr, Crash BG, Display, Show always, No large blocks, Frame1 Fl2=None Init=C262B8 Idle=C262C2 Atta=C2630F IniA=C2DFB8 DthA=C2DFBA ATbl=C2DFE7 Size=0004 Remv=C263AB Hght=FFE0
+Load: DB5B9E 7F2000 2400
+Load: DAF593 7F6400 0400
+
+Red Dragon
+Level: 66
+HP: 3000
+MP: 99
+Strength: 50
+Agility: 1
+Intelligence: 89
+Wisdom: 89
+Evade: 99
+Defense: 88
+Magic eva: 99
+Magic def: 474
+Type: Dragon
+Element: Fire
+Experience: 29000
+Blk.mag pwr: 35
+Wht.mag pwr: 1
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 87
+Money: 21800
+Set floor 2
+Set: 0304 0001
+Main sprite: Fl1=On BG1, Display, Show always, Frame1 Fl2=None Init=C28AFC Idle=C28B31 Atta=C28C20 IniA=C2F028 DthA=C2F02A ATbl=C2F056 Size=0004 Remv=C28CFA Hght=FFE0
+Load VRAM LZ: DAC294 002B00 1200
+Load VRAM LZ: DACEF6 006200 1000
+
+Axe Beak
+Level: 65
+HP: 2800
+MP: 99
+Strength: 89
+Agility: 1
+Intelligence: 87
+Wisdom: 87
+Evade: 99
+Defense: 88
+Magic eva: 99
+Magic def: 474
+Type: Animal
+Element: Fire
+Experience: 27784
+Blk.mag pwr: 37
+Wht.mag pwr: 1
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 119
+Money: 20400
+Set: 0304 0001
+Main sprite: Fl1=On BG1, Display, Show always, Frame1 Fl2=None Init=C266A0 Idle=C266D9 Atta=C2675A IniA=C2E30F DthA=C2E311 ATbl=C2E37D Size=0003 Remv=C267AD Hght=FFE0
+Load VRAM LZ: DADA27 006200 1800
+
+Blue Dragon
+Level: 68
+HP: 3200
+MP: 99
+Strength: 50
+Agility: 1
+Intelligence: 89
+Wisdom: 89
+Evade: 99
+Defense: 88
+Magic eva: 99
+Magic def: 474
+Type: Dragon
+Element: Air
+Experience: 31570
+Blk.mag pwr: 37
+Wht.mag pwr: 1
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 87
+Money: 28560
+Set floor 2
+Set: 0304 0002
+Main sprite: Fl1=On BG1, Display, Show always, Frame1 Fl2=None Init=C28AFC Idle=C28B31 Atta=C28C20 IniA=C2F028 DthA=C2F02A ATbl=C2F056 Size=0004 Remv=C28CFA Hght=FFE0
+Load VRAM LZ: DAC294 002B00 1200
+Load VRAM LZ: DACEF6 006200 1000
+
+Buffy
+Level: 71
+HP: 4200
+MP: 99
+Strength: 81
+Agility: 15
+Intelligence: 73
+Wisdom: 73
+Evade: 99
+Defense: 100
+Magic eva: 99
+Magic def: 323
+Type: Evil
+Element: Dark
+Experience: 35686
+Blk.mag pwr: 57
+Wht.mag pwr: 1
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 87
+Money: 22200
+Set: 0304 0001
+Set: 0FC0 D000
+Main sprite: Fl1=On BG2, Crash BG, Display, Show always, No large blocks, Frame1 Fl2=Falling Init=C26B1B Idle=C26B33 Atta=C26B63 IniA=C2E5C7 DthA=C2E5C8 ATbl=C2E5FC Size=0003 Remv=C26BAD Hght=FFE0
+Load: DB44B2 7F2000 2000
+
+Dark Lich
+Level: 73
+HP: 6666
+MP: 99
+Strength: 74
+Agility: 1
+Intelligence: 96
+Wisdom: 96
+Evade: 99
+Defense: 200
+Magic eva: 99
+Magic def: 423
+Type: Evil
+Element: Dark
+Experience: 38600
+Blk.mag pwr: 44
+Wht.mag pwr: 44
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 88
+Money: 27000
+Set floor 2
+Main sprite: Fl1=On BG1, Crash BG, Display, Show always, No large blocks, Frame1 Fl2=None Init=C26DE7 Idle=C26DFB Atta=C26E82 Dead=C26EBA IniA=C2E848 DthA=C2E84A ATbl=C2E896 Remv=C26ECA
+Load VRAM LZ: DBC64A 002000 1000
+Load VRAM LZ: DBC64A 003000 1000
+Load: DA652B 7F2000 3000
+Load: DA848A 7F7000 0800
+
+Biting Lizard
+Level: 12
+HP: 770
+MP: 6
+Strength: 24
+Agility: 31
+Intelligence: 23
+Wisdom: 23
+Evade: 0
+Defense: 0
+Magic eva: 0
+Magic def: 0
+Type: Lizard
+Element: Water
+Experience: 210
+Blk.mag pwr: 14
+Wht.mag pwr: 14
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 3
+Money: 348
+Set: 0304 0000
+Main sprite: Fl1=On BG1, Crash chr, Crash BG, Display, Show always, No large blocks, Frame1 Fl2=Falling Init=C2603B Idle=C2604B Atta=C260BB Dead=C26175 IniA=C2DD57 DthA=C2DD5A ATbl=C2DD94 Size=0002 Remv=C2617F Hght=FFF8 DTbl=C2DD4F
+Load: DA9BC9 7F2000 2800
+
+Dragon Worm
+Level: 62
+HP: 3525
+MP: 99
+Strength: 54
+Agility: 10
+Intelligence: 66
+Wisdom: 66
+Evade: 99
+Defense: 90
+Magic eva: 99
+Magic def: 474
+Type: Dragon
+Element: Earth
+Experience: 24290
+Blk.mag pwr: 56
+Wht.mag pwr: 1
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 120
+Money: 17460
+Set: 0304 0001
+Main sprite: Fl1=On BG1, Crash chr, Display, Show always, Frame1 Fl2=None Init=C274F9 Idle=C27605 Atta=C27661 Dead=C276D1 IniA=C2ED23 DthA=C2ED25 ATbl=C2ED65 DTbl=C2ED17
+Load VRAM LZ: DBBC2C 006200 1800
+
+Dread Slime
+Level: 72
+HP: 5000
+MP: 99
+Strength: 46
+Agility: 19
+Intelligence: 80
+Wisdom: 80
+Evade: 99
+Defense: 200
+Magic eva: 99
+Magic def: 500
+Type: Lizard
+Element: Light
+Experience: 37000
+Blk.mag pwr: 50
+Wht.mag pwr: 50
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 119
+Money: 26400
+Set: 0304 0001
+Set: 02CB 6601
+Main sprite: On BG1, Crash chr, Crash BG, Display, Show always, No large blocks, Frame1 C28455
+Clear floor 2
+Load M7 LZ: DB0000 000000 1C00
+Load: DAF74A 7F2000 0800
+Load: DBD846 7F2800 0400
+Palette: 007E=000E
+
+Thunder Gigas
+Level: 67
+HP: 4462
+MP: 99
+Strength: 87
+Agility: 15
+Intelligence: 88
+Wisdom: 88
+Evade: 99
+Defense: 90
+Magic eva: 99
+Magic def: 474
+Type: Ghost
+Element: Air
+Experience: 30277
+Blk.mag pwr: 37
+Wht.mag pwr: 1
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 119
+Money: 30600
+Set: 0304 0002
+Main sprite: Fl1=On BG1, Crash chr, Crash BG, Display, Show always, No large blocks, Frame1 Fl2=None Init=C262B8 Idle=C262C2 Atta=C2630F IniA=C2DFB8 DthA=C2DFBA ATbl=C2DFE7 Size=0004 Remv=C263AB Hght=FFE0
+Load: DB5B9E 7F2000 2400
+Load: DAF593 7F6400 0400
+
+Doom's Eye
+Level: 35
+HP: 425
+MP: 99
+Strength: 30
+Agility: 9
+Intelligence: 45
+Wisdom: 45
+Evade: 99
+Defense: 40
+Magic eva: 99
+Magic def: 100
+Type: Evil
+Element: Dark
+Experience: 1
+Blk.mag pwr: 4
+Wht.mag pwr: 4
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 53
+Money: 0
+
+Mana Beast
+Level: 74
+HP: 9990
+MP: 99
+Strength: 99
+Agility: 1
+Intelligence: 99
+Wisdom: 99
+Evade: 99
+Defense: 450
+Magic eva: 99
+Magic def: 999
+Type: None
+Element: Mana
+Experience: 0
+Blk.mag pwr: 45
+Wht.mag pwr: 45
+Protect against: Slow, Tangled, Sleep, Freeze, Petrify, Confuse, Stop, Mini, Barrel, Transform, Moogle, Poison, Burning
+Weapon 1: SPIKE KNUCKLE
+Weapon 2: SPIKE KNUCKLE
+Flags: Can't throw
+Death: Splash
+Skill: 72
+Money: 0
+Set: 02CB 6601
+Main sprite: On BG1, BG2, BG, Display, Show always, Frame1 C28F33
+Clear floor 2
+Call: C28F20
+Load VRAM LZ: D877E0 006000 0C00
+Palette: 0082=000D
+Palette: 0083=000E
+
+--- Spells ---
+EARTH SLIDE
+Target: Multiple, Enemy
+Strength: 61
+Hit: 75
+Element: Earth
+Inflict: None
+MP cost: 3
+
+GEM MISSILE
+Target: Multiple, Enemy
+Strength: 43
+Hit: 75
+Element: Earth
+Inflict: None
+MP cost: 2
+
+SPEED DOWN
+Target: Multiple, Enemy
+Strength: 61
+Hit: 75
+Element: Earth
+Inflict: Slow
+MP cost: 1
+
+STONE SABER
+Target: Multiple, Ally
+Strength: 61
+Hit: 75
+Element: Earth
+Inflict: Petrify
+MP cost: 4
+
+SPEED UP
+Target: Multiple, Ally
+Strength: 61
+Hit: 75
+Element: Earth
+Inflict: None
+MP cost: 3
+
+DEFENDER
+Target: Multiple, Ally
+Strength: 61
+Hit: 75
+Element: Earth
+Inflict: None
+MP cost: 2
+
+FREEZE
+Target: Multiple, Enemy
+Strength: 61
+Hit: 75
+Element: Water
+Inflict: None
+MP cost: 2
+
+ACID STORM
+Target: Multiple, Enemy
+Strength: 43
+Hit: 75
+Element: Water
+Inflict: Poison
+MP cost: 3
+
+ENERGY ABSORB
+Target: Multiple, Enemy
+Strength: 43
+Hit: 75
+Element: Water
+Inflict: None
+MP cost: 2
+
+ICE SABER
+Target: Multiple, Ally
+Strength: 61
+Hit: 75
+Element: Water
+Inflict: Freeze
+MP cost: 2
+
+REMEDY
+Target: Multiple, Ally
+Strength: 61
+Hit: 75
+Element: Water
+Inflict: None
+MP cost: 1
+
+CURE WATER
+Target: Multiple, Ally
+Strength: 61
+Hit: 75
+Element: Water
+Inflict: None
+MP cost: 2
+
+FIREBALL
+Target: Multiple, Enemy
+Strength: 52
+Hit: 75
+Element: Fire
+Inflict: None
+MP cost: 2
+
+EXPLODER
+Target: Multiple, Enemy
+Strength: 61
+Hit: 75
+Element: Fire
+Inflict: None
+MP cost: 4
+
+LAVA WAVE
+Target: Multiple, Enemy
+Strength: 43
+Hit: 75
+Element: Fire
+Inflict: None
+MP cost: 3
+
+FLAME SABER
+Target: Multiple, Ally
+Strength: 61
+Hit: 75
+Element: Fire
+Inflict: Burning
+MP cost: 2
+
+FIRE BOUQUET
+Target: Multiple, Enemy
+Strength: 43
+Hit: 75
+Element: Fire
+Inflict: None
+MP cost: 3
+
+BLAZE WALL
+Target: Multiple, Enemy
+Strength: 32
+Hit: 75
+Element: Fire
+Inflict: Burning
+MP cost: 4
+
+AIR BLAST
+Target: Multiple, Enemy
+Strength: 43
+Hit: 75
+Element: Air
+Inflict: None
+MP cost: 2
+
+THUNDERBOLT
+Target: Multiple, Enemy
+Strength: 61
+Hit: 75
+Element: Air
+Inflict: None
+MP cost: 4
+
+SILENCE
+Target: Multiple, Enemy
+Strength: 61
+Hit: 75
+Element: Air
+Inflict: Confuse
+MP cost: 2
+
+THUNDER SABER
+Target: Multiple, Ally
+Strength: 61
+Hit: 75
+Element: Air
+Inflict: None
+MP cost: 3
+
+BALLOON
+Target: Multiple, Enemy
+Strength: 61
+Hit: 75
+Element: Air
+Inflict: Stop
+MP cost: 2
+
+ANALYZER
+Target: Chest, Enemy
+Strength: 61
+Hit: 75
+Element: Air
+Inflict: None
+MP cost: 1
+
+CHANGE FORM
+Target: Multiple, Enemy
+Strength: 61
+Hit: 75
+Element: Moon
+Inflict: Transform
+MP cost: 5
+
+MAGIC ABSORB
+Target: Multiple, Enemy
+Strength: 43
+Hit: 75
+Element: Moon
+Inflict: None
+MP cost: 1
+
+LUNAR MAGIC
+Target: Multiple, Enemy
+Strength: 61
+Hit: 75
+Element: Moon
+Inflict: None
+MP cost: 8
+
+MOON SABER
+Target: Multiple, Ally
+Strength: 61
+Hit: 75
+Element: Moon
+Inflict: None
+MP cost: 3
+
+LUNAR BOOST
+Target: Multiple, Ally
+Strength: 61
+Hit: 75
+Element: Moon
+Inflict: None
+MP cost: 2
+
+MOON ENERGY
+Target: Ally
+Strength: 61
+Hit: 75
+Element: Moon
+Inflict: None
+MP cost: 2
+
+SLEEP FLOWER
+Target: Multiple, Enemy
+Strength: 61
+Hit: 75
+Element: Mana
+Inflict: Sleep
+MP cost: 2
+
+BURST
+Target: Multiple, Enemy
+Strength: 100
+Hit: 75
+Element: Mana
+Inflict: None
+MP cost: 4
+
+MANA MAGIC
+Target: Mana sword, Ally
+Strength: 250
+Hit: 75
+Element: Mana
+Inflict: None
+MP cost: 1
+
+REVIVIFIER
+Target: Multiple, Ally
+Strength: 61
+Hit: 75
+Element: Mana
+Inflict: Dead
+MP cost: 10
+
+WALL
+Target: Multiple, Ally
+Strength: 61
+Hit: 75
+Element: Mana
+Inflict: None
+MP cost: 6
+
+MANA MAGIC
+Target: Mana sword, Ally
+Strength: 250
+Hit: 75
+Element: Mana
+Inflict: None
+MP cost: 1
+
+EVIL GATE
+Target: Multiple, Enemy
+Strength: 61
+Hit: 75
+Element: Dark
+Inflict: None
+MP cost: 8
+
+DARK FORCE
+Target: Multiple, Enemy
+Strength: 61
+Hit: 75
+Element: Dark
+Inflict: None
+MP cost: 2
+
+DISPEL MAGIC
+Target: Multiple, Enemy
+Strength: 61
+Hit: 75
+Element: Dark
+Inflict: None
+MP cost: 4
+
+LIGHT SABER
+Target: Multiple, Ally
+Strength: 61
+Hit: 75
+Element: Light
+Inflict: None
+MP cost: 5
+
+LUCENT BEAM
+Target: Multiple, Enemy
+Strength: 61
+Hit: 75
+Element: Light
+Inflict: None
+MP cost: 8
+
+LUCID BARRIER
+Target: Multiple, Ally
+Strength: 61
+Hit: 75
+Element: Light
+Inflict: None
+MP cost: 4
+
+--- Equipment ---
+Bare Head
+Bug
+Defense: 0
+Evade: 0
+Magic Def: 0
+Magic Eva: 0
+Characters: sprite, woman, man
+Element: None
+Protect against: None
+
+Bandanna
+Bug
+Defense: 2
+Evade: 23
+Magic Def: 2
+Magic Eva: 23
+Characters: man
+Element: None
+Protect against: None
+
+Hair Ribbon
+Bug
+Defense: 3
+Evade: 23
+Magic Def: 3
+Magic Eva: 23
+Characters: woman
+Element: None
+Protect against: None
+
+Rabite Cap
+Bug
+Defense: 5
+Evade: 23
+Magic Def: 5
+Magic Eva: 23
+Characters: sprite
+Element: None
+Protect against: None
+
+Head Gear
+Bug
+Defense: 7
+Evade: 23
+Magic Def: 7
+Magic Eva: 23
+Characters: man
+Element: None
+Protect against: None
+
+Quill Cap
+Bug
+Defense: 10
+Evade: 23
+Magic Def: 10
+Magic Eva: 23
+Characters: sprite, woman
+Element: None
+Protect against: None
+
+Steel Cap
+Bug
+Defense: 13
+Evade: 23
+Magic Def: 13
+Magic Eva: 23
+Characters: man
+Element: None
+Protect against: None
+
+Golden Tiara
+Bug
+Defense: 17
+Evade: 23
+Magic Def: 17
+Magic Eva: 23
+Characters: sprite, woman
+Element: None
+Protect against: None
+
+Raccoon Cap
+Bug
+Defense: 21
+Evade: 23
+Magic Def: 21
+Magic Eva: 23
+Characters: sprite, woman, man
+Element: None
+Protect against: None
+
+Quilted Hood
+Agi+5, Bug
+Defense: 26
+Evade: 23
+Magic Def: 26
+Magic Eva: 23
+Characters: sprite, woman
+Element: None
+Protect against: None
+
+Tiger Cap
+Bug
+Defense: 32
+Evade: 23
+Magic Def: 32
+Magic Eva: 23
+Characters: sprite, woman, man
+Element: None
+Protect against: None
+
+Circlet
+Int+5, Bug
+Defense: 38
+Evade: 23
+Magic Def: 38
+Magic Eva: 23
+Characters: sprite, man
+Element: None
+Protect against: None
+
+Ruby Armet
+Bug
+Defense: 46
+Evade: 23
+Magic Def: 46
+Magic Eva: 23
+Characters: woman
+Element: None
+Protect against: None
+
+Unicorn Helm
+1, Bug
+Defense: 55
+Evade: 23
+Magic Def: 55
+Magic Eva: 23
+Characters: sprite, woman, man
+Element: None
+Protect against: None
+
+Dragon Helm
+Bug
+Defense: 66
+Evade: 23
+Magic Def: 66
+Magic Eva: 23
+Characters: sprite, woman, man
+Element: None
+Protect against: None
+
+Duck Helm
+Bug
+Defense: 78
+Evade: 23
+Magic Def: 78
+Magic Eva: 23
+Characters: sprite, woman
+Element: None
+Protect against: None
+
+Needle Helm
+Bug
+Defense: 140
+Evade: 23
+Magic Def: 140
+Magic Eva: 23
+Characters: sprite, woman, man
+Element: None
+Protect against: None
+
+Cockatrice Cap
+Bug
+Defense: 142
+Evade: 23
+Magic Def: 143
+Magic Eva: 23
+Characters: sprite, woman, man
+Element: None
+Protect against: Petrify
+
+Amulet Helm
+1, Int+5, Bug
+Defense: 143
+Evade: 23
+Magic Def: 142
+Magic Eva: 23
+Characters: sprite, woman
+Element: None
+Protect against: None
+
+Griffin Helm
+Agi+5, Str+5, Bug
+Defense: 145
+Evade: 23
+Magic Def: 145
+Magic Eva: 23
+Characters: man
+Element: None
+Protect against: None
+
+Faerie Crown
+1, Int+5, Bug
+Defense: 150
+Evade: 23
+Magic Def: 150
+Magic Eva: 23
+Characters: sprite, woman
+Element: None
+Protect against: None
+
+No
+Bug
+Defense: 0
+Evade: 0
+Magic Def: 0
+Magic Eva: 0
+Characters: sprite, woman, man
+Element: None
+Protect against: None
+
+Overalls
+Bug
+Defense: 3
+Evade: 37
+Magic Def: 1
+Magic Eva: 15
+Characters: man
+Element: None
+Protect against: None
+
+Kung Fu Suit
+Bug
+Defense: 4
+Evade: 37
+Magic Def: 2
+Magic Eva: 15
+Characters: woman
+Element: None
+Protect against: None
+
+Midge Robe
+Bug
+Defense: 7
+Evade: 37
+Magic Def: 4
+Magic Eva: 15
+Characters: sprite
+Element: None
+Protect against: None
+
+Chain Vest
+Bug
+Defense: 10
+Evade: 37
+Magic Def: 6
+Magic Eva: 15
+Characters: sprite, woman, man
+Element: None
+Protect against: None
+
+Spiky Suit
+Bug
+Defense: 13
+Evade: 37
+Magic Def: 8
+Magic Eva: 15
+Characters: sprite, man
+Element: None
+Protect against: None
+
+Kung Fu Dress
+Bug
+Defense: 17
+Evade: 37
+Magic Def: 10
+Magic Eva: 15
+Characters: woman
+Element: None
+Protect against: None
+
+Fancy Overalls
+Bug
+Defense: 22
+Evade: 37
+Magic Def: 13
+Magic Eva: 15
+Characters: sprite, woman, man
+Element: None
+Protect against: None
+
+Chest Guard
+Bug
+Defense: 28
+Evade: 37
+Magic Def: 16
+Magic Eva: 15
+Characters: sprite, woman
+Element: None
+Protect against: None
+
+Golden Vest
+Bug
+Defense: 34
+Evade: 37
+Magic Def: 20
+Magic Eva: 15
+Characters: sprite, woman, man
+Element: None
+Protect against: None
+
+Ruby Vest
+Bug
+Defense: 43
+Evade: 37
+Magic Def: 24
+Magic Eva: 15
+Characters: sprite, woman, man
+Element: None
+Protect against: None
+
+Tiger Suit
+Bug
+Defense: 52
+Evade: 37
+Magic Def: 29
+Magic Eva: 15
+Characters: sprite, man
+Element: None
+Protect against: None
+
+Tiger Bikini
+Bug
+Defense: 64
+Evade: 37
+Magic Def: 35
+Magic Eva: 15
+Characters: woman
+Element: None
+Protect against: None
+
+Magical Armor
+Bug
+Defense: 78
+Evade: 37
+Magic Def: 41
+Magic Eva: 15
+Characters: sprite, woman, man
+Element: None
+Protect against: None
+
+Tortoise Mail
+Bug
+Defense: 95
+Evade: 37
+Magic Def: 49
+Magic Eva: 15
+Characters: sprite, man
+Element: None
+Protect against: None
+
+Flower Suit
+Bug
+Defense: 115
+Evade: 37
+Magic Def: 57
+Magic Eva: 15
+Characters: woman
+Element: None
+Protect against: Sleep, Poison
+
+Battle Suit
+Bug
+Defense: 139
+Evade: 37
+Magic Def: 67
+Magic Eva: 15
+Characters: sprite, woman, man
+Element: None
+Protect against: None
+
+Vestguard
+Bug
+Defense: 240
+Evade: 37
+Magic Def: 90
+Magic Eva: 15
+Characters: sprite, woman, man
+Element: None
+Protect against: None
+
+Vampire Cape
+Bug
+Defense: 243
+Evade: 37
+Magic Def: 93
+Magic Eva: 15
+Characters: sprite, woman
+Element: None
+Protect against: None
+
+Power Suit
+Str+5, Bug
+Defense: 245
+Evade: 37
+Magic Def: 95
+Magic Eva: 15
+Characters: man
+Element: None
+Protect against: None
+
+Faerie Cloak
+Con+5, Bug
+Defense: 250
+Evade: 37
+Magic Def: 100
+Magic Eva: 15
+Characters: sprite, woman
+Element: None
+Protect against: None
+
+Nothing
+Bug
+Defense: 0
+Evade: 0
+Magic Def: 0
+Magic Eva: 0
+Characters: sprite, woman, man
+Element: None
+Protect against: None
+
+Faerie's Ring
+Agi+5, Bug
+Defense: 100
+Evade: 15
+Magic Def: 250
+Magic Eva: 37
+Characters: sprite, woman, man
+Element: None
+Protect against: Confuse, Stop, Mini, Poison
+
+Elbow Pad
+Bug
+Defense: 2
+Evade: 15
+Magic Def: 4
+Magic Eva: 37
+Characters: sprite, woman, man
+Element: None
+Protect against: None
+
+Power Wrist
+Str+5, Bug
+Defense: 4
+Evade: 15
+Magic Def: 7
+Magic Eva: 37
+Characters: sprite, woman, man
+Element: None
+Protect against: None
+
+Cobra Bracelet
+Bug
+Defense: 6
+Evade: 15
+Magic Def: 10
+Magic Eva: 37
+Characters: sprite, woman, man
+Element: None
+Protect against: Poison
+
+Wolf's Band
+Agi+5, Bug
+Defense: 8
+Evade: 15
+Magic Def: 13
+Magic Eva: 37
+Characters: sprite, woman, man
+Element: None
+Protect against: None
+
+Silver Band
+1, Bug
+Defense: 10
+Evade: 15
+Magic Def: 17
+Magic Eva: 37
+Characters: sprite, woman, man
+Element: None
+Protect against: None
+
+Golem Ring
+Bug
+Defense: 13
+Evade: 15
+Magic Def: 22
+Magic Eva: 37
+Characters: sprite, woman, man
+Element: None
+Protect against: Slow
+
+Frosty Ring
+Bug
+Defense: 16
+Evade: 15
+Magic Def: 28
+Magic Eva: 37
+Characters: sprite, woman, man
+Element: None
+Protect against: Freeze
+
+Ivy Amulet
+Bug
+Defense: 20
+Evade: 15
+Magic Def: 34
+Magic Eva: 37
+Characters: sprite, woman, man
+Element: None
+Protect against: Sleep, Poison
+
+Gold Bracelet
+Bug
+Defense: 24
+Evade: 15
+Magic Def: 43
+Magic Eva: 37
+Characters: sprite, woman, man
+Element: None
+Protect against: Petrify
+
+Shield Ring
+Bug
+Defense: 29
+Evade: 15
+Magic Def: 52
+Magic Eva: 37
+Characters: sprite, woman, man
+Element: None
+Protect against: None
+
+Lazuri Ring
+1, Int+5, Bug
+Defense: 35
+Evade: 15
+Magic Def: 64
+Magic Eva: 37
+Characters: sprite, woman, man
+Element: None
+Protect against: None
+
+Guardian Ring
+Bug
+Defense: 41
+Evade: 15
+Magic Def: 78
+Magic Eva: 37
+Characters: sprite, woman, man
+Element: None
+Protect against: None
+
+Gauntlet
+Str+5, Bug
+Defense: 90
+Evade: 15
+Magic Def: 240
+Magic Eva: 37
+Characters: sprite, woman, man
+Element: None
+Protect against: None
+
+Ninja Gloves
+Agi+5, Bug
+Defense: 91
+Evade: 15
+Magic Def: 241
+Magic Eva: 37
+Characters: sprite, woman, man
+Element: None
+Protect against: Slow
+
+Dragon Ring
+Bug
+Defense: 92
+Evade: 15
+Magic Def: 242
+Magic Eva: 37
+Characters: sprite, woman, man
+Element: None
+Protect against: None
+
+Watcher Ring
+Bug
+Defense: 93
+Evade: 15
+Magic Def: 243
+Magic Eva: 37
+Characters: sprite, woman, man
+Element: None
+Protect against: Moogle
+
+Imp's Ring
+Bug
+Defense: 94
+Evade: 15
+Magic Def: 244
+Magic Eva: 37
+Characters: sprite, woman, man
+Element: None
+Protect against: Freeze, Burning
+
+Amulet Ring
+Bug
+Defense: 95
+Evade: 15
+Magic Def: 245
+Magic Eva: 37
+Characters: sprite, woman, man
+Element: None
+Protect against: Petrify
+
+Wristband
+Bug
+Defense: 1
+Evade: 15
+Magic Def: 3
+Magic Eva: 37
+Characters: woman, man
+Element: None
+Protect against: None
+
+--- Man stats ---
+Level 1
+HP: 50
+MP: 0
+Strength: 15
+Agility: 15
+Constitution: 13
+Intelligence: 5
+Wisdom: 5
+
+Level 2
+HP: 59
+MP: 0
+Strength: 16
+Agility: 16
+Constitution: 14
+Intelligence: 6
+Wisdom: 6
+
+Level 3
+HP: 69
+MP: 0
+Strength: 17
+Agility: 17
+Constitution: 15
+Intelligence: 6
+Wisdom: 7
+
+Level 4
+HP: 79
+MP: 0
+Strength: 17
+Agility: 17
+Constitution: 16
+Intelligence: 7
+Wisdom: 8
+
+Level 5
+HP: 88
+MP: 0
+Strength: 18
+Agility: 18
+Constitution: 17
+Intelligence: 7
+Wisdom: 9
+
+Level 6
+HP: 98
+MP: 0
+Strength: 19
+Agility: 19
+Constitution: 18
+Intelligence: 8
+Wisdom: 9
+
+Level 7
+HP: 108
+MP: 0
+Strength: 20
+Agility: 20
+Constitution: 19
+Intelligence: 8
+Wisdom: 10
+
+Level 8
+HP: 117
+MP: 0
+Strength: 21
+Agility: 21
+Constitution: 20
+Intelligence: 9
+Wisdom: 11
+
+Level 9
+HP: 127
+MP: 0
+Strength: 22
+Agility: 22
+Constitution: 21
+Intelligence: 9
+Wisdom: 11
+
+Level 10
+HP: 137
+MP: 0
+Strength: 22
+Agility: 22
+Constitution: 22
+Intelligence: 10
+Wisdom: 12
+
+Level 11
+HP: 146
+MP: 0
+Strength: 23
+Agility: 23
+Constitution: 23
+Intelligence: 10
+Wisdom: 13
+
+Level 12
+HP: 156
+MP: 0
+Strength: 24
+Agility: 24
+Constitution: 24
+Intelligence: 10
+Wisdom: 13
+
+Level 13
+HP: 166
+MP: 0
+Strength: 25
+Agility: 25
+Constitution: 25
+Intelligence: 11
+Wisdom: 14
+
+Level 14
+HP: 175
+MP: 0
+Strength: 26
+Agility: 26
+Constitution: 26
+Intelligence: 11
+Wisdom: 15
+
+Level 15
+HP: 185
+MP: 0
+Strength: 27
+Agility: 27
+Constitution: 27
+Intelligence: 12
+Wisdom: 16
+
+Level 16
+HP: 195
+MP: 0
+Strength: 28
+Agility: 28
+Constitution: 28
+Intelligence: 12
+Wisdom: 16
+
+Level 17
+HP: 205
+MP: 0
+Strength: 28
+Agility: 28
+Constitution: 28
+Intelligence: 13
+Wisdom: 17
+
+Level 18
+HP: 214
+MP: 0
+Strength: 29
+Agility: 29
+Constitution: 29
+Intelligence: 13
+Wisdom: 18
+
+Level 19
+HP: 224
+MP: 0
+Strength: 30
+Agility: 30
+Constitution: 30
+Intelligence: 14
+Wisdom: 18
+
+Level 20
+HP: 234
+MP: 0
+Strength: 31
+Agility: 31
+Constitution: 31
+Intelligence: 14
+Wisdom: 19
+
+Level 21
+HP: 243
+MP: 0
+Strength: 32
+Agility: 32
+Constitution: 32
+Intelligence: 15
+Wisdom: 20
+
+Level 22
+HP: 253
+MP: 0
+Strength: 33
+Agility: 33
+Constitution: 33
+Intelligence: 15
+Wisdom: 21
+
+Level 23
+HP: 263
+MP: 0
+Strength: 34
+Agility: 34
+Constitution: 34
+Intelligence: 15
+Wisdom: 21
+
+Level 24
+HP: 272
+MP: 0
+Strength: 34
+Agility: 34
+Constitution: 34
+Intelligence: 16
+Wisdom: 22
+
+Level 25
+HP: 282
+MP: 0
+Strength: 35
+Agility: 35
+Constitution: 35
+Intelligence: 16
+Wisdom: 23
+
+Level 26
+HP: 292
+MP: 0
+Strength: 36
+Agility: 36
+Constitution: 36
+Intelligence: 17
+Wisdom: 23
+
+Level 27
+HP: 301
+MP: 0
+Strength: 37
+Agility: 37
+Constitution: 37
+Intelligence: 17
+Wisdom: 24
+
+Level 28
+HP: 311
+MP: 0
+Strength: 38
+Agility: 38
+Constitution: 38
+Intelligence: 18
+Wisdom: 25
+
+Level 29
+HP: 321
+MP: 0
+Strength: 39
+Agility: 39
+Constitution: 39
+Intelligence: 18
+Wisdom: 26
+
+Level 30
+HP: 331
+MP: 0
+Strength: 39
+Agility: 39
+Constitution: 39
+Intelligence: 19
+Wisdom: 26
+
+Level 31
+HP: 340
+MP: 0
+Strength: 40
+Agility: 40
+Constitution: 40
+Intelligence: 19
+Wisdom: 27
+
+Level 32
+HP: 350
+MP: 0
+Strength: 41
+Agility: 41
+Constitution: 41
+Intelligence: 20
+Wisdom: 28
+
+Level 33
+HP: 360
+MP: 0
+Strength: 42
+Agility: 42
+Constitution: 42
+Intelligence: 20
+Wisdom: 28
+
+Level 34
+HP: 369
+MP: 0
+Strength: 43
+Agility: 43
+Constitution: 43
+Intelligence: 20
+Wisdom: 29
+
+Level 35
+HP: 379
+MP: 0
+Strength: 44
+Agility: 44
+Constitution: 44
+Intelligence: 21
+Wisdom: 30
+
+Level 36
+HP: 389
+MP: 0
+Strength: 45
+Agility: 45
+Constitution: 45
+Intelligence: 21
+Wisdom: 30
+
+Level 37
+HP: 398
+MP: 0
+Strength: 45
+Agility: 45
+Constitution: 45
+Intelligence: 22
+Wisdom: 31
+
+Level 38
+HP: 408
+MP: 0
+Strength: 46
+Agility: 46
+Constitution: 46
+Intelligence: 22
+Wisdom: 32
+
+Level 39
+HP: 418
+MP: 0
+Strength: 47
+Agility: 47
+Constitution: 47
+Intelligence: 23
+Wisdom: 33
+
+Level 40
+HP: 427
+MP: 0
+Strength: 48
+Agility: 48
+Constitution: 48
+Intelligence: 23
+Wisdom: 33
+
+Level 41
+HP: 437
+MP: 0
+Strength: 49
+Agility: 49
+Constitution: 49
+Intelligence: 24
+Wisdom: 34
+
+Level 42
+HP: 447
+MP: 0
+Strength: 50
+Agility: 50
+Constitution: 50
+Intelligence: 24
+Wisdom: 35
+
+Level 43
+HP: 457
+MP: 0
+Strength: 50
+Agility: 50
+Constitution: 50
+Intelligence: 25
+Wisdom: 35
+
+Level 44
+HP: 466
+MP: 0
+Strength: 51
+Agility: 51
+Constitution: 51
+Intelligence: 25
+Wisdom: 36
+
+Level 45
+HP: 476
+MP: 0
+Strength: 52
+Agility: 52
+Constitution: 52
+Intelligence: 25
+Wisdom: 37
+
+Level 46
+HP: 486
+MP: 0
+Strength: 53
+Agility: 53
+Constitution: 53
+Intelligence: 26
+Wisdom: 38
+
+Level 47
+HP: 495
+MP: 0
+Strength: 54
+Agility: 54
+Constitution: 54
+Intelligence: 26
+Wisdom: 38
+
+Level 48
+HP: 505
+MP: 0
+Strength: 55
+Agility: 55
+Constitution: 55
+Intelligence: 27
+Wisdom: 39
+
+Level 49
+HP: 515
+MP: 0
+Strength: 56
+Agility: 56
+Constitution: 56
+Intelligence: 27
+Wisdom: 40
+
+Level 50
+HP: 524
+MP: 0
+Strength: 56
+Agility: 56
+Constitution: 56
+Intelligence: 28
+Wisdom: 40
+
+Level 51
+HP: 534
+MP: 0
+Strength: 57
+Agility: 57
+Constitution: 57
+Intelligence: 28
+Wisdom: 41
+
+Level 52
+HP: 544
+MP: 0
+Strength: 58
+Agility: 58
+Constitution: 58
+Intelligence: 29
+Wisdom: 42
+
+Level 53
+HP: 553
+MP: 0
+Strength: 59
+Agility: 59
+Constitution: 59
+Intelligence: 29
+Wisdom: 42
+
+Level 54
+HP: 563
+MP: 0
+Strength: 60
+Agility: 60
+Constitution: 60
+Intelligence: 30
+Wisdom: 43
+
+Level 55
+HP: 573
+MP: 0
+Strength: 61
+Agility: 61
+Constitution: 61
+Intelligence: 30
+Wisdom: 44
+
+Level 56
+HP: 582
+MP: 0
+Strength: 62
+Agility: 62
+Constitution: 62
+Intelligence: 30
+Wisdom: 45
+
+Level 57
+HP: 592
+MP: 0
+Strength: 62
+Agility: 62
+Constitution: 62
+Intelligence: 31
+Wisdom: 45
+
+Level 58
+HP: 602
+MP: 0
+Strength: 63
+Agility: 63
+Constitution: 63
+Intelligence: 31
+Wisdom: 46
+
+Level 59
+HP: 612
+MP: 0
+Strength: 64
+Agility: 64
+Constitution: 64
+Intelligence: 32
+Wisdom: 47
+
+Level 60
+HP: 621
+MP: 0
+Strength: 65
+Agility: 65
+Constitution: 65
+Intelligence: 32
+Wisdom: 47
+
+Level 61
+HP: 631
+MP: 0
+Strength: 66
+Agility: 66
+Constitution: 66
+Intelligence: 33
+Wisdom: 48
+
+Level 62
+HP: 641
+MP: 0
+Strength: 67
+Agility: 67
+Constitution: 67
+Intelligence: 33
+Wisdom: 49
+
+Level 63
+HP: 650
+MP: 0
+Strength: 67
+Agility: 67
+Constitution: 67
+Intelligence: 34
+Wisdom: 50
+
+Level 64
+HP: 660
+MP: 0
+Strength: 68
+Agility: 68
+Constitution: 68
+Intelligence: 34
+Wisdom: 50
+
+Level 65
+HP: 670
+MP: 0
+Strength: 69
+Agility: 69
+Constitution: 69
+Intelligence: 35
+Wisdom: 51
+
+Level 66
+HP: 679
+MP: 0
+Strength: 70
+Agility: 70
+Constitution: 70
+Intelligence: 35
+Wisdom: 52
+
+Level 67
+HP: 689
+MP: 0
+Strength: 71
+Agility: 71
+Constitution: 71
+Intelligence: 35
+Wisdom: 52
+
+Level 68
+HP: 699
+MP: 0
+Strength: 72
+Agility: 72
+Constitution: 72
+Intelligence: 36
+Wisdom: 53
+
+Level 69
+HP: 708
+MP: 0
+Strength: 73
+Agility: 73
+Constitution: 73
+Intelligence: 36
+Wisdom: 54
+
+Level 70
+HP: 718
+MP: 0
+Strength: 73
+Agility: 73
+Constitution: 73
+Intelligence: 37
+Wisdom: 54
+
+Level 71
+HP: 728
+MP: 0
+Strength: 74
+Agility: 74
+Constitution: 74
+Intelligence: 37
+Wisdom: 55
+
+Level 72
+HP: 738
+MP: 0
+Strength: 75
+Agility: 75
+Constitution: 75
+Intelligence: 38
+Wisdom: 56
+
+Level 73
+HP: 747
+MP: 0
+Strength: 76
+Agility: 76
+Constitution: 76
+Intelligence: 38
+Wisdom: 57
+
+Level 74
+HP: 757
+MP: 0
+Strength: 77
+Agility: 77
+Constitution: 77
+Intelligence: 39
+Wisdom: 57
+
+Level 75
+HP: 767
+MP: 0
+Strength: 78
+Agility: 78
+Constitution: 78
+Intelligence: 39
+Wisdom: 58
+
+Level 76
+HP: 776
+MP: 0
+Strength: 78
+Agility: 78
+Constitution: 78
+Intelligence: 40
+Wisdom: 59
+
+Level 77
+HP: 786
+MP: 0
+Strength: 79
+Agility: 79
+Constitution: 79
+Intelligence: 40
+Wisdom: 59
+
+Level 78
+HP: 796
+MP: 0
+Strength: 80
+Agility: 80
+Constitution: 80
+Intelligence: 40
+Wisdom: 60
+
+Level 79
+HP: 805
+MP: 0
+Strength: 81
+Agility: 81
+Constitution: 81
+Intelligence: 41
+Wisdom: 61
+
+Level 80
+HP: 815
+MP: 0
+Strength: 82
+Agility: 82
+Constitution: 82
+Intelligence: 41
+Wisdom: 62
+
+Level 81
+HP: 825
+MP: 0
+Strength: 83
+Agility: 83
+Constitution: 83
+Intelligence: 42
+Wisdom: 62
+
+Level 82
+HP: 834
+MP: 0
+Strength: 84
+Agility: 84
+Constitution: 84
+Intelligence: 42
+Wisdom: 63
+
+Level 83
+HP: 844
+MP: 0
+Strength: 84
+Agility: 84
+Constitution: 84
+Intelligence: 43
+Wisdom: 64
+
+Level 84
+HP: 854
+MP: 0
+Strength: 85
+Agility: 85
+Constitution: 85
+Intelligence: 43
+Wisdom: 64
+
+Level 85
+HP: 864
+MP: 0
+Strength: 86
+Agility: 86
+Constitution: 86
+Intelligence: 44
+Wisdom: 65
+
+Level 86
+HP: 873
+MP: 0
+Strength: 87
+Agility: 87
+Constitution: 87
+Intelligence: 44
+Wisdom: 66
+
+Level 87
+HP: 883
+MP: 0
+Strength: 88
+Agility: 88
+Constitution: 88
+Intelligence: 45
+Wisdom: 67
+
+Level 88
+HP: 893
+MP: 0
+Strength: 89
+Agility: 89
+Constitution: 89
+Intelligence: 45
+Wisdom: 67
+
+Level 89
+HP: 902
+MP: 0
+Strength: 90
+Agility: 90
+Constitution: 90
+Intelligence: 45
+Wisdom: 68
+
+Level 90
+HP: 912
+MP: 0
+Strength: 90
+Agility: 90
+Constitution: 90
+Intelligence: 46
+Wisdom: 69
+
+Level 91
+HP: 922
+MP: 0
+Strength: 91
+Agility: 91
+Constitution: 91
+Intelligence: 46
+Wisdom: 69
+
+Level 92
+HP: 931
+MP: 0
+Strength: 92
+Agility: 92
+Constitution: 92
+Intelligence: 47
+Wisdom: 70
+
+Level 93
+HP: 941
+MP: 0
+Strength: 93
+Agility: 93
+Constitution: 93
+Intelligence: 47
+Wisdom: 71
+
+Level 94
+HP: 951
+MP: 0
+Strength: 94
+Agility: 94
+Constitution: 94
+Intelligence: 48
+Wisdom: 71
+
+Level 95
+HP: 960
+MP: 0
+Strength: 95
+Agility: 95
+Constitution: 95
+Intelligence: 48
+Wisdom: 72
+
+Level 96
+HP: 970
+MP: 0
+Strength: 96
+Agility: 96
+Constitution: 96
+Intelligence: 49
+Wisdom: 73
+
+Level 97
+HP: 980
+MP: 0
+Strength: 97
+Agility: 97
+Constitution: 97
+Intelligence: 49
+Wisdom: 74
+
+Level 98
+HP: 990
+MP: 0
+Strength: 98
+Agility: 98
+Constitution: 98
+Intelligence: 50
+Wisdom: 74
+
+Level 99
+HP: 999
+MP: 0
+Strength: 99
+Agility: 99
+Constitution: 99
+Intelligence: 50
+Wisdom: 75
+
+--- Woman stats ---
+Level 1
+HP: 45
+MP: 8
+Strength: 10
+Agility: 10
+Constitution: 12
+Intelligence: 7
+Wisdom: 15
+
+Level 2
+HP: 52
+MP: 8
+Strength: 11
+Agility: 11
+Constitution: 12
+Intelligence: 8
+Wisdom: 16
+
+Level 3
+HP: 59
+MP: 8
+Strength: 12
+Agility: 11
+Constitution: 13
+Intelligence: 9
+Wisdom: 17
+
+Level 4
+HP: 67
+MP: 8
+Strength: 13
+Agility: 12
+Constitution: 13
+Intelligence: 10
+Wisdom: 17
+
+Level 5
+HP: 74
+MP: 9
+Strength: 14
+Agility: 13
+Constitution: 14
+Intelligence: 10
+Wisdom: 18
+
+Level 6
+HP: 82
+MP: 9
+Strength: 14
+Agility: 14
+Constitution: 14
+Intelligence: 11
+Wisdom: 19
+
+Level 7
+HP: 89
+MP: 9
+Strength: 15
+Agility: 14
+Constitution: 15
+Intelligence: 11
+Wisdom: 20
+
+Level 8
+HP: 97
+MP: 10
+Strength: 16
+Agility: 15
+Constitution: 15
+Intelligence: 12
+Wisdom: 21
+
+Level 9
+HP: 104
+MP: 10
+Strength: 16
+Agility: 16
+Constitution: 16
+Intelligence: 13
+Wisdom: 22
+
+Level 10
+HP: 112
+MP: 11
+Strength: 17
+Agility: 17
+Constitution: 17
+Intelligence: 13
+Wisdom: 22
+
+Level 11
+HP: 119
+MP: 11
+Strength: 18
+Agility: 17
+Constitution: 17
+Intelligence: 14
+Wisdom: 23
+
+Level 12
+HP: 127
+MP: 11
+Strength: 18
+Agility: 18
+Constitution: 18
+Intelligence: 15
+Wisdom: 24
+
+Level 13
+HP: 134
+MP: 12
+Strength: 19
+Agility: 19
+Constitution: 19
+Intelligence: 15
+Wisdom: 25
+
+Level 14
+HP: 142
+MP: 12
+Strength: 20
+Agility: 20
+Constitution: 19
+Intelligence: 16
+Wisdom: 26
+
+Level 15
+HP: 149
+MP: 13
+Strength: 21
+Agility: 20
+Constitution: 20
+Intelligence: 17
+Wisdom: 27
+
+Level 16
+HP: 157
+MP: 13
+Strength: 21
+Agility: 21
+Constitution: 21
+Intelligence: 17
+Wisdom: 28
+
+Level 17
+HP: 164
+MP: 14
+Strength: 22
+Agility: 22
+Constitution: 21
+Intelligence: 18
+Wisdom: 28
+
+Level 18
+HP: 172
+MP: 14
+Strength: 23
+Agility: 23
+Constitution: 22
+Intelligence: 18
+Wisdom: 29
+
+Level 19
+HP: 180
+MP: 15
+Strength: 23
+Agility: 23
+Constitution: 22
+Intelligence: 19
+Wisdom: 30
+
+Level 20
+HP: 187
+MP: 16
+Strength: 24
+Agility: 24
+Constitution: 23
+Intelligence: 20
+Wisdom: 31
+
+Level 21
+HP: 195
+MP: 16
+Strength: 25
+Agility: 25
+Constitution: 24
+Intelligence: 20
+Wisdom: 32
+
+Level 22
+HP: 202
+MP: 17
+Strength: 26
+Agility: 26
+Constitution: 24
+Intelligence: 21
+Wisdom: 33
+
+Level 23
+HP: 210
+MP: 17
+Strength: 26
+Agility: 26
+Constitution: 25
+Intelligence: 22
+Wisdom: 34
+
+Level 24
+HP: 217
+MP: 18
+Strength: 27
+Agility: 27
+Constitution: 26
+Intelligence: 22
+Wisdom: 34
+
+Level 25
+HP: 225
+MP: 19
+Strength: 28
+Agility: 28
+Constitution: 26
+Intelligence: 23
+Wisdom: 35
+
+Level 26
+HP: 233
+MP: 19
+Strength: 28
+Agility: 29
+Constitution: 27
+Intelligence: 24
+Wisdom: 36
+
+Level 27
+HP: 240
+MP: 20
+Strength: 29
+Agility: 29
+Constitution: 28
+Intelligence: 24
+Wisdom: 37
+
+Level 28
+HP: 248
+MP: 21
+Strength: 30
+Agility: 30
+Constitution: 28
+Intelligence: 25
+Wisdom: 38
+
+Level 29
+HP: 256
+MP: 22
+Strength: 31
+Agility: 31
+Constitution: 29
+Intelligence: 25
+Wisdom: 39
+
+Level 30
+HP: 263
+MP: 23
+Strength: 31
+Agility: 32
+Constitution: 30
+Intelligence: 26
+Wisdom: 39
+
+Level 31
+HP: 271
+MP: 23
+Strength: 32
+Agility: 32
+Constitution: 30
+Intelligence: 27
+Wisdom: 40
+
+Level 32
+HP: 278
+MP: 24
+Strength: 33
+Agility: 33
+Constitution: 31
+Intelligence: 27
+Wisdom: 41
+
+Level 33
+HP: 286
+MP: 25
+Strength: 33
+Agility: 34
+Constitution: 32
+Intelligence: 28
+Wisdom: 42
+
+Level 34
+HP: 294
+MP: 26
+Strength: 34
+Agility: 35
+Constitution: 32
+Intelligence: 29
+Wisdom: 43
+
+Level 35
+HP: 302
+MP: 27
+Strength: 35
+Agility: 36
+Constitution: 33
+Intelligence: 29
+Wisdom: 44
+
+Level 36
+HP: 309
+MP: 28
+Strength: 35
+Agility: 36
+Constitution: 34
+Intelligence: 30
+Wisdom: 45
+
+Level 37
+HP: 317
+MP: 29
+Strength: 36
+Agility: 37
+Constitution: 34
+Intelligence: 31
+Wisdom: 45
+
+Level 38
+HP: 325
+MP: 30
+Strength: 37
+Agility: 38
+Constitution: 35
+Intelligence: 31
+Wisdom: 46
+
+Level 39
+HP: 332
+MP: 32
+Strength: 38
+Agility: 39
+Constitution: 36
+Intelligence: 32
+Wisdom: 47
+
+Level 40
+HP: 340
+MP: 33
+Strength: 38
+Agility: 39
+Constitution: 36
+Intelligence: 32
+Wisdom: 48
+
+Level 41
+HP: 348
+MP: 34
+Strength: 39
+Agility: 40
+Constitution: 37
+Intelligence: 33
+Wisdom: 49
+
+Level 42
+HP: 355
+MP: 35
+Strength: 40
+Agility: 41
+Constitution: 38
+Intelligence: 34
+Wisdom: 50
+
+Level 43
+HP: 363
+MP: 37
+Strength: 40
+Agility: 42
+Constitution: 38
+Intelligence: 34
+Wisdom: 50
+
+Level 44
+HP: 371
+MP: 38
+Strength: 41
+Agility: 42
+Constitution: 39
+Intelligence: 35
+Wisdom: 51
+
+Level 45
+HP: 379
+MP: 39
+Strength: 42
+Agility: 43
+Constitution: 40
+Intelligence: 36
+Wisdom: 52
+
+Level 46
+HP: 386
+MP: 41
+Strength: 43
+Agility: 44
+Constitution: 40
+Intelligence: 36
+Wisdom: 53
+
+Level 47
+HP: 394
+MP: 42
+Strength: 43
+Agility: 45
+Constitution: 41
+Intelligence: 37
+Wisdom: 54
+
+Level 48
+HP: 402
+MP: 44
+Strength: 44
+Agility: 45
+Constitution: 42
+Intelligence: 38
+Wisdom: 55
+
+Level 49
+HP: 410
+MP: 46
+Strength: 45
+Agility: 46
+Constitution: 42
+Intelligence: 38
+Wisdom: 56
+
+Level 50
+HP: 417
+MP: 47
+Strength: 45
+Agility: 47
+Constitution: 43
+Intelligence: 39
+Wisdom: 56
+
+Level 51
+HP: 425
+MP: 49
+Strength: 46
+Agility: 48
+Constitution: 43
+Intelligence: 39
+Wisdom: 57
+
+Level 52
+HP: 433
+MP: 51
+Strength: 47
+Agility: 48
+Constitution: 44
+Intelligence: 40
+Wisdom: 58
+
+Level 53
+HP: 441
+MP: 53
+Strength: 47
+Agility: 49
+Constitution: 45
+Intelligence: 41
+Wisdom: 59
+
+Level 54
+HP: 449
+MP: 55
+Strength: 48
+Agility: 50
+Constitution: 45
+Intelligence: 41
+Wisdom: 60
+
+Level 55
+HP: 457
+MP: 57
+Strength: 49
+Agility: 51
+Constitution: 46
+Intelligence: 42
+Wisdom: 61
+
+Level 56
+HP: 464
+MP: 59
+Strength: 50
+Agility: 51
+Constitution: 47
+Intelligence: 43
+Wisdom: 62
+
+Level 57
+HP: 472
+MP: 61
+Strength: 50
+Agility: 52
+Constitution: 47
+Intelligence: 43
+Wisdom: 62
+
+Level 58
+HP: 480
+MP: 64
+Strength: 51
+Agility: 53
+Constitution: 48
+Intelligence: 44
+Wisdom: 63
+
+Level 59
+HP: 488
+MP: 66
+Strength: 52
+Agility: 54
+Constitution: 49
+Intelligence: 45
+Wisdom: 64
+
+Level 60
+HP: 496
+MP: 68
+Strength: 52
+Agility: 54
+Constitution: 49
+Intelligence: 45
+Wisdom: 65
+
+Level 61
+HP: 504
+MP: 71
+Strength: 53
+Agility: 55
+Constitution: 50
+Intelligence: 46
+Wisdom: 66
+
+Level 62
+HP: 511
+MP: 74
+Strength: 54
+Agility: 56
+Constitution: 51
+Intelligence: 46
+Wisdom: 67
+
+Level 63
+HP: 519
+MP: 76
+Strength: 55
+Agility: 57
+Constitution: 51
+Intelligence: 47
+Wisdom: 67
+
+Level 64
+HP: 527
+MP: 79
+Strength: 55
+Agility: 57
+Constitution: 52
+Intelligence: 48
+Wisdom: 68
+
+Level 65
+HP: 535
+MP: 82
+Strength: 56
+Agility: 58
+Constitution: 53
+Intelligence: 48
+Wisdom: 69
+
+Level 66
+HP: 543
+MP: 85
+Strength: 57
+Agility: 59
+Constitution: 53
+Intelligence: 49
+Wisdom: 70
+
+Level 67
+HP: 551
+MP: 88
+Strength: 57
+Agility: 60
+Constitution: 54
+Intelligence: 50
+Wisdom: 71
+
+Level 68
+HP: 559
+MP: 92
+Strength: 58
+Agility: 61
+Constitution: 55
+Intelligence: 50
+Wisdom: 72
+
+Level 69
+HP: 567
+MP: 95
+Strength: 59
+Agility: 61
+Constitution: 55
+Intelligence: 51
+Wisdom: 73
+
+Level 70
+HP: 575
+MP: 99
+Strength: 59
+Agility: 62
+Constitution: 56
+Intelligence: 52
+Wisdom: 73
+
+Level 71
+HP: 583
+MP: 99
+Strength: 60
+Agility: 63
+Constitution: 57
+Intelligence: 52
+Wisdom: 74
+
+Level 72
+HP: 591
+MP: 99
+Strength: 61
+Agility: 64
+Constitution: 57
+Intelligence: 53
+Wisdom: 75
+
+Level 73
+HP: 599
+MP: 99
+Strength: 62
+Agility: 64
+Constitution: 58
+Intelligence: 53
+Wisdom: 76
+
+Level 74
+HP: 606
+MP: 99
+Strength: 62
+Agility: 65
+Constitution: 59
+Intelligence: 54
+Wisdom: 77
+
+Level 75
+HP: 614
+MP: 99
+Strength: 63
+Agility: 66
+Constitution: 59
+Intelligence: 55
+Wisdom: 78
+
+Level 76
+HP: 622
+MP: 99
+Strength: 64
+Agility: 67
+Constitution: 60
+Intelligence: 55
+Wisdom: 78
+
+Level 77
+HP: 630
+MP: 99
+Strength: 64
+Agility: 67
+Constitution: 61
+Intelligence: 56
+Wisdom: 79
+
+Level 78
+HP: 638
+MP: 99
+Strength: 65
+Agility: 68
+Constitution: 61
+Intelligence: 57
+Wisdom: 80
+
+Level 79
+HP: 646
+MP: 99
+Strength: 66
+Agility: 69
+Constitution: 62
+Intelligence: 57
+Wisdom: 81
+
+Level 80
+HP: 654
+MP: 99
+Strength: 67
+Agility: 70
+Constitution: 63
+Intelligence: 58
+Wisdom: 82
+
+Level 81
+HP: 662
+MP: 99
+Strength: 67
+Agility: 70
+Constitution: 63
+Intelligence: 59
+Wisdom: 83
+
+Level 82
+HP: 670
+MP: 99
+Strength: 68
+Agility: 71
+Constitution: 64
+Intelligence: 59
+Wisdom: 84
+
+Level 83
+HP: 678
+MP: 99
+Strength: 69
+Agility: 72
+Constitution: 64
+Intelligence: 60
+Wisdom: 84
+
+Level 84
+HP: 686
+MP: 99
+Strength: 69
+Agility: 73
+Constitution: 65
+Intelligence: 60
+Wisdom: 85
+
+Level 85
+HP: 694
+MP: 99
+Strength: 70
+Agility: 73
+Constitution: 66
+Intelligence: 61
+Wisdom: 86
+
+Level 86
+HP: 702
+MP: 99
+Strength: 71
+Agility: 74
+Constitution: 66
+Intelligence: 62
+Wisdom: 87
+
+Level 87
+HP: 710
+MP: 99
+Strength: 72
+Agility: 75
+Constitution: 67
+Intelligence: 62
+Wisdom: 88
+
+Level 88
+HP: 718
+MP: 99
+Strength: 72
+Agility: 76
+Constitution: 68
+Intelligence: 63
+Wisdom: 89
+
+Level 89
+HP: 726
+MP: 99
+Strength: 73
+Agility: 76
+Constitution: 68
+Intelligence: 64
+Wisdom: 90
+
+Level 90
+HP: 734
+MP: 99
+Strength: 74
+Agility: 77
+Constitution: 69
+Intelligence: 64
+Wisdom: 90
+
+Level 91
+HP: 742
+MP: 99
+Strength: 74
+Agility: 78
+Constitution: 70
+Intelligence: 65
+Wisdom: 91
+
+Level 92
+HP: 750
+MP: 99
+Strength: 75
+Agility: 79
+Constitution: 70
+Intelligence: 66
+Wisdom: 92
+
+Level 93
+HP: 758
+MP: 99
+Strength: 76
+Agility: 79
+Constitution: 71
+Intelligence: 66
+Wisdom: 93
+
+Level 94
+HP: 766
+MP: 99
+Strength: 76
+Agility: 80
+Constitution: 72
+Intelligence: 67
+Wisdom: 94
+
+Level 95
+HP: 774
+MP: 99
+Strength: 77
+Agility: 81
+Constitution: 72
+Intelligence: 67
+Wisdom: 95
+
+Level 96
+HP: 782
+MP: 99
+Strength: 78
+Agility: 82
+Constitution: 73
+Intelligence: 68
+Wisdom: 96
+
+Level 97
+HP: 790
+MP: 99
+Strength: 79
+Agility: 83
+Constitution: 74
+Intelligence: 69
+Wisdom: 97
+
+Level 98
+HP: 795
+MP: 99
+Strength: 79
+Agility: 84
+Constitution: 74
+Intelligence: 69
+Wisdom: 98
+
+Level 99
+HP: 800
+MP: 99
+Strength: 80
+Agility: 85
+Constitution: 75
+Intelligence: 70
+Wisdom: 99
+
+--- Child stats ---
+Level 1
+HP: 40
+MP: 8
+Strength: 7
+Agility: 12
+Constitution: 10
+Intelligence: 15
+Wisdom: 5
+
+Level 2
+HP: 47
+MP: 8
+Strength: 8
+Agility: 12
+Constitution: 11
+Intelligence: 16
+Wisdom: 6
+
+Level 3
+HP: 54
+MP: 8
+Strength: 8
+Agility: 13
+Constitution: 11
+Intelligence: 17
+Wisdom: 6
+
+Level 4
+HP: 62
+MP: 8
+Strength: 9
+Agility: 13
+Constitution: 12
+Intelligence: 17
+Wisdom: 7
+
+Level 5
+HP: 69
+MP: 9
+Strength: 9
+Agility: 14
+Constitution: 12
+Intelligence: 18
+Wisdom: 7
+
+Level 6
+HP: 77
+MP: 9
+Strength: 10
+Agility: 14
+Constitution: 12
+Intelligence: 19
+Wisdom: 8
+
+Level 7
+HP: 84
+MP: 9
+Strength: 10
+Agility: 15
+Constitution: 13
+Intelligence: 20
+Wisdom: 8
+
+Level 8
+HP: 92
+MP: 10
+Strength: 10
+Agility: 15
+Constitution: 13
+Intelligence: 21
+Wisdom: 9
+
+Level 9
+HP: 99
+MP: 10
+Strength: 11
+Agility: 16
+Constitution: 14
+Intelligence: 22
+Wisdom: 9
+
+Level 10
+HP: 107
+MP: 11
+Strength: 11
+Agility: 17
+Constitution: 14
+Intelligence: 22
+Wisdom: 10
+
+Level 11
+HP: 114
+MP: 11
+Strength: 12
+Agility: 17
+Constitution: 14
+Intelligence: 23
+Wisdom: 10
+
+Level 12
+HP: 122
+MP: 11
+Strength: 12
+Agility: 18
+Constitution: 15
+Intelligence: 24
+Wisdom: 10
+
+Level 13
+HP: 129
+MP: 12
+Strength: 13
+Agility: 19
+Constitution: 15
+Intelligence: 25
+Wisdom: 11
+
+Level 14
+HP: 137
+MP: 12
+Strength: 13
+Agility: 19
+Constitution: 16
+Intelligence: 26
+Wisdom: 11
+
+Level 15
+HP: 144
+MP: 13
+Strength: 14
+Agility: 20
+Constitution: 16
+Intelligence: 27
+Wisdom: 12
+
+Level 16
+HP: 152
+MP: 13
+Strength: 14
+Agility: 21
+Constitution: 16
+Intelligence: 28
+Wisdom: 12
+
+Level 17
+HP: 159
+MP: 14
+Strength: 14
+Agility: 21
+Constitution: 17
+Intelligence: 28
+Wisdom: 13
+
+Level 18
+HP: 167
+MP: 14
+Strength: 15
+Agility: 22
+Constitution: 17
+Intelligence: 29
+Wisdom: 13
+
+Level 19
+HP: 175
+MP: 15
+Strength: 15
+Agility: 22
+Constitution: 18
+Intelligence: 30
+Wisdom: 14
+
+Level 20
+HP: 182
+MP: 16
+Strength: 16
+Agility: 23
+Constitution: 18
+Intelligence: 31
+Wisdom: 14
+
+Level 21
+HP: 190
+MP: 16
+Strength: 16
+Agility: 24
+Constitution: 18
+Intelligence: 32
+Wisdom: 15
+
+Level 22
+HP: 197
+MP: 17
+Strength: 17
+Agility: 24
+Constitution: 19
+Intelligence: 33
+Wisdom: 15
+
+Level 23
+HP: 205
+MP: 17
+Strength: 17
+Agility: 25
+Constitution: 19
+Intelligence: 34
+Wisdom: 15
+
+Level 24
+HP: 212
+MP: 18
+Strength: 17
+Agility: 26
+Constitution: 20
+Intelligence: 34
+Wisdom: 16
+
+Level 25
+HP: 220
+MP: 19
+Strength: 18
+Agility: 26
+Constitution: 20
+Intelligence: 35
+Wisdom: 16
+
+Level 26
+HP: 228
+MP: 19
+Strength: 18
+Agility: 27
+Constitution: 21
+Intelligence: 36
+Wisdom: 17
+
+Level 27
+HP: 235
+MP: 20
+Strength: 19
+Agility: 28
+Constitution: 21
+Intelligence: 37
+Wisdom: 17
+
+Level 28
+HP: 243
+MP: 21
+Strength: 19
+Agility: 28
+Constitution: 21
+Intelligence: 38
+Wisdom: 18
+
+Level 29
+HP: 251
+MP: 22
+Strength: 20
+Agility: 29
+Constitution: 22
+Intelligence: 39
+Wisdom: 18
+
+Level 30
+HP: 258
+MP: 23
+Strength: 20
+Agility: 30
+Constitution: 22
+Intelligence: 39
+Wisdom: 19
+
+Level 31
+HP: 266
+MP: 23
+Strength: 20
+Agility: 30
+Constitution: 23
+Intelligence: 40
+Wisdom: 19
+
+Level 32
+HP: 273
+MP: 24
+Strength: 21
+Agility: 31
+Constitution: 23
+Intelligence: 41
+Wisdom: 20
+
+Level 33
+HP: 281
+MP: 25
+Strength: 21
+Agility: 32
+Constitution: 23
+Intelligence: 42
+Wisdom: 20
+
+Level 34
+HP: 289
+MP: 26
+Strength: 22
+Agility: 32
+Constitution: 24
+Intelligence: 43
+Wisdom: 20
+
+Level 35
+HP: 297
+MP: 27
+Strength: 22
+Agility: 33
+Constitution: 24
+Intelligence: 44
+Wisdom: 21
+
+Level 36
+HP: 304
+MP: 28
+Strength: 23
+Agility: 34
+Constitution: 25
+Intelligence: 45
+Wisdom: 21
+
+Level 37
+HP: 312
+MP: 29
+Strength: 23
+Agility: 34
+Constitution: 25
+Intelligence: 45
+Wisdom: 22
+
+Level 38
+HP: 320
+MP: 30
+Strength: 24
+Agility: 35
+Constitution: 25
+Intelligence: 46
+Wisdom: 22
+
+Level 39
+HP: 327
+MP: 32
+Strength: 24
+Agility: 36
+Constitution: 26
+Intelligence: 47
+Wisdom: 23
+
+Level 40
+HP: 335
+MP: 33
+Strength: 24
+Agility: 36
+Constitution: 26
+Intelligence: 48
+Wisdom: 23
+
+Level 41
+HP: 343
+MP: 34
+Strength: 25
+Agility: 37
+Constitution: 27
+Intelligence: 49
+Wisdom: 24
+
+Level 42
+HP: 350
+MP: 35
+Strength: 25
+Agility: 38
+Constitution: 27
+Intelligence: 50
+Wisdom: 24
+
+Level 43
+HP: 358
+MP: 37
+Strength: 26
+Agility: 38
+Constitution: 27
+Intelligence: 50
+Wisdom: 25
+
+Level 44
+HP: 366
+MP: 38
+Strength: 26
+Agility: 39
+Constitution: 28
+Intelligence: 51
+Wisdom: 25
+
+Level 45
+HP: 374
+MP: 39
+Strength: 27
+Agility: 40
+Constitution: 28
+Intelligence: 52
+Wisdom: 25
+
+Level 46
+HP: 381
+MP: 41
+Strength: 27
+Agility: 40
+Constitution: 29
+Intelligence: 53
+Wisdom: 26
+
+Level 47
+HP: 389
+MP: 42
+Strength: 27
+Agility: 41
+Constitution: 29
+Intelligence: 54
+Wisdom: 26
+
+Level 48
+HP: 397
+MP: 44
+Strength: 28
+Agility: 42
+Constitution: 29
+Intelligence: 55
+Wisdom: 27
+
+Level 49
+HP: 405
+MP: 46
+Strength: 28
+Agility: 42
+Constitution: 30
+Intelligence: 56
+Wisdom: 27
+
+Level 50
+HP: 412
+MP: 47
+Strength: 29
+Agility: 43
+Constitution: 30
+Intelligence: 56
+Wisdom: 28
+
+Level 51
+HP: 420
+MP: 49
+Strength: 29
+Agility: 43
+Constitution: 31
+Intelligence: 57
+Wisdom: 28
+
+Level 52
+HP: 428
+MP: 51
+Strength: 30
+Agility: 44
+Constitution: 31
+Intelligence: 58
+Wisdom: 29
+
+Level 53
+HP: 436
+MP: 53
+Strength: 30
+Agility: 45
+Constitution: 31
+Intelligence: 59
+Wisdom: 29
+
+Level 54
+HP: 444
+MP: 55
+Strength: 30
+Agility: 45
+Constitution: 32
+Intelligence: 60
+Wisdom: 30
+
+Level 55
+HP: 452
+MP: 57
+Strength: 31
+Agility: 46
+Constitution: 32
+Intelligence: 61
+Wisdom: 30
+
+Level 56
+HP: 459
+MP: 59
+Strength: 31
+Agility: 47
+Constitution: 33
+Intelligence: 62
+Wisdom: 30
+
+Level 57
+HP: 467
+MP: 61
+Strength: 32
+Agility: 47
+Constitution: 33
+Intelligence: 62
+Wisdom: 31
+
+Level 58
+HP: 475
+MP: 64
+Strength: 32
+Agility: 48
+Constitution: 33
+Intelligence: 63
+Wisdom: 31
+
+Level 59
+HP: 483
+MP: 66
+Strength: 33
+Agility: 49
+Constitution: 34
+Intelligence: 64
+Wisdom: 32
+
+Level 60
+HP: 491
+MP: 68
+Strength: 33
+Agility: 49
+Constitution: 34
+Intelligence: 65
+Wisdom: 32
+
+Level 61
+HP: 499
+MP: 71
+Strength: 33
+Agility: 50
+Constitution: 35
+Intelligence: 66
+Wisdom: 33
+
+Level 62
+HP: 506
+MP: 74
+Strength: 34
+Agility: 51
+Constitution: 35
+Intelligence: 67
+Wisdom: 33
+
+Level 63
+HP: 514
+MP: 76
+Strength: 34
+Agility: 51
+Constitution: 35
+Intelligence: 67
+Wisdom: 34
+
+Level 64
+HP: 522
+MP: 79
+Strength: 35
+Agility: 52
+Constitution: 36
+Intelligence: 68
+Wisdom: 34
+
+Level 65
+HP: 530
+MP: 82
+Strength: 35
+Agility: 53
+Constitution: 36
+Intelligence: 69
+Wisdom: 35
+
+Level 66
+HP: 538
+MP: 85
+Strength: 36
+Agility: 53
+Constitution: 37
+Intelligence: 70
+Wisdom: 35
+
+Level 67
+HP: 546
+MP: 88
+Strength: 36
+Agility: 54
+Constitution: 37
+Intelligence: 71
+Wisdom: 35
+
+Level 68
+HP: 554
+MP: 92
+Strength: 37
+Agility: 55
+Constitution: 37
+Intelligence: 72
+Wisdom: 36
+
+Level 69
+HP: 562
+MP: 95
+Strength: 37
+Agility: 55
+Constitution: 38
+Intelligence: 73
+Wisdom: 36
+
+Level 70
+HP: 570
+MP: 99
+Strength: 37
+Agility: 56
+Constitution: 38
+Intelligence: 73
+Wisdom: 37
+
+Level 71
+HP: 578
+MP: 99
+Strength: 38
+Agility: 57
+Constitution: 39
+Intelligence: 74
+Wisdom: 37
+
+Level 72
+HP: 586
+MP: 99
+Strength: 38
+Agility: 57
+Constitution: 39
+Intelligence: 75
+Wisdom: 38
+
+Level 73
+HP: 594
+MP: 99
+Strength: 39
+Agility: 58
+Constitution: 39
+Intelligence: 76
+Wisdom: 38
+
+Level 74
+HP: 601
+MP: 99
+Strength: 39
+Agility: 59
+Constitution: 40
+Intelligence: 77
+Wisdom: 39
+
+Level 75
+HP: 609
+MP: 99
+Strength: 40
+Agility: 59
+Constitution: 40
+Intelligence: 78
+Wisdom: 39
+
+Level 76
+HP: 617
+MP: 99
+Strength: 40
+Agility: 60
+Constitution: 41
+Intelligence: 78
+Wisdom: 40
+
+Level 77
+HP: 625
+MP: 99
+Strength: 40
+Agility: 61
+Constitution: 41
+Intelligence: 79
+Wisdom: 40
+
+Level 78
+HP: 633
+MP: 99
+Strength: 41
+Agility: 61
+Constitution: 42
+Intelligence: 80
+Wisdom: 40
+
+Level 79
+HP: 641
+MP: 99
+Strength: 41
+Agility: 62
+Constitution: 42
+Intelligence: 81
+Wisdom: 41
+
+Level 80
+HP: 649
+MP: 99
+Strength: 42
+Agility: 63
+Constitution: 42
+Intelligence: 82
+Wisdom: 41
+
+Level 81
+HP: 657
+MP: 99
+Strength: 42
+Agility: 63
+Constitution: 43
+Intelligence: 83
+Wisdom: 42
+
+Level 82
+HP: 665
+MP: 99
+Strength: 43
+Agility: 64
+Constitution: 43
+Intelligence: 84
+Wisdom: 42
+
+Level 83
+HP: 673
+MP: 99
+Strength: 43
+Agility: 64
+Constitution: 44
+Intelligence: 84
+Wisdom: 43
+
+Level 84
+HP: 681
+MP: 99
+Strength: 43
+Agility: 65
+Constitution: 44
+Intelligence: 85
+Wisdom: 43
+
+Level 85
+HP: 689
+MP: 99
+Strength: 44
+Agility: 66
+Constitution: 44
+Intelligence: 86
+Wisdom: 44
+
+Level 86
+HP: 697
+MP: 99
+Strength: 44
+Agility: 66
+Constitution: 45
+Intelligence: 87
+Wisdom: 44
+
+Level 87
+HP: 705
+MP: 99
+Strength: 45
+Agility: 67
+Constitution: 45
+Intelligence: 88
+Wisdom: 45
+
+Level 88
+HP: 713
+MP: 99
+Strength: 45
+Agility: 68
+Constitution: 46
+Intelligence: 89
+Wisdom: 45
+
+Level 89
+HP: 721
+MP: 99
+Strength: 46
+Agility: 68
+Constitution: 46
+Intelligence: 90
+Wisdom: 45
+
+Level 90
+HP: 729
+MP: 99
+Strength: 46
+Agility: 69
+Constitution: 46
+Intelligence: 90
+Wisdom: 46
+
+Level 91
+HP: 737
+MP: 99
+Strength: 47
+Agility: 70
+Constitution: 47
+Intelligence: 91
+Wisdom: 46
+
+Level 92
+HP: 745
+MP: 99
+Strength: 47
+Agility: 70
+Constitution: 47
+Intelligence: 92
+Wisdom: 47
+
+Level 93
+HP: 753
+MP: 99
+Strength: 47
+Agility: 71
+Constitution: 48
+Intelligence: 93
+Wisdom: 47
+
+Level 94
+HP: 761
+MP: 99
+Strength: 48
+Agility: 72
+Constitution: 48
+Intelligence: 94
+Wisdom: 48
+
+Level 95
+HP: 769
+MP: 99
+Strength: 48
+Agility: 72
+Constitution: 48
+Intelligence: 95
+Wisdom: 48
+
+Level 96
+HP: 777
+MP: 99
+Strength: 49
+Agility: 73
+Constitution: 49
+Intelligence: 96
+Wisdom: 49
+
+Level 97
+HP: 785
+MP: 99
+Strength: 49
+Agility: 74
+Constitution: 49
+Intelligence: 97
+Wisdom: 49
+
+Level 98
+HP: 793
+MP: 99
+Strength: 50
+Agility: 74
+Constitution: 50
+Intelligence: 98
+Wisdom: 50
+
+Level 99
+HP: 800
+MP: 99
+Strength: 50
+Agility: 75
+Constitution: 50
+Intelligence: 99
+Wisdom: 50
+
+--- Boss weapons ---
+00
+Effective: None
+Element: None
+Hit: 99
+Strength: 35
+Inflict: Burning
+Status rate: 99
+
+01
+Effective: None
+Element: None
+Hit: 99
+Strength: 34
+Inflict: Freeze
+Status rate: 99
+
+02
+Effective: None
+Element: None
+Hit: 99
+Strength: 125
+Inflict: None
+Status rate: 50
+
+03
+Effective: None
+Element: None
+Hit: 99
+Strength: 12
+Inflict: None
+Status rate: 50
+
+04
+Effective: None
+Element: None
+Hit: 99
+Strength: 0
+Inflict: Poison
+Status rate: 50
+
+05
+Effective: None
+Element: None
+Hit: 99
+Strength: 37
+Inflict: None
+Status rate: 50
+
+06
+Effective: None
+Element: None
+Hit: 99
+Strength: 0
+Inflict: None
+Status rate: 50
+
+07
+Effective: None
+Element: None
+Hit: 99
+Strength: 65
+Inflict: Petrify
+Status rate: 99
+
+08
+Effective: None
+Element: None
+Hit: 99
+Strength: 33
+Inflict: Sleep
+Status rate: 99
+
+09
+Effective: None
+Element: None
+Hit: 99
+Strength: 54
+Inflict: Poison
+Status rate: 99
+
+0A
+Effective: None
+Element: None
+Hit: 99
+Strength: 11
+Inflict: None
+Status rate: 50
+
+0B
+Effective: None
+Element: None
+Hit: 99
+Strength: 11
+Inflict: Burning
+Status rate: 99
+
+0C
+Effective: None
+Element: None
+Hit: 99
+Strength: 29
+Inflict: None
+Status rate: 50
+
+0D
+Effective: None
+Element: None
+Hit: 99
+Strength: 124
+Inflict: None
+Status rate: 50
+
+0E
+Effective: None
+Element: None
+Hit: 99
+Strength: 93
+Inflict: Freeze
+Status rate: 99
+
+0F
+Effective: None
+Element: None
+Hit: 99
+Strength: 89
+Inflict: Petrify
+Status rate: 99
+
+10
+Effective: None
+Element: None
+Hit: 99
+Strength: 0
+Inflict: Moogle
+Status rate: 50
+
+11
+Effective: None
+Element: None
+Hit: 99
+Strength: 37
+Inflict: Sleep
+Status rate: 99
+
+12
+Effective: None
+Element: None
+Hit: 99
+Strength: 67
+Inflict: Stop
+Status rate: 80
+
+13
+Effective: None
+Element: None
+Hit: 99
+Strength: 81
+Inflict: Sleep
+Status rate: 99
+
+14
+Effective: None
+Element: None
+Hit: 99
+Strength: 0
+Inflict: Sleep
+Status rate: 50
+
+15
+Effective: None
+Element: None
+Hit: 99
+Strength: 22
+Inflict: Moogle
+Status rate: 99
+
+16
+Effective: None
+Element: None
+Hit: 99
+Strength: 71
+Inflict: Mini
+Status rate: 99
+
+17
+Effective: None
+Element: None
+Hit: 99
+Strength: 22
+Inflict: Slow
+Status rate: 50
+
+18
+Effective: None
+Element: None
+Hit: 99
+Strength: 25
+Inflict: Mini, Moogle
+Status rate: 50
+
+19
+Effective: None
+Element: None
+Hit: 99
+Strength: 93
+Inflict: None
+Status rate: 50
+
+1A
+Effective: None
+Element: None
+Hit: 99
+Strength: 69
+Inflict: None
+Status rate: 50
+
+1B
+Effective: None
+Element: None
+Hit: 75
+Strength: 17
+Inflict: Sleep
+Status rate: 50
+
+1C
+Effective: None
+Element: None
+Hit: 99
+Strength: 30
+Inflict: None
+Status rate: 50
+
+1D
+Effective: None
+Element: None
+Hit: 99
+Strength: 89
+Inflict: None
+Status rate: 50
+
+1E
+Effective: None
+Element: None
+Hit: 99
+Strength: 25
+Inflict: Poison
+Status rate: 33
+
+1F
+Effective: None
+Element: None
+Hit: 99
+Strength: 70
+Inflict: Poison
+Status rate: 50
+
+20
+Effective: None
+Element: None
+Hit: 99
+Strength: 32
+Inflict: None
+Status rate: 33
+
+21
+Effective: None
+Element: None
+Hit: 99
+Strength: 34
+Inflict: Sleep
+Status rate: 50
+
+22
+Effective: None
+Element: None
+Hit: 99
+Strength: 36
+Inflict: Sleep
+Status rate: 33
+
+23
+Effective: None
+Element: None
+Hit: 99
+Strength: 33
+Inflict: None
+Status rate: 50
+
+24
+Effective: None
+Element: None
+Hit: 99
+Strength: 35
+Inflict: None
+Status rate: 50
+
+25
+Effective: None
+Element: None
+Hit: 99
+Strength: 38
+Inflict: None
+Status rate: 50
+
+26
+Effective: None
+Element: None
+Hit: 99
+Strength: 52
+Inflict: None
+Status rate: 50
+
+27
+Effective: None
+Element: None
+Hit: 99
+Strength: 70
+Inflict: None
+Status rate: 50
+
+28
+Effective: None
+Element: None
+Hit: 99
+Strength: 84
+Inflict: None
+Status rate: 50
+
+29
+Effective: None
+Element: None
+Hit: 99
+Strength: 94
+Inflict: Sleep
+Status rate: 33
+
+2A
+Effective: None
+Element: None
+Hit: 99
+Strength: 85
+Inflict: None
+Status rate: 50
+
+2B
+Effective: None
+Element: None
+Hit: 99
+Strength: 98
+Inflict: Sleep
+Status rate: 99
+
+2C
+Effective: None
+Element: None
+Hit: 99
+Strength: 94
+Inflict: None
+Status rate: 50
+
+2D
+Effective: None
+Element: None
+Hit: 99
+Strength: 103
+Inflict: Sleep
+Status rate: 33
+
+2E
+Effective: None
+Element: None
+Hit: 99
+Strength: 35
+Inflict: None
+Status rate: 50
+
+2F
+Effective: None
+Element: None
+Hit: 99
+Strength: 48
+Inflict: Moogle
+Status rate: 33
+
+30
+Effective: None
+Element: None
+Hit: 99
+Strength: 43
+Inflict: Moogle
+Status rate: 33
+
+31
+Effective: None
+Element: None
+Hit: 99
+Strength: 52
+Inflict: Moogle
+Status rate: 33
+
+32
+Effective: None
+Element: None
+Hit: 99
+Strength: 106
+Inflict: Sleep
+Status rate: 33
+
+33
+Effective: None
+Element: None
+Hit: 99
+Strength: 97
+Inflict: Sleep
+Status rate: 25
+
+34
+Effective: None
+Element: None
+Hit: 99
+Strength: 111
+Inflict: Sleep
+Status rate: 50
+
+35
+Effective: None
+Element: None
+Hit: 99
+Strength: 40
+Inflict: Burning
+Status rate: 50
+
+36
+Effective: None
+Element: None
+Hit: 99
+Strength: 120
+Inflict: Burning
+Status rate: 99
+
+37
+Effective: None
+Element: None
+Hit: 99
+Strength: 120
+Inflict: Freeze
+Status rate: 99
+
+38
+Effective: None
+Element: None
+Hit: 99
+Strength: 20
+Inflict: None
+Status rate: 50
+
+39
+Effective: None
+Element: None
+Hit: 99
+Strength: 48
+Inflict: None
+Status rate: 50
+
+3A
+Effective: None
+Element: None
+Hit: 99
+Strength: 68
+Inflict: Petrify
+Status rate: 99
+
+3B
+Effective: None
+Element: None
+Hit: 99
+Strength: 89
+Inflict: Sleep
+Status rate: 99
+
+3C
+Effective: None
+Element: None
+Hit: 99
+Strength: 40
+Inflict: None
+Status rate: 50
+
+3D
+Effective: None
+Element: None
+Hit: 99
+Strength: 59
+Inflict: Mini
+Status rate: 99
+
+3E
+Effective: None
+Element: None
+Hit: 99
+Strength: 50
+Inflict: Mini, Moogle
+Status rate: 50
+
+3F
+Effective: None
+Element: None
+Hit: 99
+Strength: 44
+Inflict: Sleep
+Status rate: 33
+
+40
+Effective: None
+Element: None
+Hit: 99
+Strength: 89
+Inflict: Poison
+Status rate: 99
+
+41
+Effective: None
+Element: None
+Hit: 99
+Strength: 46
+Inflict: Sleep
+Status rate: 33
+
+42
+Effective: None
+Element: None
+Hit: 99
+Strength: 36
+Inflict: Sleep
+Status rate: 33
+
+43
+Effective: None
+Element: None
+Hit: 99
+Strength: 50
+Inflict: Sleep
+Status rate: 33
+
+44
+Effective: None
+Element: None
+Hit: 99
+Strength: 7
+Inflict: None
+Status rate: 50
+
+45
+Effective: None
+Element: None
+Hit: 99
+Strength: 7
+Inflict: None
+Status rate: 50
+
+46
+Effective: None
+Element: None
+Hit: 99
+Strength: 60
+Inflict: None
+Status rate: 50
+
+47
+Effective: None
+Element: None
+Hit: 99
+Strength: 89
+Inflict: Confuse
+Status rate: 99
+
+48
+Effective: None
+Element: None
+Hit: 99
+Strength: 34
+Inflict: None
+Status rate: 50
+
+49
+Effective: None
+Element: None
+Hit: 99
+Strength: 89
+Inflict: Stop
+Status rate: 99
+
+4A
+Effective: None
+Element: None
+Hit: 99
+Strength: 89
+Inflict: Mini
+Status rate: 99
+
+4B
+Effective: None
+Element: None
+Hit: 99
+Strength: 76
+Inflict: Slow
+Status rate: 99
+
+4C
+Effective: None
+Element: None
+Hit: 99
+Strength: 89
+Inflict: Slow
+Status rate: 99
+
+4D
+Effective: None
+Element: None
+Hit: 99
+Strength: 76
+Inflict: Poison
+Status rate: 99
+
+4E
+Effective: None
+Element: None
+Hit: 99
+Strength: 85
+Inflict: Sleep
+Status rate: 33
+
+4F
+Effective: None
+Element: None
+Hit: 99
+Strength: 100
+Inflict: None
+Status rate: 50
+
+50
+Effective: None
+Element: None
+Hit: 99
+Strength: 81
+Inflict: None
+Status rate: 50
+
+51
+Effective: None
+Element: None
+Hit: 99
+Strength: 81
+Inflict: None
+Status rate: 50
+
+52
+Effective: None
+Element: None
+Hit: 99
+Strength: 95
+Inflict: None
+Status rate: 50
+
+53
+Effective: None
+Element: None
+Hit: 99
+Strength: 88
+Inflict: None
+Status rate: 66
+
+54
+Effective: None
+Element: None
+Hit: 99
+Strength: 88
+Inflict: Poison
+Status rate: 99
+
+55
+Effective: None
+Element: None
+Hit: 99
+Strength: 88
+Inflict: Burning
+Status rate: 66
+
+56
+Effective: None
+Element: None
+Hit: 99
+Strength: 88
+Inflict: Freeze
+Status rate: 66
+
+57
+Effective: None
+Element: None
+Hit: 75
+Strength: 30
+Inflict: Mini
+Status rate: 50
+
+58
+Effective: None
+Element: None
+Hit: 75
+Strength: 30
+Inflict: Sleep
+Status rate: 50
+
+59
+Effective: None
+Element: None
+Hit: 75
+Strength: 30
+Inflict: Mini
+Status rate: 50
+
+5A
+Effective: None
+Element: None
+Hit: 75
+Strength: 30
+Inflict: None
+Status rate: 50
+
+5B
+Effective: None
+Element: None
+Hit: 99
+Strength: 101
+Inflict: None
+Status rate: 50
+
+5C
+Effective: None
+Element: None
+Hit: 99
+Strength: 120
+Inflict: None
+Status rate: 50
+
+5D
+Effective: None
+Element: None
+Hit: 99
+Strength: 110
+Inflict: None
+Status rate: 50
+
+5E
+Effective: None
+Element: None
+Hit: 99
+Strength: 110
+Inflict: None
+Status rate: 50
+
+5F
+Effective: None
+Element: None
+Hit: 99
+Strength: 120
+Inflict: None
+Status rate: 50
+
+60
+Effective: None
+Element: None
+Hit: 99
+Strength: 33
+Inflict: None
+Status rate: 50
+
+61
+Effective: None
+Element: None
+Hit: 99
+Strength: 42
+Inflict: Sleep
+Status rate: 50
+
+62
+Effective: None
+Element: None
+Hit: 99
+Strength: 37
+Inflict: Poison
+Status rate: 50
+
+63
+Effective: None
+Element: None
+Hit: 99
+Strength: 10
+Inflict: Sleep
+Status rate: 99
+
+64
+Effective: None
+Element: None
+Hit: 99
+Strength: 71
+Inflict: None
+Status rate: 50
+
+65
+Effective: None
+Element: None
+Hit: 99
+Strength: 81
+Inflict: None
+Status rate: 50
+
+66
+Effective: None
+Element: None
+Hit: 99
+Strength: 81
+Inflict: None
+Status rate: 50
+
+67
+Effective: None
+Element: None
+Hit: 99
+Strength: 123
+Inflict: None
+Status rate: 50
+
+68
+Effective: None
+Element: None
+Hit: 99
+Strength: 55
+Inflict: None
+Status rate: 50
+
+69
+Effective: None
+Element: None
+Hit: 99
+Strength: 55
+Inflict: None
+Status rate: 50
+
+6A
+Effective: None
+Element: None
+Hit: 99
+Strength: 55
+Inflict: None
+Status rate: 50
+
+6B
+Effective: None
+Element: None
+Hit: 99
+Strength: 55
+Inflict: Freeze
+Status rate: 66
+
+6C
+Effective: None
+Element: None
+Hit: 99
+Strength: 55
+Inflict: Burning
+Status rate: 66
+
+6D
+Effective: None
+Element: None
+Hit: 99
+Strength: 125
+Inflict: None
+Status rate: 50
+
+6E
+Effective: None
+Element: None
+Hit: 99
+Strength: 127
+Inflict: Sleep
+Status rate: 99
+
+6F
+Effective: None
+Element: None
+Hit: 99
+Strength: 89
+Inflict: None
+Status rate: 50
+
+70
+Effective: None
+Element: None
+Hit: 99
+Strength: 89
+Inflict: None
+Status rate: 50
+
+71
+Effective: None
+Element: None
+Hit: 99
+Strength: 92
+Inflict: None
+Status rate: 50
+
+72
+Effective: None
+Element: None
+Hit: 99
+Strength: 120
+Inflict: None
+Status rate: 50
+
+--- Shops ---
+00
+Candy
+Medical Herb
+Cup of Wishes
+Bandanna
+Overalls
+
+01
+Candy
+Chocolate
+Royal Jam
+Faerie Walnut
+Medical Herb
+Cup of Wishes
+Barrel
+Bandanna
+Hair Ribbon
+Rabite Cap
+Wristband
+
+02
+Candy
+Medical Herb
+Cup of Wishes
+Hair Ribbon
+Kung Fu Suit
+Wristband
+
+03
+Candy
+Medical Herb
+Cup of Wishes
+Hair Ribbon
+Chain Vest
+Kung Fu Dress
+Elbow Pad
+
+04
+Candy
+Medical Herb
+Cup of Wishes
+Rabite Cap
+Head Gear
+Midge Robe
+Chain Vest
+Spiky Suit
+Wristband
+Elbow Pad
+Power Wrist
+
+05
+Candy
+Medical Herb
+Cup of Wishes
+Head Gear
+Spiky Suit
+Kung Fu Dress
+Elbow Pad
+Power Wrist
+Cobra Bracelet
+
+06
+Candy
+Chocolate
+Faerie Walnut
+Medical Herb
+Cup of Wishes
+Head Gear
+Quill Cap
+Spiky Suit
+Kung Fu Dress
+Power Wrist
+Cobra Bracelet
+
+07
+Candy
+Chocolate
+Faerie Walnut
+Medical Herb
+Cup of Wishes
+Quill Cap
+Steel Cap
+Fancy Overalls
+Wolf's Band
+
+08
+Chocolate
+Faerie Walnut
+Medical Herb
+Cup of Wishes
+Golden Tiara
+Raccoon Cap
+Chest Guard
+Golden Vest
+Silver Band
+
+09
+Chocolate
+Faerie Walnut
+Medical Herb
+Cup of Wishes
+Golden Tiara
+Raccoon Cap
+Chest Guard
+Golden Vest
+Silver Band
+
+0A
+Chocolate
+Faerie Walnut
+Medical Herb
+Cup of Wishes
+Golden Tiara
+Raccoon Cap
+Quilted Hood
+Chest Guard
+Golden Vest
+Ruby Vest
+Silver Band
+Golem Ring
+Frosty Ring
+
+0B
+Chocolate
+Faerie Walnut
+Medical Herb
+Cup of Wishes
+Quilted Hood
+Tiger Cap
+Ruby Vest
+Tiger Suit
+Tiger Bikini
+Silver Band
+Golem Ring
+Frosty Ring
+
+0C
+Candy
+Chocolate
+Faerie Walnut
+Medical Herb
+Cup of Wishes
+Circlet
+Magical Armor
+Ivy Amulet
+
+0D
+Chocolate
+Faerie Walnut
+Medical Herb
+Cup of Wishes
+Unicorn Helm
+Dragon Helm
+Duck Helm
+Flower Suit
+Battle Suit
+Shield Ring
+Lazuri Ring
+
+0E
+Candy
+Chocolate
+Royal Jam
+Faerie Walnut
+Medical Herb
+Cup of Wishes
+Dragon Helm
+Duck Helm
+Tortoise Mail
+Battle Suit
+Gold Bracelet
+Lazuri Ring
+
+0F
+Candy
+Chocolate
+Royal Jam
+Faerie Walnut
+Medical Herb
+Cup of Wishes
+Barrel
+Needle Helm
+Vestguard
+Gauntlet

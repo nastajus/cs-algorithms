@@ -54,12 +54,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Expando_Example_Simple.cs" />
+    <Compile Include="Expando_Main.cs" />
     <Compile Include="import-dynamic\GeneralImport.cs" />
     <Compile Include="import-dynamic\IGeneralImport.cs" />
     <Compile Include="import-dynamic\SomeSpecificImport.cs" />
     <Compile Include="import-dynamic\Test.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="somtxt\SomTxtRdr.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -67,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="import-dynamic\SomeSpecificCsv.txt" />
+    <Content Include="somtxt\sombl.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

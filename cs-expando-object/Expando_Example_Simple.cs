@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace cs_expando_object
 {
-    class Program
+    class Expando_Example_Simple
     {
-        static void Main(string[] args)
+        public static void Init()
         {
             //origin : https://stackoverflow.com/questions/1653046/what-are-the-true-benefits-of-expandoobject
 
@@ -22,7 +22,6 @@ namespace cs_expando_object
             contact.Address.City = "Mercer Island";
             contact.Address.State = "WA";
             contact.Address.Postal = "68402";
-
         }
     }
 }
