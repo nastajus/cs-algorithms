@@ -8,6 +8,11 @@ namespace cs_polymorphsim
 {
     class Polymorphism_Secret_Of_Mana
     {
+        //mvp implement basic attack dry run, obviously without any visual interface.
+        //emulate a sequence of actions
+
+        //battle regular enemy
+        //sale
     }
 
     /**
@@ -34,9 +39,11 @@ namespace cs_polymorphsim
      * Green Slime, Goblin    : IUnderling
      * Nitro Pumpkin, Spectre
      * Chest
-     *      Drops(
+     *      Drops(IConsumable)
      *      GivesExperience(int, ? whom ? )
      *      GivesMoney
+     *
+     * Candy, Chocolate, Royal Jam, Cup of Wishes, Herb : IConsumable
      *
      * Jema : INPC
      *     Talk();
