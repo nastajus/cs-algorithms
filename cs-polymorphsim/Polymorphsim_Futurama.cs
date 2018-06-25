@@ -10,7 +10,7 @@ namespace cs_polymorphsim
     {
         public static void Init()
         {
-
+            //ultimately, any kind of polymormism prototype requires some kind of ACTION... 
         }
 
 
@@ -27,12 +27,19 @@ namespace cs_polymorphsim
      *
      * Omicronions conquer planets...
      *
+     * Robots
+     *      don't need air
+     * Meatbags
+     *      do need air
+     *
      * Mutants (live in sewers who cares... that's not an action)
      *
      * TwentiethCenturian's use Debit
      * TwentyFirstCenturian's use BrainAds, Flying Tubes... Flyin cars...
-     * Philip J Fry 
-     * Robots don't need air, can walk in space, like Bender, etc.
+     *
+     * Fry : IDeliveryBoy
+     *      Delivers<TDeliverable>();
+     *
      * Amy's family uses riches to buy obscenely expensive things
      * Kip's, Zap Brannagon's army issues army commands
      * President Nixon, etc...

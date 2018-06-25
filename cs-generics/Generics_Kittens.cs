@@ -30,7 +30,6 @@ namespace cs_generics
         }
     }
 
-
     class Box<TKitten>
     {
         private List<TKitten> _list = new List<TKitten>();
