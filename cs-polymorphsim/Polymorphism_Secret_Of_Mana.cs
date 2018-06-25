@@ -19,7 +19,7 @@ namespace cs_polymorphsim
     interface ITradable { }
 
     /**
-     * Randi, Purim, and Popoi : IPlayable, IFightable, IMerchant, IAutomatic
+     * Randi, Purim, and Popoi : IPlayable, IFightable, IMerchant, IEquiappable IAutomaticFight, IAutomaticFollow
      *
      * IPlayable
      *      Move(Direction)
@@ -29,8 +29,23 @@ namespace cs_polymorphsim
      *      Attack( ~~ whom ? ~~ Collision ??? umm )
      *      Defend Chance ( ~~ property ~~ )
      *
-     * IAutomatic
+     * Equiappable
+     *      ~~ a weapon is "equippable" ~~...
+     *      ~~ a head gear is "equippable" ~~...
+     *      ~~ a armor is "equippable" ~~...
+     *      ~~ a wristband is "equippable" ~~...
+     *      but is this really an interface ???
+     *          no.
+     *          there's no "actions" to enforce... , no methods to implement... unless
+     *          should there be interfaces without methods?
+     *          seems like   a bad method...
+     *          maybe using raw inheritance of classes is better ???
+     *          https://softwareengineering.stackexchange.com/questions/260343/why-is-inheritance-generally-viewed-as-a-bad-thing-by-oop-proponents
+     *
+     *
+     * IAutomaticFight
      *      
+     *
      *
      *
      * Purim, Popoi : IMagical
@@ -51,7 +66,8 @@ namespace cs_polymorphsim
      *      GivesExperience(int, ? whom ? )
      *      GivesMoney
      *
-     * Candy, Chocolate, Royal Jam, Cup of Wishes, Herb : IConsumable
+     * Candy, Chocolate, Royal Jam, Cup of Wishes, Herb, Faerie Walnut, Barrel, Magic Rope, Midge Mallet, Flammie Drum : IConsumable
+     *      Midge Mallet, Magic Rope, Flammie Drum --- override Consumable(false);
      *
      * Jema : INPC
      *     Talk();
@@ -71,8 +87,18 @@ namespace cs_polymorphsim
      *      Attack(IFightable)
      *      Level -- property [enum --> references various things ... ]
      *
+     * -----
+     * low-lev implementation details
+     *
      *
      * Gaia's Navel, Dwarf Village, Gold City : .... dictionary items as strings... affects prices.. ?
+     *
+     * Force, Agility, Constitution, Intelligence, Wisdom, Attack, %Hit, Defense, %Evade, MagicDef: Status fields...
+     *
+     * algorithms for attacking, defending, ... all the above...
+     *
+     *
+     * Attack Guard Approach Keep Away
      *
      */
 }
