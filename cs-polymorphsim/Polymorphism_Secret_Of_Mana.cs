@@ -37,8 +37,8 @@ namespace cs_polymorphsim
      *      Cast(TSpell)
      *      int MP;
      *
-     * Undine, Gnome, Salamando, Syphlid, Luna, Lumina, Shade, Dryad : IElemental
-     *      ... ? anything ? ...
+     * Undine, Gnome, Salamando, Syphlid, Luna, Lumina, Shade, Dryad : Elemental
+     *      Animate() //lol sigh
      *
      * Fire Gigas, Spikey Tiger, Wall Face : IBoss 
      *      Reward(TRewardable~~ == e.g. Orb, ManaSeed)
