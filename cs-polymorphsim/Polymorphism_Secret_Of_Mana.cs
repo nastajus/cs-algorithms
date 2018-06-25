@@ -13,7 +13,10 @@ namespace cs_polymorphsim
 
         //battle regular enemy
         //sale
+        //
     }
+
+    interface ITradable { }
 
     /**
      * Randi, Purim, and Popoi : IPlayable, IFightable, IMerchant
@@ -62,6 +65,8 @@ namespace cs_polymorphsim
      * Sword, Spear, Boomerang, Javalin, Whip, Axe, Knuckles, Bow & Arrow : IWeapons
      *      Attack(IFightable)
      *
+     *
+     * Gaia's Navel, Dwarf Village, Gold City : ~~ ?? ILocation 
      *
      */
 }
