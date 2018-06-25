@@ -13,11 +13,21 @@ namespace cs_polymorphsim
     /**
      * Randi, Purim, and Popoi
      *
-     * Magic Users
      *
-     * Thanatos
+     * IMagical
+     *      Cast(TSpell) 
+     *
+     * Fire Gigas, Spikey Tiger, Wall Face : IBoss 
+     *      Reward(TRewardable == e.g. Orb, ManaSeed)
      *
      *
+     * Jema : INPC
+     *     Talk();
+     *
+     * Shopkeeper : INPC, IMerchant
+     *      Talk()
+     *      Buy(TTradable)
+     *      Sell(TTradable)
      *
      */
 }
