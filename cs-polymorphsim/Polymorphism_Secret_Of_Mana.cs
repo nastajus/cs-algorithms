@@ -30,7 +30,7 @@ namespace cs_polymorphsim
      *      Defend Chance ( ~~ property ~~ )
      *
      * IMoveable
-     *      prop Vector2 (f, f) position ... umm.. { get; protected set; } ... not allowed.
+     *      prop Vector2 (f, f) position ... umm.. { get; set; } ... others can move you! ha!
      *
      * ??Equiappable??
      *      ~~ a weapon is "equippable" ~~...
