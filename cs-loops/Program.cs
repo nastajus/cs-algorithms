@@ -7,10 +7,15 @@ namespace cs_loops
     {
         static void Main(string[] args)
         {
-
+            EnumerablesAndEnumerators();
             IteratingAndPrintingAnArrayOrCollection();
             Console.ReadLine();
 
+        }
+
+        private static void EnumerablesAndEnumerators()
+        {
+            throw new NotImplementedException();
         }
 
         static void IteratingAndPrintingAnArrayOrCollection()
