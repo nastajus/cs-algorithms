@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace cs_linq
 {
-    class Program
+    class RatsAndMice
     {
-        static void Main(string[] args)
+        public static void Run()
         {
             //purpose, examing why this isn't working as expected
             //var toUploadLogs = localLogData.Where(x => remoteLogs.Any(y => x.Date != y.Date));
