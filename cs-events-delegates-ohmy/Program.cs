@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cs_events_delegates_ohmy
 {
-    class Person
+    public class Person
     {
         public enum Genders { MALE, FEMALE, OTHER }
 

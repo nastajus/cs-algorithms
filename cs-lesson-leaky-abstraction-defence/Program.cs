@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using cs_events_delegates_ohmy;
 
-namespace Car
+namespace cs_lesson_leaky_abstraction_defence
 {
     class Car
     {
@@ -24,7 +24,7 @@ namespace Car
             get
             {
                 //int val = (Passengers != null) ? Passengers.Count : 0;
-                int val = Passengers.Count ;
+                int val = Passengers.Count;
                 int v = (Driver != null) ? 1 : 0;
                 return val + v;
             }
@@ -67,5 +67,4 @@ namespace Car
         }
 
     }
-
 }
