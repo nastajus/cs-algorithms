@@ -8,5 +8,9 @@ namespace cs_events_delegates_ohmy
 {
     class Runner
     {
+        public static void Main()
+        {
+
+        }
     }
 }
