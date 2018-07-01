@@ -10,6 +10,8 @@ namespace cs_events_delegates_ohmy
     {
         public static void Main()
         {
+            Person p = new Person();
+            Life l = new Life();
 
         }
     }
