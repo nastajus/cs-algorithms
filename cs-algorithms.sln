@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs-extensions-methods", "cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs-expando-object", "cs-expando-object\cs-expando-object.csproj", "{178B714E-CDA1-422F-A790-D1E477BD3E06}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs-events-delegates-ohmy", "cs-events-delegates-ohmy\cs-events-delegates-ohmy.csproj", "{FC86D88C-F5EF-4FE4-9FF6-C7CB9989FE08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{178B714E-CDA1-422F-A790-D1E477BD3E06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{178B714E-CDA1-422F-A790-D1E477BD3E06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{178B714E-CDA1-422F-A790-D1E477BD3E06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC86D88C-F5EF-4FE4-9FF6-C7CB9989FE08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC86D88C-F5EF-4FE4-9FF6-C7CB9989FE08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC86D88C-F5EF-4FE4-9FF6-C7CB9989FE08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC86D88C-F5EF-4FE4-9FF6-C7CB9989FE08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
