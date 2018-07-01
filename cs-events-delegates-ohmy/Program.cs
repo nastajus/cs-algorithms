@@ -8,6 +8,10 @@ namespace cs_events_delegates_ohmy
 {
     class Person
     {
+        public enum Genders { MALE, FEMALE, OTHER }
+
+        public Genders Gender { get; } = (Genders)new Random().Next(3);
+
         delegate void VisitsGym(int val);
 
         private event VisitsGym GymActionHandler;
@@ -37,12 +41,12 @@ namespace cs_events_delegates_ohmy
 
     class Life
     {
-        static void Main(string[] args)
+        /*static void Main(string[] args)
         {
             Person p = new Person();
             p.MakesResolution();
             p.FeelsFat();
-        }
+        }*/
 
     }
 }
