@@ -16,9 +16,8 @@ namespace cs_events_scheduler
 
             //NO 
             //CONCRETIZE HERE
-            Scheduler<T> scheduler = new Scheduler<T>();
-            //COMPILER ERROR: cannot convert from 'cs_events_scheduler.Scheduler<T>.YogaStudios.YogaRoom' to 'T'
-            scheduler.RegisterBookableLocation<YogaRoom>(new YogaRoom());
+            Scheduler<YogaRoom> scheduler = new Scheduler<YogaRoom>();
+            scheduler.RegisterBookableLocation(new YogaRoom());
 
             //reconcile inconsistent mocking ... eh whatever
             YogaStudios.Mock();
@@ -58,7 +57,7 @@ namespace cs_events_scheduler
         /// however then why use this AND resource Occupancy... 
         /// my mind wishes both... but i haven't determined the implementation that completely justifies both yet...
         /// </summary>
-        private List<Bookable<T>> _bookingsLocations = new List<Bookable<T>>();
+        private List<IBookable> _bookingsLocations = new List<IBookable>();
 
 
         //todo: decide data structure, if I want 1 or Many schedulers running, for 2 types of bookings...
@@ -77,22 +76,17 @@ namespace cs_events_scheduler
         }
 
         // Register█████blah is what is seen externally in my API designed for another developer to consume. for better or worse
-        public Bookable<T> RegisterBookableLocation<T>(T bookable)
+        public T RegisterBookableLocation(T bookable)
         {
-            var newthing = new Bookable<T>();
-            //COMPILER ERROR: cannot convert type from 'T' to 'Scheduler<T>.Bookable<T>'
-            _bookingsLocations.Add(newthing);
-            return newthing;
+            //COMPILER ERROR: cannot convert from  'T' to 'Scheduler<T>.IBookable'
+            _bookingsLocations.Add(bookable);
+            return bookable;
         }
 
-        //e.g. invoke with either Bookable<YogaRoom> or Bookable<BabysittingHome>
+        //e.g. invoke with either IBookable<YogaRoom> or IBookable<BabysittingHome>
         //todo: ponder, is this an anti-pattern? 
-        //resharper warning:  Type parameter 'T' has the same name as outer paramter type 'Scheduler<T>'.
-        //i did do this on purpose though. validity of this implementation is to be determined via experimentation....
-        public class Bookable<T>
-        {
-
-        }
+        // "Marker interface"
+        public interface IBookable { }
 
 
 
@@ -177,6 +171,15 @@ namespace cs_events_scheduler
             Teri        ,
             Eula        
         }
+
+
+        //wut
+        public class YogaRoom : IBookable
+        {
+            public string StudioName;
+            public int NumInstructorsBookable;
+
+        }
     }
 
 
@@ -207,11 +210,4 @@ namespace cs_events_scheduler
 
     }
 
-    //wut
-    public class YogaRoom : Scheduler<T>.Bookable<T>
-    {
-        public string StudioName;
-        public int NumInstructorsBookable;
-
-    }
 }
