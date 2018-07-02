@@ -53,6 +53,7 @@ namespace cs_events_scheduler
             public Mock()
             {
                 //compiler error: an object reference is required for the non-static field, method, property 'Scheduler.registeredUsers'
+                //is this a good idea to convert to static??? welll... if i do ... then the scheduler may as well be static too... then... this begs the question, would i ever want 2+ concurrent scheduler instances? i suppose , sure... why not... no reason to limit that...
                 registeredUsers.Add(new User(GetRandomName(), "111-111-1111"));
                 registeredUsers.Add(new User(GetRandomName(), "222-222-2222"));
                 registeredUsers.Add(new User(GetRandomName(), "234"));
