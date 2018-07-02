@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 
 namespace cs_events_scheduler
 {
-    class Scheduler<T>
+
+    class Program
     {
-        //warning / compilation error: An entry point cannot be generic
         public static void Main(string[] args)
         {
-            Run();
 
-            // above is redundant now...
-
-            //NO 
-            //CONCRETIZE HERE
             Scheduler<YogaRoom> scheduler = new Scheduler<YogaRoom>();
             scheduler.RegisterBookableLocation(new YogaRoom());
 
             //reconcile inconsistent mocking ... eh whatever
             YogaStudios.Mock();
 
+            Console.ReadKey();
+
 
         }
+    }
 
+    class Scheduler<T>
+    {
         static void Run()
         {
             //load up a list of existing schedules
@@ -43,7 +43,7 @@ namespace cs_events_scheduler
              */
         }
 
-        Scheduler()
+        public Scheduler()
         {
             Mock.Run(this);
             ShowRegisteredUsers();
