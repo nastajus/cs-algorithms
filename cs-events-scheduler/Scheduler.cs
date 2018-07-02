@@ -57,7 +57,10 @@ namespace cs_events_scheduler
         /// however then why use this AND resource Occupancy... 
         /// my mind wishes both... but i haven't determined the implementation that completely justifies both yet...
         /// </summary>
-        private List<IBookable> _bookingsLocations = new List<IBookable>();
+
+        //oh
+        // my abstraction was not being consistently used...
+        private List<T> _bookingsLocations = new List<T>();
 
 
         //todo: decide data structure, if I want 1 or Many schedulers running, for 2 types of bookings...
@@ -79,6 +82,8 @@ namespace cs_events_scheduler
         public T RegisterBookableLocation(T bookable)
         {
             //COMPILER ERROR: cannot convert from  'T' to 'Scheduler<T>.IBookable'
+            //oh.
+
             _bookingsLocations.Add(bookable);
             return bookable;
         }
