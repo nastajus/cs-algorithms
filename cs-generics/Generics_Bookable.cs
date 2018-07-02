@@ -38,6 +38,16 @@ namespace cs_generics
     // "marker interfaces"
     //  answer: no if compile-time id, yes if run-time id.
     //  quotes from Microsoft: https://stackoverflow.com/questions/7552677/are-empty-interfaces-code-smell
+    
+    // so my question now is
+    //   is there a way to pass in any type without requiring it to implement my interface? 
+    //   why do i care?
+    //      1) i find implementing a hierachy messy to read. it increases difficulty of reading, for the gain of increased compiler-time writing ease.
+    //      2) part of me wants to ENTIRELY AVOID any kind of "code smell"... 
+    //   it doesn't matter.
+    //   do it.
+    //   i choose "the potentially smelly way" JUST to *climb to the top of the mountain of experience" ... just so I can read my peers code at work... 
+
     interface IBookable
     {
 
