@@ -176,9 +176,12 @@ namespace cs_events_scheduler
         {
             // debating about choosing between anonymous object & nested dictionary, and converting between with reflection, or anything else?
 
-            var rooms = new { venue = StudioNames.BayDundas, rooms = new { DundasRoomNames.Earth, DundasRoomNames.Fire } };
+            var bookablesAnon = new { venue = StudioNames.BayDundas, rooms = new { DundasRoomNames.Earth, DundasRoomNames.Fire } };
 
-            Dictionary<string, Dictionary<string, object>> asdf;
+            Dictionary<string, Dictionary<string, object>> bookablesDict = new Dictionary<string, Dictionary<string, object>>();
+
+            bookablesDict.Add(StudioNames.BayDundas.ToString(), new Dictionary<string, object>());
+            bookablesDict.Add(StudioNames.BayDundas.ToString(), DundasRoomNames.Earth.ToString());
 
 
         }
