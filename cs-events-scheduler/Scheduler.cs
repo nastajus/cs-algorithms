@@ -15,7 +15,7 @@ namespace cs_events_scheduler
             YogaStudios.Mock();
 
             Scheduler<IBookable> scheduler = new Scheduler<IBookable>();
-            scheduler.RegisterBookableLocation(new YogaRoom());
+            //scheduler.RegisterBookableLocation(new YogaTreeRoom());
 
 
 
@@ -201,9 +201,18 @@ namespace cs_events_scheduler
                 }
             }
 
-            HashSet<YogaRoom> bookableHash = new HashSet<YogaRoom>();
-            bookableHash.Add(new YogaRoom(StudioNames.BayDundas, DundasRoomNames.Fire.ToString())); //i want some kind of TUPLE to go here.... maybe a class instance is best?? what if i used class instances instead???
+            //i want some kind of TUPLE to go here.... maybe a class instance is best?? what if i used class instances instead???
+            HashSet<YogaTreeRoom> bookableHash = new HashSet<YogaTreeRoom>();
+            bookableHash.Add(new YogaTreeRoom(StudioNames.BayDundas, DundasRoomNames.Fire.ToString()));
+            bookableHash.Add(new YogaTreeRoom(StudioNames.BayDundas, DundasRoomNames.Earth.ToString()));
+            bookableHash.Add(new YogaTreeRoom(StudioNames.BayDundas, DundasRoomNames.Water.ToString()));
+            bookableHash.Add(new YogaTreeRoom(StudioNames.BayDundas, DundasRoomNames.Wind.ToString()));
 
+            //verify contents of hash set
+            foreach (YogaTreeRoom yoroom in bookableHash)
+            {
+                Console.WriteLine(yoroom);
+            }
 
             //bookablesDict.Add(StudioNames.BayDundas.ToString(), );
 
@@ -227,7 +236,7 @@ namespace cs_events_scheduler
             Earth
         }
 
-        public enum RichmondSpadinaRoomNames
+        public enum RichmondSpadinaRoomNames 
         {
             Fire,
             One,
@@ -237,24 +246,30 @@ namespace cs_events_scheduler
 
     }
 
+
+    //i wanted to use Room or something as some kind of generalized way to force either  DundasRoomNames  or  RichmondSpadinaRoomNames to be supplied
     class Room
     {
 
     }
 
-    public class YogaRoom : IBookable
+    public class YogaTreeRoom : IBookable
     {
         public YogaStudios.StudioNames StudioName; // { get; }
-        public string RoomName; //no enforcement
+        public string RoomName; //no enforcement    //todo: investigate proper way of getting multiple enum choices here...
         public int NumInstructorsBookable;
 
-        public YogaRoom(YogaStudios.StudioNames studioName, string roomName, int numInstructorsBookable = 1)
+        public YogaTreeRoom(YogaStudios.StudioNames studioName, string roomName, int numInstructorsBookable = 1)
         {
             StudioName = studioName;
             RoomName = roomName;
             NumInstructorsBookable = numInstructorsBookable;
         }
 
+        public override string ToString()
+        {
+            return $"{StudioName} . {RoomName} allows {NumInstructorsBookable} 1 instructor";
+        }
     }
 
 
