@@ -100,8 +100,37 @@ a derpful moment, i'd mixed up pType and p.
             }  //System.ArgumentException: 'Field 'name' defined on type 'cs_sl.Program+Person' is not a field on the target object which is of type 'System.RuntimeType'.'
         }
 ```
+- i caused an interesting error here... as if i was expecting
 
 
+string comparison
+
+```
+pType.Name == typeof(Dog).ToString()
+```
+
+
+the goal here was to write `SetNameOfThing` _generally_ to accept either type `Dog`, `Person` or whatever.
+
+```
+    main...
+    {
+        var dante = new Person();
+
+
+        var lassie = new Dog();
+        SetNameOfThing(dante, "Dnate");
+        SetNameOfThing(lassie, "Lassie");
+
+
+        DmlPopulate(str,dante);
+    }
+
+    static void SetNameOfThing(object p, string name)
+    {
+
+    }
+```
 
 
 
@@ -145,7 +174,7 @@ var rateLimit3 = new
 };
 ```
 
-##### implicit parameter
+##### absent expected implicit parameter (in my mind...)
 
 ```
 pType.GetField("name").SetValue(pType, name);
@@ -196,7 +225,7 @@ Terms:
 - ~~implicit variable~~
 - [implicit parameter](http://www.mathcs.emory.edu/~cheung/Courses/170.2010/Syllabus/03/implicit-param.html)
 
-##### my own explorations:
+##### my own explorations (unrelated to populate):
 
 Concepts
 - https://stackoverflow.com/questions/507747/can-you-explain-the-concept-of-streams
@@ -209,3 +238,8 @@ Visual Studio concepts:
 Terms
 - managed code
 - [code snippets](https://msdn.microsoft.com/en-us/library/ms165392.aspx), eg insertion snippet or as a surround-with snippet
+
+##### other concepts recently discussed, but unrelated:
+
+- strings are immutable objects.
+    - the way they're implemented prevents mutation............................ to think more about.
