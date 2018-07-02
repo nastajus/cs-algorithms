@@ -52,8 +52,40 @@ namespace cs_events_scheduler
             //todo: ponder when do i ever want a private constructor...
             public Mock()
             {
-
+                //compiler error: an object reference is required for the non-static field, method, property 'Scheduler.registeredUsers'
+                registeredUsers.Add(new User(GetRandomName(), "111-111-1111"));
+                registeredUsers.Add(new User(GetRandomName(), "222-222-2222"));
+                registeredUsers.Add(new User(GetRandomName(), "234"));
             }
+
+            private string GetRandomName()
+            {
+                return ((RandomNames) new Random().Next(Enum.GetNames(typeof(RandomNames)).Length)).ToString();
+            }
+        }
+
+        enum RandomNames
+        {
+            Martin      ,
+            Alesia      ,
+            Farrah      ,
+            Quintin     ,
+            Jeri        ,
+            Clorinda    ,
+            Bobette     ,
+            Nana        ,
+            Paulene     ,
+            Lavone      ,
+            Melania     ,
+            Breana      ,
+            Clifton     ,
+            Dani        ,
+            Margarette  ,
+            Orval       ,
+            Lyndia      ,
+            Elmo        ,
+            Teri        ,
+            Eula        
         }
     }
 }
