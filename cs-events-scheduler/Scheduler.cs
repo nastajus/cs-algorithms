@@ -204,12 +204,12 @@ namespace cs_events_scheduler
 
             //i want some kind of TUPLE to go here.... maybe a class instance is best?? what if i used class instances instead???
             HashSet<YogaTreeRoomBookable> bookableHash = new HashSet<YogaTreeRoomBookable>();
-            bookableHash.Add(new YogaTreeRoomBookable(StudioNames.BayDundas, new YogaTreeRoomName("Fire")));
-            bookableHash.Add(new YogaTreeRoomBookable(StudioNames.BayDundas, new YogaTreeRoomName("Earth")));
-            bookableHash.Add(new YogaTreeRoomBookable(StudioNames.BayDundas, new YogaTreeRoomName("Water")));
-            bookableHash.Add(new YogaTreeRoomBookable(StudioNames.BayDundas, new YogaTreeRoomName("Wind")));
+            bookableHash.Add(new YogaTreeRoomBookable(StudioNames.BayDundas, new BayDundas("Fire")));
+            bookableHash.Add(new YogaTreeRoomBookable(StudioNames.BayDundas, new BayDundas("Earth")));
+            bookableHash.Add(new YogaTreeRoomBookable(StudioNames.BayDundas, new BayDundas("Water")));
+            bookableHash.Add(new YogaTreeRoomBookable(StudioNames.BayDundas, new BayDundas("Wind")));
 
-            bookableHash.Add(new YogaTreeRoomBookable(StudioNames.RichmondSpadina, new YogaTreeRoomName("One")));
+            bookableHash.Add(new YogaTreeRoomBookable(StudioNames.RichmondSpadina, new RichmondSpadina("One")));
             
             
 
@@ -293,7 +293,7 @@ namespace cs_events_scheduler
     {
         // "constructor initializer" 
         // you get to specify which constructor in the base class should be invoked before the constructor of the derived class
-        BayDundas(string roomName) : base (roomName)
+        public BayDundas(string roomName) : base (roomName)
         {
             //base(roomName);
 
@@ -311,7 +311,7 @@ namespace cs_events_scheduler
 
     public class RichmondSpadina : YogaTreeRoom
     {
-        RichmondSpadina(string roomName) : base(roomName)
+        public RichmondSpadina(string roomName) : base(roomName)
         {
             //rely entirely on parent...
         }
@@ -329,7 +329,7 @@ namespace cs_events_scheduler
     {
 
         public YogaStudios.StudioNames StudioName; // { get; }
-        public YogaTreeRoom RoomName { get; }
+        public YogaTreeRoom RoomName { get; } // private set; } // todo: DO I NEED? TO TEST...
         public int NumInstructorsBookable;
 
         //COMPILER ERROR: base class YogaTreeRoom doesn't contain a parameterless constructor
