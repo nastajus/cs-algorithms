@@ -252,20 +252,18 @@ namespace cs_events_scheduler
 
     public abstract class YogaTreeRoom : IYogaTreeRoom
     {
-        public string RoomName { get; private set; }
-
         protected YogaTreeRoom() { } //this is upsetting, why do i need this, i don't want it to exist, i want it locked and inaccessible.
         protected YogaTreeRoom(string roomName)
         {
             RoomName = roomName;
         }
 
-        private string _value;
-        public string Value
+        private string _roomName;
+        public string RoomName
         {
             get
             {
-                return _value;
+                return _roomName;
             }
 
             //only allowed via the constructor
@@ -273,7 +271,7 @@ namespace cs_events_scheduler
             {
                 if (Enum.IsDefined(typeof(BayDundas.BayDundasRoomNames), value) || Enum.IsDefined(typeof(RichmondSpadina.RichmondSpadinaRoomNames), value))
                 {
-                    _value = value;
+                    _roomName = value;
                 }
                 else
                 {
@@ -284,7 +282,7 @@ namespace cs_events_scheduler
 
         public override string ToString()
         {
-            return _value;
+            return _roomName;
         }
 
     }
