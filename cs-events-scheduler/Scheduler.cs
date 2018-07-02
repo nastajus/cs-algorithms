@@ -29,6 +29,11 @@ namespace cs_events_scheduler
             Mock.Run(this);
         }
 
+        //todo: ponder if this is a good design. no? Should it be IEnumerable instead? 
+        //well, it's fine as a list internally. why?
+        // internal to this Scheduler class, i can wreak havoc on this poor list.
+        // but externally i should only provide an IEnumerable, which, btw, is totally convertable back to a list.
+        // the point is... this Scheduler should have complete control... nobody should be able to modify the list state externally.
         List<User> registeredUsers = new List<User>();
 
         class Timeblock
