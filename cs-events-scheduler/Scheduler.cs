@@ -37,9 +37,9 @@ namespace cs_events_scheduler
 
         }
 
-        //resharper tip: field can be made `readonly`
         readonly List<User> _registeredUsers = new List<User>();
-        private IEnumerable<User> RegisteredUsers => _registeredUsers;
+        public IEnumerable<User> RegisteredUsers => _registeredUsers;
+        //compiler error:  Inconsistent accessibility: type argument 'cs_events_scheduler.Scheduler.User' is less accessible than property 'cs_events_scheduler.Scheduler.RegisteredUsers'
 
         void Show()
         {
