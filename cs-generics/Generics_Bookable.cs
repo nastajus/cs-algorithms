@@ -11,9 +11,9 @@ namespace cs_generics
     {
         public static void Init()
         {
-            Scheduler<Bookable> scheduler = new Scheduler<Bookable>();
+            Scheduler<IBookable> scheduler = new Scheduler<IBookable>();
 
-            //COMPILER ERROR: cannot convert from YogaRoom to Bookable
+            //COMPILER ERROR: cannot convert from YogaRoom to IBookable
             scheduler.Book(new YogaRoom());
 
 
@@ -34,12 +34,13 @@ namespace cs_generics
         }
     }
 
-    class Bookable
+    //empty interface ... is this a code smell? 
+    interface IBookable
     {
 
     }
 
-    class YogaRoom
+    class YogaRoom : IBookable
     {
         public string RoomName;
     }
