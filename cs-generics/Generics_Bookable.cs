@@ -23,8 +23,7 @@ namespace cs_generics
     {
         public List<T> bookable = new List<T>();
 
-        //COMPILER ERROR: unexpected use of a generic name
-        public void Add<T>
+        public void Add<T>()
         {
 
         }
