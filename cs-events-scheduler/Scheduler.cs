@@ -37,12 +37,9 @@ namespace cs_events_scheduler
 
         }
 
-        List<User> _registeredUsers = new List<User>();
-        private IEnumerable<User> RegisteredUsers
-        {
-            get { return _registeredUsers; }
-            //set { }
-        }
+        //resharper tip: field can be made `readonly`
+        readonly List<User> _registeredUsers = new List<User>();
+        private IEnumerable<User> RegisteredUsers => _registeredUsers;
 
         void Show()
         {
@@ -50,6 +47,8 @@ namespace cs_events_scheduler
             {
                 Console.WriteLine(user);
             }
+            //todo: ponder the value of using IEnumerable syntax here... oh... none.
+            //my rule will be: use shorter code unless more verbosity solves another problem.
         }
 
 
