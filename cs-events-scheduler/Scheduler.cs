@@ -256,39 +256,18 @@ namespace cs_events_scheduler
     //WHAT I REALLY want is that ONLY BayDundas has Fire Earth Water Wind, and that ONLY SpadinaRichomd has One Two Three... 
     //so for all my fancy machinantions with enums and classes and overridding ToString and using property's private settings and throwing exceptions... none of this helps...
     // the only solution is to promote EVERYTHING to the class level...
-    public class YogaTreeRoomName
+    interface IYogaTreeRoom
     {
-        public YogaTreeRoomName(string value)
-        {
-            Value = value;
-        }
+        string RoomName { get; }
+    }
 
-        private string _value;
-        public string Value
-        {
-            get
-            {
-                return _value;
-            }
+    class DundasBay : IYogaTreeRoom
+    {
+        public string RoomName { get; private set;  }
+    }
 
-            //only allowed via the constructor
-            private set
-            {
-                if (Enum.IsDefined(typeof(YogaStudios.DundasRoomNames), value) || Enum.IsDefined(typeof(YogaStudios.RichmondSpadinaRoomNames), value))
-                {
-                    _value = value;
-                }
-                else
-                {
-                    throw new InvalidEnumArgumentException("yo, please use one of the standard Yoga Studios names in the enums, pal");
-                }
-            }
-        }
+    class RichmondSpadina {
 
-        public override string ToString()
-        {
-            return _value;
-        }
     }
 
     public class YogaTreeRoom : IBookable
