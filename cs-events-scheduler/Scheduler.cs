@@ -40,7 +40,7 @@ namespace cs_events_scheduler
         Scheduler()
         {
             Mock.Run(this);
-            Show(this);
+            Show();
 
         }
 
@@ -56,16 +56,17 @@ namespace cs_events_scheduler
             //set { }
         }
 
-        void Show(Scheduler scheduler)
+        void Show()
         {
-            foreach (User user in scheduler.RegisteredUsers)
+            foreach (User user in RegisteredUsers)
             {
                 Console.WriteLine(user);
             }
         }
 
 
-    class Timeblock
+
+        class Timeblock
         {
             User who;
         }
