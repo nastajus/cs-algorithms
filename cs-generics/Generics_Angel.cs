@@ -7,16 +7,17 @@ using System.Threading.Tasks;
 namespace cs_generics
 {
 
-    public class MyGenericClass
+    // compiler doesn't have any idea what "T" is about... but i can create an object instance that concretizes with an existing type...
+    public class MyGenericClass<T>
     {
-        public int MyNumber { get; set; }
+        public T MyNumber { get; set; }
     }
 
     class Generics_Angel
     {
         public static void Init()
         {
-            var c = new MyGenericClass();
+            var c = new MyGenericClass<int>();
             // accessible : c.MyNumber;
         }
     }
