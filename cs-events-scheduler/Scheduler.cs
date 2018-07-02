@@ -43,6 +43,8 @@ namespace cs_events_scheduler
         readonly List<User> _registeredUsers = new List<User>();
         public IEnumerable<User> RegisteredUsers => _registeredUsers;
 
+        public Bookable<T> RegisterBookable;
+
         //todo: decide data structure, if I want 1 or Many schedulers running, for 2 types of bookings...
         // oh, it must be 1 singular system. otherwise i'd lose the point of trying to have multiple events coming in... okay... okay! ... ManaObject! or ... something! 
         Dictionary<string, object> _resourceOccupancy = new Dictionary<string, object>();
@@ -56,6 +58,11 @@ namespace cs_events_scheduler
             }
             //todo: ponder the value of using IEnumerable syntax here... oh... none.
             //my rule will be: use shorter code unless more verbosity solves another problem.
+        }
+
+        class Bookable<T>
+        {
+
         }
 
 
