@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cs_events_scheduler
 {
-    class Scheduler
+    class Scheduler<T>
     {
         static void Main(string[] args)
         {
@@ -40,8 +40,10 @@ namespace cs_events_scheduler
 
         }
 
-        readonly List<User> _registeredUsers = new List<User>();
+        private List<User> _registeredUsers = new List<User>();
         public IEnumerable<User> RegisteredUsers => _registeredUsers;
+
+        private List<Bookable<T>> _bookings = new List<Bookable<T>>();
 
         public Bookable<T> RegisterBookable;
 
@@ -60,6 +62,15 @@ namespace cs_events_scheduler
             //my rule will be: use shorter code unless more verbosity solves another problem.
         }
 
+        public Bookable<T> RegisterBookable(T bookable)
+        {
+            _bookings.Add(new Bookable<T>());
+        }
+
+        //e.g. invoke with either Bookable<YogaRoom> or Bookable<BabysittingHome>
+        //todo: ponder, is this an anti-pattern? 
+        //resharper warning:  Type parameter 'T' has the same name as outer paramter type 'Scheduler<T>'.
+        //i did do this on purpose though. validity of this implementation is to be determined via experimentation....
         class Bookable<T>
         {
 
@@ -95,7 +106,7 @@ namespace cs_events_scheduler
         }
 
 
-        class Babysittable { }
+        class BabysittingHome { }
 
 
 
@@ -134,7 +145,7 @@ namespace cs_events_scheduler
         class Mock
         {
 
-            public static void Run(Scheduler scheduler)
+            public static void Run(Scheduler<T> scheduler)
             {
                 scheduler._registeredUsers.Add(new User(GetRandomNameUser(), "111-111-1111"));
                 scheduler._registeredUsers.Add(new User(GetRandomNameUser(), "222-222-2222"));
