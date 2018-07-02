@@ -43,9 +43,13 @@ namespace cs_events_scheduler
         private List<User> _registeredUsers = new List<User>();
         public IEnumerable<User> RegisteredUsers => _registeredUsers;
 
-        private List<Bookable<T>> _bookings = new List<Bookable<T>>();
+        /// <summary>
+        /// todo: is intended to be the idempotent collection of venues *physically exist*, without consideration of *time availability*
+        /// however then why use this AND resource Occupancy... 
+        /// my mind wishes both... but i haven't determined the implementation that completely justifies both yet...
+        /// </summary>
+        private List<Bookable<T>> _bookingsLocations = new List<Bookable<T>>();
 
-        public Bookable<T> RegisterBookable;
 
         //todo: decide data structure, if I want 1 or Many schedulers running, for 2 types of bookings...
         // oh, it must be 1 singular system. otherwise i'd lose the point of trying to have multiple events coming in... okay... okay! ... ManaObject! or ... something! 
@@ -62,11 +66,10 @@ namespace cs_events_scheduler
             //my rule will be: use shorter code unless more verbosity solves another problem.
         }
 
-        //COMPILER ERROR: The type 'Scheduler<T>' already contains a definition for 'RegisterBookable'
         public Bookable<T> RegisterBookable(T bookable)
         {
             var newthing = new Bookable<T>();
-            _bookings.Add(newthing);
+            _bookingsLocations.Add(newthing);
             return newthing;
         }
 
@@ -74,7 +77,7 @@ namespace cs_events_scheduler
         //todo: ponder, is this an anti-pattern? 
         //resharper warning:  Type parameter 'T' has the same name as outer paramter type 'Scheduler<T>'.
         //i did do this on purpose though. validity of this implementation is to be determined via experimentation....
-        class Bookable<T>
+        public class Bookable<T>
         {
 
         }
