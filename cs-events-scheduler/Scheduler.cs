@@ -220,12 +220,17 @@ namespace cs_events_scheduler
         }
 
         //i want sub-enums... internet suggests nested classes with static constants instead
-        public enum DundasRoomNames
+        //Fwiw, enum types exist to make code fast and memory-efficient. This isn't
+        public static class RoomNames
         {
-            Fire,
-            Wind,
-            Water,
-            Earth
+            public static class BayDundas
+            {
+                public const int Fire = 1;
+                public const int Wind = 2;
+                public const int Water = 3;
+                public const int Earth = 4;
+            }
+
         }
 
 
