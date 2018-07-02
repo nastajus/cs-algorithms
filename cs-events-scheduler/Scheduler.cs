@@ -91,19 +91,17 @@ namespace cs_events_scheduler
         {
             public string StudioName;
 
+            /*
             class Mock
             {
                 Mock(YogaRoom yogaroom)
                 {
                     //Fuuuuuuuuuuuuuck
-                    //okay
-                    //make a hack stay a hack.
-                    //let this be ugly here now.
-                    //let it stay obvious so it begs fixing later.
                     //todo: do generically from a single Mocking location... at least the type names...
                     yogaroom.StudioName = Scheduler.Mock.GetRandomNameStudio();
                 }
             }
+            */
 
             public enum StudioNames
             {
