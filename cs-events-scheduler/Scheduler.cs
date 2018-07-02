@@ -11,13 +11,6 @@ namespace cs_events_scheduler
         static void Main(string[] args)
         {
             Run();
-            //compiler error: an object reference is required for the non-static field, method, or property 'Scheduler.Show()'
-            //compiler error: cannot access non-static method 'Show' in static context
-            
-            //todo: resolve the decision pathway i took that made me put this here. oh.
-            // i wanted Run() and Show() but didn't want to care about static/not at that moment.
-            // still don't want to care....... well, do it.
-            // 
         }
 
         static void Run()
@@ -44,11 +37,6 @@ namespace cs_events_scheduler
 
         }
 
-        //todo: ponder if this is a good design. no? Should it be IEnumerable instead? 
-        //well, it's fine as a list internally. why?
-        // internal to this Scheduler class, i can wreak havoc on this poor list.
-        // but externally i should only provide an IEnumerable, which, btw, is totally convertable back to a list.
-        // the point is... this Scheduler should have complete control... nobody should be able to modify the list state externally.
         List<User> _registeredUsers = new List<User>();
         private IEnumerable<User> RegisteredUsers
         {
@@ -85,8 +73,6 @@ namespace cs_events_scheduler
                 Phone = phone;
             }
 
-            //compiler error:  Override method 'string cs_events_scheduler.Scheduler.User.ToString()' cannot change access rights
-            //resoultion:  go to definition, resharper takes to decompiled assembly, see `public`, an important semantic difference in signature, match it. (also saw `virtual` as expected).
             public override string ToString()
             {
                 return $"Name: {Name}, Phone: {Phone}";
@@ -95,10 +81,6 @@ namespace cs_events_scheduler
 
         class Mock
         {
-            //todo: ponder deeper questions of whether this is a good design long-term though.
-            // since this Mock class is intended to be highly coupled to the Scheduler,
-            // i see no downfall of this design.
-            // let Mock be static, let it accept a Scheduler parameter, let it have copious instance references from that Scheduler, let this Mock class reside as an inner class inside Scheduler.
 
             public static void Run(Scheduler scheduler)
             {
