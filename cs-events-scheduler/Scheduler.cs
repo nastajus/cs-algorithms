@@ -35,7 +35,7 @@ namespace cs_events_scheduler
         class User
         {
             public string Name { get; }
-            public string Phone;
+            public string Phone; //should anyone (any class) be allowed to erase phone? no... then...
 
             public User(string name)
             {
