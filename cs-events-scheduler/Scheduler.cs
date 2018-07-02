@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -203,10 +204,14 @@ namespace cs_events_scheduler
 
             //i want some kind of TUPLE to go here.... maybe a class instance is best?? what if i used class instances instead???
             HashSet<YogaTreeRoom> bookableHash = new HashSet<YogaTreeRoom>();
-            bookableHash.Add(new YogaTreeRoom(StudioNames.BayDundas, DundasRoomNames.Fire.ToString()));
-            bookableHash.Add(new YogaTreeRoom(StudioNames.BayDundas, DundasRoomNames.Earth.ToString()));
-            bookableHash.Add(new YogaTreeRoom(StudioNames.BayDundas, DundasRoomNames.Water.ToString()));
-            bookableHash.Add(new YogaTreeRoom(StudioNames.BayDundas, DundasRoomNames.Wind.ToString()));
+            bookableHash.Add(new YogaTreeRoom(StudioNames.BayDundas, new YogaTreeRoomName("Fire")));
+            bookableHash.Add(new YogaTreeRoom(StudioNames.BayDundas, new YogaTreeRoomName("Earth")));
+            bookableHash.Add(new YogaTreeRoom(StudioNames.BayDundas, new YogaTreeRoomName("Water")));
+            bookableHash.Add(new YogaTreeRoom(StudioNames.BayDundas, new YogaTreeRoomName("Wind")));
+
+            bookableHash.Add(new YogaTreeRoom(StudioNames.RichmondSpadina, new YogaTreeRoomName("One")));
+            
+            
 
             //verify contents of hash set
             foreach (YogaTreeRoom yoroom in bookableHash)
@@ -238,9 +243,9 @@ namespace cs_events_scheduler
 
         public enum RichmondSpadinaRoomNames 
         {
-            Fire,
             One,
-            Two
+            Two,
+            Three
         }
 
 
@@ -248,18 +253,48 @@ namespace cs_events_scheduler
 
 
     //i wanted to use Room or something as some kind of generalized way to force either  DundasRoomNames  or  RichmondSpadinaRoomNames to be supplied
-    class Room
+    public class YogaTreeRoomName
     {
+        public YogaTreeRoomName(string value)
+        {
+            Value = value;
+        }
 
+        private string _value;
+        public string Value
+        {
+            get
+            {
+                return _value;
+            }
+
+            //only allowed via the constructor
+            private set
+            {
+                if (Enum.IsDefined(typeof(YogaStudios.DundasRoomNames), value) || Enum.IsDefined(typeof(YogaStudios.RichmondSpadinaRoomNames), value))
+                {
+                    _value = value;
+                }
+                else
+                {
+                    throw new InvalidEnumArgumentException("yo, please use one of the standard Yoga Studios names in the enums, pal");
+                }
+            }
+        }
+
+        public override string ToString()
+        {
+            return _value;
+        }
     }
 
     public class YogaTreeRoom : IBookable
     {
         public YogaStudios.StudioNames StudioName; // { get; }
-        public string RoomName; //no enforcement    //todo: investigate proper way of getting multiple enum choices here...
+        public YogaTreeRoomName RoomName; //no enforcement    //todo: investigate proper way of getting multiple enum choices here...
         public int NumInstructorsBookable;
 
-        public YogaTreeRoom(YogaStudios.StudioNames studioName, string roomName, int numInstructorsBookable = 1)
+        public YogaTreeRoom(YogaStudios.StudioNames studioName, YogaTreeRoomName roomName, int numInstructorsBookable = 1)
         {
             StudioName = studioName;
             RoomName = roomName;
