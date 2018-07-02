@@ -325,15 +325,15 @@ namespace cs_events_scheduler
     }
 
 
-    public class YogaTreeRoomBookable : YogaTreeRoom, IBookable
+    public class YogaTreeRoomBookable : IBookable
     {
 
         public YogaStudios.StudioNames StudioName; // { get; }
-        public IYogaTreeRoom RoomName { get; }
+        public YogaTreeRoom RoomName { get; }
         public int NumInstructorsBookable;
 
         //COMPILER ERROR: base class YogaTreeRoom doesn't contain a parameterless constructor
-        public YogaTreeRoomBookable(YogaStudios.StudioNames studioName, IYogaTreeRoom roomName, int numInstructorsBookable = 1)
+        public YogaTreeRoomBookable(YogaStudios.StudioNames studioName, YogaTreeRoom roomName, int numInstructorsBookable = 1)
         {
             StudioName = studioName;
             RoomName = roomName;
