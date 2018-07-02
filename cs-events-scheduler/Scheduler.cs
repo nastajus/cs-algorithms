@@ -96,7 +96,9 @@ namespace cs_events_scheduler
                 Mock(YogaRoom yogaroom)
                 {
                     //compiler erorr: invalid anonymous type member declarator. Anonymous type members must be declared with a member assignment, a simple name or member access.
-                    var rooms = new { venue = StudioNames.BayDundas, new { adsf = ""} };
+                    var rooms = new { venue = StudioNames.BayDundas, asdf = new {}, qwer = "" };
+                    //                                               ^^^^^^^^^^^^^  #########
+                    //                                               member assignment, check
                 }
             }
 
