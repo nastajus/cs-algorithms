@@ -66,7 +66,7 @@ namespace cs_events_scheduler
             //my rule will be: use shorter code unless more verbosity solves another problem.
         }
 
-        public Bookable<T> RegisterBookable(T bookable)
+        public Bookable<T> RegisterBookableLocation(T bookable)
         {
             var newthing = new Bookable<T>();
             _bookingsLocations.Add(newthing);
