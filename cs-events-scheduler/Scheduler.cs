@@ -62,9 +62,12 @@ namespace cs_events_scheduler
             //my rule will be: use shorter code unless more verbosity solves another problem.
         }
 
+        //COMPILER ERROR: The type 'Scheduler<T>' already contains a definition for 'RegisterBookable'
         public Bookable<T> RegisterBookable(T bookable)
         {
-            _bookings.Add(new Bookable<T>());
+            var newthing = new Bookable<T>();
+            _bookings.Add(newthing);
+            return newthing;
         }
 
         //e.g. invoke with either Bookable<YogaRoom> or Bookable<BabysittingHome>
