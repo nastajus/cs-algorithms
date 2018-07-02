@@ -34,7 +34,7 @@ namespace cs_events_scheduler
 
         class User
         {
-            public string Name;
+            public string Name { get; }
             public string Phone;
 
             public User(string name)
