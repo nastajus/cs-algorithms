@@ -170,7 +170,7 @@ namespace cs_events_scheduler
     }
 
 
-    class YogaStudios
+    public class YogaStudios
     {
         public static void Mock()
         {
@@ -202,7 +202,7 @@ namespace cs_events_scheduler
             }
 
             HashSet<string> bookableHash = new HashSet<string>();
-            bookableHash.Add(); //i want some kind of TUPLE to go here....
+            bookableHash.Add(); //i want some kind of TUPLE to go here.... maybe a class instance is best?? what if i used class instances instead???
 
 
             //bookablesDict.Add(StudioNames.BayDundas.ToString(), );
@@ -232,7 +232,7 @@ namespace cs_events_scheduler
 
     public class YogaRoom : IBookable
     {
-        public string StudioName;
+        public YogaStudios.StudioNames StudioName;
         public int NumInstructorsBookable;
 
     }
