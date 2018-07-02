@@ -91,6 +91,15 @@ namespace cs_events_scheduler
         {
             public string StudioName;
 
+            class Mock
+            {
+                Mock(YogaRoom yogaroom)
+                {
+                    //Fuuuuuuuuuuuuuck
+                    yogaroom.StudioName = Scheduler.Mock.GetRandomNameStudio();
+                }
+            }
+
             public enum StudioNames
             {
                 BayDundas        ,
@@ -123,7 +132,7 @@ namespace cs_events_scheduler
                 return ((RandomUserNames)new Random().Next(Enum.GetNames(typeof(RandomUserNames)).Length)).ToString();
             }
 
-            public static string GetRandomName()
+            public static string GetRandomNameStudio()
             {
                 return ((YogaRoom.StudioNames)new Random().Next(Enum.GetNames(typeof(YogaRoom.StudioNames)).Length)).ToString();
             }
