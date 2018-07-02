@@ -11,7 +11,8 @@ namespace cs_generics
         public static void Init()
         {
             List<Bookable<T>> bookables = new List<Bookable<T>>();
-            bookables.Add(new YogaRoom());
+            //COMPILER ERROR: The **non-generic** list... cannot be used... wait a minute...
+            bookables.Add<YogaRoom>(new YogaRoom());
         }
     }
 
