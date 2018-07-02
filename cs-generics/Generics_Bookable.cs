@@ -23,6 +23,7 @@ namespace cs_generics
     {
         public List<T> bookable = new List<T>();
 
+        //RESHARPER WARNING: Type paramater 'T' has the same name as the type parameter from outer type 'Scheduler<T>'
         public void Add<T>(T t)
         {
             //COMPILER ERROR: Cannot convert from 'T [C:\...Generics_Bookable.cs(26)]' to 'T [C:\...Generics_Bookable.cs(22)]'
