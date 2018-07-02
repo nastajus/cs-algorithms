@@ -84,6 +84,11 @@ namespace cs_events_scheduler
             }
         }
 
+
+        class Babysittable { }
+
+        class YogaRoom { }
+
         class Mock
         {
 
