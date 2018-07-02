@@ -57,9 +57,6 @@ namespace cs_events_scheduler
         /// however then why use this AND resource Occupancy... 
         /// my mind wishes both... but i haven't determined the implementation that completely justifies both yet...
         /// </summary>
-
-        //oh
-        // my abstraction was not being consistently used...
         private List<T> _bookingsLocations = new List<T>();
 
 
@@ -81,17 +78,10 @@ namespace cs_events_scheduler
         // Register█████blah is what is seen externally in my API designed for another developer to consume. for better or worse
         public T RegisterBookableLocation(T bookable)
         {
-            //COMPILER ERROR: cannot convert from  'T' to 'Scheduler<T>.IBookable'
-            //oh.
-
             _bookingsLocations.Add(bookable);
             return bookable;
         }
 
-        //e.g. invoke with either IBookable<YogaRoom> or IBookable<BabysittingHome>
-        //todo: ponder, is this an anti-pattern? 
-        // "Marker interface"
-        public interface IBookable { }
 
 
 
@@ -176,15 +166,6 @@ namespace cs_events_scheduler
             Teri        ,
             Eula        
         }
-
-
-        //wut
-        public class YogaRoom : IBookable
-        {
-            public string StudioName;
-            public int NumInstructorsBookable;
-
-        }
     }
 
 
@@ -214,5 +195,17 @@ namespace cs_events_scheduler
 
 
     }
+
+    //wut
+    public class YogaRoom : IBookable
+    {
+        public string StudioName;
+        public int NumInstructorsBookable;
+
+    }
+
+
+    // "Marker interface"
+    public interface IBookable { }
 
 }
