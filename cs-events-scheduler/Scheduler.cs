@@ -178,10 +178,33 @@ namespace cs_events_scheduler
 
             var bookablesAnon = new { venue = StudioNames.BayDundas, rooms = new { DundasRoomNames.Earth, DundasRoomNames.Fire } };
 
-            Dictionary<string, Dictionary<string, object>> bookablesDict = new Dictionary<string, Dictionary<string, object>>();
+            Dictionary<string, List<string>> bookablesDict = new Dictionary<string, List<string>>();
 
-            bookablesDict.Add(StudioNames.BayDundas.ToString(), new Dictionary<string, object>());
-            bookablesDict.Add(StudioNames.BayDundas.ToString(), DundasRoomNames.Earth.ToString());
+            bookablesDict.Add(StudioNames.BayDundas.ToString(), new List<string>());
+
+            List<string> listDundasRooms = new List<string>();
+            listDundasRooms.Add(DundasRoomNames.Earth.ToString());
+            listDundasRooms.Add(DundasRoomNames.Fire.ToString());
+            // EXCEPTION:  System.ArgumentException: 'An item with the same key has already been added.'
+            // update a list nested inside a dictionary C#
+            // https://stackoverflow.com/questions/39464294/add-objects-to-a-list-nested-inside-a-dictionary-using-linq-extensions
+            bookablesDict.Add(StudioNames.BayDundas.ToString(), listDundasRooms);
+
+            bookablesDict.TryGetValue(StudioNames.BayDundas.ToString(), out var value);
+            value?.Add(DundasRoomNames.Wind.ToString());
+            value?.Add(DundasRoomNames.Water.ToString());
+
+            //verify contents of dictionary..
+            foreach (KeyValuePair<string, List<string>> entry in bookablesDict)
+            {
+                foreach (string innerEntry in entry.Value)
+                {
+                    Console.WriteLine($"bookablesDict[\"{entry}\"][\"{innerEntry}\"] ... eh might work\n");
+                }
+            }
+
+
+            //bookablesDict.Add(StudioNames.BayDundas.ToString(), );
 
 
         }
