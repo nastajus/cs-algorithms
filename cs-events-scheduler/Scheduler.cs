@@ -219,6 +219,7 @@ namespace cs_events_scheduler
             RichmondHill,
         }
 
+        //i want sub-enums... internet suggests nested classes with static constants instead
         public enum DundasRoomNames
         {
             Fire,
