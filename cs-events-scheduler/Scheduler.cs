@@ -18,7 +18,6 @@ namespace cs_events_scheduler
             // i wanted Run() and Show() but didn't want to care about static/not at that moment.
             // still don't want to care....... well, do it.
             // 
-            Show(this);
         }
 
         static void Run()
@@ -41,6 +40,8 @@ namespace cs_events_scheduler
         Scheduler()
         {
             Mock.Run(this);
+            Show(this);
+
         }
 
         //todo: ponder if this is a good design. no? Should it be IEnumerable instead? 
@@ -55,7 +56,7 @@ namespace cs_events_scheduler
             //set { }
         }
 
-        static void Show(Scheduler scheduler)
+        void Show(Scheduler scheduler)
         {
             foreach (User user in scheduler.RegisteredUsers)
             {
