@@ -26,7 +26,7 @@ namespace cs_generics
         //this might be the core cause of my faults here... now... maybe...
 
         //RESHARPER WARNING: Type paramater 'T' has the same name as the type parameter from outer type 'Scheduler<T>'
-        public void Add<T>(T t)
+        public void Add(T t)
         {
             //COMPILER ERROR: Cannot convert from 'T [C:\...Generics_Bookable.cs(26)]' to 'T [C:\...Generics_Bookable.cs(22)]'
             bookable.Add(t);
