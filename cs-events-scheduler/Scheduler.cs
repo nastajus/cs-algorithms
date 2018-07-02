@@ -91,7 +91,7 @@ namespace cs_events_scheduler
         {
             public string StudioName;
 
-            enum StudioNames
+            public enum StudioNames
             {
                 BayDundas        ,
                 RichmondSpadina  ,
@@ -106,9 +106,9 @@ namespace cs_events_scheduler
 
             public static void Run(Scheduler scheduler)
             {
-                scheduler._registeredUsers.Add(new User(GetRandomName(typeof(RandomNames)), "111-111-1111"));
-                scheduler._registeredUsers.Add(new User(GetRandomName(typeof(RandomNames)), "222-222-2222"));
-                scheduler._registeredUsers.Add(new User(GetRandomName(typeof(RandomNames)), "234"));
+                scheduler._registeredUsers.Add(new User(GetRandomNameUser(), "111-111-1111"));
+                scheduler._registeredUsers.Add(new User(GetRandomNameUser(), "222-222-2222"));
+                scheduler._registeredUsers.Add(new User(GetRandomNameUser(), "234"));
             }
 
             public static string GetRandomName(Type type)
@@ -116,13 +116,22 @@ namespace cs_events_scheduler
                 //todo: analyze & internalize why this is wrong. again.
                 // Symbol `Type` is a *type*  --> possibly called a "type variable"
                 // Symbol `type` is a *variable*. --> possibly called a "value variable"???
-                // typeof accepts TYPE VARIABLE... not a "VALUE VARIABLE"...
-                return ((type.GetType()) new Random().Next(Enum.GetNames((type.GetType()).Length)).ToString();
-                //sigh
+                // typeof accepts TYPE VARIABLE... not a "VALUE VARIABLE".
+                return ((type) new Random().Next(Enum.GetNames(typeof(type)).Length)).ToString();
+            }
+
+            public static string GetRandomNameUser()
+            {
+                return ((RandomUserNames)new Random().Next(Enum.GetNames(typeof(RandomUserNames)).Length)).ToString();
+            }
+
+            public static string GetRandomName()
+            {
+                return ((YogaRoom.StudioNames)new Random().Next(Enum.GetNames(typeof(YogaRoom.StudioNames)).Length)).ToString();
             }
         }
 
-        enum RandomNames
+        enum RandomUserNames
         {
             Martin      ,
             Alesia      ,
