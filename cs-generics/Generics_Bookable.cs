@@ -35,6 +35,9 @@ namespace cs_generics
     }
 
     //empty interface ... is this a code smell? 
+    // "marker interfaces"
+    //  answer: no if compile-time id, yes if run-time id.
+    //  quotes from Microsoft: https://stackoverflow.com/questions/7552677/are-empty-interfaces-code-smell
     interface IBookable
     {
 
