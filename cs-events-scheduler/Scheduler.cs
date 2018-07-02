@@ -180,14 +180,12 @@ namespace cs_events_scheduler
 
             Dictionary<string, List<string>> bookablesDict = new Dictionary<string, List<string>>();
 
-            bookablesDict.Add(StudioNames.BayDundas.ToString(), new List<string>());
-
             List<string> listDundasRooms = new List<string>();
             listDundasRooms.Add(DundasRoomNames.Earth.ToString());
             listDundasRooms.Add(DundasRoomNames.Fire.ToString());
-            // EXCEPTION:  System.ArgumentException: 'An item with the same key has already been added.'
-            // update a list nested inside a dictionary C#
-            // https://stackoverflow.com/questions/39464294/add-objects-to-a-list-nested-inside-a-dictionary-using-linq-extensions
+            listDundasRooms.Add(DundasRoomNames.Wind.ToString());
+            listDundasRooms.Add(DundasRoomNames.Water.ToString());
+
             bookablesDict.Add(StudioNames.BayDundas.ToString(), listDundasRooms);
 
             bookablesDict.TryGetValue(StudioNames.BayDundas.ToString(), out var value);
