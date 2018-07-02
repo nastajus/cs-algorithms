@@ -11,12 +11,13 @@ namespace cs_events_scheduler
     {
         public static void Main(string[] args)
         {
+            //reconcile inconsistent mocking ... eh whatever
+            YogaStudios.Mock();
 
             Scheduler<IBookable> scheduler = new Scheduler<IBookable>();
             scheduler.RegisterBookableLocation(new YogaRoom());
 
-            //reconcile inconsistent mocking ... eh whatever
-            YogaStudios.Mock();
+
 
             Console.ReadKey();
 
@@ -26,6 +27,9 @@ namespace cs_events_scheduler
 
     class Scheduler<T>
     {
+        /// <summary>
+        /// i had a reason for this static Run() method originally... it's being forgotten... 
+        /// </summary>
         static void Run()
         {
             //load up a list of existing schedules
@@ -170,7 +174,13 @@ namespace cs_events_scheduler
     {
         public static void Mock()
         {
+            // debating about choosing between anonymous object & nested dictionary, and converting between with reflection, or anything else?
+
             var rooms = new { venue = StudioNames.BayDundas, rooms = new { DundasRoomNames.Earth, DundasRoomNames.Fire } };
+
+            Dictionary<string, Dictionary<string, object>> asdf;
+
+
         }
 
         public enum StudioNames
@@ -210,5 +220,16 @@ namespace cs_events_scheduler
 
     // "Marker interface"
     public interface IBookable { }
+
+
+
+
+    //class Util
+    //{
+    //    void ConvertAnonymousObjectToNestedDictionary(object anonymousObject)
+    //    {
+    //
+    //    }
+    //}
 
 }
