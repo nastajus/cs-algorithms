@@ -23,9 +23,10 @@ namespace cs_generics
     {
         public List<T> bookable = new List<T>();
 
-        public void Add<T>()
+        public void Add<T>(T t)
         {
-
+            //COMPILER ERROR: Cannot convert from 'T [C:\...Generics_Bookable.cs(26)]' to 'T [C:\...Generics_Bookable.cs(22)]'
+            bookable.Add(t);
         }
     }
 
