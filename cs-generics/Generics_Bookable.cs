@@ -16,11 +16,6 @@ namespace cs_generics
             //COMPILER ERROR: cannot convert from YogaRoom to IBookable
             scheduler.Book(new YogaRoom());
 
-
-
-            List<T> bookables = new List<T>();
-            //COMPILER ERROR: The **non-generic** list... cannot be used... with type arguments... wait a minute...
-            bookables.Add<T>(new YogaRoom());
         }
     }
 
