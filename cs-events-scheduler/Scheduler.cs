@@ -91,17 +91,16 @@ namespace cs_events_scheduler
         {
             public string StudioName;
 
-            /*
             class Mock
             {
                 Mock(YogaRoom yogaroom)
                 {
-                    //Fuuuuuuuuuuuuuck
-                    //todo: do generically from a single Mocking location... at least the type names...
-                    yogaroom.StudioName = Scheduler.Mock.GetRandomNameStudio();
+                    foreach (var e in Enum.GetNames(typeof(StudioNames)))
+                    {
+                        
+                    }
                 }
             }
-            */
 
             public enum StudioNames
             {
@@ -110,6 +109,14 @@ namespace cs_events_scheduler
                 YongeEglinton    ,
                 Vaughan          ,
                 RichmondHill     ,
+            }
+
+            public enum DundasRoomNames
+            {
+                Fire,
+                Wind,
+                Water,
+                Earth
             }
         }
 
@@ -123,6 +130,7 @@ namespace cs_events_scheduler
                 scheduler._registeredUsers.Add(new User(GetRandomNameUser(), "234"));
             }
 
+            //todo: do generically from a single Mocking location... at least the type names...
             public static string GetRandomName(Type type)
             {
                 //todo: make this work
@@ -135,10 +143,6 @@ namespace cs_events_scheduler
                 return ((RandomUserNames)new Random().Next(Enum.GetNames(typeof(RandomUserNames)).Length)).ToString();
             }
 
-            public static string GetRandomNameStudio()
-            {
-                return ((YogaRoom.StudioNames)new Random().Next(Enum.GetNames(typeof(YogaRoom.StudioNames)).Length)).ToString();
-            }
         }
 
         enum RandomUserNames
