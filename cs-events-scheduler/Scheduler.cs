@@ -11,7 +11,6 @@ namespace cs_events_scheduler
         static void Main(string[] args)
         {
             Run();
-            Mock();
         }
 
         static void Run()
@@ -23,6 +22,11 @@ namespace cs_events_scheduler
             //    NOT use protobufs, nor GRPC. 
             //     these are to-be-run as native C# projects, to emphasize purely `events`
 
+        }
+
+        Scheduler()
+        {
+            Mock.Run(this);
         }
 
         List<User> registeredUsers = new List<User>();
@@ -49,17 +53,19 @@ namespace cs_events_scheduler
 
         class Mock
         {
-            //todo: ponder when do i ever want a private constructor...
-            public Mock()
+            //todo: ponder deeper questions of whether this is a good design long-term though.
+            // since this Mock class is intended to be highly coupled to the Scheduler,
+            // i see no downfall of this design.
+            // let Mock be static, let it accept a Scheduler parameter, let it have copious instance references from that Scheduler, let this Mock class reside as an inner class inside Scheduler.
+
+            public static void Run(Scheduler scheduler)
             {
-                //compiler error: an object reference is required for the non-static field, method, property 'Scheduler.registeredUsers'
-                //is this a good idea to convert to static??? welll... if i do ... then the scheduler may as well be static too... then... this begs the question, would i ever want 2+ concurrent scheduler instances? i suppose , sure... why not... no reason to limit that...
-                registeredUsers.Add(new User(GetRandomName(), "111-111-1111"));
-                registeredUsers.Add(new User(GetRandomName(), "222-222-2222"));
-                registeredUsers.Add(new User(GetRandomName(), "234"));
+                scheduler.registeredUsers.Add(new User(GetRandomName(), "111-111-1111"));
+                scheduler.registeredUsers.Add(new User(GetRandomName(), "222-222-2222"));
+                scheduler.registeredUsers.Add(new User(GetRandomName(), "234"));
             }
 
-            private string GetRandomName()
+            private static string GetRandomName()
             {
                 return ((RandomNames) new Random().Next(Enum.GetNames(typeof(RandomNames)).Length)).ToString();
             }
