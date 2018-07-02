@@ -66,6 +66,10 @@ namespace cs_events_scheduler
             //my rule will be: use shorter code unless more verbosity solves another problem.
         }
 
+        // Register█████blah is what is seen externally in my API designed for another developer to consume.... 
+        // internally in this class i'm choosing to drop "registered" and let it be "understood"... 
+        // this may go well or badly. 
+        // by reducing verbosity am i increasing risk of mistakes myself as a developer? do i risk increasing my own misunderstandings?
         public Bookable<T> RegisterBookableLocation(T bookable)
         {
             var newthing = new Bookable<T>();
