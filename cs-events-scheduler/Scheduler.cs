@@ -210,8 +210,13 @@ namespace cs_events_scheduler
             bookableHash.Add(new YogaTreeRoomBookable(StudioNames.BayDundas, new BayDundas("Wind")));
 
             bookableHash.Add(new YogaTreeRoomBookable(StudioNames.RichmondSpadina, new RichmondSpadina("One")));
-            
-            
+            bookableHash.Add(new YogaTreeRoomBookable(StudioNames.RichmondSpadina, new RichmondSpadina("Two")));
+            bookableHash.Add(new YogaTreeRoomBookable(StudioNames.RichmondSpadina, new RichmondSpadina("Three")));
+
+            //todo: move this to a separate unit test, see if i can capture the exception... i bet yes.
+            //bookableHash.Add(new YogaTreeRoomBookable(StudioNames.RichmondSpadina, new RichmondSpadina("Four")));
+
+
 
             //verify contents of hash set
             foreach (YogaTreeRoomBookable yoroom in bookableHash)
