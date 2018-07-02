@@ -11,6 +11,8 @@ namespace cs_events_scheduler
         static void Main(string[] args)
         {
             Run();
+
+            YogaStudios
         }
 
         static void Run()
@@ -87,25 +89,22 @@ namespace cs_events_scheduler
 
         class Babysittable { }
 
-        class YogaRoom
-        {
-            public string StudioName;
 
-            class Mock
+
+        class YogaStudios
+        {
+            public static void Mock()
             {
-                Mock(YogaRoom yogaroom)
-                {
-                    var rooms = new { venue = StudioNames.BayDundas, rooms = new { DundasRoomNames.Earth, DundasRoomNames.Fire } };
-                }
+                var rooms = new { venue = StudioNames.BayDundas, rooms = new { DundasRoomNames.Earth, DundasRoomNames.Fire } };
             }
 
             public enum StudioNames
             {
-                BayDundas        ,
-                RichmondSpadina  ,
-                YongeEglinton    ,
-                Vaughan          ,
-                RichmondHill     ,
+                BayDundas,
+                RichmondSpadina,
+                YongeEglinton,
+                Vaughan,
+                RichmondHill,
             }
 
             public enum DundasRoomNames
@@ -114,6 +113,13 @@ namespace cs_events_scheduler
                 Wind,
                 Water,
                 Earth
+            }
+
+            public class YogaRoom
+            {
+                public string StudioName;
+                public int NumInstructorsBookable;
+
             }
         }
 
