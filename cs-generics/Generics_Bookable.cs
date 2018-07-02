@@ -7,24 +7,30 @@ using System.Threading.Tasks;
 namespace cs_generics
 {
 
-
-    // smouldering dumpster fire
-    // T of what?
-    // T of the one damn class I don't care about? 
-    // T of OMG.
-    //the logic ... isn't logical... time to die
-
-    class Generics_Bookable<T>
+    class Generics_Bookable
     {
         public static void Init()
         {
+            Scheduler<Bookable> scheduler = new Scheduler<Bookable>();
+
             List<T> bookables = new List<T>();
             //COMPILER ERROR: The **non-generic** list... cannot be used... with type arguments... wait a minute...
             bookables.Add<T>(new YogaRoom());
         }
     }
 
-    class Bookable<T>
+    class Scheduler<T>
+    {
+        public List<T> bookable = new List<T>();
+
+        //COMPILER ERROR: unexpected use of a generic name
+        public void Add<T>
+        {
+
+        }
+    }
+
+    class Bookable
     {
 
     }
