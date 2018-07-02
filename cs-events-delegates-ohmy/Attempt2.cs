@@ -51,6 +51,17 @@ namespace cs_events_delegates_ohmy
         // Loose Coupling
         // https://en.wikipedia.org/wiki/Loose_coupling
 
+        // How to measure coupling
+        // https://softwareengineering.stackexchange.com/questions/151004/are-there-metrics-for-cohesion-and-coupling
+
+        // afferent coupling : number of responsibilities
+        // efferent coupling : number of dependencies
+        // instability: ratio of efferent to total coupling (efferent + afferent)
+
+
+        // Understanding events and event handlers in C#
+        // https://stackoverflow.com/questions/803242/understanding-events-and-event-handlers-in-c-sharp
+
 
 
     }
