@@ -87,21 +87,37 @@ namespace cs_events_scheduler
 
         class Babysittable { }
 
-        class YogaRoom { }
+        class YogaRoom
+        {
+            public string StudioName;
+
+            enum StudioNames
+            {
+                BayDundas        ,
+                RichmondSpadina  ,
+                YongeEglinton    ,
+                Vaughan          ,
+                RichmondHill     ,
+            }
+        }
 
         class Mock
         {
 
             public static void Run(Scheduler scheduler)
             {
-                scheduler._registeredUsers.Add(new User(GetRandomName(), "111-111-1111"));
-                scheduler._registeredUsers.Add(new User(GetRandomName(), "222-222-2222"));
-                scheduler._registeredUsers.Add(new User(GetRandomName(), "234"));
+                scheduler._registeredUsers.Add(new User(GetRandomName(typeof(RandomNames)), "111-111-1111"));
+                scheduler._registeredUsers.Add(new User(GetRandomName(typeof(RandomNames)), "222-222-2222"));
+                scheduler._registeredUsers.Add(new User(GetRandomName(typeof(RandomNames)), "234"));
             }
 
-            private static string GetRandomName()
+            public static string GetRandomName(Type type)
             {
-                return ((RandomNames) new Random().Next(Enum.GetNames(typeof(RandomNames)).Length)).ToString();
+                //todo: analyze & internalize why this is wrong. again.
+                // Symbol `Type` is a *type*  --> possibly called a "type variable"
+                // Symbol `type` is a *variable*. --> possibly called a "value variable"???
+                // typeof accepts TYPE VARIABLE... not a "VALUE VARIABLE"...
+                return ((type) new Random().Next(Enum.GetNames(typeof(type)).Length)).ToString();
             }
         }
 
