@@ -12,7 +12,8 @@ namespace cs_events_scheduler
         {
             Run();
 
-            YogaStudios
+            //todo: reconcile inconsistent mocking ... eh whatever
+            YogaStudios.Mock();
         }
 
         static void Run()
