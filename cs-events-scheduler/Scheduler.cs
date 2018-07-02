@@ -117,7 +117,8 @@ namespace cs_events_scheduler
                 // Symbol `Type` is a *type*  --> possibly called a "type variable"
                 // Symbol `type` is a *variable*. --> possibly called a "value variable"???
                 // typeof accepts TYPE VARIABLE... not a "VALUE VARIABLE"...
-                return ((type) new Random().Next(Enum.GetNames(typeof(type)).Length)).ToString();
+                return ((type.GetType()) new Random().Next(Enum.GetNames(type.GetType().Length)).ToString();
+                //sigh
             }
         }
 
