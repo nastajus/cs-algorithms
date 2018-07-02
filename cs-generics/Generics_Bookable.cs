@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cs_generics
 {
-    class Generics_Bookable<T> where T : Bookable<T>
+    class Generics_Bookable<T>
     {
         public static void Init()
         {
