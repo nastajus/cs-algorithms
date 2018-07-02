@@ -95,10 +95,8 @@ namespace cs_events_scheduler
             {
                 Mock(YogaRoom yogaroom)
                 {
-                    foreach (var e in Enum.GetNames(typeof(StudioNames)))
-                    {
-                        
-                    }
+                    //compiler erorr: invalid anonymous type member declarator. Anonymous type members must be declared with a member assignment, a simple name or member access.
+                    var rooms = new { venue = StudioNames.BayDundas, new { adsf = ""} };
                 }
             }
 
