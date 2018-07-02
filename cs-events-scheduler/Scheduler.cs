@@ -16,7 +16,7 @@ namespace cs_events_scheduler
 
             Scheduler<T> scheduler = new Scheduler<T>();
             //COMPILER ERROR: cannot convert from 'cs_events_scheduler.Scheduler<T>.YogaStudios.YogaRoom' to 'T'
-            scheduler.RegisterBookableLocation(new YogaStudios.YogaRoom());
+            scheduler.RegisterBookableLocation(new YogaRoom());
 
             //reconcile inconsistent mocking ... eh whatever
             YogaStudios.Mock();
@@ -125,37 +125,6 @@ namespace cs_events_scheduler
 
 
 
-        class YogaStudios
-        {
-            public static void Mock()
-            {
-                var rooms = new { venue = StudioNames.BayDundas, rooms = new { DundasRoomNames.Earth, DundasRoomNames.Fire } };
-            }
-
-            public enum StudioNames
-            {
-                BayDundas,
-                RichmondSpadina,
-                YongeEglinton,
-                Vaughan,
-                RichmondHill,
-            }
-
-            public enum DundasRoomNames
-            {
-                Fire,
-                Wind,
-                Water,
-                Earth
-            }
-
-            public class YogaRoom
-            {
-                public string StudioName;
-                public int NumInstructorsBookable;
-
-            }
-        }
 
         class Mock
         {
@@ -205,5 +174,40 @@ namespace cs_events_scheduler
             Teri        ,
             Eula        
         }
+    }
+
+
+    class YogaStudios
+    {
+        public static void Mock()
+        {
+            var rooms = new { venue = StudioNames.BayDundas, rooms = new { DundasRoomNames.Earth, DundasRoomNames.Fire } };
+        }
+
+        public enum StudioNames
+        {
+            BayDundas,
+            RichmondSpadina,
+            YongeEglinton,
+            Vaughan,
+            RichmondHill,
+        }
+
+        public enum DundasRoomNames
+        {
+            Fire,
+            Wind,
+            Water,
+            Earth
+        }
+
+
+    }
+
+    public class YogaRoom
+    {
+        public string StudioName;
+        public int NumInstructorsBookable;
+
     }
 }
