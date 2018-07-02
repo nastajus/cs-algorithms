@@ -253,6 +253,9 @@ namespace cs_events_scheduler
 
 
     //i wanted to use Room or something as some kind of generalized way to force either  DundasRoomNames  or  RichmondSpadinaRoomNames to be supplied
+    //WHAT I REALLY want is that ONLY BayDundas has Fire Earth Water Wind, and that ONLY SpadinaRichomd has One Two Three... 
+    //so for all my fancy machinantions with enums and classes and overridding ToString and using property's private settings and throwing exceptions... none of this helps...
+    // the only solution is to promote EVERYTHING to the class level...
     public class YogaTreeRoomName
     {
         public YogaTreeRoomName(string value)
