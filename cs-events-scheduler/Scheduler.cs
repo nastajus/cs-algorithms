@@ -11,7 +11,14 @@ namespace cs_events_scheduler
         static void Main(string[] args)
         {
             Run();
-            Show();
+            //compiler error: an object reference is required for the non-static field, method, or property 'Scheduler.Show()'
+            //compiler error: cannot access non-static method 'Show' in static context
+            
+            //todo: resolve the decision pathway i took that made me put this here. oh.
+            // i wanted Run() and Show() but didn't want to care about static/not at that moment.
+            // still don't want to care....... well, do it.
+            // 
+            Show(this);
         }
 
         static void Run()
@@ -23,6 +30,12 @@ namespace cs_events_scheduler
             //    NOT use protobufs, nor GRPC. 
             //     these are to-be-run as native C# projects, to emphasize purely `events`
 
+
+            /*
+             * - some kind of while loop
+             * - some kind of event queuing
+             * - some kind of event removing or executing here.
+             */
         }
 
         Scheduler()
@@ -42,11 +55,11 @@ namespace cs_events_scheduler
             //set { }
         }
 
-        void Show()
+        static void Show(Scheduler scheduler)
         {
-            foreach (User user in RegisteredUsers)
+            foreach (User user in scheduler.RegisteredUsers)
             {
-                Console.WriteLine(user.Name);
+                Console.WriteLine(user);
             }
         }
 
@@ -74,7 +87,7 @@ namespace cs_events_scheduler
             //resoultion:  go to definition, resharper takes to decompiled assembly, see `public`, an important semantic difference in signature, match it. (also saw `virtual` as expected).
             public override string ToString()
             {
-                return "";
+                return $"Name: {Name}, Phone: {Phone}";
             }
         }
 
