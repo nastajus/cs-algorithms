@@ -175,11 +175,24 @@ namespace cs_events_scheduler
     {
         public static void Mock()
         {
+            // data structure design 1 : anonymous object
+            // -----------------------
             // debating about choosing between anonymous object & nested dictionary, and converting between with reflection, or anything else?
 
+            // reasoning:
+            // ---------
+            // eventually abandoned due to not wanting to explore using reflection to put into dictionaries... 
+            // that i should explore manually populating dictionaries myself before worrying about automatic dictionary creation...
             var bookablesAnon = new { venue = StudioNames.BayDundas, rooms = new { BayDundas.BayDundasRoomNames.Earth, BayDundas.BayDundasRoomNames.Fire } };
 
+
+            // data structure design 2 : dictionary of strings nesting list of strings... why? oh. see above.
+            // -----------------------
             Dictionary<string, List<string>> bookablesDict = new Dictionary<string, List<string>>();
+
+
+
+            #region defines dictionary of strings with nesting list of strings
 
             List<string> listDundasRooms = new List<string>();
             listDundasRooms.Add(BayDundas.BayDundasRoomNames.Earth.ToString());
@@ -198,12 +211,26 @@ namespace cs_events_scheduler
             {
                 foreach (string innerEntry in entry.Value)
                 {
+                    //this is ugly to read {entry} as fully qualified... yuck.
                     Console.WriteLine($"bookablesDict[\"{entry}\"][\"{innerEntry}\"] ... eh might work\n");
                 }
             }
 
+            #endregion
+
+
+            // data structure design 3 : hash set of types
+            // -----------------------
             //i want some kind of TUPLE to go here.... maybe a class instance is best?? what if i used class instances instead???
+            
+            // reason:
+            // -------
+            // ultimately arrived at conclusion that I wanted some kind of compile-time safety to prevent any invalid data going in...
             HashSet<YogaTreeRoomBookable> bookableHash = new HashSet<YogaTreeRoomBookable>();
+
+
+            #region defines hash set of typed-everything
+
             bookableHash.Add(new YogaTreeRoomBookable(StudioNames.BayDundas, new BayDundas("Fire")));
             bookableHash.Add(new YogaTreeRoomBookable(StudioNames.BayDundas, new BayDundas("Earth")));
             bookableHash.Add(new YogaTreeRoomBookable(StudioNames.BayDundas, new BayDundas("Water")));
@@ -216,8 +243,6 @@ namespace cs_events_scheduler
             //todo: move this to a separate unit test, see if i can capture the exception... i bet yes.
             //bookableHash.Add(new YogaTreeRoomBookable(StudioNames.RichmondSpadina, new RichmondSpadina("Four")));
 
-
-
             //verify contents of hash set
             foreach (YogaTreeRoomBookable yoroom in bookableHash)
             {
@@ -225,6 +250,8 @@ namespace cs_events_scheduler
             }
 
             //bookablesDict.Add(StudioNames.BayDundas.ToString(), );
+
+            #endregion 
 
 
         }
