@@ -254,7 +254,7 @@ namespace cs_events_scheduler
     {
         public string RoomName { get; private set; }
 
-        //protected YogaTreeRoom() { }
+        protected YogaTreeRoom() { } //this is upsetting, why do i need this, i don't want it to exist, i want it locked and inaccessible.
         protected YogaTreeRoom(string roomName)
         {
             RoomName = roomName;
