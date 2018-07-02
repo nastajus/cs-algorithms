@@ -11,6 +11,7 @@ namespace cs_events_scheduler
         static void Main(string[] args)
         {
             Run();
+            Show();
         }
 
         static void Run()
@@ -34,9 +35,23 @@ namespace cs_events_scheduler
         // internal to this Scheduler class, i can wreak havoc on this poor list.
         // but externally i should only provide an IEnumerable, which, btw, is totally convertable back to a list.
         // the point is... this Scheduler should have complete control... nobody should be able to modify the list state externally.
-        List<User> registeredUsers = new List<User>();
+        List<User> _registeredUsers = new List<User>();
+        private IEnumerable<User> RegisteredUsers
+        {
+            get { return _registeredUsers; }
+            //set { }
+        }
 
-        class Timeblock
+        void Show()
+        {
+            foreach (User user in RegisteredUsers)
+            {
+                Console.WriteLine(user.Name);
+            }
+        }
+
+
+    class Timeblock
         {
             User who;
         }
@@ -54,6 +69,12 @@ namespace cs_events_scheduler
                 Name = name;
                 Phone = phone;
             }
+
+            //compiler error:  Override method 'string cs_events_scheduler.Scheduler.User.ToString()' cannot change access rights
+            override string ToString()
+            {
+                return "";
+            }
         }
 
         class Mock
@@ -65,9 +86,9 @@ namespace cs_events_scheduler
 
             public static void Run(Scheduler scheduler)
             {
-                scheduler.registeredUsers.Add(new User(GetRandomName(), "111-111-1111"));
-                scheduler.registeredUsers.Add(new User(GetRandomName(), "222-222-2222"));
-                scheduler.registeredUsers.Add(new User(GetRandomName(), "234"));
+                scheduler._registeredUsers.Add(new User(GetRandomName(), "111-111-1111"));
+                scheduler._registeredUsers.Add(new User(GetRandomName(), "222-222-2222"));
+                scheduler._registeredUsers.Add(new User(GetRandomName(), "234"));
             }
 
             private static string GetRandomName()
