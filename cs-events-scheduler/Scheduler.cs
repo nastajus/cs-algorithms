@@ -201,8 +201,8 @@ namespace cs_events_scheduler
                 }
             }
 
-            HashSet<string> bookableHash = new HashSet<string>();
-            bookableHash.Add(); //i want some kind of TUPLE to go here.... maybe a class instance is best?? what if i used class instances instead???
+            HashSet<YogaRoom> bookableHash = new HashSet<YogaRoom>();
+            bookableHash.Add(new YogaRoom(StudioNames.BayDundas, DundasRoomNames.Fire.ToString())); //i want some kind of TUPLE to go here.... maybe a class instance is best?? what if i used class instances instead???
 
 
             //bookablesDict.Add(StudioNames.BayDundas.ToString(), );
@@ -219,27 +219,41 @@ namespace cs_events_scheduler
             RichmondHill,
         }
 
-        //i want sub-enums... internet suggests nested classes with static constants instead
-        //Fwiw, enum types exist to make code fast and memory-efficient. This isn't
-        public static class RoomNames
+        public enum DundasRoomNames
         {
-            public static class BayDundas
-            {
-                public const int Fire = 1;
-                public const int Wind = 2;
-                public const int Water = 3;
-                public const int Earth = 4;
-            }
+            Fire,
+            Wind,
+            Water,
+            Earth
+        }
 
+        public enum RichmondSpadinaRoomNames
+        {
+            Fire,
+            One,
+            Two
         }
 
 
     }
 
+    class Room
+    {
+
+    }
+
     public class YogaRoom : IBookable
     {
-        public YogaStudios.StudioNames StudioName;
+        public YogaStudios.StudioNames StudioName; // { get; }
+        public string RoomName; //no enforcement
         public int NumInstructorsBookable;
+
+        public YogaRoom(YogaStudios.StudioNames studioName, string roomName, int numInstructorsBookable = 1)
+        {
+            StudioName = studioName;
+            RoomName = roomName;
+            NumInstructorsBookable = numInstructorsBookable;
+        }
 
     }
 
