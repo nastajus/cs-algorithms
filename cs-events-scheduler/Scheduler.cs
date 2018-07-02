@@ -41,6 +41,7 @@ namespace cs_events_scheduler
         public IEnumerable<User> RegisteredUsers => _registeredUsers;
 
         //todo: decide data structure, if I want 1 or Many schedulers running, for 2 types of bookings...
+        // oh, it must be 1 singular system. otherwise i'd lose the point of trying to have multiple events coming in... okay...
         Dictionary<string, object> _resourceOccupancy = new Dictionary<string, object>();
 
 
