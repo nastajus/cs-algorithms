@@ -16,7 +16,7 @@ namespace cs_events_scheduler
             YogaStudios.Mock();
 
             Scheduler<IBookable> scheduler = new Scheduler<IBookable>();
-            //scheduler.RegisterBookableLocation(new YogaTreeRoom());
+            //scheduler.RegisterBookableLocation(new YogaTreeRoomBookable());
 
 
 
@@ -177,21 +177,21 @@ namespace cs_events_scheduler
         {
             // debating about choosing between anonymous object & nested dictionary, and converting between with reflection, or anything else?
 
-            var bookablesAnon = new { venue = StudioNames.BayDundas, rooms = new { DundasRoomNames.Earth, DundasRoomNames.Fire } };
+            var bookablesAnon = new { venue = StudioNames.BayDundas, rooms = new { BayDundas.BayDundasRoomNames.Earth, BayDundas.BayDundasRoomNames.Fire } };
 
             Dictionary<string, List<string>> bookablesDict = new Dictionary<string, List<string>>();
 
             List<string> listDundasRooms = new List<string>();
-            listDundasRooms.Add(DundasRoomNames.Earth.ToString());
-            listDundasRooms.Add(DundasRoomNames.Fire.ToString());
-            listDundasRooms.Add(DundasRoomNames.Wind.ToString());
-            listDundasRooms.Add(DundasRoomNames.Water.ToString());
+            listDundasRooms.Add(BayDundas.BayDundasRoomNames.Earth.ToString());
+            listDundasRooms.Add(BayDundas.BayDundasRoomNames.Fire.ToString());
+            listDundasRooms.Add(BayDundas.BayDundasRoomNames.Wind.ToString());
+            listDundasRooms.Add(BayDundas.BayDundasRoomNames.Water.ToString());
 
             bookablesDict.Add(StudioNames.BayDundas.ToString(), listDundasRooms);
 
             bookablesDict.TryGetValue(StudioNames.BayDundas.ToString(), out var value);
-            value?.Add(DundasRoomNames.Wind.ToString());
-            value?.Add(DundasRoomNames.Water.ToString());
+            value?.Add(BayDundas.BayDundasRoomNames.Wind.ToString());
+            value?.Add(BayDundas.BayDundasRoomNames.Water.ToString());
 
             //verify contents of dictionary..
             foreach (KeyValuePair<string, List<string>> entry in bookablesDict)
@@ -203,18 +203,18 @@ namespace cs_events_scheduler
             }
 
             //i want some kind of TUPLE to go here.... maybe a class instance is best?? what if i used class instances instead???
-            HashSet<YogaTreeRoom> bookableHash = new HashSet<YogaTreeRoom>();
-            bookableHash.Add(new YogaTreeRoom(StudioNames.BayDundas, new YogaTreeRoomName("Fire")));
-            bookableHash.Add(new YogaTreeRoom(StudioNames.BayDundas, new YogaTreeRoomName("Earth")));
-            bookableHash.Add(new YogaTreeRoom(StudioNames.BayDundas, new YogaTreeRoomName("Water")));
-            bookableHash.Add(new YogaTreeRoom(StudioNames.BayDundas, new YogaTreeRoomName("Wind")));
+            HashSet<YogaTreeRoomBookable> bookableHash = new HashSet<YogaTreeRoomBookable>();
+            bookableHash.Add(new YogaTreeRoomBookable(StudioNames.BayDundas, new YogaTreeRoomName("Fire")));
+            bookableHash.Add(new YogaTreeRoomBookable(StudioNames.BayDundas, new YogaTreeRoomName("Earth")));
+            bookableHash.Add(new YogaTreeRoomBookable(StudioNames.BayDundas, new YogaTreeRoomName("Water")));
+            bookableHash.Add(new YogaTreeRoomBookable(StudioNames.BayDundas, new YogaTreeRoomName("Wind")));
 
-            bookableHash.Add(new YogaTreeRoom(StudioNames.RichmondSpadina, new YogaTreeRoomName("One")));
+            bookableHash.Add(new YogaTreeRoomBookable(StudioNames.RichmondSpadina, new YogaTreeRoomName("One")));
             
             
 
             //verify contents of hash set
-            foreach (YogaTreeRoom yoroom in bookableHash)
+            foreach (YogaTreeRoomBookable yoroom in bookableHash)
             {
                 Console.WriteLine(yoroom);
             }
@@ -233,50 +233,107 @@ namespace cs_events_scheduler
             RichmondHill,
         }
 
-        public enum DundasRoomNames
+
+
+
+
+
+    }
+
+
+    //i wanted to use Room or something as some kind of generalized way to force either  BayDundasRoomNames  or  RichmondSpadinaRoomNames to be supplied
+    //WHAT I REALLY want is that ONLY BayDundas has Fire Earth Water Wind, and that ONLY SpadinaRichomd has One Two Three... 
+    //so for all my fancy machinantions with enums and classes and overridding ToString and using property's private settings and throwing exceptions... none of this helps...
+    // the only solution is to promote EVERYTHING to the class level...
+    public interface IYogaTreeRoom
+    {
+        string RoomName { get; }
+    }
+
+    public abstract class YogaTreeRoom : IYogaTreeRoom
+    {
+        public string RoomName { get; private set; }
+
+        //protected YogaTreeRoom() { }
+        protected YogaTreeRoom(string roomName)
+        {
+            RoomName = roomName;
+        }
+
+        private string _value;
+        public string Value
+        {
+            get
+            {
+                return _value;
+            }
+
+            //only allowed via the constructor
+            private set
+            {
+                if (Enum.IsDefined(typeof(BayDundas.BayDundasRoomNames), value) || Enum.IsDefined(typeof(RichmondSpadina.RichmondSpadinaRoomNames), value))
+                {
+                    _value = value;
+                }
+                else
+                {
+                    throw new InvalidEnumArgumentException("yo, please use one of the standard Yoga Studios names in the enums, pal");
+                }
+            }
+        }
+
+        public override string ToString()
+        {
+            return _value;
+        }
+
+    }
+
+    public class BayDundas : YogaTreeRoom
+    {
+        // "constructor initializer" 
+        // you get to specify which constructor in the base class should be invoked before the constructor of the derived class
+        BayDundas(string roomName) : base (roomName)
+        {
+            //base(roomName);
+
+            //rely entirely on parent...
+        }
+
+        public enum BayDundasRoomNames
         {
             Fire,
             Wind,
             Water,
             Earth
         }
+    }
 
-        public enum RichmondSpadinaRoomNames 
+    public class RichmondSpadina : YogaTreeRoom
+    {
+        RichmondSpadina(string roomName) : base(roomName)
+        {
+            //rely entirely on parent...
+        }
+
+        public enum RichmondSpadinaRoomNames
         {
             One,
             Two,
             Three
         }
-
-
     }
 
 
-    //i wanted to use Room or something as some kind of generalized way to force either  DundasRoomNames  or  RichmondSpadinaRoomNames to be supplied
-    //WHAT I REALLY want is that ONLY BayDundas has Fire Earth Water Wind, and that ONLY SpadinaRichomd has One Two Three... 
-    //so for all my fancy machinantions with enums and classes and overridding ToString and using property's private settings and throwing exceptions... none of this helps...
-    // the only solution is to promote EVERYTHING to the class level...
-    interface IYogaTreeRoom
+    public class YogaTreeRoomBookable : YogaTreeRoom, IBookable
     {
-        string RoomName { get; }
-    }
 
-    class DundasBay : IYogaTreeRoom
-    {
-        public string RoomName { get; private set;  }
-    }
-
-    class RichmondSpadina {
-
-    }
-
-    public class YogaTreeRoom : IBookable
-    {
         public YogaStudios.StudioNames StudioName; // { get; }
-        public YogaTreeRoomName RoomName; //no enforcement    //todo: investigate proper way of getting multiple enum choices here...
+        public IYogaTreeRoom RoomName { get; }
         public int NumInstructorsBookable;
 
-        public YogaTreeRoom(YogaStudios.StudioNames studioName, YogaTreeRoomName roomName, int numInstructorsBookable = 1)
+        //COMPILER ERROR: base class YogaTreeRoom doesn't contain a parameterless constructor
+        public YogaTreeRoomBookable(YogaStudios.StudioNames studioName, IYogaTreeRoom roomName, int numInstructorsBookable = 1)
         {
             StudioName = studioName;
             RoomName = roomName;
