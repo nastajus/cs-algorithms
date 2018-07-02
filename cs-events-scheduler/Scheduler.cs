@@ -113,11 +113,9 @@ namespace cs_events_scheduler
 
             public static string GetRandomName(Type type)
             {
-                //todo: analyze & internalize why this is wrong. again.
-                // Symbol `Type` is a *type*  --> possibly called a "type variable"
-                // Symbol `type` is a *variable*. --> possibly called a "value variable"???
-                // typeof accepts TYPE VARIABLE... not a "VALUE VARIABLE".
-                return ((type) new Random().Next(Enum.GetNames(typeof(type)).Length)).ToString();
+                //todo: make this work
+                //return ((type) new Random().Next(Enum.GetNames(typeof(type)).Length)).ToString();
+                return null;
             }
 
             public static string GetRandomNameUser()
