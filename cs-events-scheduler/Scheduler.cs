@@ -8,7 +8,8 @@ namespace cs_events_scheduler
 {
     class Scheduler<T>
     {
-        static void Main(string[] args)
+        //warning / compilation error: An entry point cannot be generic
+        public static void Main(string[] args)
         {
             Run();
 
@@ -113,10 +114,6 @@ namespace cs_events_scheduler
         }
 
 
-        class BabysittingHome { }
-
-
-
 
         class Mock
         {
@@ -196,13 +193,19 @@ namespace cs_events_scheduler
 
     }
 
-    //wut
     public class YogaRoom : IBookable
     {
         public string StudioName;
         public int NumInstructorsBookable;
 
     }
+
+
+    class BabysittingHome : IBookable { }
+
+
+
+
 
 
     // "Marker interface"
