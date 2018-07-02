@@ -16,7 +16,7 @@ namespace cs_events_scheduler
 
             Scheduler<T> scheduler = new Scheduler<T>();
             //COMPILER ERROR: cannot convert from 'cs_events_scheduler.Scheduler<T>.YogaStudios.YogaRoom' to 'T'
-            scheduler.RegisterBookableLocation(new YogaRoom());
+            scheduler.RegisterBookableLocation<YogaRoom>(new YogaRoom());
 
             //reconcile inconsistent mocking ... eh whatever
             YogaStudios.Mock();
@@ -78,6 +78,7 @@ namespace cs_events_scheduler
         public Bookable<T> RegisterBookableLocation<T>(T bookable)
         {
             //var newthing = new Bookable<T>();
+            //COMPILER ERROR: cannot convert type from 'T' to 'Scheduler<T>.Bookable<T>'
             _bookingsLocations.Add(bookable);
             return newthing;
         }
