@@ -23,6 +23,8 @@ namespace cs_generics
     {
         public List<T> bookable = new List<T>();
 
+        //this might be the core cause of my faults here... now... maybe...
+
         //RESHARPER WARNING: Type paramater 'T' has the same name as the type parameter from outer type 'Scheduler<T>'
         public void Add<T>(T t)
         {
