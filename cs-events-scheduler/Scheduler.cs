@@ -71,7 +71,8 @@ namespace cs_events_scheduler
             }
 
             //compiler error:  Override method 'string cs_events_scheduler.Scheduler.User.ToString()' cannot change access rights
-            override string ToString()
+            //resoultion:  go to definition, resharper takes to decompiled assembly, see `public`, an important semantic difference in signature, match it. (also saw `virtual` as expected).
+            public override string ToString()
             {
                 return "";
             }
