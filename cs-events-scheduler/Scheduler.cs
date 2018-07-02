@@ -12,7 +12,7 @@ namespace cs_events_scheduler
         public static void Main(string[] args)
         {
 
-            Scheduler<YogaRoom> scheduler = new Scheduler<YogaRoom>();
+            Scheduler<IBookable> scheduler = new Scheduler<IBookable>();
             scheduler.RegisterBookableLocation(new YogaRoom());
 
             //reconcile inconsistent mocking ... eh whatever
@@ -77,10 +77,10 @@ namespace cs_events_scheduler
         }
 
         // Register█████blah is what is seen externally in my API designed for another developer to consume. for better or worse
-        public T RegisterBookableLocation(T bookable)
+        public bool RegisterBookableLocation(T bookable)
         {
             _bookingsLocations.Add(bookable);
-            return bookable;
+            return true;
         }
 
 
