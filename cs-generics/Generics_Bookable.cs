@@ -13,6 +13,11 @@ namespace cs_generics
         {
             Scheduler<Bookable> scheduler = new Scheduler<Bookable>();
 
+            //COMPILER ERROR: cannot convert from YogaRoom to Bookable
+            scheduler.Book(new YogaRoom());
+
+
+
             List<T> bookables = new List<T>();
             //COMPILER ERROR: The **non-generic** list... cannot be used... with type arguments... wait a minute...
             bookables.Add<T>(new YogaRoom());
@@ -23,12 +28,8 @@ namespace cs_generics
     {
         public List<T> bookable = new List<T>();
 
-        //this might be the core cause of my faults here... now... maybe...
-
-        //RESHARPER WARNING: Type paramater 'T' has the same name as the type parameter from outer type 'Scheduler<T>'
-        public void Add(T t)
+        public void Book(T t)
         {
-            //COMPILER ERROR: Cannot convert from 'T [C:\...Generics_Bookable.cs(26)]' to 'T [C:\...Generics_Bookable.cs(22)]'
             bookable.Add(t);
         }
     }
