@@ -35,17 +35,25 @@ namespace cs_events_scheduler
         class User
         {
             public string Name { get; }
-            public string Phone; //should anyone (any class) be allowed to erase phone? no... then...
+            public string Phone { get; }
 
-            public User(string name)
+            //todo: fix leaky abstraction
+            public string Email { get; set; } //should any class be allowed  to set email???
+
+            public User(string name, string phone)
             {
                 Name = name;
+                Phone = phone;
             }
         }
 
         class Mock
         {
-            
+            //todo: ponder when do i ever want a private constructor...
+            public Mock()
+            {
+
+            }
         }
     }
 }
