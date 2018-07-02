@@ -14,6 +14,8 @@ namespace cs_events_scheduler
 
             // above is redundant now...
 
+            //NO 
+            //CONCRETIZE HERE
             Scheduler<T> scheduler = new Scheduler<T>();
             //COMPILER ERROR: cannot convert from 'cs_events_scheduler.Scheduler<T>.YogaStudios.YogaRoom' to 'T'
             scheduler.RegisterBookableLocation<YogaRoom>(new YogaRoom());
