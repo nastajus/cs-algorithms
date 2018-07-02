@@ -33,15 +33,18 @@ namespace cs_events_scheduler
         Scheduler()
         {
             Mock.Run(this);
-            Show();
+            ShowRegisteredUsers();
 
         }
 
         readonly List<User> _registeredUsers = new List<User>();
         public IEnumerable<User> RegisteredUsers => _registeredUsers;
-        //compiler error:  Inconsistent accessibility: type argument 'cs_events_scheduler.Scheduler.User' is less accessible than property 'cs_events_scheduler.Scheduler.RegisteredUsers'
 
-        void Show()
+        //todo: decide data structure, if I want 1 or Many schedulers running, for 2 types of bookings...
+        Dictionary<string, object> _resourceOccupancy = new Dictionary<string, object>();
+
+
+        void ShowRegisteredUsers()
         {
             foreach (User user in RegisteredUsers)
             {
@@ -58,7 +61,9 @@ namespace cs_events_scheduler
             User who;
         }
 
-        class User
+
+        //todo: resolve question of what does `public` mean for an inner class?
+        public class User
         {
             public string Name { get; }
             public string Phone { get; }
