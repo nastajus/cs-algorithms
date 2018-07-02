@@ -201,6 +201,9 @@ namespace cs_events_scheduler
                 }
             }
 
+            HashSet<string> bookableHash = new HashSet<string>();
+            bookableHash.Add(); //i want some kind of TUPLE to go here....
+
 
             //bookablesDict.Add(StudioNames.BayDundas.ToString(), );
 
