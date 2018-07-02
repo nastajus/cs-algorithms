@@ -75,10 +75,10 @@ namespace cs_events_scheduler
         }
 
         // Register█████blah is what is seen externally in my API designed for another developer to consume. for better or worse
-        public Bookable<T> RegisterBookableLocation(T bookable)
+        public Bookable<T> RegisterBookableLocation<T>(T bookable)
         {
-            var newthing = new Bookable<T>();
-            _bookingsLocations.Add(newthing);
+            //var newthing = new Bookable<T>();
+            _bookingsLocations.Add(bookable);
             return newthing;
         }
 
