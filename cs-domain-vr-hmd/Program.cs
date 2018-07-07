@@ -10,6 +10,10 @@ namespace cs_domain_vr_hmd
     {
         static void Main(string[] args)
         {
+            //HMD hmd = new HMD();  //don't need this yet
+            
+
+            //pretend hardware level response received 
 
         }
     }
@@ -18,25 +22,35 @@ namespace cs_domain_vr_hmd
 
     class HMD
     {
+
+        public OurHeadset OurHeadset { get; private set; }
+
         event Action<bool> VrFocusChanged;
 
-        HMD()
+        public HMD()
         {
 
-            //detect which device is connected... by some arbitrary placeholder ...
+            //pretend detect which device is connected... by some arbitrary placeholder ...
             if (true)
             {
-                Rift rift = new Rift();
+                OurRift rift = new OurRift();
+                OurHeadset = rift;
             }
             else if (false)
             {
-                Vive vive = new Vive();
+                OurVive vive = new OurVive();
+                OurHeadset = vive;
             }
 
 
 
         }
     }
+
+    interface OurHeadset { }
+
+    class OurRift : OurHeadset { }
+    class OurVive : OurHeadset { }
 
     #endregion mine
 
@@ -52,7 +66,7 @@ namespace cs_domain_vr_hmd
         event Action<bool> InputFocusLost;
 
         //something listening low-level to hardware... maybe in a loop...
-        void HardwareUpdate()
+        public void HardwareUpdate()
         {
             //while (true)
             {
