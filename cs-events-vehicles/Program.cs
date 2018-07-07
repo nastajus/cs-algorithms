@@ -24,14 +24,6 @@ namespace cs_events_vehicles
         }
     }
 
-    //timed as 30 seconds on, 30 seconds off.
-    // use city of toronto documents as a guideline for the design: 
-    // https://www.toronto.ca/311/knowledgebase/kb/docs/articles/transportation-services/traffic-management-centre/urban-traffic-control-systems/traffic-signals-operation-timing.html
-    //The duration of the all-red display at traffic signals in the City ranges from two to four seconds. 
-    //The duration of the yellow light display at traffic signals in the City ranges from three to five seconds. ...
-    // Most intersections in Toronto provide at least enough time for someone crossing at 1.0 metre/second walking speed 
-    // https://en.wikipedia.org/wiki/Lane#Lane_width
-    // The Interstate Highway standards for the U.S.Interstate Highway System uses a 12-foot (3.7 m) standard for lane width, while narrower lanes are used on lower classification roads.
     class TrafficLights
     {
         private const double RedMin = 2;
@@ -41,8 +33,6 @@ namespace cs_events_vehicles
         private const double Green = 24; //hardcoded assuming only four lanes...
 
         Timer _aTimer = new Timer();
-
-        //delegate void ElapsedEventHandler(object o, ElapsedEventArgs e);
 
         TrafficLights()
         {
@@ -62,7 +52,8 @@ namespace cs_events_vehicles
                     throw new ArgumentOutOfRangeException();
                 }
 
-                _aTimer.Interval = value * 1000 / Program.SystemSpeedFactor; //i mean... i question the design decision to create this dependency from I.S. to Program... and later from VG to Program as well... but meh
+                //i mean... i question the design decision to create this dependency from I.S. to Program... and later from VG to Program as well... but meh
+                _aTimer.Interval = value * 1000 / Program.SystemSpeedFactor; 
             }
         }
 
