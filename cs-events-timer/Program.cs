@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Timers;
 
 namespace cs_events_timer
 {
@@ -14,16 +16,21 @@ namespace cs_events_timer
         }
     }
 
+    class TimerNetworkLaggerFaker
+    {
+        TimerNetworkLaggerFaker()
+        {
+            System.Timers.Timer aTimer = new System.Timers.Timer();
+            aTimer.Elapsed += OnTimedEvent;
+        }
 
-    //request budget... e.g. fill job of x employees... or spend y dollars annually ... ugh 
-
-    //traffic accumulates at red lights for 30 seconds (5 sec)
-
-    //various requests come in, aggregate, then get executed... 
-
-    //.. some kind of information sharing between 
-    //  cookie monster & sesame street ..>? 
-    // boats? cars? ugh
-    // games related...hahaha... 
+        //oh, i accept this signature as necessary to conform matching the publisher's event ... besides...
+        //... just think like... i can discard these paramaters... as unimportant for consideration...
+        // ... ... because ... I just need to understand the convention of matching signature... and "On.." methods...
+        private void OnTimedEvent(object sender, ElapsedEventArgs e) 
+        {
+            throw new NotImplementedException();
+        }
+    }
 
 }
