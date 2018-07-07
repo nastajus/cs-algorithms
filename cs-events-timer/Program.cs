@@ -30,7 +30,30 @@ namespace cs_events_timer
 
         private void OnTimedEvent(object sender, ElapsedEventArgs e) //matching, oh right.
         {
-            Console.WriteLine("well, i'll do something, on a timed basis, for sure");
+            //Console.WriteLine("well, i'll do something, on a timed basis, for sure");
+            OnShotShot();
+        }
+
+        public static event Action ShotShot;
+
+        private void OnShotShot()
+        {
+            ShotShot?.Invoke();
+        }
+
+    }
+
+    class PewPew
+    {
+        PewPew()
+        {
+            
+
+            while (true)
+            {
+                Random rand = new Random();
+                rand.Next(500, 1000);
+            }
         }
     }
 
