@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
+using ON = cs_events_vehicles.OntarioStandards;
 
 namespace cs_events_vehicles
 {
@@ -20,37 +21,81 @@ namespace cs_events_vehicles
 
         static void Main(string[] args)
         {
-
+            TrafficLights lights = new TrafficLights(ON.RedMax, ON.AmberMax, ON.Green);
         }
     }
 
+
     class TrafficLights
     {
-        private const double RedMin = 2;
-        private const double RedMax = 4;
-        private const double AmberMin = 3;
-        private const double AmberMax = 5;
-        private const double Green = 24; //hardcoded assuming only four lanes...
 
-        Timer _aTimer = new Timer();
+        private const double _pulse = 1000;
+        private Timer _aTimer = new Timer();
         private bool _active;
 
-        TrafficLights()
+        public TrafficLights(double red, double amber, double green)
         {
-            //just by divine existance, it begins in an immediately executing state...
-            _active = true;
-            _aTimer.Interval = IntervalSeconds;
-            _aTimer.Elapsed += new ElapsedEventHandler(OnCycleCompleteEvent);
+            //boot up into existance, barely alive.
+            Light = ConsoleColor.Gray;
+            _aTimer.Interval = _pulse; 
+            _aTimer.Elapsed += new ElapsedEventHandler(OnPulseTickEvent);
+
+            _redDuration = red;
+            _amberDuration = amber;
+            _greenDuration = green;
+
+            Init();
         }
+
+        public void Init()
+        {
+            //begin normal operations, on assumption it is the solitary light in existance. 
+
+            _active = true;
+            /* Light = */ SetNextLightColor();
+
+
+        }
+
+        private double _redDuration;
+        private double _amberDuration;
+        private double _greenDuration;
+
+        public ConsoleColor Light
+        {
+            get;
+            private set;
+        }
+
+        /// <summary>
+        /// rotate through 3 different light colors in-order
+        /// </summary>
+        private void SetNextLightColor()
+        {
+            switch (Light)
+            {
+                case ConsoleColor.Green:
+                    Light = ConsoleColor.DarkYellow;
+                    break;
+                case ConsoleColor.DarkYellow:
+                    Light = ConsoleColor.Red;
+                    break;
+                case ConsoleColor.Red:
+                case ConsoleColor.Gray:
+                    Light = ConsoleColor.Green;
+                    break;
+            }
+        }
+
 
         public double IntervalSeconds
         {
             get { return _aTimer.Interval / 1000; }
 
-            [DefaultValue(Green + AmberMax + RedMax)] //== 33 seconds
+            [DefaultValue(Green1 + AmberMax1 + RedMax1)] //== 33 seconds
             private set
             {
-                if (value < Green + AmberMin + RedMin || value > Green + AmberMax + RedMax)
+                if (value < Green1 + AmberMin1 + RedMin1 || value > Green1 + AmberMax1 + RedMax1)
                 {
                     throw new ArgumentOutOfRangeException();
                 }
@@ -60,11 +105,16 @@ namespace cs_events_vehicles
             }
         }
 
-        private ConsoleColor lightState;
 
 
-        void OnCycleCompleteEvent(object source, ElapsedEventArgs e)
+        private double _secondsElapsedInCycle = 0;
+
+        void OnPulseTickEvent(object source, ElapsedEventArgs e)
         {
+            _secondsElapsedInCycle += 1;
+
+            if (_secondsElapsedInCycle == )
+
             _active = false;
             //hmm okay i see...
             //internally within this single class...
@@ -78,4 +128,17 @@ namespace cs_events_vehicles
     {
 
     }
+
+
+    class OntarioStandards
+    {
+
+        public static readonly double RedMin = 2;
+        public static readonly double RedMax = 4;
+        public static readonly double AmberMin = 3;
+        public static readonly double AmberMax = 5;
+        public static readonly double Green = 24; //hardcoded assuming only four lanes...
+
+    }
+
 }
