@@ -13,6 +13,8 @@ namespace cs_events_timer
         static void Main(string[] args)
         {
             TimerThingy tt = new TimerThingy();
+            PewPew pp = new PewPew();
+            pp.GenerateShotsForever();
 
             Console.ReadKey();
         }
@@ -45,16 +47,16 @@ namespace cs_events_timer
 
     class PewPew
     {
-        PewPew()
+        public void GenerateShotsForever()
         {
 
             while (true)
             {
                 Random rand = new Random();
-                rand.Next(500, 1000);
+                var waitingMilliseconds = rand.Next(500, 1000);
+                System.Threading.Thread.Sleep(waitingMilliseconds);
                 //ShootShoot();     //??? nah ???
                 TimerThingy.ShotShot += ShootShoot; //yaaaa
-
             }
         }
 
