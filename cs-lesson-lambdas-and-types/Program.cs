@@ -19,10 +19,10 @@ namespace cs_lesson_lambdas_and_types
         static void Main(string[] args)
         {
 
-            // () => C.WL (" yo ");
+            // () => Console.WriteLine(" yo ");
             // (alpha) => alpha + _beta
             // (a,b,c) => a + b + c
-            // (int x, string y) => C.WL (y + x)
+            // (int x, string y) => Console.WriteLine (y + x)
             // (ref int x, int y) => x = y + 5
             /*
             () =>
