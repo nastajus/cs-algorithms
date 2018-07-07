@@ -16,7 +16,7 @@ namespace cs_events_vehicles
     /// </summary>
     class Program
     {
-        public const int SystemSpeedMultiplicationFactor = 5;
+        public static int SystemSpeedFactor = 5;
 
         static void Main(string[] args)
         {
@@ -46,7 +46,6 @@ namespace cs_events_vehicles
 
         TrafficLights()
         {
-            //for one particular road... of 2 lanes width for each direction... so 4 lanes total width... meaning green is duration 24 seconds.
             _aTimer.Interval = IntervalSeconds;
             _aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
         }
@@ -55,7 +54,7 @@ namespace cs_events_vehicles
         {
             get { return _aTimer.Interval / 1000; }
 
-            [DefaultValue(Green + AmberMax + RedMax)]
+            [DefaultValue(Green + AmberMax + RedMax)] //== 33 seconds
             private set
             {
                 if (value < Green + AmberMin + RedMin || value > Green + AmberMax + RedMax)
@@ -63,7 +62,7 @@ namespace cs_events_vehicles
                     throw new ArgumentOutOfRangeException();
                 }
 
-                _aTimer.Interval = value * 1000;
+                _aTimer.Interval = value * 1000 / Program.SystemSpeedFactor; //i mean... i question the design decision to create this dependency from I.S. to Program... and later from VG to Program as well... but meh
             }
         }
 
