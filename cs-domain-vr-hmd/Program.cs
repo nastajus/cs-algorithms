@@ -16,11 +16,29 @@ namespace cs_domain_vr_hmd
 
     #region mine
 
-    class Vusr { }
-    class HMD { }
+    class HMD
+    {
+        event Action<bool> VrFocusChanged;
+
+        HMD()
+        {
+
+            //detect which device is connected... by some arbitrary placeholder ...
+            if (true)
+            {
+                Rift rift = new Rift();
+            }
+            else if (false)
+            {
+                Vive vive = new Vive();
+            }
+
+
+
+        }
+    }
 
     #endregion mine
-
 
     #region theirs
 
@@ -29,7 +47,10 @@ namespace cs_domain_vr_hmd
     class OpenVR { }
 
     //hardware
-    class Rift : OVR { }
+    class Rift : OVR
+    {
+        event Action InputFocusLost;
+    }
     class Vive : OpenVR { }
 
     #endregion theirs
