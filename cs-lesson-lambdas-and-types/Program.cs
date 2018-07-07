@@ -9,7 +9,12 @@ namespace cs_lesson_lambdas_and_types
 {
     class Program
     {
-        //useful tool: syntax visualizer
+        // syntax visualizer
+        // https://github.com/dotnet/roslyn/wiki/Syntax-Visualizer
+
+
+        // syntax tree
+        // https://github.com/dotnet/csharplang/blob/7f39331672cf8edbda8867de004138e0f711c877/spec/expressions.md#anonymous-function-expressions
 
         static void Main(string[] args)
         {
