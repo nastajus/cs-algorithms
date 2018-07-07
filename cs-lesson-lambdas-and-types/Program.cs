@@ -24,6 +24,7 @@ namespace cs_lesson_lambdas_and_types
             // (a,b,c) => a + b + c
             // (int x, string y) => C.WL (y + x)
             // (ref int x, int y) => x = y + 5
+            /*
             () =>
             {
                 Console.WriteLine("Yo!");
@@ -31,6 +32,7 @@ namespace cs_lesson_lambdas_and_types
                 Console.Beep();
                 //return 42;
             }
+            */
             // a => !a 
         }
     }
