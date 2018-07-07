@@ -34,23 +34,25 @@ namespace cs_events_vehicles
     // The Interstate Highway standards for the U.S.Interstate Highway System uses a 12-foot (3.7 m) standard for lane width, while narrower lanes are used on lower classification roads.
     class TrafficLights
     {
-        System.Timers.Timer _aTimer = new Timer();
-
-        TrafficLights()
-        {
-            //for one particular road... 
-            _aTimer.Interval = IntervalSeconds;
-        }
-
         private const double RedMin = 2;
         private const double RedMax = 4;
         private const double AmberMin = 3;
         private const double AmberMax = 5;
         private const double Green = 24; //hardcoded assuming only four lanes...
 
+        System.Timers.Timer _aTimer = new Timer();
+
+        TrafficLights()
+        {
+            //for one particular road... of 2 lanes width for each direction... so 4 lanes total width... meaning green is duration 24 seconds.
+            _aTimer.Interval = IntervalSeconds;
+        }
+
         public double IntervalSeconds
         {
             get { return _aTimer.Interval / 1000; }
+
+            [DefaultValue(Green + AmberMax + RedMax)]
             private set
             {
                 if (value < Green + AmberMin + RedMin || value > Green + AmberMax + RedMax)
