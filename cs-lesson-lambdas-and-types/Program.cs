@@ -19,6 +19,8 @@ namespace cs_lesson_lambdas_and_types
             //() => { ; }
 
             // lambdas are ... expressions or blocks perhaps....
+            //does it even make sense to use alone like this anywhere ??? 
+            //  do i *need* to assign lambdas to a variable ??? 
 
             () => { Console.WriteLine("hi") };
 
