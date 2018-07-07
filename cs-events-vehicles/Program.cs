@@ -40,12 +40,14 @@ namespace cs_events_vehicles
         private const double AmberMax = 5;
         private const double Green = 24; //hardcoded assuming only four lanes...
 
-        System.Timers.Timer _aTimer = new Timer();
+        Timer _aTimer = new Timer();
 
         TrafficLights()
         {
             //for one particular road... of 2 lanes width for each direction... so 4 lanes total width... meaning green is duration 24 seconds.
             _aTimer.Interval = IntervalSeconds;
+            _aTimer.Enabled += ElapsedEventHandler(OnTimedEvent);
+            //COMPILER ERROR: non-invocable member 'ElapsedEventHandler' cannot be used like a method
         }
 
         public double IntervalSeconds
@@ -62,6 +64,11 @@ namespace cs_events_vehicles
 
                 _aTimer.Interval = value * 1000;
             }
+        }
+
+        void OnTimedEvent(object source, ElapsedEventArgs e)
+        {
+
         }
     }
 
