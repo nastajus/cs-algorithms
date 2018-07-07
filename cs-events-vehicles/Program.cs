@@ -33,11 +33,14 @@ namespace cs_events_vehicles
         private const double Green = 24; //hardcoded assuming only four lanes...
 
         Timer _aTimer = new Timer();
+        private bool _active;
 
         TrafficLights()
         {
+            //just by divine existance, it begins in an immediately executing state...
+            _active = true;
             _aTimer.Interval = IntervalSeconds;
-            _aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+            _aTimer.Elapsed += new ElapsedEventHandler(OnCycleCompleteEvent);
         }
 
         public double IntervalSeconds
@@ -57,8 +60,12 @@ namespace cs_events_vehicles
             }
         }
 
-        void OnTimedEvent(object source, ElapsedEventArgs e)
+        private ConsoleColor lightState;
+
+
+        void OnCycleCompleteEvent(object source, ElapsedEventArgs e)
         {
+            _active = false;
             //hmm okay i see...
             //internally within this single class...
             //I'M SUBSCRIBING to the event that raised INTERNALLY by the system whenever time passes.
