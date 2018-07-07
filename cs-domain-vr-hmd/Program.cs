@@ -46,10 +46,19 @@ namespace cs_domain_vr_hmd
     class OVR { }
     class OpenVR { }
 
-    //hardware
+    //hardware representation
     class Rift : OVR
     {
-        event Action InputFocusLost;
+        event Action<bool> InputFocusLost;
+
+        //something listening low-level to hardware... maybe in a loop...
+        void HardwareUpdate()
+        {
+            //while (true)
+            {
+
+            }
+        }
     }
     class Vive : OpenVR { }
 
