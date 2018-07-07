@@ -22,11 +22,14 @@ namespace cs_events_vehicles
         }
     }
 
+    //timed as 30 seconds on, 30 seconds off.
     class TrafficLights
     {
 
     }
 
+
+    //yagni / kis --> do simplest implementation first: all vehicles are 1 size and all listen directly to lights only 
     class VehicleGenerator
     {
 
