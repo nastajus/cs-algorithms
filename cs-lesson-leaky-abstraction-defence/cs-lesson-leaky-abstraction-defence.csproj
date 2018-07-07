@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A5FE6321-A89A-4E76-B6DD-55DD3762AB7C}</ProjectGuid>
+    <ProjectGuid>{D71C9D99-225F-4454-9538-6B6F67D5C859}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>cs_linq</RootNamespace>
-    <AssemblyName>cs-linq</AssemblyName>
+    <RootNamespace>cs_lesson_leaky_abstraction_defence</RootNamespace>
+    <AssemblyName>cs-lesson-leaky-abstraction-defence</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,8 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Runner.cs" />
-    <Compile Include="RatsAndMice.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

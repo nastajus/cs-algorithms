@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Generics_Angel.cs" />
+    <Compile Include="Generics_Bookable.cs" />
     <Compile Include="Generics_Flyable.cs" />
     <Compile Include="Generics_Food.cs" />
     <Compile Include="Generics_Kittens.cs" />

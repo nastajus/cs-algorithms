@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A5FE6321-A89A-4E76-B6DD-55DD3762AB7C}</ProjectGuid>
+    <ProjectGuid>{FC86D88C-F5EF-4FE4-9FF6-C7CB9989FE08}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>cs_linq</RootNamespace>
-    <AssemblyName>cs-linq</AssemblyName>
+    <RootNamespace>cs_events_delegates_ohmy</RootNamespace>
+    <AssemblyName>cs-events-delegates-ohmy</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,9 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Runner.cs" />
-    <Compile Include="RatsAndMice.cs" />
+    <Compile Include="Attempt2.cs" />
+    <Compile Include="Attempt1_Gym.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Runner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
