@@ -41,10 +41,12 @@ namespace cs_domain_vr_hmd
                 OurVive vive = new OurVive();
                 OurHeadset = vive;
             }
-
-
-
         }
+
+        //our system *could* listen to *other* system... by subscribing to *other's* events..
+        void SubscribeToRift() { }
+        void SubscribeToVive() { }
+
     }
 
     interface OurHeadset { }
