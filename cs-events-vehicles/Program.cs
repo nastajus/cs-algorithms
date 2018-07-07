@@ -46,8 +46,7 @@ namespace cs_events_vehicles
         {
             //for one particular road... of 2 lanes width for each direction... so 4 lanes total width... meaning green is duration 24 seconds.
             _aTimer.Interval = IntervalSeconds;
-            _aTimer.Enabled += ElapsedEventHandler(OnTimedEvent);
-            //COMPILER ERROR: non-invocable member 'ElapsedEventHandler' cannot be used like a method
+            _aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
         }
 
         public double IntervalSeconds
