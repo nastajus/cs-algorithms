@@ -23,7 +23,7 @@ namespace cs_domain_vr_hmd
     class HMD
     {
 
-        public OurHeadset OurHeadset { get; private set; }
+        public IOurHeadset OurHeadset { get; private set; }
 
         event Action<bool> VrFocusChanged;
 
@@ -41,20 +41,59 @@ namespace cs_domain_vr_hmd
                 OurVive vive = new OurVive();
                 OurHeadset = vive;
             }
+            else
+            {
+                throw new Exception($"can't detect hardware, can't start {nameof(HMD)}");
+            }
         }
 
         //our system *could* listen to *other* system... by subscribing to *other's* events..
-        void SubscribeToRift() { }
-        void SubscribeToVive() { }
+        private void SubscriptionsCheckUpdate()
+        {
+            OurHeadset.SubscribeToHardwareEvents();
+        }
 
     }
 
-    interface OurHeadset { }
+    interface IOurHeadset
+    {
+        void SubscribeToHardwareEvents();
+    }
 
-    class OurRift : OurHeadset { }
-    class OurVive : OurHeadset { }
+    class OurRift : Rift, IOurHeadset {
+
+        public OurRift()
+        {
+            SubscribeToHardwareEvents();
+        }
+
+        public void SubscribeToHardwareEvents()
+        {
+
+            InputFocusLost += OnInputFocusLost();
+        }
+
+        public Action<bool> OnInputFocusLost()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    class OurVive : Vive, IOurHeadset {
+        public void OnInputFocusLost()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SubscribeToHardwareEvents()
+        {
+            throw new NotImplementedException();
+        }
+    }
 
     #endregion mine
+
+
 
     #region theirs
 
@@ -65,7 +104,8 @@ namespace cs_domain_vr_hmd
     //hardware representation
     class Rift : OVR
     {
-        event Action<bool> InputFocusLost;
+        //these be pushed out to use... this would be a publisher... to anything that cares, like IOurHeadset...
+        public event Action<bool> InputFocusLost;
 
         //something listening low-level to hardware... maybe in a loop...
         public void HardwareUpdate()
