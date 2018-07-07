@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,11 +53,13 @@ namespace cs_events_vehicles
             get { return _aTimer.Interval / 1000; }
             private set
             {
-                if (value < 15 + 3 + 2)
+                if (value < Green + AmberMin + RedMin || value > Green + AmberMax + RedMax)
                 {
-
+                    throw new ArgumentOutOfRangeException();
                 }
-            };
+
+                _aTimer.Interval = value * 1000;
+            }
         }
     }
 
