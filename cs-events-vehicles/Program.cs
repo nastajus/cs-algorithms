@@ -42,6 +42,8 @@ namespace cs_events_vehicles
 
         Timer _aTimer = new Timer();
 
+        //delegate void ElapsedEventHandler(object o, ElapsedEventArgs e);
+
         TrafficLights()
         {
             //for one particular road... of 2 lanes width for each direction... so 4 lanes total width... meaning green is duration 24 seconds.
@@ -67,7 +69,9 @@ namespace cs_events_vehicles
 
         void OnTimedEvent(object source, ElapsedEventArgs e)
         {
-
+            //hmm okay i see...
+            //internally within this single class...
+            //I'M SUBSCRIBING to the event that raised INTERNALLY by the system whenever time passes.
         }
     }
 
