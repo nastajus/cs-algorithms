@@ -10,18 +10,28 @@ namespace cs_domain_vr_hmd
     {
         static void Main(string[] args)
         {
+
         }
     }
 
+    #region mine
+
+    class Vusr { }
+    class HMD { }
+
+    #endregion mine
+
+
+    #region theirs
 
     //runtime
     class OVR { }
     class OpenVR { }
 
     //hardware
-    class Rift { }
-    class Vive { }
+    class Rift : OVR { }
+    class Vive : OpenVR { }
 
-
+    #endregion theirs
 
 }
