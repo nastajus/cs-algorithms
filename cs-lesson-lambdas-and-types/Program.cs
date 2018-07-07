@@ -18,6 +18,8 @@ namespace cs_lesson_lambdas_and_types
 
             //() => { ; }
 
+            // lambdas are ... expressions or blocks perhaps....
+
             () => { Console.WriteLine("hi") };
 
             int _beta = 2;
@@ -25,7 +27,9 @@ namespace cs_lesson_lambdas_and_types
 
             (string x, int y) => { y + x };
 
-            //(ref string x, int y) => { x = 23 } //um wait no.. not assignment...
+            (ref string x, int y) => { x + y } //um wait no.. not assignment...
+
+            () => { }
 
 
         }
