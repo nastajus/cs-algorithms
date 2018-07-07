@@ -12,24 +12,25 @@ namespace cs_events_timer
     {
         static void Main(string[] args)
         {
+            TimerNetworkLaggerFaker tn = new TimerNetworkLaggerFaker();
 
+            Console.ReadKey();
         }
     }
 
     class TimerNetworkLaggerFaker
     {
-        TimerNetworkLaggerFaker()
+        public TimerNetworkLaggerFaker()
         {
             System.Timers.Timer aTimer = new System.Timers.Timer();
             aTimer.Elapsed += OnTimedEvent;
+            aTimer.Interval = 5000;
+            aTimer.Enabled = true;
         }
 
-        //oh, i accept this signature as necessary to conform matching the publisher's event ... besides...
-        //... just think like... i can discard these paramaters... as unimportant for consideration...
-        // ... ... because ... I just need to understand the convention of matching signature... and "On.." methods...
-        private void OnTimedEvent(object sender, ElapsedEventArgs e) 
+        private void OnTimedEvent(object sender, ElapsedEventArgs e) //matching, oh right.
         {
-            throw new NotImplementedException();
+            Console.WriteLine("well, i'll do something, on a timed basis, for sure");
         }
     }
 
