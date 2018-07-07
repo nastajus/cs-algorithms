@@ -12,15 +12,15 @@ namespace cs_events_timer
     {
         static void Main(string[] args)
         {
-            TimerNetworkLaggerFaker tn = new TimerNetworkLaggerFaker();
+            TimerThingy tt = new TimerThingy();
 
             Console.ReadKey();
         }
     }
 
-    class TimerNetworkLaggerFaker
+    class TimerThingy
     {
-        public TimerNetworkLaggerFaker()
+        public TimerThingy()
         {
             System.Timers.Timer aTimer = new System.Timers.Timer();
             aTimer.Elapsed += OnTimedEvent;
@@ -47,13 +47,21 @@ namespace cs_events_timer
     {
         PewPew()
         {
-            
 
             while (true)
             {
                 Random rand = new Random();
                 rand.Next(500, 1000);
+                //ShootShoot();     //??? nah ???
+                TimerThingy.ShotShot += ShootShoot; //yaaaa
+
             }
+        }
+
+        void ShootShoot()
+        {
+            //i'm shooting some event at TimerThingy's event ... thingy?  (event handler...)
+            Console.WriteLine("pew pew");
         }
     }
 
