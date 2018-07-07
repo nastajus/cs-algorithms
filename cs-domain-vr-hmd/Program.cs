@@ -75,7 +75,7 @@ namespace cs_domain_vr_hmd
 
         public Action<bool> OnInputFocusLost()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("yo, duuuude, the Rift's focus has been ... ");
         }
     }
 
