@@ -22,10 +22,12 @@ namespace cs_lesson_lambdas_and_types
             //does it even make sense to use alone like this anywhere ??? 
             //  do i *need* to assign lambdas to a variable ??? 
 
-            () => { Console.WriteLine("hi") };
+            () => Console.WriteLine("hi");
 
             int _beta = 2;
-            (alpha) => { alpha + _beta };
+            (alpha) => alpha + _beta;
+
+            (a, b, c) => a + b + c 
 
             (string x, int y) => { y + x };
 
