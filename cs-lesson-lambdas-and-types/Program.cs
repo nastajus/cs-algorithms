@@ -25,18 +25,6 @@ namespace cs_lesson_lambdas_and_types
             //valid since is an expression on the right side, which can be returned.
             (a, b, c) => a + b + c
 
-            //invalid///////////////////////////////////////////////////////
-            () => Console.WriteLine("hi");
-
-            int _beta = 2;
-            (alpha) => alpha + _beta;
-
-
-            (string x, int y) => { y + x };
-
-            (ref string x, int y) => { x + y } //um wait no.. not assignment...
-
-            () => { }
 
 
         }
