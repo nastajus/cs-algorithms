@@ -27,7 +27,9 @@ namespace cs_events_vehicles
         {
             TrafficLight light = new TrafficLight(ON.RedMaxAll, ON.AmberMax, ON.Green, SystemSpeedFactor);
 
-            VehicleTrafficGenerator vg = new VehicleTrafficGenerator(SystemSpeedFactor);
+            RoadwayAcceptor roadway = new RoadwayAcceptor();
+
+            VehicleTrafficGenerator vg = new VehicleTrafficGenerator(roadway, SystemSpeedFactor);
 
             light.LightChanged += vg.OnLightChanged;
 
@@ -186,21 +188,20 @@ namespace cs_events_vehicles
     /// </summary>
     class VehicleTrafficGenerator
     {
-        Timer _vgTimer = new Timer();
-        Random _vgRandom = new Random();
-
-        // kis ... for now bake road directly into VG class... no additional abstraction allowed...
-        Queue<Vehicle> _lane1 = new Queue<Vehicle>();
-        Queue<Vehicle> _lane2 = new Queue<Vehicle>();
+        private Timer _vgTimer = new Timer();
+        private Random _vgRandom = new Random();
+        private RoadwayAcceptor _ra;
 
         // seems strange to instantiate a variable but not perform any dot operations on it... yet i definitely want this constructor to run and continue to exist in-memory holding state. heh.
         private VehicleGenerator _vg;
 
-        public VehicleTrafficGenerator(int systemSpeedFactor = 1)
+        public VehicleTrafficGenerator(RoadwayAcceptor ra, int systemSpeedFactor = 1)
         {
             _vgTimer.Interval = 1000 / systemSpeedFactor;
 
             _vg = new VehicleGenerator();
+
+            _ra = ra;
 
             Init();
         }
@@ -227,12 +228,30 @@ namespace cs_events_vehicles
             int numV = _vgRandom.Next(0, 3);
             while (numV-- > 0)
             {
-                _lane1.Enqueue(VehicleGenerator.Create());
+                _ra.Accept(VehicleGenerator.Create());
                 Console.ForegroundColor = ConsoleColor.Gray;
-                Console.WriteLine($" - drove up: {_lane1.Last()}");
+                Console.WriteLine($" - drove up: {_ra.RoadwayVehicles.Last()}");
 
             }
         }
+    }
+
+    class RoadwayAcceptor
+    {
+        //now i lie:
+        //ok.
+        // kis ... for now bake road directly into VG class... no additional abstraction allowed...
+        private Queue<Vehicle> _lane1 = new Queue<Vehicle>();
+        private Queue<Vehicle> _lane2 = new Queue<Vehicle>();
+
+        //would this make sense as an event instead? seems pointlessly over-complicated..
+        public void Accept(Vehicle v)
+        {
+            _lane1.Enqueue(v);
+        }
+
+        public IEnumerable<Vehicle> RoadwayVehicles { get {return _lane1; } }
+
     }
 
     /// <summary>
