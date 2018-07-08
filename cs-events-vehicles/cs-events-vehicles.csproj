@@ -7,7 +7,7 @@
     <ProjectGuid>{1F92D71E-B2DD-42C1-824E-C9BFE17C6D51}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>cs_events_vehicles</RootNamespace>
-    <AssemblyName>cs_events_vehicles</AssemblyName>
+    <AssemblyName>cs-events-vehicles</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

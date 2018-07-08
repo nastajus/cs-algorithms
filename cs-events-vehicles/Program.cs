@@ -17,11 +17,12 @@ namespace cs_events_vehicles
     /// </summary>
     class Program
     {
-        public static int SystemSpeedFactor = 5;
+        public static int SystemSpeedFactor = 15;
 
         static void Main(string[] args)
         {
-            TrafficLights lights = new TrafficLights(ON.RedMaxAll, ON.AmberMax, ON.Green);
+            TrafficLights lights = new TrafficLights(ON.RedMaxAll, ON.AmberMax, ON.Green, SystemSpeedFactor);
+            Console.ReadKey();
         }
     }
 
@@ -32,12 +33,13 @@ namespace cs_events_vehicles
         private const double _pulse = 1000;
         private Timer _aTimer = new Timer();
 
-        public TrafficLights(int durationRedAll, int durationAmber, int durationGreen)
+        public TrafficLights(int durationRedAll, int durationAmber, int durationGreen, int systemSpeedFactor = 1)
         {
             //boot up into existance, barely alive.
             Light = ConsoleColor.Gray;
-            _aTimer.Interval = _pulse; 
+            _aTimer.Interval = _pulse / systemSpeedFactor; 
             _aTimer.Elapsed += new ElapsedEventHandler(OnPulseTickEvent);
+
 
             _durationRedAll = durationRedAll;
             _durationAmber = durationAmber;
@@ -45,6 +47,7 @@ namespace cs_events_vehicles
 
             _durationRedJustThis = durationRedAll + durationAmber + durationGreen;
 
+            Console.WriteLine("lights started");
             Init();
         }
 
@@ -52,7 +55,13 @@ namespace cs_events_vehicles
         {
             //begin normal operations, on assumption it is the solitary light in existance. 
 
+            _aTimer.Enabled = true;
             /* Light = */ SetNextLightColor();
+
+
+            //feels like pointless duplication... should be able to rewrite this somehow...
+            Console.ForegroundColor = Light;
+            Console.WriteLine($"current light color is ... {Light}");
 
 
         }
@@ -99,15 +108,18 @@ namespace cs_events_vehicles
         {
             _secondsElapsedInCycle += 1;
 
+            //todo: proper state machine that correctly separates four states for three colors... 
+            //right now is weak design, as relies on symmetry between this function on SetNextLightColor();
 
-            if ((Light == ConsoleColor.Green && _secondsElapsedInCycle == _durationAmber)
-                || (Light == ConsoleColor.DarkYellow && _secondsElapsedInCycle == _durationRedAll)
-                || (Light == ConsoleColor.Red && _secondsElapsedInCycle == _durationRedAll)
-                || (Light == ConsoleColor.Red && _secondsElapsedInCycle == _durationRedJustThis))
+            //check if light changes
+            if ((Light == ConsoleColor.Green && _secondsElapsedInCycle == _durationGreen)
+                || (Light == ConsoleColor.DarkYellow && _secondsElapsedInCycle == _durationAmber)
+                || (Light == ConsoleColor.Red && _secondsElapsedInCycle == _durationRedAll + _durationRedJustThis))
             {
                 //switch
                 _secondsElapsedInCycle = 0;
                 SetNextLightColor();
+                Console.ForegroundColor = Light;
                 Console.WriteLine($"current light color is ... {Light}");
             }
 
@@ -117,7 +129,7 @@ namespace cs_events_vehicles
         //hmm okay i see...
         //internally within this single class...
         //I'M SUBSCRIBING to the event that raised INTERNALLY by the system whenever time passes.
-    }
+        }
     }
 
 
