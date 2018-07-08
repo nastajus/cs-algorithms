@@ -133,12 +133,14 @@ namespace cs_events_vehicles
 
                 // I wanna publish or emit or raise an event here... hmm...
                 // so how about ... this! 
-                LightChanged?.Invoke(Light);   //now... by itself... this isn't gonna trigger anything at this time... since I have subscribed to the LightChanged event yet.
+                Vehicle v = LightChanged?.Invoke(Light);   //now... by itself... this isn't gonna trigger anything at this time... since I have subscribed to the LightChanged event yet.
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.WriteLine($" ... Lights see vehicle {v}");
             }
         }
 
         //i *think* this is called __Handler by convention... tbd
-        public delegate void LightChangedToHandler(ConsoleColor cc);
+        public delegate Vehicle LightChangedToHandler(ConsoleColor cc);
 
         public event LightChangedToHandler LightChanged;
 
@@ -187,7 +189,7 @@ namespace cs_events_vehicles
         }
         
 
-        public void OnLightChanged(ConsoleColor cc)
+        public Vehicle OnLightChanged(ConsoleColor cc)
         {
             //Console.WriteLine("vehicles can move...");
 
@@ -203,6 +205,7 @@ namespace cs_events_vehicles
 
             }
 
+            return _lane1.Last();
         }
     }
 
