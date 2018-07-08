@@ -406,18 +406,15 @@ namespace cs_events_vehicles
 
             //building
             //IEnumerable<string> results = node.ChildNodes.Where()
-            List<string> search = new List<string> { "Length", "Width", "Height" };
-            var results = myNodes.Where(n => n.InnerText == search);
+            List<string> searchMetrics = new List<string> { "Length", "Width", "Height" };
+            var results = myNodes.Where(n => searchMetrics.Any(s => n.InnerText.Contains(s)));
 
-            foreach (HtmlNode node in myNodes)
+            foreach (HtmlNode node in results)
             {
-                if (node != null && node.InnerText.Contains("Length"))
-                {
-                    //get corresponding TD element containing actual value
+                //get corresponding TD element containing actual value
 
-                    var desiredValue = node.ChildNodes.Where(c => c.Name == "td").ToList();
-                    Console.WriteLine(desiredValue.FirstOrDefault()?.InnerText);
-                }
+                var desiredValue = node.ChildNodes.Where(c => c.Name == "td").ToList();
+                Console.WriteLine(desiredValue.FirstOrDefault()?.InnerText);
             }
         }
 

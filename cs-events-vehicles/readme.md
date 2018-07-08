@@ -20,4 +20,4 @@ https://stackoverflow.com/questions/18065526/pulling-data-from-a-webpage-parsing
 
 https://stackoverflow.com/questions/14305945/get-the-content-of-an-element-of-a-web-page-using-c-sharp
 
-C# where list - https://stackoverflow.com/questions/1175645/find-an-item-in-list-by-linq
+C# where list - https://stackoverflow.com/questions/1175645/find-an-item-in-list-by-linq 
