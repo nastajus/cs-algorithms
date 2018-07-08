@@ -27,8 +27,7 @@ namespace cs_events_vehicles
 
         static void Main(string[] args)
         {
-            //WebScraper.SearchGoogleForLinks();
-            WebScraper.ScrapSite("","");
+            //WikipediaWebScraper.SearchGoogleForLinks();
 
             Roadway roadway = new Roadway();
 
@@ -357,6 +356,12 @@ namespace cs_events_vehicles
             var example = examples[exampleNum];
 
             Vehicle v = new Vehicle(whichVehicle.American, example);
+
+            //var res = WikipediaWebScraper.ScrapeForDimensions("Renault Twizy");
+            //shitty version for now:
+            //Console.ForegroundColor = ConsoleColor.White;
+            //Console.WriteLine(example + " : " + res);
+
             return v;
         }
 
@@ -364,13 +369,16 @@ namespace cs_events_vehicles
 
     class Vehicle
     {
+
+        public string MarketSegment { get; private set; }
+        public string Example { get; private set; }
+        public WikipediaWebScraper.Metric Metric;
+
         public Vehicle(string marketSegment, string example)
         {
             MarketSegment = marketSegment;
             Example = example;
         }
-        public string MarketSegment { get; private set; }
-        public string Example { get; private set; }
 
         public override string ToString()
         {
@@ -378,19 +386,21 @@ namespace cs_events_vehicles
         }
     }
 
-    class WebScraper
+    class WikipediaWebScraper
     {
 
         /// <summary>
         /// try getting Renault Twizy for example...
         /// </summary>
-        public static void ScrapSite(string url, string xpath)
+        public static Metric ScrapeForDimensions(string vehicleName)
         {
-            ////*[@id="mw-content-text"]/div/table[1]/tbody/tr[17]
             var client = new WebClient();
 
+            //convert spaces to underscores
+            vehicleName = vehicleName.Replace(" ", "_");
+
             //download the HTML
-            string html = client.DownloadString("https://en.wikipedia.org/wiki/Renault_Twizy");
+            string html = client.DownloadString("https://en.wikipedia.org/wiki/" + vehicleName);
 
             //now feed it to html agility pack
             HtmlDocument doc = new HtmlDocument();
@@ -450,10 +460,11 @@ namespace cs_events_vehicles
 
             }
 
-            Console.WriteLine(m);
+            //Console.WriteLine(m);
+            return m;
         }
 
-        class Metric
+        public class Metric
         {
             public enum UnitTypes
             {
