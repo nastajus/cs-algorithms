@@ -209,6 +209,8 @@ namespace cs_events_vehicles
     class VehicleGenerator
     {
         private static List<VehicleClassification> _possibleVehicles;
+        private static Random _randomVehicleClassification = new Random();
+        private static Random _randomExample = new Random();
 
         public VehicleGenerator()
         {
@@ -249,8 +251,6 @@ namespace cs_events_vehicles
             //public List<string> Examples = new List<string>();
         }
 
-        private static Random randomVehicleClassification = new Random();
-        private static Random randomExample = new Random();
 
         public static Vehicle Create()
         {
@@ -258,21 +258,20 @@ namespace cs_events_vehicles
             //int? num = _possibleVehicles?.Count;
             if (_possibleVehicles == null || _possibleVehicles.Count <= 0)
             {
-                throw new Exception("need data to spawn cars, problem getting data loaded.");
+                throw new Exception("no data to create cars with.");
             }
 
             
-            var whichNum = randomVehicleClassification.Next(_possibleVehicles.Count);
+            var whichNum = _randomVehicleClassification.Next(_possibleVehicles.Count);
             var whichVehicle = _possibleVehicles[whichNum];
-
-
-            var examples = whichVehicle.Examples.Split(new[] { "," }, StringSplitOptions.None).ToList();
-
+            var examples = whichVehicle.Examples.Split(new[] {","}, StringSplitOptions.None).ToList();
             
-            var exampleNum = randomExample.Next(examples.Count);
+            var exampleNum = _randomExample.Next(examples.Count);
+            var example = examples[exampleNum];
 
-            Vehicle v = new Vehicle(whichVehicle.American, examples[exampleNum]);
-            
+            example = (example.StartsWith("?")) ? example.Replace("?", "") : example;
+
+            Vehicle v = new Vehicle(whichVehicle.American, example);
             return v;
         }
 
