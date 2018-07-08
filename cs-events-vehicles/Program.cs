@@ -180,6 +180,10 @@ namespace cs_events_vehicles
 
 
     //yagni / kis --> do simplest implementation first: all vehicles are 1 size and all listen directly to lights only 
+
+    /// <summary>
+    /// represents the endless stream of vehicles in an metropolitan urban area.
+    /// </summary>
     class VehicleTrafficGenerator
     {
         Timer _vgTimer = new Timer();
@@ -189,6 +193,7 @@ namespace cs_events_vehicles
         Queue<Vehicle> _lane1 = new Queue<Vehicle>();
         Queue<Vehicle> _lane2 = new Queue<Vehicle>();
 
+        // seems strange to instantiate a variable but not perform any dot operations on it... yet i definitely want this constructor to run and continue to exist in-memory holding state. heh.
         private VehicleGenerator _vg;
 
         public VehicleTrafficGenerator(int systemSpeedFactor = 1)
@@ -230,6 +235,12 @@ namespace cs_events_vehicles
         }
     }
 
+    /// <summary>
+    /// this is coupled to the raw data loaded from the csv for vehicle types. 
+    /// serves two main purposes:
+    ///     1) abstracts away need to think about loading file,
+    ///     2) Creating vehicle instances 
+    /// </summary>
     class VehicleGenerator
     {
         private static List<VehicleClassification> _possibleVehicles;
