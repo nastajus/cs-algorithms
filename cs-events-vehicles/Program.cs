@@ -33,6 +33,14 @@ namespace cs_events_vehicles
         private const double _pulse = 1000;
         private Timer _aTimer = new Timer();
 
+        private int _secondsElapsedInCycle = 0;
+
+        private readonly int _durationRedJustThis;
+        private readonly int _durationRedAll;
+        private readonly int _durationAmber;
+        private readonly int _durationGreen;
+
+
         public TrafficLights(int durationRedAll, int durationAmber, int durationGreen, int systemSpeedFactor = 1)
         {
             //boot up into existance, barely alive.
@@ -40,36 +48,28 @@ namespace cs_events_vehicles
             _aTimer.Interval = _pulse / systemSpeedFactor; 
             _aTimer.Elapsed += new ElapsedEventHandler(OnPulseTickEvent);
 
-
             _durationRedAll = durationRedAll;
             _durationAmber = durationAmber;
             _durationGreen = durationGreen;
 
             _durationRedJustThis = durationRedAll + durationAmber + durationGreen;
 
-            Console.WriteLine("lights started");
             Init();
         }
 
         public void Init()
         {
             //begin normal operations, on assumption it is the solitary light in existance. 
+            Console.WriteLine("lights started");
 
             _aTimer.Enabled = true;
             /* Light = */ SetNextLightColor();
-
 
             //feels like pointless duplication... should be able to rewrite this somehow...
             Console.ForegroundColor = Light;
             Console.WriteLine($"current light color is ... {Light}");
 
-
         }
-
-        private readonly int _durationRedJustThis;
-        private readonly int _durationRedAll;
-        private readonly int _durationAmber;
-        private readonly int _durationGreen;
 
         public ConsoleColor Light
         {
@@ -98,11 +98,11 @@ namespace cs_events_vehicles
         }
 
 
-        private int _secondsElapsedInCycle = 0;
-
-
         /// <summary>
         /// begins as if was in durationGreen state initially
+        /// 
+        /// this method is += subscribed to the Timer's published ⚡ Elapsed event
+        /// (internally in the same class scope that Timer is declared)
         /// </summary>
         void OnPulseTickEvent(object source, ElapsedEventArgs e)
         {
@@ -122,14 +122,27 @@ namespace cs_events_vehicles
                 Console.ForegroundColor = Light;
                 Console.WriteLine($"current light color is ... {Light}");
             }
-
-
-
-
-        //hmm okay i see...
-        //internally within this single class...
-        //I'M SUBSCRIBING to the event that raised INTERNALLY by the system whenever time passes.
         }
+
+        //i *think* this is called __Handler by convention... tbd
+        public delegate void LightChangeToHandler(ConsoleColor cc);
+
+        public event LightChangeToHandler LightChanging;
+
+
+        // naming conventions:
+        // https://stackoverflow.com/questions/724085/events-naming-convention-and-style
+
+
+        // search for "convention"
+        // https://www.codeproject.com/Articles/20550/C-Event-Implementation-Fundamentals-Best-Practices
+
+        //no, not here... not On... I think?
+        public void OnLightChanging()
+        {
+
+        }
+
     }
 
 
