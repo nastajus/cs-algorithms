@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,8 @@ namespace cs_events_vehicles
 
         static void Main(string[] args)
         {
+            WebScraper.SearchPage();
+
             Roadway roadway = new Roadway();
 
             TrafficLightAssembly trafficLightAssembly = new TrafficLightAssembly(roadway, SystemSpeedFactor);
@@ -383,6 +386,30 @@ namespace cs_events_vehicles
         public static void ScrapSite(string url, string xpath)
         {
             ////*[@id="mw-content-text"]/div/table[1]/tbody/tr[17]
+        }
+
+        public static void SearchPage()
+        {
+            var client = new WebClient();
+
+            // Download the HTML
+            string html = client.DownloadString("http://www.google.com");
+
+            // Now feed it to HTML Agility Pack:
+            HtmlDocument doc = new HtmlDocument();
+            doc.LoadHtml(html);
+
+            // Now you could query the DOM. For example you could extract
+            // all href attributes from all anchors:
+            foreach (HtmlNode link in doc.DocumentNode.SelectNodes("//a[@href]"))
+            {
+                HtmlAttribute href = link.Attributes["href"];
+                if (href != null)
+                {
+                    Console.WriteLine(href.Value);
+                }
+            }
+
         }
     }
 
