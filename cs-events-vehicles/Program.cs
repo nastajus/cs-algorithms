@@ -23,7 +23,7 @@ namespace cs_events_vehicles
         {
             TrafficLights lights = new TrafficLights(ON.RedMaxAll, ON.AmberMax, ON.Green, SystemSpeedFactor);
 
-            VehicleGenerator vg = new VehicleGenerator();
+            VehicleGenerator vg = new VehicleGenerator(SystemSpeedFactor);
 
             lights.LightChanged += vg.OnLightChanged;
 
@@ -152,9 +152,37 @@ namespace cs_events_vehicles
     //yagni / kis --> do simplest implementation first: all vehicles are 1 size and all listen directly to lights only 
     class VehicleGenerator
     {
-        public VehicleGenerator()
+        Timer _vgTimer = new Timer();
+        Random _vgRandom = new Random();
+
+        // kis ... for now bake road directly into VG class... no additional abstraction allowed...
+        List<Vehicle> _lane1 = new List<Vehicle>();
+        List<Vehicle> _lane2 = new List<Vehicle>();
+
+        public VehicleGenerator(int systemSpeedFactor = 1)
         {
-            
+            _vgTimer.Interval = 1000 / systemSpeedFactor;
+            Init();
+        }
+
+
+        void Init()
+        {
+            //begins generating cars
+            _vgTimer.Enabled = true;
+
+            //for now... no limit the number of vehicles spawned...
+            int numV = _vgRandom.Next(0, 2);
+            _lane1.Add(new Vehicle());
+
+            //SpawnVehicles();
+
+        }
+
+        void SpawnVehicles()
+        {
+
+
         }
 
         public void OnLightChanged(ConsoleColor cc)
@@ -163,6 +191,16 @@ namespace cs_events_vehicles
         }
     }
 
+    // Driver's Licence Classification Chart
+    // https://www.ontario.ca/document/official-mto-drivers-handbook/getting-your-drivers-licence#section-1
+
+    public enum VehicleClasses { ClassA, ClassB, ClassC, ClassD, ClassE, ClassF, ClassG, ClassM }
+    public Dictionary<VehicleClasses,Vehicle>
+
+    internal class Vehicle
+    {
+
+    }
 
     class OntarioStandards
     {
