@@ -400,9 +400,13 @@ namespace cs_events_vehicles
 
 
             List<string> searchMetrics = new List<string> { "Length", "Width", "Height" };
-            var results = myNodes.Where(n => searchMetrics.Any(s => n.InnerText.Contains(s))).Select(m => new Metric()).ToList();
+            var results = myNodes.Where(n => searchMetrics.Any(s => n.InnerText.Contains(s))).Select(m => new Metric
+            {
+                Node = n, //well, poopie. 
+            }).ToList();
             //flawed... dunno which is which... hmm...
             //doubly flawed... lol .... okay so i'm making a new valid linq query that nests stuff... but then it becomes invalid to iterate upon, losing it's node quality... unleess... i jam the node in there too! 
+            //unfortunately i cannot access "n", defined in "Where", later on in "Select"... at least it seems that's the case in my usage here.
 
             foreach (HtmlNode node in results)
             {
@@ -414,9 +418,10 @@ namespace cs_events_vehicles
 
         class Metric
         {
-            private string Length;
-            private string Width;
-            private string Height;
+            public string Length;
+            public string Width;
+            public string Height;
+            public HtmlNode Node;
         }
 
         public static void SearchGoogleForLinks()
