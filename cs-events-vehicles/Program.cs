@@ -36,8 +36,16 @@ namespace cs_events_vehicles
     }
 
 
+    /// <summary>
+    /// this <see cref="TrafficLights"/> refers to the system of equipment necessary for a single intersection to operate, including TrafficLights, TimingAdjusterAI, ...
+    /// </summary>
     class TrafficLights
     {
+        //i *think* this is called __Handler by convention... tbd
+        public delegate void LightChangedToHandler(ConsoleColor cc);
+        public event LightChangedToHandler LightChanged;
+
+
 
         private const double _pulse = 1000;
         private Timer _aTimer = new Timer();
@@ -133,25 +141,9 @@ namespace cs_events_vehicles
 
                 // I wanna publish or emit or raise an event here... hmm...
                 // so how about ... this! 
-                Vehicle v = LightChanged?.Invoke(Light);   //now... by itself... this isn't gonna trigger anything at this time... since I have subscribed to the LightChanged event yet.
-                Console.ForegroundColor = ConsoleColor.Gray;
-                Console.WriteLine($" ... Lights see vehicle {v}");
+                LightChanged?.Invoke(Light);
             }
         }
-
-        //i *think* this is called __Handler by convention... tbd
-        public delegate Vehicle LightChangedToHandler(ConsoleColor cc);
-
-        public event LightChangedToHandler LightChanged;
-
-
-        // naming conventions:
-        // https://stackoverflow.com/questions/724085/events-naming-convention-and-style
-
-
-        // search for "convention"
-        // https://www.codeproject.com/Articles/20550/C-Event-Implementation-Fundamentals-Best-Practices
-
     }
 
 
@@ -189,7 +181,7 @@ namespace cs_events_vehicles
         }
         
 
-        public Vehicle OnLightChanged(ConsoleColor cc)
+        public void OnLightChanged(ConsoleColor cc)
         {
             //Console.WriteLine("vehicles can move...");
 
@@ -204,8 +196,6 @@ namespace cs_events_vehicles
                 Console.WriteLine($" - drove up: {_lane1.Last()}");
 
             }
-
-            return _lane1.Last();
         }
     }
 
@@ -241,7 +231,6 @@ namespace cs_events_vehicles
                 Map(m => m.British).Name("Market segment (British English)");
                 Map(m => m.Australian).Name("Market segment (Australian English)");
                 Map(m => m.Examples).Name("Examples");
-                //Map(m => m.Examples).Name("Examples").ConvertUsing();
             }
         }
 
@@ -251,7 +240,6 @@ namespace cs_events_vehicles
             public string British;
             public string Australian;
             public string Examples;
-            //public List<string> Examples = new List<string>();
         }
 
 
@@ -271,8 +259,6 @@ namespace cs_events_vehicles
             
             var exampleNum = _randomExample.Next(examples.Count);
             var example = examples[exampleNum];
-
-            example = (example.StartsWith("?")) ? example.Replace("?", "") : example;
 
             Vehicle v = new Vehicle(whichVehicle.American, example);
             return v;
