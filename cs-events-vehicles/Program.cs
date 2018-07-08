@@ -400,6 +400,7 @@ namespace cs_events_vehicles
 
 
             List<string> searchMetrics = new List<string> { "Length", "Width", "Height" };
+            //this is dumb. i dunno linq well enough yet. 
             List<HtmlNode> r = myNodes.SelectMany(n => myNodes.Where(nn => searchMetrics.Any(s=>nn.InnerText.Contains(s)))).ToList();
             var results = myNodes.Where(n => searchMetrics.Any(s => n.InnerText.Contains(s))).ToList();//.Select(m => new Metric()).ToList();
             //flawed... dunno which is which... hmm...
