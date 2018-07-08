@@ -25,7 +25,7 @@ namespace cs_events_vehicles
 
         static void Main(string[] args)
         {
-            RoadwayAcceptor roadway = new RoadwayAcceptor();
+            Roadway roadway = new Roadway();
 
             TrafficLightAssembly trafficLightAssembly = new TrafficLightAssembly(roadway, SystemSpeedFactor);
 
@@ -46,7 +46,7 @@ namespace cs_events_vehicles
     {
         public readonly TrafficLight TrafficLight;
 
-        public TrafficLightAssembly(RoadwayAcceptor roadwayWatching, int systemSpeedFactor = 1)
+        public TrafficLightAssembly(Roadway roadwayWatching, int systemSpeedFactor = 1)
         {
             TrafficLight = new TrafficLight(ON.RedMaxAll, ON.AmberMax, ON.Green, systemSpeedFactor);
 
@@ -59,9 +59,9 @@ namespace cs_events_vehicles
     /// </summary>
     internal class TrafficCamera
     {
-        private RoadwayAcceptor _roadwayWatching;
+        private Roadway _roadwayWatching;
 
-        public TrafficCamera(RoadwayAcceptor roadwayWatching)
+        public TrafficCamera(Roadway roadwayWatching)
         {
             _roadwayWatching = roadwayWatching;
         }
@@ -192,12 +192,12 @@ namespace cs_events_vehicles
     {
         private Timer _vgTimer = new Timer();
         private Random _vgRandom = new Random();
-        private RoadwayAcceptor _ra;
+        private Roadway _ra;
 
         // seems strange to instantiate a variable but not perform any dot operations on it... yet i definitely want this constructor to run and continue to exist in-memory holding state. heh.
         private VehicleGenerator _vg;
 
-        public VehicleTrafficGenerator(RoadwayAcceptor ra, int systemSpeedFactor = 1)
+        public VehicleTrafficGenerator(Roadway ra, int systemSpeedFactor = 1)
         {
             _vgTimer.Interval = 1000 / systemSpeedFactor;
 
@@ -230,7 +230,7 @@ namespace cs_events_vehicles
             int numV = _vgRandom.Next(0, 3);
             while (numV-- > 0)
             {
-                _ra.Accept(VehicleGenerator.Create());
+                _ra.DrivesOnto(VehicleGenerator.Create());
                 Console.ForegroundColor = ConsoleColor.Gray;
                 Console.WriteLine($" - drove up: {_ra.RoadwayVehicles.Last()}");
 
@@ -241,13 +241,13 @@ namespace cs_events_vehicles
     /// <summary>
     /// probably can rename to just Roadway... 
     /// </summary>
-    class RoadwayAcceptor
+    class Roadway
     {
         private Queue<Vehicle> _lane1 = new Queue<Vehicle>();
         private Queue<Vehicle> _lane2 = new Queue<Vehicle>();
 
         //would this make sense as an event instead? seems pointlessly over-complicated..
-        public void Accept(Vehicle v)
+        public void DrivesOnto(Vehicle v)
         {
             // kis ... for now send all vehicles to lane1 only... no additional abstraction allowed...
             _lane1.Enqueue(v);
@@ -255,6 +255,9 @@ namespace cs_events_vehicles
             //publish event that new car has arrived...
             //why here though? 
             //the purpose of "roadway acceptor" quickly degrades into ... wth. grr.
+            //ok
+            //resolved.
+            //this is too abstract for my tastes, i'm going to resolve this by making the interface of `DrivesOnto` more literal, and remove the abstraction in the name `Roadway`.
         }
 
         public IEnumerable<Vehicle> RoadwayVehicles { get {return _lane1; } }
