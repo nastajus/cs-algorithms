@@ -33,7 +33,7 @@ namespace cs_events_vehicles
 
             trafficLightAssembly.TrafficLight.LightChanged += vg.OnLightChanged;
 
-            trafficLightAssembly.tc.OnAppearsVehicle;
+            roadway.AppearsVehicle += trafficLightAssembly.tc.OnAppearsVehicle;
 
             Console.ReadKey();
         }
