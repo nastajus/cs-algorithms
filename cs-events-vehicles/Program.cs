@@ -100,39 +100,24 @@ namespace cs_events_vehicles
             _secondsElapsedInCycle += 1;
 
 
-            if (Light == ConsoleColor.Green && _secondsElapsedInCycle == _durationAmber)
+            if ((Light == ConsoleColor.Green && _secondsElapsedInCycle == _durationAmber)
+                || (Light == ConsoleColor.DarkYellow && _secondsElapsedInCycle == _durationRedAll)
+                || (Light == ConsoleColor.Red && _secondsElapsedInCycle == _durationRedAll)
+                || (Light == ConsoleColor.Red && _secondsElapsedInCycle == _durationRedJustThis))
             {
-                _secondsElapsedInCycle = 0;
                 //switch
-                SetNextLightColor();
-            }
-            else if (Light == ConsoleColor.DarkYellow && _secondsElapsedInCycle == _durationRedAll)
-            {
                 _secondsElapsedInCycle = 0;
-                //switch
                 SetNextLightColor();
-            }
-            else if (Light == ConsoleColor.Red && _secondsElapsedInCycle == _durationRedAll)
-            {
-                _secondsElapsedInCycle = 0;
-                //switch
-                SetNextLightColor();
-            }
-            else if (Light == ConsoleColor.Red && _secondsElapsedInCycle == _durationRedJustThis)
-            {
-                _secondsElapsedInCycle = 0;
-                //switch
-                SetNextLightColor();
+                Console.WriteLine($"current light color is ... {Light}");
             }
 
 
-            Console.WriteLine($"current light color is ... {Light}");}
 
 
-            //hmm okay i see...
-            //internally within this single class...
-            //I'M SUBSCRIBING to the event that raised INTERNALLY by the system whenever time passes.
-        }
+        //hmm okay i see...
+        //internally within this single class...
+        //I'M SUBSCRIBING to the event that raised INTERNALLY by the system whenever time passes.
+    }
     }
 
 
