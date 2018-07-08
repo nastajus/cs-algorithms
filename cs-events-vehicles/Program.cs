@@ -33,7 +33,7 @@ namespace cs_events_vehicles
         private Timer _aTimer = new Timer();
         private bool _active;
 
-        public TrafficLights(double red, double amber, double green)
+        public TrafficLights(int red, int amber, int green)
         {
             //boot up into existance, barely alive.
             Light = ConsoleColor.Gray;
@@ -57,9 +57,9 @@ namespace cs_events_vehicles
 
         }
 
-        private double _redDuration;
-        private double _amberDuration;
-        private double _greenDuration;
+        private int _redDuration;
+        private int _amberDuration;
+        private int _greenDuration;
 
         public ConsoleColor Light
         {
@@ -107,7 +107,7 @@ namespace cs_events_vehicles
 
 
 
-        private double _secondsElapsedInCycle = 0;
+        private int _secondsElapsedInCycle = 0;
 
 
         /// <summary>
@@ -118,6 +118,9 @@ namespace cs_events_vehicles
             _secondsElapsedInCycle += 1;
 
             if (_secondsElapsedInCycle == _greenDuration)
+            {
+
+            }
 
             _active = false;
             //hmm okay i see...
@@ -137,11 +140,11 @@ namespace cs_events_vehicles
     class OntarioStandards
     {
 
-        public static readonly double RedMin = 2;
-        public static readonly double RedMax = 4;
-        public static readonly double AmberMin = 3;
-        public static readonly double AmberMax = 5;
-        public static readonly double Green = 24; //hardcoded assuming only four lanes...
+        public static readonly int RedMin = 2;
+        public static readonly int RedMax = 4;
+        public static readonly int AmberMin = 3;
+        public static readonly int AmberMax = 5;
+        public static readonly int Green = 24; //hardcoded assuming only four lanes...
 
     }
 
