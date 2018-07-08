@@ -10,6 +10,7 @@ using System.Timers;
 using ON = cs_events_vehicles.OntarioStandards;
 using CsvHelper;
 using CsvHelper.Configuration;
+using HtmlAgilityPack;
 
 namespace cs_events_vehicles
 {
@@ -375,9 +376,13 @@ namespace cs_events_vehicles
 
     class WebScraper
     {
-        public static void ScrapSite()
-        {
 
+        /// <summary>
+        /// try getting Renault Twizy for example...
+        /// </summary>
+        public static void ScrapSite(string url, string xpath)
+        {
+            ////*[@id="mw-content-text"]/div/table[1]/tbody/tr[17]
         }
     }
 
