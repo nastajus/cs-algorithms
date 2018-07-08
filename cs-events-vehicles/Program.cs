@@ -193,7 +193,7 @@ namespace cs_events_vehicles
 
             //for now... no limit the number of vehicles spawned...
             //SpawnVehicles();
-            int numV = _vgRandom.Next(0, 2);
+            int numV = _vgRandom.Next(0, 3);
             while (numV-- > 0)
             {
                 _lane1.Add(VehicleGenerator.Create());
@@ -249,6 +249,9 @@ namespace cs_events_vehicles
             //public List<string> Examples = new List<string>();
         }
 
+        private static Random randomVehicleClassification = new Random();
+        private static Random randomExample = new Random();
+
         public static Vehicle Create()
         {
             //int num = _possibleVehicles ?? _possibleVehicles.Count;
@@ -258,14 +261,14 @@ namespace cs_events_vehicles
                 throw new Exception("need data to spawn cars, problem getting data loaded.");
             }
 
-            Random randomVehicleClassification = new Random();
+            
             var whichNum = randomVehicleClassification.Next(_possibleVehicles.Count);
             var whichVehicle = _possibleVehicles[whichNum];
 
 
             var examples = whichVehicle.Examples.Split(new[] { "," }, StringSplitOptions.None).ToList();
 
-            Random randomExample = new Random();
+            
             var exampleNum = randomExample.Next(examples.Count);
 
             Vehicle v = new Vehicle(whichVehicle.American, examples[exampleNum]);
