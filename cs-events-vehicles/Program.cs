@@ -238,15 +238,13 @@ namespace cs_events_vehicles
 
     class RoadwayAcceptor
     {
-        //now i lie:
-        //ok.
-        // kis ... for now bake road directly into VG class... no additional abstraction allowed...
         private Queue<Vehicle> _lane1 = new Queue<Vehicle>();
         private Queue<Vehicle> _lane2 = new Queue<Vehicle>();
 
         //would this make sense as an event instead? seems pointlessly over-complicated..
         public void Accept(Vehicle v)
         {
+            // kis ... for now send all vehicles to lane1 only... no additional abstraction allowed...
             _lane1.Enqueue(v);
         }
 
