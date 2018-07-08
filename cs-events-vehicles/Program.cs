@@ -31,7 +31,6 @@ namespace cs_events_vehicles
 
         private const double _pulse = 1000;
         private Timer _aTimer = new Timer();
-        private bool _active;
 
         public TrafficLights(int durationRedAll, int durationAmber, int durationGreen)
         {
@@ -53,7 +52,6 @@ namespace cs_events_vehicles
         {
             //begin normal operations, on assumption it is the solitary light in existance. 
 
-            _active = true;
             /* Light = */ SetNextLightColor();
 
 
@@ -91,25 +89,6 @@ namespace cs_events_vehicles
         }
 
 
-        public double IntervalSeconds
-        {
-            get { return _aTimer.Interval / 1000; }
-
-            [DefaultValue(Green1 + AmberMax1 + RedMax1)] //== 33 seconds
-            private set
-            {
-                if (value < Green1 + AmberMin1 + RedMin1 || value > Green1 + AmberMax1 + RedMax1)
-                {
-                    throw new ArgumentOutOfRangeException();
-                }
-
-                //i mean... i question the design decision to create this dependency from I.S. to Program... and later from VG to Program as well... but meh
-                _aTimer.Interval = value * 1000 / Program.SystemSpeedFactor; 
-            }
-        }
-
-
-
         private int _secondsElapsedInCycle = 0;
 
 
@@ -121,13 +100,35 @@ namespace cs_events_vehicles
             _secondsElapsedInCycle += 1;
 
 
-            switch (_secondsElapsedInCycle)
+            if (Light == ConsoleColor.Green && _secondsElapsedInCycle == _durationAmber)
             {
-                case _durationAmber:
-
+                _secondsElapsedInCycle = 0;
+                //switch
+                SetNextLightColor();
+            }
+            else if (Light == ConsoleColor.DarkYellow && _secondsElapsedInCycle == _durationRedAll)
+            {
+                _secondsElapsedInCycle = 0;
+                //switch
+                SetNextLightColor();
+            }
+            else if (Light == ConsoleColor.Red && _secondsElapsedInCycle == _durationRedAll)
+            {
+                _secondsElapsedInCycle = 0;
+                //switch
+                SetNextLightColor();
+            }
+            else if (Light == ConsoleColor.Red && _secondsElapsedInCycle == _durationRedJustThis)
+            {
+                _secondsElapsedInCycle = 0;
+                //switch
+                SetNextLightColor();
             }
 
-            _active = false;
+
+            Console.WriteLine($"current light color is ... {Light}");}
+
+
             //hmm okay i see...
             //internally within this single class...
             //I'M SUBSCRIBING to the event that raised INTERNALLY by the system whenever time passes.
