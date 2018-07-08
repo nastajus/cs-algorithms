@@ -109,11 +109,15 @@ namespace cs_events_vehicles
 
         private double _secondsElapsedInCycle = 0;
 
+
+        /// <summary>
+        /// begins as if was in green state initially
+        /// </summary>
         void OnPulseTickEvent(object source, ElapsedEventArgs e)
         {
             _secondsElapsedInCycle += 1;
 
-            if (_secondsElapsedInCycle == )
+            if (_secondsElapsedInCycle == _greenDuration)
 
             _active = false;
             //hmm okay i see...
