@@ -386,7 +386,6 @@ namespace cs_events_vehicles
         /// </summary>
         public static void ScrapSite(string url, string xpath)
         {
-            ////*[@id="mw-content-text"]/div/table[1]/tbody/tr[17]
             var client = new WebClient();
 
             //download the HTML
@@ -397,22 +396,16 @@ namespace cs_events_vehicles
             doc.LoadHtml(html);
 
             //now you could query the DOM. trying...
-
-            //HtmlNode myNode = doc.DocumentNode.SelectSingleNode("//div//table//tbody//tr");
             var myNodes = doc.DocumentNode.SelectNodes("//div//table//tbody//tr");
 
-            //example
-            //IEnumerable<string> results = myList.Where(s => s == search);
 
-            //building
-            //IEnumerable<string> results = node.ChildNodes.Where()
             List<string> searchMetrics = new List<string> { "Length", "Width", "Height" };
             var results = myNodes.Where(n => searchMetrics.Any(s => n.InnerText.Contains(s)));
+            //flawed... dunno which is which... hmm...
 
             foreach (HtmlNode node in results)
             {
                 //get corresponding TD element containing actual value
-
                 var desiredValue = node.ChildNodes.Where(c => c.Name == "td").ToList();
                 Console.WriteLine(desiredValue.FirstOrDefault()?.InnerText);
             }
