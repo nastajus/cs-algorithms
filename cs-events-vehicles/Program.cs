@@ -182,11 +182,19 @@ namespace cs_events_vehicles
             //begins generating cars
             _vgTimer.Enabled = true;
 
+
+
+        }
+        
+
+        public void OnLightChanged(ConsoleColor cc)
+        {
+            //Console.WriteLine("vehicles can move...");
+
             //for now... no limit the number of vehicles spawned...
             //SpawnVehicles();
             int numV = _vgRandom.Next(0, 2);
-            int i = numV;
-            while (i < numV--)
+            while (numV-- > 0)
             {
                 _lane1.Add(VehicleGenerator.Create());
 
@@ -195,13 +203,6 @@ namespace cs_events_vehicles
 
             }
 
-
-        }
-        
-
-        public void OnLightChanged(ConsoleColor cc)
-        {
-            Console.WriteLine("vehicles can move...");
         }
     }
 
@@ -262,7 +263,7 @@ namespace cs_events_vehicles
             var whichVehicle = _possibleVehicles[whichNum];
 
 
-            var examples = whichVehicle.Examples.Split(new[] { ", " }, StringSplitOptions.None).ToList();
+            var examples = whichVehicle.Examples.Split(new[] { "," }, StringSplitOptions.None).ToList();
 
             Random randomExample = new Random();
             var exampleNum = randomExample.Next(examples.Count);
@@ -283,6 +284,11 @@ namespace cs_events_vehicles
         }
         public string MarketSegment { get; private set; }
         public string Example { get; private set; }
+
+        public override string ToString()
+        {
+            return Example;
+        }
     }
 
 
