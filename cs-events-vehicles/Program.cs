@@ -121,13 +121,17 @@ namespace cs_events_vehicles
                 SetNextLightColor();
                 Console.ForegroundColor = Light;
                 Console.WriteLine($"current light color is ... {Light}");
+
+                // I wanna publish or emit or raise an event here... hmm...
+                // so how about ... this! 
+                LightChanged?.Invoke(Light);   //now... by itself... this isn't gonna trigger anything at this time... since I have subscribed to the LightChanged event yet.
             }
         }
 
         //i *think* this is called __Handler by convention... tbd
-        public delegate void LightChangeToHandler(ConsoleColor cc);
+        public delegate void LightChangedToHandler(ConsoleColor cc);
 
-        public event LightChangeToHandler LightChanging;
+        public event LightChangedToHandler LightChanged;
 
 
         // naming conventions:
