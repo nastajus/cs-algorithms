@@ -69,6 +69,14 @@ namespace cs_events_vehicles
             _roadwayWatching = roadwayWatching;
         }
 
+        //subcribable method since it matches delegate signature of Roadway
+        public void OnAppearsVehicle(Vehicle v)
+        {
+            //do something...
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine($" --- camera acknowledges existance of {v}");
+        }
+
         //can i modify Enqeue to emit an event when something happens? ehh...
         //i'd rather just do it from the vehicle... right?
         //what's the appropriate semantics here.... 
