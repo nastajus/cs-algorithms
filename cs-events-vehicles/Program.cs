@@ -408,30 +408,69 @@ namespace cs_events_vehicles
             //IEnumerable<string> results = node.ChildNodes.Where()
             List<string> searchMetrics = new List<string> { "Length", "Width", "Height" };
             var results = myNodes.Where(n => searchMetrics.Any(s => n.InnerText.Contains(s))).ToList();
-            
+
             //todo: ok super hacky time...
-            results.RemoveAll(s => String.IsNullOrWhiteSpace(s.InnerText));
+            //results.RemoveAll(s => String.IsNullOrWhiteSpace(s.InnerText));
+            List<string> hackytime = new List<string>();
+
 
             //compiler error: orderby ... cannot be inferred from the usage
             //You cannot OrderBy a string; you need to pass a lambda expression or delegate. You need to use Dynamic LINQ, as mentioned in the tutorial.
             //oh
-            results.OrderBy(r => r.);
+            //results.OrderBy(r => r.);
 
+            const string KNOWN_SPACE_NUMERIC_ENTITY = "&#160;";
 
             foreach (HtmlNode node in results)
             {
                 //get corresponding TD element containing actual value
                 var desiredValue = node.ChildNodes.Where(c => c.Name == "td").ToList();
-                Console.WriteLine(desiredValue.FirstOrDefault()?.InnerText.Trim());
+                var str = desiredValue.FirstOrDefault()?.InnerText.Trim().Replace(KNOWN_SPACE_NUMERIC_ENTITY, "");
+                hackytime.Add(str);
             }
+
+            hackytime = hackytime.OrderBy(s => s).ToList();
+            Metric m = new Metric();
+            m.Units = Metric.UnitTypes.Meters; //more hardcoding ...
+
+            foreach (string rawString in hackytime)
+            {
+                string[] strs = rawString?.Split(' ');
+                //string sMeters = strs.Select(s => s.FirstOrDefault());    //woopsie nope
+                string sMeters = strs?.ToList().Find(s => s.Contains("m")).Replace("m", "");
+                string sInches = strs?.ToList().Find(s => s.Contains("in")).Replace("in", "" ).Replace("(", "").Replace(")", "");
+
+                //smallest first, so height... then width... then length..
+
+                //todo: undo super hacky time ... also will be incorrect for tall vehicals like Vans, Trucks, and Busses...
+                if (m.Height == 0) { m.Height = float.Parse(sMeters ?? "0"); continue; }
+                if (m.Width == 0) { m.Width = float.Parse(sMeters ?? "0"); continue; }
+                if (m.Length == 0) { m.Length = float.Parse(sMeters ?? "0"); }
+                
+
+            }
+
+            Console.WriteLine(m);
         }
 
         class Metric
         {
-            public string Length;
-            public string Width;
-            public string Height;
+            public enum UnitTypes
+            {
+                Meters,
+                Inches
+            };
+
+            public UnitTypes Units;
+            public float Height;
+            public float Width;
+            public float Length;
             public HtmlNode Node;
+
+            public override string ToString()
+            {
+                return $"Height: {Height}, Width: {Width}, Length; {Length}";
+            }
         }
 
         public static void SearchGoogleForLinks()

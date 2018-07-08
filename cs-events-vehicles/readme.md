@@ -30,3 +30,8 @@ linq queries
 C# where list - https://stackoverflow.com/questions/1175645/find-an-item-in-list-by-linq 
 
 linq where any new object - https://stackoverflow.com/questions/10750146/linq-select-to-new-object
+
+
+equivalency of zero 
+===
+is == 0 okay for float? - https://stackoverflow.com/questions/485175/is-it-safe-to-check-floating-point-values-for-equality-to-0
