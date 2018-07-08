@@ -31,6 +31,7 @@ namespace cs_events_vehicles
 
             VehicleTrafficGenerator vg = new VehicleTrafficGenerator(roadway, SystemSpeedFactor);
 
+            //i'm questioning if this is the "right" place... especially now that I am considering burying it in a layer of abstraction...
             light.LightChanged += vg.OnLightChanged;
 
             Console.ReadKey();
@@ -44,11 +45,11 @@ namespace cs_events_vehicles
     /// </summary>
     class TrafficLightAssembly
     {
-        TrafficLightAssembly(int systemSpeedFactor, Queue<Vehicle> lane1Watching)
+        TrafficLightAssembly(int systemSpeedFactor, RoadwayAcceptor roadwayWatching)
         {
             TrafficLight tl = new TrafficLight(ON.RedMaxAll, ON.AmberMax, ON.Green, systemSpeedFactor);
 
-            TrafficCamera tc = new TrafficCamera(lane1Watching);
+            TrafficCamera tc = new TrafficCamera(roadwayWatching);
         }
     }
 
@@ -57,11 +58,11 @@ namespace cs_events_vehicles
     /// </summary>
     internal class TrafficCamera
     {
-        private Queue<Vehicle> _lane1Watching;
+        private RoadwayAcceptor _roadwayWatching;
 
-        public TrafficCamera(Queue<Vehicle> lane1Watching)
+        public TrafficCamera(RoadwayAcceptor roadwayWatching)
         {
-            _lane1Watching = lane1Watching;
+            _roadwayWatching = roadwayWatching;
         }
 
         //can i modify Enqeue to emit an event when something happens? ehh...
@@ -236,6 +237,9 @@ namespace cs_events_vehicles
         }
     }
 
+    /// <summary>
+    /// probably can rename to just Roadway... 
+    /// </summary>
     class RoadwayAcceptor
     {
         private Queue<Vehicle> _lane1 = new Queue<Vehicle>();
