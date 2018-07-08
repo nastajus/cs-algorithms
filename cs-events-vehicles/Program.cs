@@ -32,6 +32,8 @@ namespace cs_events_vehicles
             VehicleTrafficGenerator vg = new VehicleTrafficGenerator(roadway, SystemSpeedFactor);
 
             //i'm questioning if this is the "right" place... especially now that I am considering burying it in a layer of abstraction...
+
+            //in fact... i'd like to bury it... i don't wanna think about events at this top level... i don't think i should have to... except one concern is coupling.
             light.LightChanged += vg.OnLightChanged;
 
             Console.ReadKey();
