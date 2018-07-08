@@ -21,7 +21,7 @@ namespace cs_events_vehicles
 
         static void Main(string[] args)
         {
-            TrafficLights lights = new TrafficLights(ON.RedMax, ON.AmberMax, ON.Green);
+            TrafficLights lights = new TrafficLights(ON.RedMaxAll, ON.AmberMax, ON.Green);
         }
     }
 
@@ -33,16 +33,18 @@ namespace cs_events_vehicles
         private Timer _aTimer = new Timer();
         private bool _active;
 
-        public TrafficLights(int red, int amber, int green)
+        public TrafficLights(int durationRedAll, int durationAmber, int durationGreen)
         {
             //boot up into existance, barely alive.
             Light = ConsoleColor.Gray;
             _aTimer.Interval = _pulse; 
             _aTimer.Elapsed += new ElapsedEventHandler(OnPulseTickEvent);
 
-            _redDuration = red;
-            _amberDuration = amber;
-            _greenDuration = green;
+            _durationRedAll = durationRedAll;
+            _durationAmber = durationAmber;
+            _durationGreen = durationGreen;
+
+            _durationRedJustThis = durationRedAll + durationAmber + durationGreen;
 
             Init();
         }
@@ -57,9 +59,10 @@ namespace cs_events_vehicles
 
         }
 
-        private int _redDuration;
-        private int _amberDuration;
-        private int _greenDuration;
+        private readonly int _durationRedJustThis;
+        private readonly int _durationRedAll;
+        private readonly int _durationAmber;
+        private readonly int _durationGreen;
 
         public ConsoleColor Light
         {
@@ -111,14 +114,16 @@ namespace cs_events_vehicles
 
 
         /// <summary>
-        /// begins as if was in green state initially
+        /// begins as if was in durationGreen state initially
         /// </summary>
         void OnPulseTickEvent(object source, ElapsedEventArgs e)
         {
             _secondsElapsedInCycle += 1;
 
-            if (_secondsElapsedInCycle == _greenDuration)
+
+            switch (_secondsElapsedInCycle)
             {
+                case _durationAmber:
 
             }
 
@@ -140,8 +145,8 @@ namespace cs_events_vehicles
     class OntarioStandards
     {
 
-        public static readonly int RedMin = 2;
-        public static readonly int RedMax = 4;
+        public static readonly int RedMinAll = 2; //all directions...
+        public static readonly int RedMaxAll = 4;
         public static readonly int AmberMin = 3;
         public static readonly int AmberMax = 5;
         public static readonly int Green = 24; //hardcoded assuming only four lanes...
