@@ -25,9 +25,9 @@ namespace cs_events_vehicles
 
         static void Main(string[] args)
         {
-            TrafficLight light = new TrafficLight(ON.RedMaxAll, ON.AmberMax, ON.Green, SystemSpeedFactor);
-
             RoadwayAcceptor roadway = new RoadwayAcceptor();
+
+            TrafficLightAssembly trafficLightAssembly = new TrafficLightAssembly(roadway, SystemSpeedFactor);
 
             VehicleTrafficGenerator vg = new VehicleTrafficGenerator(roadway, SystemSpeedFactor);
 
@@ -36,7 +36,7 @@ namespace cs_events_vehicles
             //in fact... i'd like to bury it... i don't wanna think about events at this top level... i don't think i should have to... except one concern is coupling... i concede. i think should stay here.
             // oh
             // i don't need to "promote" it... i just need to use "dot accessors" to get at the composed object 
-            light.LightChanged += vg.OnLightChanged;
+            trafficLightAssembly._tl.LightChanged += vg.OnLightChanged;
 
             Console.ReadKey();
         }
@@ -51,7 +51,7 @@ namespace cs_events_vehicles
     {
         public TrafficLight _tl;
 
-        TrafficLightAssembly(int systemSpeedFactor, RoadwayAcceptor roadwayWatching)
+        public TrafficLightAssembly(RoadwayAcceptor roadwayWatching, int systemSpeedFactor = 1)
         {
             _tl = new TrafficLight(ON.RedMaxAll, ON.AmberMax, ON.Green, systemSpeedFactor);
 
