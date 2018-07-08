@@ -31,11 +31,6 @@ namespace cs_events_vehicles
 
             VehicleTrafficGenerator vg = new VehicleTrafficGenerator(roadway, SystemSpeedFactor);
 
-            //i'm questioning if this is the "right" place... especially now that I am considering burying it in a layer of abstraction...
-
-            //in fact... i'd like to bury it... i don't wanna think about events at this top level... i don't think i should have to... except one concern is coupling... i concede. i think should stay here.
-            // oh
-            // i don't need to "promote" it... i just need to use "dot accessors" to get at the composed object 
             trafficLightAssembly.TrafficLight.LightChanged += vg.OnLightChanged;
 
             Console.ReadKey();
@@ -256,6 +251,10 @@ namespace cs_events_vehicles
         {
             // kis ... for now send all vehicles to lane1 only... no additional abstraction allowed...
             _lane1.Enqueue(v);
+
+            //publish event that new car has arrived...
+            //why here though? 
+            //the purpose of "roadway acceptor" quickly degrades into ... wth. grr.
         }
 
         public IEnumerable<Vehicle> RoadwayVehicles { get {return _lane1; } }
