@@ -400,38 +400,25 @@ namespace cs_events_vehicles
 
             //HtmlNode myNode = doc.DocumentNode.SelectSingleNode("//div//table//tbody//tr");
             var myNodes = doc.DocumentNode.SelectNodes("//div//table//tbody//tr");
+
+            //example
+            //IEnumerable<string> results = myList.Where(s => s == search);
+
+            //building
+            //IEnumerable<string> results = node.ChildNodes.Where()
+            List<string> search = new List<string> { "Length", "Width", "Height" };
+            var results = myNodes.Where(n => n.InnerText == search);
+
             foreach (HtmlNode node in myNodes)
             {
-
                 if (node != null && node.InnerText.Contains("Length"))
                 {
                     //get corresponding TD element containing actual value
 
-                    //if (node.ChildNodes.Contains(c => c.Name == "td")) ;
                     var desiredValue = node.ChildNodes.Where(c => c.Name == "td").ToList();
                     Console.WriteLine(desiredValue.FirstOrDefault()?.InnerText);
-
-                    //foreach (HtmlNode c in node.ChildNodes)
-                    //{
-                    //    Console.WriteLine(c);
-                    //}
-                    //Console.WriteLine($"InnerText is : {node.InnerText}\nNode is : {node}\nCorresponding element Xpath is: {node.XPath}//td[1]");
                 }
-
             }
-
-            System.Threading.Thread.Sleep(5000000);
-
-
-
-            //foreach (HtmlNode link in doc.DocumentNode.SelectNodes("//a[@href]"))
-            //{
-            //    HtmlAttribute href = link.Attributes["href"];
-            //    if (href != null)
-            //    {
-            //        Console.WriteLine(href.Value);
-            //    }
-            //}
         }
 
         public static void SearchGoogleForLinks()
