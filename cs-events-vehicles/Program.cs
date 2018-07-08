@@ -33,7 +33,7 @@ namespace cs_events_vehicles
 
             trafficLightAssembly.TrafficLight.LightChanged += vg.OnLightChanged;
 
-            roadway.AppearsVehicle += trafficLightAssembly.tc.OnAppearsVehicle;
+            roadway.AppearsVehicle += trafficLightAssembly.TrafficCamera.OnAppearsVehicle;
 
             Console.ReadKey();
         }
@@ -47,13 +47,13 @@ namespace cs_events_vehicles
     class TrafficLightAssembly
     {
         public readonly TrafficLight TrafficLight;
-        public TrafficCamera tc;
+        public readonly TrafficCamera TrafficCamera;
 
         public TrafficLightAssembly(Roadway roadwayWatching, int systemSpeedFactor = 1)
         {
             TrafficLight = new TrafficLight(ON.RedMaxAll, ON.AmberMax, ON.Green, systemSpeedFactor);
 
-            tc = new TrafficCamera(roadwayWatching);
+            TrafficCamera = new TrafficCamera(roadwayWatching);
         }
     }
 
@@ -370,6 +370,14 @@ namespace cs_events_vehicles
         public override string ToString()
         {
             return Example;
+        }
+    }
+
+    class WebScraper
+    {
+        public static void ScrapSite()
+        {
+
         }
     }
 
