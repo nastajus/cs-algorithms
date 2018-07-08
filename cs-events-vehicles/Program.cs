@@ -16,7 +16,7 @@ namespace cs_events_vehicles
     /// <summary>
     /// This will begin as a complete and an extremely simplified dual event system
     /// TrafficLights frequency will be designed to be slightly adaptable based on vehicle accumulation.
-    /// VehicleGenerator will randomly spawn a periodic amount of cars that stop at the traffic lights
+    /// VehicleTrafficGenerator will randomly spawn a periodic amount of cars that stop at the traffic lights
     /// Only once the above is complete do I allow myself to expand into A) graphical representation or B) a connected city block network
     /// </summary>
     class Program
@@ -27,7 +27,7 @@ namespace cs_events_vehicles
         {
             TrafficLights lights = new TrafficLights(ON.RedMaxAll, ON.AmberMax, ON.Green, SystemSpeedFactor);
 
-            VehicleGenerator vg = new VehicleGenerator(SystemSpeedFactor);
+            VehicleTrafficGenerator vg = new VehicleTrafficGenerator(SystemSpeedFactor);
 
             lights.LightChanged += vg.OnLightChanged;
 
@@ -154,7 +154,7 @@ namespace cs_events_vehicles
 
 
     //yagni / kis --> do simplest implementation first: all vehicles are 1 size and all listen directly to lights only 
-    class VehicleGenerator
+    class VehicleTrafficGenerator
     {
         Timer _vgTimer = new Timer();
         Random _vgRandom = new Random();
@@ -163,31 +163,60 @@ namespace cs_events_vehicles
         List<Vehicle> _lane1 = new List<Vehicle>();
         List<Vehicle> _lane2 = new List<Vehicle>();
 
-        public VehicleGenerator(int systemSpeedFactor = 1)
+        private VehicleGenerator _vg;
+
+        public VehicleTrafficGenerator(int systemSpeedFactor = 1)
         {
             _vgTimer.Interval = 1000 / systemSpeedFactor;
-            
+
+            _vg = new VehicleGenerator();
+
             Init();
         }
 
 
         void Init()
         {
-            string path = Path.Combine(Directory.GetCurrentDirectory(), $"data", $"vehicle classification systems worldwide.csv");
-            LoadCSV(path);
+
 
             //begins generating cars
             _vgTimer.Enabled = true;
 
             //for now... no limit the number of vehicles spawned...
-            int numV = _vgRandom.Next(0, 2);
-            _lane1.Add(new Vehicle());
-
             //SpawnVehicles();
+            int numV = _vgRandom.Next(0, 2);
+            int i = numV;
+            while (i < numV--)
+            {
+                _lane1.Add(VehicleGenerator.Create());
+
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.WriteLine($" - drove up: {_lane1.Last()}");
+
+            }
+
+
+        }
+        
+
+        public void OnLightChanged(ConsoleColor cc)
+        {
+            Console.WriteLine("vehicles can move...");
+        }
+    }
+
+    class VehicleGenerator
+    {
+        private static List<VehicleClassification> _possibleVehicles;
+
+        public VehicleGenerator()
+        {
+            string path = Path.Combine(Directory.GetCurrentDirectory(), $"data", $"vehicle classification systems worldwide.csv");
+            _possibleVehicles = LoadCSV(path);
 
         }
 
-        void LoadCSV(string path)
+        private List<VehicleClassification> LoadCSV(string path)
         {
             CsvReader csv = new CsvReader(new StreamReader(path));
             csv.Configuration.RegisterClassMap<ClassificationCSVMap>();
@@ -195,8 +224,7 @@ namespace cs_events_vehicles
             //csv.Configuration.HeaderValidated = null;
             //csv.Configuration.MissingFieldFound = null;
             List<VehicleClassification> vcs = csv.GetRecords<VehicleClassification>().ToList();
-            var x = 34;
-
+            return vcs;
         }
 
         internal class ClassificationCSVMap : ClassMap<VehicleClassification>
@@ -206,7 +234,7 @@ namespace cs_events_vehicles
                 Map(m => m.American).Name("Market segment (American English)");
                 Map(m => m.British).Name("Market segment (British English)");
                 Map(m => m.Australian).Name("Market segment (Australian English)");
-                //Map(m => m.Examples).Name("Examples");
+                Map(m => m.Examples).Name("Examples");
                 //Map(m => m.Examples).Name("Examples").ConvertUsing();
             }
         }
@@ -216,37 +244,47 @@ namespace cs_events_vehicles
             public string American;
             public string British;
             public string Australian;
-            public List<string> Examples = new List<string>();
+            public string Examples;
+            //public List<string> Examples = new List<string>();
         }
 
-        void SpawnVehicles()
+        public static Vehicle Create()
         {
+            //int num = _possibleVehicles ?? _possibleVehicles.Count;
+            //int? num = _possibleVehicles?.Count;
+            if (_possibleVehicles == null || _possibleVehicles.Count <= 0)
+            {
+                throw new Exception("need data to spawn cars, problem getting data loaded.");
+            }
+
+            Random randomVehicleClassification = new Random();
+            var whichNum = randomVehicleClassification.Next(_possibleVehicles.Count);
+            var whichVehicle = _possibleVehicles[whichNum];
 
 
+            var examples = whichVehicle.Examples.Split(new[] { ", " }, StringSplitOptions.None).ToList();
+
+            Random randomExample = new Random();
+            var exampleNum = randomExample.Next(examples.Count);
+
+            Vehicle v = new Vehicle(whichVehicle.American, examples[exampleNum]);
+            
+            return v;
         }
 
-        public void OnLightChanged(ConsoleColor cc)
+    }
+
+    class Vehicle
+    {
+        public Vehicle(string marketSegment, string example)
         {
-            Console.WriteLine("vehicles can move...");
+            MarketSegment = marketSegment;
+            Example = example;
         }
+        public string MarketSegment { get; private set; }
+        public string Example { get; private set; }
     }
 
-    // Driver's Licence Classification Chart
-    // https://www.ontario.ca/document/official-mto-drivers-handbook/getting-your-drivers-licence#section-1
-
-    public enum VehicleClasses { ClassA, ClassB, ClassC, ClassD, ClassE, ClassF, ClassG, ClassM }
-
-    internal class Vehicle
-    {
-        public VehicleClasses VehicleClass { get; protected set; }
-    }
-
-    //https://en.wikipedia.org/wiki/Vehicle_size_class#Canada
-
-    class ClassA : Vehicle
-    {
-
-    }
 
     class OntarioStandards
     {
