@@ -22,6 +22,11 @@ namespace cs_events_vehicles
         static void Main(string[] args)
         {
             TrafficLights lights = new TrafficLights(ON.RedMaxAll, ON.AmberMax, ON.Green, SystemSpeedFactor);
+
+            VehicleGenerator vg = new VehicleGenerator();
+
+            lights.LightChanged += vg.OnLightChanged;
+
             Console.ReadKey();
         }
     }
@@ -141,19 +146,21 @@ namespace cs_events_vehicles
         // search for "convention"
         // https://www.codeproject.com/Articles/20550/C-Event-Implementation-Fundamentals-Best-Practices
 
-        //no, not here... not On... I think?
-        public void OnLightChanging()
-        {
-
-        }
-
     }
 
 
     //yagni / kis --> do simplest implementation first: all vehicles are 1 size and all listen directly to lights only 
     class VehicleGenerator
     {
+        public VehicleGenerator()
+        {
+            
+        }
 
+        public void OnLightChanged(ConsoleColor cc)
+        {
+            Console.WriteLine("vehicles can move...");
+        }
     }
 
 
