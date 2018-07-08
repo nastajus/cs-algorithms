@@ -400,6 +400,7 @@ namespace cs_events_vehicles
 
 
             List<string> searchMetrics = new List<string> { "Length", "Width", "Height" };
+            var r = myNodes.SelectMany(n => n.InnerText.Contains("Length")).ToList();
             var results = myNodes.Where(n => searchMetrics.Any(s => n.InnerText.Contains(s))).Select(m => new Metric
             {
                 Node = n, //well, poopie. 
