@@ -230,7 +230,7 @@ namespace cs_events_vehicles
             int numV = _vgRandom.Next(0, 3);
             while (numV-- > 0)
             {
-                _ra.DrivesOnto(VehicleGenerator.Create());
+                _ra.DrivenOnBy(VehicleGenerator.Create());
                 Console.ForegroundColor = ConsoleColor.Gray;
                 Console.WriteLine($" - drove up: {_ra.RoadwayVehicles.Last()}");
 
@@ -243,11 +243,14 @@ namespace cs_events_vehicles
     /// </summary>
     class Roadway
     {
+        public delegate void AppearsVehicleHandler(Vehicle v);
+        public event AppearsVehicleHandler AppearsVehicle;
+
         private Queue<Vehicle> _lane1 = new Queue<Vehicle>();
         private Queue<Vehicle> _lane2 = new Queue<Vehicle>();
 
         //would this make sense as an event instead? seems pointlessly over-complicated..
-        public void DrivesOnto(Vehicle v)
+        public void DrivenOnBy(Vehicle v)
         {
             // kis ... for now send all vehicles to lane1 only... no additional abstraction allowed...
             _lane1.Enqueue(v);
@@ -257,7 +260,13 @@ namespace cs_events_vehicles
             //the purpose of "roadway acceptor" quickly degrades into ... wth. grr.
             //ok
             //resolved.
-            //this is too abstract for my tastes, i'm going to resolve this by making the interface of `DrivesOnto` more literal, and remove the abstraction in the name `Roadway`.
+            //this is too abstract for my tastes, i'm going to resolve this by making the interface of `DrivenOnBy` more literal, and remove the abstraction in the name `Roadway`.
+
+            //publish
+            //AppearsVehicle(); -- herp derp nope unun.
+            AppearsVehicle?.Invoke(v); //-- yessir!
+            //this will trigger (RAISE) any sbuscribed methods.
+
         }
 
         public IEnumerable<Vehicle> RoadwayVehicles { get {return _lane1; } }
