@@ -27,7 +27,8 @@ namespace cs_events_vehicles
 
         static void Main(string[] args)
         {
-            WebScraper.SearchPage();
+            //WebScraper.SearchGoogleForLinks();
+            WebScraper.ScrapSite("","");
 
             Roadway roadway = new Roadway();
 
@@ -386,9 +387,54 @@ namespace cs_events_vehicles
         public static void ScrapSite(string url, string xpath)
         {
             ////*[@id="mw-content-text"]/div/table[1]/tbody/tr[17]
+            var client = new WebClient();
+
+            //download the HTML
+            string html = client.DownloadString("https://en.wikipedia.org/wiki/Renault_Twizy");
+
+            //now feed it to html agility pack
+            HtmlDocument doc = new HtmlDocument();
+            doc.LoadHtml(html);
+
+            //now you could query the DOM. trying...
+
+            //HtmlNode myNode = doc.DocumentNode.SelectSingleNode("//div//table//tbody//tr");
+            var myNodes = doc.DocumentNode.SelectNodes("//div//table//tbody//tr");
+            foreach (HtmlNode node in myNodes)
+            {
+
+                if (node != null && node.InnerText.Contains("Length"))
+                {
+                    //get corresponding TD element containing actual value
+
+                    //if (node.ChildNodes.Contains(c => c.Name == "td")) ;
+                    var desiredValue = node.ChildNodes.Where(c => c.Name == "td").ToList();
+                    Console.WriteLine(desiredValue.FirstOrDefault()?.InnerText);
+
+                    //foreach (HtmlNode c in node.ChildNodes)
+                    //{
+                    //    Console.WriteLine(c);
+                    //}
+                    //Console.WriteLine($"InnerText is : {node.InnerText}\nNode is : {node}\nCorresponding element Xpath is: {node.XPath}//td[1]");
+                }
+
+            }
+
+            System.Threading.Thread.Sleep(5000000);
+
+
+
+            //foreach (HtmlNode link in doc.DocumentNode.SelectNodes("//a[@href]"))
+            //{
+            //    HtmlAttribute href = link.Attributes["href"];
+            //    if (href != null)
+            //    {
+            //        Console.WriteLine(href.Value);
+            //    }
+            //}
         }
 
-        public static void SearchPage()
+        public static void SearchGoogleForLinks()
         {
             var client = new WebClient();
 
@@ -409,6 +455,17 @@ namespace cs_events_vehicles
                     Console.WriteLine(href.Value);
                 }
             }
+            //HtmlNode node = doc.DocumentNode.SelectSingleNode("//td[@class='dnTableCell']//a[text()='High']/../../td[3]");
+
+            //https://en.wikipedia.org/wiki/Renault_Twizy
+            //copy-pasted XPath from Chrome
+            //tr:     //*[@id="mw-content-text"]/div/table[1]/tbody/tr[17]
+            //Length: //*[@id="mw-content-text"]/div/table[1]/tbody/tr[17]/th
+            //2.32..: //*[@id="mw-content-text"]/div/table[1]/tbody/tr[17]/td
+
+            //so maybe... i can do this:... //
+            //      //div//table//tbody//tr   ??? does this get me things?
+
 
         }
     }
