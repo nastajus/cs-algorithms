@@ -15,7 +15,7 @@ namespace cs_events_vehicles
 {
     /// <summary>
     /// This will begin as a complete and an extremely simplified dual event system
-    /// TrafficLights frequency will be designed to be slightly adaptable based on vehicle accumulation.
+    /// TrafficLight frequency will be designed to be slightly adaptable based on vehicle accumulation.
     /// VehicleTrafficGenerator will randomly spawn a periodic amount of cars that stop at the traffic lights
     /// Only once the above is complete do I allow myself to expand into A) graphical representation or B) a connected city block network
     /// </summary>
@@ -25,11 +25,11 @@ namespace cs_events_vehicles
 
         static void Main(string[] args)
         {
-            TrafficLights lights = new TrafficLights(ON.RedMaxAll, ON.AmberMax, ON.Green, SystemSpeedFactor);
+            TrafficLight light = new TrafficLight(ON.RedMaxAll, ON.AmberMax, ON.Green, SystemSpeedFactor);
 
             VehicleTrafficGenerator vg = new VehicleTrafficGenerator(SystemSpeedFactor);
 
-            lights.LightChanged += vg.OnLightChanged;
+            light.LightChanged += vg.OnLightChanged;
 
             Console.ReadKey();
         }
@@ -37,9 +37,41 @@ namespace cs_events_vehicles
 
 
     /// <summary>
-    /// this <see cref="TrafficLights"/> refers to the system of equipment necessary for a single intersection to operate, including TrafficLights, TimingAdjusterAI, ...
+    /// this class refers to the system of equipment necessary for a single roadway to operate, including TrafficLight, Camera, and TimingAdjusterAI.
+    /// Not to be confused with a city-centralized controller, and not even 2-4 roadways for a complete intersection! 
     /// </summary>
-    class TrafficLights
+    class TrafficLightAssembly
+    {
+        TrafficLightAssembly(int systemSpeedFactor, Queue<Vehicle> lane1Watching)
+        {
+            TrafficLight tl = new TrafficLight(ON.RedMaxAll, ON.AmberMax, ON.Green, systemSpeedFactor);
+
+            TrafficCamera tc = new TrafficCamera(lane1Watching);
+        }
+    }
+
+    /// <summary>
+    /// detects cars in oncoming Roadway it faces (for now stay with lane1 hardcoding)
+    /// </summary>
+    internal class TrafficCamera
+    {
+        private Queue<Vehicle> _lane1Watching;
+
+        public TrafficCamera(Queue<Vehicle> lane1Watching)
+        {
+            _lane1Watching = lane1Watching;
+        }
+
+        //can i modify Enqeue to emit an event when something happens? ehh...
+        //i'd rather just do it from the vehicle... right?
+        //what's the appropriate semantics here.... 
+        //ultimately this entire program is all just a model that is of lesser accuracy than reality
+    }
+
+    /// <summary>
+    /// this class represents current state & control of traffic lights as they move through phases like green, amber, red.
+    /// </summary>
+    class TrafficLight
     {
         //i *think* this is called __Handler by convention... tbd
         public delegate void LightChangedToHandler(ConsoleColor cc);
@@ -58,7 +90,7 @@ namespace cs_events_vehicles
         private readonly int _durationGreen;
 
 
-        public TrafficLights(int durationRedAll, int durationAmber, int durationGreen, int systemSpeedFactor = 1)
+        public TrafficLight(int durationRedAll, int durationAmber, int durationGreen, int systemSpeedFactor = 1)
         {
             //boot up into existance, barely alive.
             Light = ConsoleColor.Gray;
@@ -154,8 +186,8 @@ namespace cs_events_vehicles
         Random _vgRandom = new Random();
 
         // kis ... for now bake road directly into VG class... no additional abstraction allowed...
-        List<Vehicle> _lane1 = new List<Vehicle>();
-        List<Vehicle> _lane2 = new List<Vehicle>();
+        Queue<Vehicle> _lane1 = new Queue<Vehicle>();
+        Queue<Vehicle> _lane2 = new Queue<Vehicle>();
 
         private VehicleGenerator _vg;
 
@@ -190,8 +222,7 @@ namespace cs_events_vehicles
             int numV = _vgRandom.Next(0, 3);
             while (numV-- > 0)
             {
-                _lane1.Add(VehicleGenerator.Create());
-
+                _lane1.Enqueue(VehicleGenerator.Create());
                 Console.ForegroundColor = ConsoleColor.Gray;
                 Console.WriteLine($" - drove up: {_lane1.Last()}");
 
@@ -293,5 +324,4 @@ namespace cs_events_vehicles
         public static readonly int Green = 24; //hardcoded assuming only four lanes...
 
     }
-
 }
