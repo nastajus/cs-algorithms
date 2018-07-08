@@ -386,6 +386,7 @@ namespace cs_events_vehicles
         /// </summary>
         public static void ScrapSite(string url, string xpath)
         {
+            ////*[@id="mw-content-text"]/div/table[1]/tbody/tr[17]
             var client = new WebClient();
 
             //download the HTML
@@ -396,22 +397,32 @@ namespace cs_events_vehicles
             doc.LoadHtml(html);
 
             //now you could query the DOM. trying...
+
+            //HtmlNode myNode = doc.DocumentNode.SelectSingleNode("//div//table//tbody//tr");
             var myNodes = doc.DocumentNode.SelectNodes("//div//table//tbody//tr");
 
+            //example
+            //IEnumerable<string> results = myList.Where(s => s == search);
 
+            //building
+            //IEnumerable<string> results = node.ChildNodes.Where()
             List<string> searchMetrics = new List<string> { "Length", "Width", "Height" };
-            //this is dumb. i dunno linq well enough yet. 
-            List<HtmlNode> r = myNodes.SelectMany(n => myNodes.Where(nn => searchMetrics.Any(s=>nn.InnerText.Contains(s)))).ToList();
-            var results = myNodes.Where(n => searchMetrics.Any(s => n.InnerText.Contains(s))).ToList();//.Select(m => new Metric()).ToList();
-            //flawed... dunno which is which... hmm...
-            //doubly flawed... lol .... okay so i'm making a new valid linq query that nests stuff... but then it becomes invalid to iterate upon, losing it's node quality... unleess... i jam the node in there too! 
-            //unfortunately i cannot access "n", defined in "Where", later on in "Select"... at least it seems that's the case in my usage here.
+            var results = myNodes.Where(n => searchMetrics.Any(s => n.InnerText.Contains(s))).ToList();
+            
+            //todo: ok super hacky time...
+            results.RemoveAll(s => String.IsNullOrWhiteSpace(s.InnerText));
+
+            //compiler error: orderby ... cannot be inferred from the usage
+            //You cannot OrderBy a string; you need to pass a lambda expression or delegate. You need to use Dynamic LINQ, as mentioned in the tutorial.
+            //oh
+            results.OrderBy(r => r.);
+
 
             foreach (HtmlNode node in results)
             {
                 //get corresponding TD element containing actual value
                 var desiredValue = node.ChildNodes.Where(c => c.Name == "td").ToList();
-                Console.WriteLine(desiredValue.FirstOrDefault()?.InnerText);
+                Console.WriteLine(desiredValue.FirstOrDefault()?.InnerText.Trim());
             }
         }
 
