@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 using ON = cs_events_vehicles.OntarioStandards;
+using CsvHelper;
+using CsvHelper.Configuration;
 
 namespace cs_events_vehicles
 {
@@ -162,12 +166,16 @@ namespace cs_events_vehicles
         public VehicleGenerator(int systemSpeedFactor = 1)
         {
             _vgTimer.Interval = 1000 / systemSpeedFactor;
+            
             Init();
         }
 
 
         void Init()
         {
+            string path = Path.Combine(Directory.GetCurrentDirectory(), $"data", $"vehicle classification systems worldwide.csv");
+            LoadCSV(path);
+
             //begins generating cars
             _vgTimer.Enabled = true;
 
@@ -177,6 +185,38 @@ namespace cs_events_vehicles
 
             //SpawnVehicles();
 
+        }
+
+        void LoadCSV(string path)
+        {
+            CsvReader csv = new CsvReader(new StreamReader(path));
+            csv.Configuration.RegisterClassMap<ClassificationCSVMap>();
+            csv.Configuration.Delimiter = ",";
+            //csv.Configuration.HeaderValidated = null;
+            //csv.Configuration.MissingFieldFound = null;
+            List<VehicleClassification> vcs = csv.GetRecords<VehicleClassification>().ToList();
+            var x = 34;
+
+        }
+
+        internal class ClassificationCSVMap : ClassMap<VehicleClassification>
+        {
+            public ClassificationCSVMap()
+            {
+                Map(m => m.American).Name("Market segment (American English)");
+                Map(m => m.British).Name("Market segment (British English)");
+                Map(m => m.Australian).Name("Market segment (Australian English)");
+                //Map(m => m.Examples).Name("Examples");
+                //Map(m => m.Examples).Name("Examples").ConvertUsing();
+            }
+        }
+
+        internal class VehicleClassification
+        {
+            public string American;
+            public string British;
+            public string Australian;
+            public List<string> Examples = new List<string>();
         }
 
         void SpawnVehicles()
@@ -195,9 +235,15 @@ namespace cs_events_vehicles
     // https://www.ontario.ca/document/official-mto-drivers-handbook/getting-your-drivers-licence#section-1
 
     public enum VehicleClasses { ClassA, ClassB, ClassC, ClassD, ClassE, ClassF, ClassG, ClassM }
-    public Dictionary<VehicleClasses,Vehicle>
 
     internal class Vehicle
+    {
+        public VehicleClasses VehicleClass { get; protected set; }
+    }
+
+    //https://en.wikipedia.org/wiki/Vehicle_size_class#Canada
+
+    class ClassA : Vehicle
     {
 
     }
