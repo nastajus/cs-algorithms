@@ -403,7 +403,7 @@ namespace cs_events_vehicles
             string html = null;
             try
             {
-                html = client.DownloadString("https://en.wikipedia.org/wiki/" + vehicleName);
+                html = client.DownloadString("https://en.wikipedia.org/wiki/" + "Mazda_MX-5");
             }
             catch (System.Net.WebException e)
             {
@@ -420,6 +420,10 @@ namespace cs_events_vehicles
 
             //HtmlNode myNode = doc.DocumentNode.SelectSingleNode("//div//table//tbody//tr");
             var myNodes = doc.DocumentNode.SelectNodes("//div//table//tbody//tr");
+
+            //.SelectNodes("//a[@class='tim_new']").Select(n => n.Attributes["href"].Value);
+            //.SelectNodes("//th[@scope='row']/following-sibling::td")
+
 
             //example
             //IEnumerable<string> results = myList.Where(s => s == search);
@@ -443,6 +447,22 @@ namespace cs_events_vehicles
 
             //below is broken by this: https://en.wikipedia.org/wiki/Mazda_MX-5#First_generation_(NA)
             //returning a very long string 
+            //should've used this more accurate path instead perhaps ??? //*[@id="mw-content-text"]/div/table[3]/tbody/tr/td/table/tbody/tr[16]/th
+            /*
+             * Mazda MX-5 (NA)
+OverviewProduction
+May 1989â€“1997Designer
+Tsutomu Matano, Shunji Tanaka (1984, 1986)Body and chassisBodystyle
+2-door roadsterPlatform
+Mazda NAPowertrainEngine
+1598cc B6ZE(RS) DOHC I41839cc BP DOHC I4Transmission
+5-speed manual4-speed automaticDimensionsWheelbase
+2,265mm (89.2in)Length
+3,950mm (155.5in)Width
+1,675mm (65.9in)Height
+1,230mm (48.4in)Curbweight
+940kg (2,070lb)
+             */
             foreach (HtmlNode node in results)
             {
                 //get corresponding TD element containing actual value
