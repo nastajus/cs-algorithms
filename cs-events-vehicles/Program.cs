@@ -350,17 +350,17 @@ namespace cs_events_vehicles
             
             var whichNum = _randomVehicleClassification.Next(_possibleVehicles.Count);
             var whichVehicle = _possibleVehicles[whichNum];
-            var examples = whichVehicle.Examples.Split(new[] {","}, StringSplitOptions.None).ToList();
+            var examples = whichVehicle.Examples.Split(new[] {", "}, StringSplitOptions.None).ToList();
             
             var exampleNum = _randomExample.Next(examples.Count);
             var example = examples[exampleNum];
 
             Vehicle v = new Vehicle(whichVehicle.American, example);
 
-            //var res = WikipediaWebScraper.ScrapeForDimensions("Renault Twizy");
+            var res = WikipediaWebScraper.ScrapeForDimensions(example);
             //shitty version for now:
-            //Console.ForegroundColor = ConsoleColor.White;
-            //Console.WriteLine(example + " : " + res);
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(example + " : " + res);
 
             return v;
         }
@@ -400,8 +400,18 @@ namespace cs_events_vehicles
             vehicleName = vehicleName.Replace(" ", "_");
 
             //download the HTML
-            string html = client.DownloadString("https://en.wikipedia.org/wiki/" + vehicleName);
+            string html = null;
+            try
+            {
+                html = client.DownloadString("https://en.wikipedia.org/wiki/" + vehicleName);
+            }
+            catch (System.Net.WebException e)
+            {
+                Console.WriteLine($"sadly, {vehicleName} threw up");
+            }
 
+            if (html == null) return new Metric();
+            
             //now feed it to html agility pack
             HtmlDocument doc = new HtmlDocument();
             doc.LoadHtml(html);
@@ -431,6 +441,8 @@ namespace cs_events_vehicles
 
             const string KNOWN_SPACE_NUMERIC_ENTITY = "&#160;";
 
+            //below is broken by this: https://en.wikipedia.org/wiki/Mazda_MX-5#First_generation_(NA)
+            //returning a very long string 
             foreach (HtmlNode node in results)
             {
                 //get corresponding TD element containing actual value
@@ -447,15 +459,16 @@ namespace cs_events_vehicles
             {
                 string[] strs = rawString?.Split(' ');
                 //string sMeters = strs.Select(s => s.FirstOrDefault());    //woopsie nope
+                string sMillimeters = strs?.ToList().Find(s => s.Contains("mm")).Replace("mm", "").Replace(",","");
                 string sMeters = strs?.ToList().Find(s => s.Contains("m")).Replace("m", "");
                 string sInches = strs?.ToList().Find(s => s.Contains("in")).Replace("in", "" ).Replace("(", "").Replace(")", "");
 
                 //smallest first, so height... then width... then length..
 
                 //todo: undo super hacky time ... also will be incorrect for tall vehicals like Vans, Trucks, and Busses...
-                if (m.Height == 0) { m.Height = float.Parse(sMeters ?? "0"); continue; }
-                if (m.Width == 0) { m.Width = float.Parse(sMeters ?? "0"); continue; }
-                if (m.Length == 0) { m.Length = float.Parse(sMeters ?? "0"); }
+                if (m.Height == 0) { m.Height = float.Parse(sMillimeters ?? sMeters ?? "0"); continue; }
+                if (m.Width == 0) { m.Width = float.Parse(sMillimeters ?? sMeters ?? "0"); continue; }
+                if (m.Length == 0) { m.Length = float.Parse(sMillimeters ?? sMeters ?? "0"); }
                 
 
             }
