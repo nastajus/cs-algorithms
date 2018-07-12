@@ -395,7 +395,6 @@ namespace cs_events_vehicles
          * //table//tbody//tr//th[@scope='row']/following-sibling::td
          */
 
-
         /// <summary>
         /// try getting Renault Twizy for example...
         /// </summary>
@@ -423,61 +422,53 @@ namespace cs_events_vehicles
             HtmlDocument doc = new HtmlDocument();
             doc.LoadHtml(html);
 
-            //var myNodes = doc.DocumentNode.SelectNodes("//th[text()='Length' or text()='Width' or text()='Height']/following-sibling::td");
-            var lengthNodes = doc.DocumentNode.SelectNodes("//th[text()='Length']/following-sibling::td");
-            var widthNodes = doc.DocumentNode.SelectNodes("//th[text()='Width']/following-sibling::td");
-            var heightNodes = doc.DocumentNode.SelectNodes("//th[text()='Height']/following-sibling::td");
-
-            if (lengthNodes.Count > 1 || widthNodes.Count > 1 || heightNodes.Count > 1)
-            {
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine($" {vehicleName} has many results! {lengthNodes}! {widthNodes}! {heightNodes}! lwh!");
-            }
-
             const string KNOWN_SPACE_NUMERIC_ENTITY = "&#160;";
+            List<string> searchMetrics = new List<string> { "Length", "Width", "Height" };
+            //var myNodes = doc.DocumentNode.SelectNodes("//th[text()='Length' or text()='Width' or text()='Height']/following-sibling::td");
 
-
-
-
-
-            var results = myNodes.Where(n => searchMetrics.Any(s => n.InnerText.Contains(s))).ToList();
-
-            //todo: ok super hacky time...
-            //results.RemoveAll(s => String.IsNullOrWhiteSpace(s.InnerText));
-            List<string> hackytime = new List<string>();
-
-
-
-            foreach (HtmlNode node in results)
+            var m = new Metric();
+            foreach (var search in searchMetrics)
             {
-                //get corresponding TD element containing actual value
-                var desiredValue = node.ChildNodes.Where(c => c.Name == "td").ToList();
-                var str = desiredValue.FirstOrDefault()?.InnerText.Trim().Replace(KNOWN_SPACE_NUMERIC_ENTITY, "");
-                hackytime.Add(str);
-            }
+                //1. parse DOM for specific types
+                var nodes = doc.DocumentNode.SelectNodes($"//th[text()='{search}']/following-sibling::td");
 
-            Metric m = new Metric();
-            m.Units = Metric.UnitTypes.Meters; //more hardcoding ...
+                //2. strip out garbage
+                var numericStringAnyUnits = nodes.FirstOrDefault()?.InnerText.Trim().Replace(KNOWN_SPACE_NUMERIC_ENTITY, "");
 
-            foreach (string rawString in hackytime)
-            {
-                string[] strs = rawString?.Split(' ');
-                //string sMeters = strs.Select(s => s.FirstOrDefault());    //woopsie nope
-                string sMillimeters = strs?.ToList().Find(s => s.Contains("mm")).Replace("mm", "").Replace(",","");
+                //3. meters conversion
+                string[] strs = numericStringAnyUnits?.Split(' ');
+                string sMillimeters = strs?.ToList().Find(s => s.Contains("mm")).Replace("mm", "").Replace(",", "");
                 string sMeters = strs?.ToList().Find(s => s.Contains("m")).Replace("m", "");
-                string sInches = strs?.ToList().Find(s => s.Contains("in")).Replace("in", "" ).Replace("(", "").Replace(")", "");
+                string sInches = strs?.ToList().Find(s => s.Contains("in")).Replace("in", "").Replace("(", "").Replace(")", "");
 
-                //smallest first, so height... then width... then length..
+                //4. store number
+                float metric = float.Parse(sMillimeters ?? sMeters ?? sInches ?? "0");
+                PropertyInfo prop = m.GetType().GetProperty(search);
+                prop?.SetValue(m, metric);
 
-                //todo: undo super hacky time ... also will be incorrect for tall vehicals like Vans, Trucks, and Busses...
-                if (m.Height == 0) { m.Height = float.Parse(sMillimeters ?? sMeters ?? "0"); continue; }
-                if (m.Width == 0) { m.Width = float.Parse(sMillimeters ?? sMeters ?? "0"); continue; }
-                if (m.Length == 0) { m.Length = float.Parse(sMillimeters ?? sMeters ?? "0"); }
-                
+                //5. alert large results sets
+                if (m.Units == null && nodes.Count > 1)
+                {
+                    {
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.WriteLine($" {vehicleName} has many results! {nodes.Count} !");
+                    }
+                }
+
+                //6. store metric type
+                if (m.Units == null && sMillimeters != null && sMeters != null)
+                {
+                    m.Units = Metric.UnitTypes.Meters;
+                }
+                else if (m.Units == null && sInches != null)
+                {
+                    m.Units = Metric.UnitTypes.Inches;
+                }
 
             }
 
-            //Console.WriteLine(m);
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(m);
             return m;
         }
 
@@ -489,15 +480,18 @@ namespace cs_events_vehicles
                 Inches
             };
 
-            public UnitTypes Units;
-            public float Height;
-            public float Width;
-            public float Length;
+            public UnitTypes? Units;
+
+            //just a shorthand abbreviation to output the units consisely
+            public string U => Units.ToString().Substring(0, 1).ToLower(); 
+            public float Height { get; private set; }
+            public float Width { get; private set; }
+            public float Length { get; private set; }
             public HtmlNode Node;
 
             public override string ToString()
             {
-                return $"Height: {Height}, Width: {Width}, Length; {Length}";
+                return $"Height: {Height}{U}, Width: {Width}{U}, Length; {Length}{U}.";
             }
         }
 
