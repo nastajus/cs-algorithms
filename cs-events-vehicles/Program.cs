@@ -410,7 +410,7 @@ namespace cs_events_vehicles
             string html = null;
             try
             {
-                data = client.DownloadData("https://en.wikipedia.org/wiki/Ford_Super_Duty");// + vehicleName);
+                data = client.DownloadData("https://en.wikipedia.org/wiki/" + vehicleName);
                 html = Encoding.UTF8.GetString(data);
             }
             catch (System.Net.WebException e)
@@ -436,16 +436,19 @@ namespace cs_events_vehicles
                 //1. parse DOM for specific types
                 var nodes = doc.DocumentNode.SelectNodes($"//th[text()='{search}']/following-sibling::td");
 
-                foreach (var node in nodes)
+                if (nodes != null)
                 {
-                    var liNodes = node.SelectNodes("./div/ul/li");
-                    if (liNodes != null)
+                    foreach (var node in nodes)
                     {
-                        //straight up discard outermost for innermost list
-                        nodes = liNodes;
-                        Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine($" {vehicleName} has nested lists! ");
-
+                        var liNodes = node.SelectNodes("./div/ul/li");
+                        if (liNodes != null)
+                        {
+                            //straight up discard outermost for innermost list
+                            nodes = liNodes;
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.WriteLine($" {vehicleName} has nested lists! ");
+                            break;
+                        }
                     }
                 }
 
@@ -453,12 +456,7 @@ namespace cs_events_vehicles
                 var numericStringAnyUnits = nodes.FirstOrDefault()?.InnerText.Trim().Replace(KNOWN_SPACE_NUMERIC_ENTITY, "");
 
                 //3. conversion
-
-                // https://en.wikipedia.org/wiki/Ford_Super_Duty
-                // there's ranges:       Height	76.2–81.3 in (1,935–2,065 mm)   appears as â€ "1935â€“2065" ... needed to ensure received as UTF-8 to resolve
-
-                // a normal space works for separating ... 
-                string[] strs = numericStringAnyUnits?.Split(' ');
+                string[] strs = numericStringAnyUnits?.Split(' '); // a normal space works for separating ... 
                 string sMillimeters = strs?.ToList().Find(s => s.Contains("mm")).Replace("mm", "").Replace(",", "").Replace("(", "").Replace(")", "").Split(KNOWN_EN_DASH).First();
                 string sMeters = strs?.ToList().Find(s => s.Contains("m")).Replace("m", "").Split(KNOWN_EN_DASH).First();//.Replace(",", ".");
                 string sInches = strs?.ToList().Find(s => s.Contains("in")).Replace("in", "").Replace("(", "").Replace(")", "").Split(KNOWN_EN_DASH).First();
