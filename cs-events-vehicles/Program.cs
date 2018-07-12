@@ -410,7 +410,8 @@ namespace cs_events_vehicles
             string html = null;
             try
             {
-                data = client.DownloadData("https://en.wikipedia.org/wiki/" + vehicleName);
+                vehicleName = "Toyota_Tundra";
+                data = client.DownloadData("https://en.wikipedia.org/wiki/" + vehicleName); 
                 html = Encoding.UTF8.GetString(data);
             }
             catch (System.Net.WebException e)
@@ -455,8 +456,10 @@ namespace cs_events_vehicles
                 //2. strip out garbage
                 var numericStringAnyUnits = nodes.FirstOrDefault()?.InnerText.Trim().Replace(KNOWN_SPACE_NUMERIC_ENTITY, "");
 
+                //Toyota_Tundra has 2000-04: 217.5 in (5,524 mm)
+
                 //3. conversion
-                string[] strs = numericStringAnyUnits?.Split(' '); // a normal space works for separating ... 
+                string[] strs = numericStringAnyUnits?.Split(':').Last()?.Split(' '); // a normal space works for separating ... 
                 string sMillimeters = strs?.ToList().Find(s => s.Contains("mm")).Replace("mm", "").Replace(",", "").Replace("(", "").Replace(")", "").Split(KNOWN_EN_DASH).First();
                 string sMeters = strs?.ToList().Find(s => s.Contains("m")).Replace("m", "").Split(KNOWN_EN_DASH).First();//.Replace(",", ".");
                 string sInches = strs?.ToList().Find(s => s.Contains("in")).Replace("in", "").Replace("(", "").Replace(")", "").Split(KNOWN_EN_DASH).First();
