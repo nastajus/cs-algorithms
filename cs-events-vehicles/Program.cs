@@ -410,7 +410,7 @@ namespace cs_events_vehicles
             string html = null;
             try
             {
-                vehicleName = "Toyota_Tundra";
+                vehicleName = "Lincoln_Town_Car";
                 data = client.DownloadData("https://en.wikipedia.org/wiki/" + vehicleName); 
                 html = Encoding.UTF8.GetString(data);
             }
@@ -439,6 +439,7 @@ namespace cs_events_vehicles
 
                 if (nodes != null)
                 {
+                    //check for inner nested lest
                     foreach (var node in nodes)
                     {
                         var liNodes = node.SelectNodes("./div/ul/li");
@@ -451,6 +452,18 @@ namespace cs_events_vehicles
                             break;
                         }
                     }
+
+                    //check for superscript, discard it
+                    foreach (var node in nodes)
+                    {
+                        HtmlNodeCollection supNodes = node.SelectNodes("./sup");
+                        if (supNodes != null)
+                        {
+                            node.Remove();
+                            break;
+                        }
+                    }
+
                 }
 
                 //2. strip out garbage
