@@ -456,10 +456,10 @@ namespace cs_events_vehicles
                     //check for superscript, discard it
                     foreach (var node in nodes)
                     {
-                        HtmlNodeCollection supNodes = node.SelectNodes("./sup");
+                        var supNodes = node.SelectNodes("./sup");
                         if (supNodes != null)
                         {
-                            node.Remove();
+                            nodes.Remove(node);
                             break;
                         }
                     }
