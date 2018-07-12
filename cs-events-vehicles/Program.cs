@@ -410,7 +410,6 @@ namespace cs_events_vehicles
             string html = null;
             try
             {
-                vehicleName = "Lincoln_Town_Car";
                 data = client.DownloadData("https://en.wikipedia.org/wiki/" + vehicleName); 
                 html = Encoding.UTF8.GetString(data);
             }
@@ -453,14 +452,13 @@ namespace cs_events_vehicles
                         }
                     }
 
-                    //check for superscript, discard it
+                    //discard superscript, in a roundabout way
                     foreach (var node in nodes)
                     {
-                        var supNodes = node.SelectNodes("./sup");
-                        if (supNodes != null)
+                        var textNodesWithoutTags = node.SelectNodes("./text()");
+                        if (textNodesWithoutTags != null)
                         {
-                            nodes.Remove(node);
-                            break;
+                            nodes = textNodesWithoutTags;
                         }
                     }
 
