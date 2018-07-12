@@ -409,7 +409,7 @@ namespace cs_events_vehicles
             string html = null;
             try
             {
-                html = client.DownloadString("https://en.wikipedia.org/wiki/" + vehicleName);
+                html = client.DownloadString("https://en.wikipedia.org/wiki/Ford_Super_Duty");// + vehicleName);
             }
             catch (System.Net.WebException e)
             {
@@ -432,17 +432,28 @@ namespace cs_events_vehicles
                 //1. parse DOM for specific types
                 var nodes = doc.DocumentNode.SelectNodes($"//th[text()='{search}']/following-sibling::td");
 
+                foreach (var node in nodes)
+                {
+                    var liNodes = node.SelectNodes("./div/ul/li");
+                    if (liNodes != null)
+                    {
+                        //straight up discard outermost for innermost list
+                        nodes = liNodes;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.WriteLine($" {vehicleName} has nested lists! ");
+
+                    }
+                }
+
                 //2. strip out garbage
                 var numericStringAnyUnits = nodes.FirstOrDefault()?.InnerText.Trim().Replace(KNOWN_SPACE_NUMERIC_ENTITY, "");
 
                 //3. conversion
 
                 // https://en.wikipedia.org/wiki/Ford_Super_Duty
-                // 222.2&#160;in (5,644&#160;mm)227&#160;in (5,766&#160;mm)243.2&#160;in (6,177&#160;mm)241.4&#160;in (6,132&#160;mm)652.6&#160;in (16,576&#160;mm)
-                // assumptions that built code below fail here, since multiple TD are returned, and the innerText of that ignores any distinctive separation.
-                // worse, there's ranges:       Height	76.2–81.3 in (1,935–2,065 mm)
+                // there's ranges:       Height	76.2–81.3 in (1,935–2,065 mm)
                 string[] strs = numericStringAnyUnits?.Split(' ');
-                string sMillimeters = strs?.ToList().Find(s => s.Contains("mm")).Replace("mm", "").Replace(",", "");
+                string sMillimeters = strs?.ToList().Find(s => s.Contains("mm")).Replace("mm", "").Replace(",", "").Replace("(", "").Replace(")", "");
                 string sMeters = strs?.ToList().Find(s => s.Contains("m")).Replace("m", "");//.Replace(",", ".");
                 string sInches = strs?.ToList().Find(s => s.Contains("in")).Replace("in", "").Replace("(", "").Replace(")", "");
 
