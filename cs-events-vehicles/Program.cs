@@ -389,6 +389,8 @@ namespace cs_events_vehicles
     class WikipediaWebScraper
     {
         /*
+         *
+         * sample: 
          * https://en.wikipedia.org/wiki/Mazda_MX-5
          * //*[@id="mw-content-text"]/div/table[3]/tbody/tr/td/table/tbody/tr[14]/th       <tr>  <th>  Length  </th>  <td> 3,950 mm (155.5 in) </td>  </tr>
          * //table//tbody//tr//th
@@ -447,8 +449,8 @@ namespace cs_events_vehicles
                         {
                             //straight up discard outermost for innermost list
                             nodes = liNodes;
-                            Console.ForegroundColor = ConsoleColor.White;
-                            Console.WriteLine($" {vehicleName} has nested lists! ");
+                            //Console.ForegroundColor = ConsoleColor.White;
+                            //Console.WriteLine($" {vehicleName} has nested lists! ");
                             break;
                         }
                     }
@@ -462,7 +464,6 @@ namespace cs_events_vehicles
                             nodes = textNodesWithoutTags;
                         }
                     }
-
                 }
 
                 //2. strip out garbage
@@ -486,8 +487,8 @@ namespace cs_events_vehicles
                 if (m.Units == null && nodes?.Count > 1)
                 {
                     {
-                        Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine($" {vehicleName} has many results! {nodes.Count} !");
+                        //Console.ForegroundColor = ConsoleColor.White;
+                        //Console.WriteLine($" {vehicleName} has many results! {nodes.Count} !");
                     }
                 }
 
@@ -506,8 +507,9 @@ namespace cs_events_vehicles
             //if (m.Length == 0 && m.Width == 0 && m.Height == 0)
             if (Math.Abs(m.Length) < float.Epsilon && Math.Abs(m.Width) < float.Epsilon && Math.Abs(m.Height) < float.Epsilon)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"{vehicleName}: no sizes discovered");
+                //Console.ForegroundColor = ConsoleColor.Red;
+                //Console.WriteLine($"{vehicleName}: no sizes discovered");
+                return null;
             }
 
             Console.ForegroundColor = ConsoleColor.White;
