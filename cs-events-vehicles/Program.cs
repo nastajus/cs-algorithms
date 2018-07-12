@@ -409,7 +409,7 @@ namespace cs_events_vehicles
             string html = null;
             try
             {
-                html = client.DownloadString("https://en.wikipedia.org/wiki/" + "Mazda_MX-5");
+                html = client.DownloadString("https://en.wikipedia.org/wiki/" + vehicleName);
             }
             catch (System.Net.WebException e)
             {
@@ -435,14 +435,15 @@ namespace cs_events_vehicles
                 //2. strip out garbage
                 var numericStringAnyUnits = nodes.FirstOrDefault()?.InnerText.Trim().Replace(KNOWN_SPACE_NUMERIC_ENTITY, "");
 
-                //3. meters conversion
+                //3. conversion
                 string[] strs = numericStringAnyUnits?.Split(' ');
                 string sMillimeters = strs?.ToList().Find(s => s.Contains("mm")).Replace("mm", "").Replace(",", "");
-                string sMeters = strs?.ToList().Find(s => s.Contains("m")).Replace("m", "");
+                string sMeters = strs?.ToList().Find(s => s.Contains("m")).Replace("m", "");//.Replace(",", ".");
                 string sInches = strs?.ToList().Find(s => s.Contains("in")).Replace("in", "").Replace("(", "").Replace(")", "");
 
                 //4. store number
                 float metric = float.Parse(sMillimeters ?? sMeters ?? sInches ?? "0");
+                if (sMillimeters != null) metric /= 1000;
                 PropertyInfo prop = m.GetType().GetProperty(search);
                 prop?.SetValue(m, metric);
 
@@ -464,12 +465,11 @@ namespace cs_events_vehicles
                 {
                     m.Units = Metric.UnitTypes.Inches;
                 }
-
             }
 
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(m);
-            return m;
+            return null;// m;
         }
 
         public class Metric
