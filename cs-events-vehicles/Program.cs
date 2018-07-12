@@ -388,6 +388,13 @@ namespace cs_events_vehicles
 
     class WikipediaWebScraper
     {
+        /*
+         * https://en.wikipedia.org/wiki/Mazda_MX-5
+         * //*[@id="mw-content-text"]/div/table[3]/tbody/tr/td/table/tbody/tr[14]/th       <tr>  <th>  Length  </th>  <td> 3,950 mm (155.5 in) </td>  </tr>
+         * //table//tbody//tr//th
+         * //table//tbody//tr//th[@scope='row']/following-sibling::td
+         */
+
 
         /// <summary>
         /// try getting Renault Twizy for example...
@@ -416,21 +423,23 @@ namespace cs_events_vehicles
             HtmlDocument doc = new HtmlDocument();
             doc.LoadHtml(html);
 
-            //now you could query the DOM. trying...
+            //var myNodes = doc.DocumentNode.SelectNodes("//th[text()='Length' or text()='Width' or text()='Height']/following-sibling::td");
+            var lengthNodes = doc.DocumentNode.SelectNodes("//th[text()='Length']/following-sibling::td");
+            var widthNodes = doc.DocumentNode.SelectNodes("//th[text()='Width']/following-sibling::td");
+            var heightNodes = doc.DocumentNode.SelectNodes("//th[text()='Height']/following-sibling::td");
 
-            //HtmlNode myNode = doc.DocumentNode.SelectSingleNode("//div//table//tbody//tr");
-            var myNodes = doc.DocumentNode.SelectNodes("//div//table//tbody//tr");
+            if (lengthNodes.Count > 1 || widthNodes.Count > 1 || heightNodes.Count > 1)
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine($" {vehicleName} has many results! {lengthNodes}! {widthNodes}! {heightNodes}! lwh!");
+            }
 
-            //.SelectNodes("//a[@class='tim_new']").Select(n => n.Attributes["href"].Value);
-            //.SelectNodes("//th[@scope='row']/following-sibling::td")
+            const string KNOWN_SPACE_NUMERIC_ENTITY = "&#160;";
 
 
-            //example
-            //IEnumerable<string> results = myList.Where(s => s == search);
 
-            //building
-            //IEnumerable<string> results = node.ChildNodes.Where()
-            List<string> searchMetrics = new List<string> { "Length", "Width", "Height" };
+
+
             var results = myNodes.Where(n => searchMetrics.Any(s => n.InnerText.Contains(s))).ToList();
 
             //todo: ok super hacky time...
@@ -438,31 +447,7 @@ namespace cs_events_vehicles
             List<string> hackytime = new List<string>();
 
 
-            //compiler error: orderby ... cannot be inferred from the usage
-            //You cannot OrderBy a string; you need to pass a lambda expression or delegate. You need to use Dynamic LINQ, as mentioned in the tutorial.
-            //oh
-            //results.OrderBy(r => r.);
 
-            const string KNOWN_SPACE_NUMERIC_ENTITY = "&#160;";
-
-            //below is broken by this: https://en.wikipedia.org/wiki/Mazda_MX-5#First_generation_(NA)
-            //returning a very long string 
-            //should've used this more accurate path instead perhaps ??? //*[@id="mw-content-text"]/div/table[3]/tbody/tr/td/table/tbody/tr[16]/th
-            /*
-             * Mazda MX-5 (NA)
-OverviewProduction
-May 1989â€“1997Designer
-Tsutomu Matano, Shunji Tanaka (1984, 1986)Body and chassisBodystyle
-2-door roadsterPlatform
-Mazda NAPowertrainEngine
-1598cc B6ZE(RS) DOHC I41839cc BP DOHC I4Transmission
-5-speed manual4-speed automaticDimensionsWheelbase
-2,265mm (89.2in)Length
-3,950mm (155.5in)Width
-1,675mm (65.9in)Height
-1,230mm (48.4in)Curbweight
-940kg (2,070lb)
-             */
             foreach (HtmlNode node in results)
             {
                 //get corresponding TD element containing actual value
@@ -471,7 +456,6 @@ Mazda NAPowertrainEngine
                 hackytime.Add(str);
             }
 
-            hackytime = hackytime.OrderBy(s => s).ToList();
             Metric m = new Metric();
             m.Units = Metric.UnitTypes.Meters; //more hardcoding ...
 
