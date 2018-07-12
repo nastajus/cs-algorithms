@@ -436,6 +436,10 @@ namespace cs_events_vehicles
                 var numericStringAnyUnits = nodes.FirstOrDefault()?.InnerText.Trim().Replace(KNOWN_SPACE_NUMERIC_ENTITY, "");
 
                 //3. conversion
+
+                // https://en.wikipedia.org/wiki/Ford_Super_Duty
+                // 222.2&#160;in (5,644&#160;mm)227&#160;in (5,766&#160;mm)243.2&#160;in (6,177&#160;mm)241.4&#160;in (6,132&#160;mm)652.6&#160;in (16,576&#160;mm)
+                // assumptions that built code below fail here, since multiple TD are returned, and the innerText of that ignores any distinctive separation.
                 string[] strs = numericStringAnyUnits?.Split(' ');
                 string sMillimeters = strs?.ToList().Find(s => s.Contains("mm")).Replace("mm", "").Replace(",", "");
                 string sMeters = strs?.ToList().Find(s => s.Contains("m")).Replace("m", "");//.Replace(",", ".");
