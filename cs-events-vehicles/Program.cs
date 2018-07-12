@@ -358,9 +358,12 @@ namespace cs_events_vehicles
             Vehicle v = new Vehicle(whichVehicle.American, example);
 
             var res = WikipediaWebScraper.ScrapeForDimensions(example);
-            //shitty version for now:
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine(example + " : " + res);
+
+            if (res != null)
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine(example + " : " + res);
+            }
 
             return v;
         }
@@ -512,9 +515,7 @@ namespace cs_events_vehicles
                 return null;
             }
 
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine(m);
-            return null;// m;
+            return m;
         }
 
         public class Metric
