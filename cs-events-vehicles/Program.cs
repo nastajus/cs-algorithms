@@ -410,6 +410,7 @@ namespace cs_events_vehicles
             string html = null;
             try
             {
+                //vehicleName = "Citroën_C4_Picasso"; //unable to reproduce issue...
                 data = client.DownloadData("https://en.wikipedia.org/wiki/" + vehicleName); 
                 html = Encoding.UTF8.GetString(data);
             }
@@ -465,7 +466,7 @@ namespace cs_events_vehicles
                 }
 
                 //2. strip out garbage
-                var numericStringAnyUnits = nodes.FirstOrDefault()?.InnerText.Trim().Replace(KNOWN_SPACE_NUMERIC_ENTITY, "");
+                var numericStringAnyUnits = nodes?.FirstOrDefault()?.InnerText.Trim().Replace(KNOWN_SPACE_NUMERIC_ENTITY, "");
 
                 //Toyota_Tundra has 2000-04: 217.5 in (5,524 mm)
 
@@ -482,7 +483,7 @@ namespace cs_events_vehicles
                 prop?.SetValue(m, metric);
 
                 //5. alert large results sets
-                if (m.Units == null && nodes.Count > 1)
+                if (m.Units == null && nodes?.Count > 1)
                 {
                     {
                         Console.ForegroundColor = ConsoleColor.White;
@@ -501,6 +502,14 @@ namespace cs_events_vehicles
                 }
             }
 
+            //7. sanity check
+            //if (m.Length == 0 && m.Width == 0 && m.Height == 0)
+            if (Math.Abs(m.Length) < float.Epsilon && Math.Abs(m.Width) < float.Epsilon && Math.Abs(m.Height) < float.Epsilon)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"{vehicleName}: no sizes discovered");
+            }
+
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(m);
             return null;// m;
@@ -517,7 +526,7 @@ namespace cs_events_vehicles
             public UnitTypes? Units;
 
             //just a shorthand abbreviation to output the units consisely
-            public string U => Units.ToString().Substring(0, 1).ToLower(); 
+            public string U => Units?.ToString().Substring(0, 1).ToLower(); 
             public float Height { get; private set; }
             public float Width { get; private set; }
             public float Length { get; private set; }
