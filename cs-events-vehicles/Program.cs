@@ -406,10 +406,12 @@ namespace cs_events_vehicles
             vehicleName = vehicleName.Replace(" ", "_");
 
             //download the HTML
+            byte[] data = null;
             string html = null;
             try
             {
-                html = client.DownloadString("https://en.wikipedia.org/wiki/Ford_Super_Duty");// + vehicleName);
+                data = client.DownloadData("https://en.wikipedia.org/wiki/Ford_Super_Duty");// + vehicleName);
+                html = Encoding.UTF8.GetString(data);
             }
             catch (System.Net.WebException e)
             {
@@ -423,6 +425,8 @@ namespace cs_events_vehicles
             doc.LoadHtml(html);
 
             const string KNOWN_SPACE_NUMERIC_ENTITY = "&#160;";
+            const char KNOWN_EN_DASH = '–';
+
             List<string> searchMetrics = new List<string> { "Length", "Width", "Height" };
             //var myNodes = doc.DocumentNode.SelectNodes("//th[text()='Length' or text()='Width' or text()='Height']/following-sibling::td");
 
@@ -451,11 +455,13 @@ namespace cs_events_vehicles
                 //3. conversion
 
                 // https://en.wikipedia.org/wiki/Ford_Super_Duty
-                // there's ranges:       Height	76.2–81.3 in (1,935–2,065 mm)
+                // there's ranges:       Height	76.2–81.3 in (1,935–2,065 mm)   appears as â€ "1935â€“2065" ... needed to ensure received as UTF-8 to resolve
+
+                // a normal space works for separating ... 
                 string[] strs = numericStringAnyUnits?.Split(' ');
-                string sMillimeters = strs?.ToList().Find(s => s.Contains("mm")).Replace("mm", "").Replace(",", "").Replace("(", "").Replace(")", "");
-                string sMeters = strs?.ToList().Find(s => s.Contains("m")).Replace("m", "");//.Replace(",", ".");
-                string sInches = strs?.ToList().Find(s => s.Contains("in")).Replace("in", "").Replace("(", "").Replace(")", "");
+                string sMillimeters = strs?.ToList().Find(s => s.Contains("mm")).Replace("mm", "").Replace(",", "").Replace("(", "").Replace(")", "").Split(KNOWN_EN_DASH).First();
+                string sMeters = strs?.ToList().Find(s => s.Contains("m")).Replace("m", "").Split(KNOWN_EN_DASH).First();//.Replace(",", ".");
+                string sInches = strs?.ToList().Find(s => s.Contains("in")).Replace("in", "").Replace("(", "").Replace(")", "").Split(KNOWN_EN_DASH).First();
 
                 //4. store number
                 float metric = float.Parse(sMillimeters ?? sMeters ?? sInches ?? "0");
