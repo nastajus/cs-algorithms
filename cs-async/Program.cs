@@ -11,6 +11,8 @@ namespace cs_async
         static void Main(string[] args)
         {
             aaa();
+            //aaa(); alone: Because this call is not awatied,execution of the current method continues before the call is completed. Consider applying await
+
             Console.ReadKey();
         }
 
