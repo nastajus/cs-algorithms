@@ -14,6 +14,7 @@ namespace cs_async_tasks
     {
         static void Main(string[] args)
         {
+            //Run takes Action type, Actions accept lambdas, lambdas are consice functions nay expressions
             Task t = Task.Run(() => { });
             t.Wait();
         }
