@@ -10,8 +10,11 @@ namespace cs_async
     {
         static void Main(string[] args)
         {
-            aaa();
-            //aaa(); alone: Because this call is not awatied,execution of the current method continues before the call is completed. Consider applying await
+            var a = aaa();
+            //aaa() assigned: interesting, the warning disappeared. 
+
+            Console.WriteLine(a);
+            //output: System.Threading.Tasks.Task`1[System.Boolean]
 
             Console.ReadKey();
         }
