@@ -14,9 +14,15 @@ namespace cs_async_tasks
     {
         static void Main(string[] args)
         {
-            //Run takes Action type, Actions accept lambdas, lambdas are consice functions nay expressions
-            Task t = Task.Run(() => { });
+            Task t = Task.Run(() =>
+            {
+                //just loop.
+                int ctr = 0;
+                for (ctr=0; ctr<=1000000000; ctr++) { }
+                Console.WriteLine($"finished {ctr} loop iterations");
+            });
             t.Wait();
+            Console.ReadKey();
         }
     }
 
