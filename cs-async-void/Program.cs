@@ -24,7 +24,8 @@ namespace cs_async_void
             Console.Read();
         }
 
-        static async void OnTimerFired(object sender, ElapsedEventArgs args)
+        //invalid since the handler subscription expects a void return type
+        static async Task OnTimerFired(object sender, ElapsedEventArgs args)
         {
             await Task.Delay(1000);
 
