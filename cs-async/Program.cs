@@ -16,6 +16,9 @@ namespace cs_async
             var a = Aaa();
             //aaa() assigned: interesting, the warning disappeared. 
 
+            Task<bool> b = Aaa();
+            //bool bb = Aaa();
+
             Console.WriteLine(a);
             //output: System.Threading.Tasks.Task`1[System.Boolean]
 
@@ -24,7 +27,8 @@ namespace cs_async
 
         static async Task<bool> Aaa()
         {
-            return await Bbb();
+            bool b = await Bbb();
+            return b;
         }
 
         static async Task<bool> Bbb()
