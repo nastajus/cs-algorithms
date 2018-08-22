@@ -34,6 +34,9 @@ namespace cs_lambdas
 
             //lambda multiple parameters
             Func<int, int, int> func5 = (x, y) => x * y;
+
+            // lambda no parameters
+            Action func6 = () => Console.WriteLine();
             
 
 
