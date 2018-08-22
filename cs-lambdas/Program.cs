@@ -17,11 +17,14 @@ namespace cs_lambdas
         static void Main(string[] args)
         {
 
+            //expression body
             Func<int, int> func1 = x => x + 1;
 
-            //with a statement body...
-            //is it the braces? is it the *return* portion?
+            //statement body
             Func<int, int> func2 = x => { return x + 1; };
+
+            //formal parameters + experssion body
+            Func<int, int> func3 = (int x) => x + 1;
 
 
 
