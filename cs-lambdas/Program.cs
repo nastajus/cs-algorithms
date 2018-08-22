@@ -50,11 +50,10 @@ namespace cs_lambdas
 
         //conclusion:
         // ~everything~ is a delegate type! 
-        // ok so first
-        // lambda expressions are simply anonymous functions
-        // and well ok so.. 
-        // to *store* those anon meths into *variables* WELL WE NEED delegate type variables.
-        // AND FOR *interesting* lambdas, that is, for lambdas with *any* variables, we need generic delegate types.
+        // suffice to say:
+        // either `Func<a, b> myVariableV` or `Action myVariableW` are necessary types to assign lambdas to variables.
+
+
 
 
     }
