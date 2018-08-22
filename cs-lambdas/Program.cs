@@ -9,7 +9,11 @@ namespace cs_lambdas
     class Program
     {
 
+        //mine
         delegate bool Pred(int val);
+
+        //ms's 
+        delegate bool Predicate<in T>(T obj);
 
         static void Main(string[] args)
         {
