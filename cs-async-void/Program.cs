@@ -18,19 +18,26 @@ namespace cs_async_void
         static void Main(string[] args)
         {
             var timer = new Timer();
-            timer.Elapsed += OnTimerFired;
+            timer.Elapsed += (s,e) => OnTimerFired(s, e).SwallowException();
             timer.Interval = 1000;
             timer.Start();
             Console.Read();
         }
 
-        //invalid since the handler subscription expects a void return type
         static async Task OnTimerFired(object sender, ElapsedEventArgs args)
         {
             await Task.Delay(1000);
 
-            //kill process
+            //kill process, but now will be swallowed silently.
             throw new Exception();
+        }
+    }
+
+    public static class TaskExtensions
+    {
+        public static void SwallowException(this Task task)
+        {
+            task.ContinueWith(_ => { return; });
         }
     }
 }
