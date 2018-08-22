@@ -8,11 +8,17 @@ namespace cs_lambdas
 {
     class Program
     {
+
+        delegate bool Pred(int val);
+
         static void Main(string[] args)
         {
+            //anonymous method
+            Pred odd = delegate(int val) { return val % 2 != 0; };
+
             //expression lambdas
             List<int> elements = new List<int>() { 10, 20, 31, 40 };
-            int oddIndex = elements.FindIndex(x => x % 2 != 0);
+            int oddIndex = elements.FindIndex(odd);
             
             //commentary:
             // predicate: a function that returns a boolean
@@ -20,6 +26,7 @@ namespace cs_lambdas
 
             
             Console.WriteLine(oddIndex);
+            Console.ReadKey();
 
             //statement lambdas
             //...
