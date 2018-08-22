@@ -23,21 +23,18 @@ namespace cs_lambdas
         static void Main(string[] args)
         {
 
-            //expression body
+            //lambda with expression body
             Func<int, int> func1 = x => x + 1;
 
-            //statement body
+            //lambda with statement body
             Func<int, int> func2 = x => { return x + 1; };
 
-            //formal parameters + experssion body
+            //lambda with formal parameters + with experssion body
             Func<int, int> func3 = (int x) => x + 1;
 
-            //multiple parameters lambda
+            //lambda multiple parameters
             Func<int, int, int> func5 = (x, y) => x * y;
-            //                          ^^^^^^^^^^^^^^^
-            //                          function function
-            //                          lambda lambda lam
-
+            
 
 
             Console.ReadKey();
