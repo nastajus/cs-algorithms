@@ -12,6 +12,7 @@ namespace cs_lambdas
 
         static void Main(string[] args)
         {
+            Func<int, int> func1 = x => x + 1;
 
 
 
