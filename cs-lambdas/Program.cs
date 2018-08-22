@@ -37,6 +37,9 @@ namespace cs_lambdas
 
             // lambda no parameters
             Action func6 = () => Console.WriteLine();
+            // damn it microsoft, couldn't you have made Action and Func the same keyword?
+            // just created both delegate types with the same name, but one with generics and one without? 
+            // no compiler error below... common guys...
 
 
             
@@ -45,8 +48,8 @@ namespace cs_lambdas
             Console.ReadKey();
         }
 
-        delegate void Action();
-        delegate TResult Func<in T1, in T2, out TResult>(T1 arg1, T2 arg2);
+        delegate void Actionn();
+        delegate TResult Actionn<in T1, in T2, out TResult>(T1 arg1, T2 arg2);
 
         //conclusion:
         // ~everything~ is a delegate type! 
