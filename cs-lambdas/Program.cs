@@ -8,33 +8,14 @@ namespace cs_lambdas
 {
     class Program
     {
+        //follow along: https://www.dotnetperls.com/lambda
 
         static void Main(string[] args)
         {
-            //expression lambdas
-            List<int> elements = new List<int>() { 10, 20, 31, 40 };
-            int oddIndex = elements.FindIndex(x => x % 2 != 0);
-
-            //describe parts:
-            // () => {}
-            // (args) => {body}
-            // (args) => {expression}
-
-            //conclusion:
-            // the arguments list of a lambda infers their types from expression lambda body (right side of =>).
 
 
-            
-            Console.WriteLine(oddIndex);
+
             Console.ReadKey();
-
-            //statement lambdas
-            //...
-
-
-
-
-
         }
     }
 }
