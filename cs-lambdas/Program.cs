@@ -37,10 +37,25 @@ namespace cs_lambdas
 
             // lambda no parameters
             Action func6 = () => Console.WriteLine();
+
+
             
 
 
             Console.ReadKey();
         }
+
+        delegate void Action();
+        delegate TResult Func<in T1, in T2, out TResult>(T1 arg1, T2 arg2);
+
+        //conclusion:
+        // ~everything~ is a delegate type! 
+        // ok so first
+        // lambda expressions are simply anonymous functions
+        // and well ok so.. 
+        // to *store* those anon meths into *variables* WELL WE NEED delegate type variables.
+        // AND FOR *interesting* lambdas, that is, for lambdas with *any* variables, we need generic delegate types.
+
+
     }
 }
