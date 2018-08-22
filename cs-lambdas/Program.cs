@@ -37,12 +37,28 @@ namespace cs_lambdas
 
             // lambda no parameters
             Action func6 = () => Console.WriteLine();
-            // damn it microsoft, couldn't you have made Action and Func the same keyword?
-            // just created both delegate types with the same name, but one with generics and one without? 
-            // no compiler error below... common guys...
 
 
+            #region copy_Pasta
+
+            //COPY-PASTA:
+
+
+            // Use delegate method expression.
+            Func<int, int> func7 = delegate (int x) { return x + 1; };
             
+            // Use delegate expression with no parameter list.
+            Func<int> func8 = delegate { return 1 + 1; };
+
+            Console.WriteLine(func1.Invoke(1));
+            Console.WriteLine(func2.Invoke(1));
+            Console.WriteLine(func3.Invoke(1));
+            Console.WriteLine(func5.Invoke(2, 2));
+            func6.Invoke();
+            Console.WriteLine(func7.Invoke(1));
+            Console.WriteLine(func8.Invoke());
+
+            #endregion
 
 
             Console.ReadKey();
