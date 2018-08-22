@@ -10,9 +10,15 @@ namespace cs_lambdas
     {
         // follow along: https://www.dotnetperls.com/lambda
 
+        //DEFINITIONS:
+
         // expression vs statement:
         // Expression: Something which evaluates to a value. Example: 1+2/x
         // Statement:  A line of code which does something.  Example: GOTO 100
+
+        // lambda: 
+        // Lambda comes from the Lambda Calculus and refers to anonymous functions in programming.
+        // ~= shorthand for FUNCTION.
 
         static void Main(string[] args)
         {
@@ -25,6 +31,12 @@ namespace cs_lambdas
 
             //formal parameters + experssion body
             Func<int, int> func3 = (int x) => x + 1;
+
+            //multiple parameters lambda
+            Func<int, int, int> func5 = (x, y) => x * y;
+            //                          ^^^^^^^^^^^^^^^
+            //                          function function
+            //                          lambda lambda lam
 
 
 
