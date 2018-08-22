@@ -10,6 +10,10 @@ namespace cs_lambdas
     {
         // follow along: https://www.dotnetperls.com/lambda
 
+        // wisdom:
+        // Many developers regard lambda expressions as a complete improvement over (and replacement for) the delegate syntax.
+
+
         //DEFINITIONS:
 
         // expression vs statement:
