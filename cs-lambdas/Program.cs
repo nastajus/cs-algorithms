@@ -42,6 +42,10 @@ namespace cs_lambdas
             // lambda no parameters
             Action func6 = () => Console.WriteLine();
 
+            //assign lambdas without defining Func? ... var?
+            //var f10 = () => Console.WriteLine();
+            //COMPILER: Cannot assign lambda expression to implicitly-typed variable.
+
 
             #region copy_Pasta
 
